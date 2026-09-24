@@ -1,0 +1,47 @@
+# にほんご Tags
+
+Learn 2,000 real-life Japanese sentences in 14 days with **Tag Grammar**: every sentence is
+tagged chunks in front of one final polite-form verb. Move the chunks, keep the tags.
+No conjugation drills, no kanji required — kana and romaji side by side.
+
+Static site (HTML + JSON), no build step needed to run it, and no server-side code.
+
+## Run locally
+
+```
+python3 -m http.server 8000
+```
+then open http://localhost:8000/
+
+## Structure
+
+- `data/` — particles.json, scenes.json, confusions.json, adverbs.json, ch01–ch10.json (2,000 examples)
+- `js/` — app.js (shared rendering/settings), romaji.js (kana→Hepburn), chunks.js (drag/tap sentence
+  builder), quiz.js (7 question types), srs.js (3-box Leitner progress in localStorage), speech.js
+  (Web Speech API read-aloud)
+- `css/tags.css` — single stylesheet, light/dark aware
+- `index.html`, `grammar/`, `ch/`, `drill/`, `test/`, `progress/`, `scenes/`, `print/`
+- `tools/` — `validate.js` (schema/consistency checker for data/chNN.json), `DATA_SPEC.md` (the
+  spec new example data must follow), `politeify.mjs` (one-off ます/です migration, kept for
+  reference), `build-print.js` (generates `print/chNN.html` worksheets), `inject-seo.mjs`
+  (injects title/OGP/JSON-LD/gtag per `google-ids.json` into the public pages)
+
+## Editing example data
+
+Read `tools/DATA_SPEC.md` first. After any edit to `data/chNN.json`, run:
+
+```
+node tools/validate.js
+```
+
+It must report `OK` for every chapter with no cross-chapter duplicate sentences.
+
+## Publishing
+
+- GA4 measurement ID is the shared Yusando property (see `google-ids.json`); no new property
+  needed. Re-run `node tools/inject-seo.mjs` after changing `google-ids.json` or a page's
+  title/description in that script's `PAGES` list.
+- Domain: `CNAME` currently points at `nihongo.yusando.com` (still to be confirmed — see the design
+  doc's open decisions). DNS is Route 53 under yusando.com.
+- Before going live: Search Console (verify + submit `sitemap.xml`), confirm GA4 real-time hits,
+  check `robots.txt` matches what should/shouldn't be indexed.

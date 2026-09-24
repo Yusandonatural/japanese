@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily drill — にほんご Tags</title>
+<meta name="description" content="A 30-question daily drill mixing seven exercise types to build tag-grammar reflexes.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/drill/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Daily drill — にほんご Tags">
+<meta property="og:description" content="A 30-question daily drill mixing seven exercise types to build tag-grammar reflexes.">
+<meta property="og:url" content="https://nihongo.yusando.com/drill/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily drill — にほんご Tags">
+<meta name="twitter:description" content="A 30-question daily drill mixing seven exercise types to build tag-grammar reflexes.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "en" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../css/tags.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="muted small" id="crumb"></div>
+  <h1 id="title">Drill</h1>
+  <div class="row" style="justify-content:space-between">
+    <div class="small muted" id="counter"></div>
+    <div class="progress-bar" style="flex:1;margin:0 12px"><i id="bar" style="width:0%"></i></div>
+    <div class="small muted" id="score">0 / 0</div>
+  </div>
+
+  <div class="panel" id="qbox"></div>
+  <div class="row" style="justify-content:space-between">
+    <div class="status" id="status"></div>
+    <div class="row">
+      <button class="btn ghost" id="skipBtn">Skip</button>
+      <button class="btn" id="checkBtn">Check</button>
+      <button class="btn" id="nextBtn" style="display:none">Next →</button>
+    </div>
+  </div>
+
+  <div class="panel" id="doneBox" style="display:none">
+    <h2>Nice work 🎉</h2>
+    <p id="doneSummary"></p>
+    <div id="weakList"></div>
+    <div class="row" style="margin-top:10px">
+      <a class="btn" id="toChapter" href="#">Back to chapter</a>
+      <a class="btn ghost" href="../">Home</a>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadChapter, loadParticles, qs, chapterFor, shuffle } from '../js/app.js';
+import { renderQuestion, pickType } from '../js/quiz.js';
+import { recordAnswer, recordParticle, markDayDone, particleStats } from '../js/srs.js';
+import { speak } from '../js/speech.js';
+renderHeader('');
+
+const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
+const day = qs('day');
+const N = parseInt(qs('n') || '30', 10);
+const chapter = chapterFor(ch);
+document.getElementById('crumb').innerHTML = `<a href="../">Home</a> / <a href="../ch/?n=${ch}">Chapter ${ch}</a> / Drill`;
+document.getElementById('title').textContent = `Drill · Chapter ${ch}. ${chapter.title}`;
+document.getElementById('toChapter').href = `../ch/?n=${ch}`;
+
+const [examples, particles] = await Promise.all([loadChapter(ch), loadParticles()]);
+const availableParticles = particles.filter(p => p.chapter <= ch || ch >= 7).map(p => p.p);
+const opts = { particles, availableParticles, speak };
+const deck = shuffle(examples).slice(0, Math.min(N, examples.length));
+
+let idx = 0, correct = 0, answered = 0;
+let current = null;
+const qbox = document.getElementById('qbox');
+const statusEl = document.getElementById('status');
+const checkBtn = document.getElementById('checkBtn');
+const nextBtn = document.getElementById('nextBtn');
+const skipBtn = document.getElementById('skipBtn');
+
+function updateBar() {
+  document.getElementById('counter').textContent = `Question ${idx + 1} / ${deck.length}`;
+  document.getElementById('bar').style.width = Math.round((idx / deck.length) * 100) + '%';
+  document.getElementById('score').textContent = `${correct} / ${answered}`;
+}
+
+function showQuestion() {
+  if (idx >= deck.length) return finish();
+  const ex = deck[idx];
+  const type = pickType(ex);
+  current = renderQuestion(qbox, ex, type, opts);
+  current.ex = ex; current.type = type;
+  statusEl.textContent = ''; statusEl.className = 'status';
+  checkBtn.style.display = ''; nextBtn.style.display = 'none';
+  updateBar();
+}
+
+checkBtn.addEventListener('click', () => {
+  const result = current.check();
+  answered++;
+  const particleTagged = current.ex.chunks.find(c => c.p)?.p || '';
+  if (result.ok) {
+    correct++;
+    statusEl.textContent = '✓ That works.';
+    statusEl.className = 'status ok';
+  } else {
+    statusEl.textContent = current.correctText ? `Not quite. → ${current.correctText}` : '✗ Not quite — try to notice the difference and move on.';
+    statusEl.className = 'status ng';
+  }
+  recordAnswer(current.ex.id, !!result.ok);
+  if (particleTagged) recordParticle(particleTagged, !!result.ok);
+  checkBtn.style.display = 'none'; nextBtn.style.display = '';
+  updateBar();
+});
+nextBtn.addEventListener('click', () => { idx++; showQuestion(); });
+skipBtn.addEventListener('click', () => { idx++; showQuestion(); });
+
+function finish() {
+  qbox.style.display = 'none';
+  document.querySelector('.row.status')?.remove?.();
+  checkBtn.style.display = 'none'; nextBtn.style.display = 'none'; skipBtn.style.display = 'none';
+  statusEl.textContent = '';
+  document.getElementById('doneBox').style.display = '';
+  document.getElementById('doneSummary').textContent = `You got ${correct} of ${answered} right.`;
+  const stats = particleStats();
+  const weak = Object.entries(stats).filter(([, s]) => s.right + s.wrong >= 2).map(([p, s]) => [p, s.right / (s.right + s.wrong)]).sort((a, b) => a[1] - b[1]).slice(0, 3);
+  const wl = document.getElementById('weakList');
+  if (weak.length) {
+    wl.innerHTML = '<p class="small muted">Keep an eye on:</p>' + weak.map(([p, acc]) => `<span class="tag-pill" style="background:var(--p-${p === '(none)' ? 'none' : p})">${p === '(none)' ? 'no tag' : p} ${Math.round(acc * 100)}%</span>`).join(' ');
+  }
+  if (day) markDayDone(day);
+  updateBar();
+}
+
+showQuestion();
+renderFooter();
+</script>
+</body>
+</html>

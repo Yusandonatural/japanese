@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your progress — にほんご Tags</title>
+<meta name="description" content="Track your 14-day plan, chapter test scores, and per-tag accuracy.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/progress/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Your progress — にほんご Tags">
+<meta property="og:description" content="Track your 14-day plan, chapter test scores, and per-tag accuracy.">
+<meta property="og:url" content="https://nihongo.yusando.com/progress/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your progress — にほんご Tags">
+<meta name="twitter:description" content="Track your 14-day plan, chapter test scores, and per-tag accuracy.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "en" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../css/tags.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="muted small"><a href="../">Home</a> / Progress</div>
+  <h1>Your progress</h1>
+
+  <h2>14-day plan</h2>
+  <div class="day-grid" id="days"></div>
+
+  <h2>Chapter tests</h2>
+  <div id="tests" class="panel"></div>
+
+  <h2>Tag accuracy</h2>
+  <p class="small muted">Based on your drill and test answers this browser.</p>
+  <div id="particleAcc" class="panel"></div>
+
+  <div class="row">
+    <button class="btn ghost" id="resetBtn">Reset all progress</button>
+  </div>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadParticles, CHAPTERS, pColor } from '../js/app.js';
+import { loadDayLog, loadTests, particleStats } from '../js/srs.js';
+renderHeader('progress');
+
+const log = loadDayLog();
+const daysWrap = document.getElementById('days');
+for (let d = 1; d <= 14; d++) {
+  const ch = CHAPTERS.find(c => c.days.includes(d));
+  const el = document.createElement('a');
+  el.href = `../ch/?n=${ch.n}&day=${d}`;
+  el.className = 'day' + (log[d] ? ' done' : '');
+  el.innerHTML = `Day ${d}<br>${log[d] ? '✓' : 'Ch' + ch.n}`;
+  daysWrap.appendChild(el);
+}
+
+const tests = loadTests();
+const testsWrap = document.getElementById('tests');
+if (!Object.keys(tests).length) testsWrap.innerHTML = '<p class="muted small">No chapter tests taken yet.</p>';
+CHAPTERS.forEach(c => {
+  const t = tests[c.n];
+  const row = document.createElement('div'); row.className = 'row'; row.style.padding = '6px 0';
+  const pct = t ? Math.round((t.correct / t.total) * 100) : null;
+  row.innerHTML = `<b style="min-width:90px">Chapter ${c.n}</b>` + (t ? `<span class="${pct >= 80 ? 'status ok' : 'status ng'}" style="min-height:auto">${t.correct}/${t.total} (${pct}%)</span>` : '<span class="muted small">not taken</span>');
+  testsWrap.appendChild(row);
+});
+
+const particles = await loadParticles();
+const stats = particleStats();
+const accWrap = document.getElementById('particleAcc');
+const rows = particles.map(p => [p, stats[p.p]]).filter(([, s]) => s && (s.right + s.wrong) > 0);
+if (!rows.length) accWrap.innerHTML = '<p class="muted small">Do a drill or two, and this fills in.</p>';
+rows.sort((a, b) => (a[1].right / (a[1].right + a[1].wrong)) - (b[1].right / (b[1].right + b[1].wrong)));
+rows.forEach(([p, s]) => {
+  const acc = s.right / (s.right + s.wrong);
+  const row = document.createElement('div'); row.className = 'row'; row.style.padding = '6px 0';
+  row.innerHTML = `<span class="tag-pill" style="background:${pColor(p.p)};min-width:26px;text-align:center">${p.p}</span>
+    <div style="flex:1"><div class="progress-bar"><i style="width:${Math.round(acc*100)}%;background:${acc >= .8 ? 'var(--ok)' : acc >= .5 ? 'var(--accent)' : 'var(--ng)'}"></i></div></div>
+    <span class="small muted" style="min-width:70px;text-align:right">${s.right}/${s.right + s.wrong} (${Math.round(acc*100)}%)</span>`;
+  accWrap.appendChild(row);
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (!confirm('Reset all progress on this device? This cannot be undone.')) return;
+  ['tags.srs.v1', 'tags.particleStats.v1', 'tags.dayLog.v1', 'tags.chapterTests.v1'].forEach(k => localStorage.removeItem(k));
+  location.reload();
+});
+
+renderFooter();
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapters — にほんご Tags</title>
+<meta name="description" content="Ten chapters of real-life Japanese sentences, built from ten particle tags. Browse examples chapter by chapter.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/ch/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Chapters — にほんご Tags">
+<meta property="og:description" content="Ten chapters of real-life Japanese sentences, built from ten particle tags. Browse examples chapter by chapter.">
+<meta property="og:url" content="https://nihongo.yusando.com/ch/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chapters — にほんご Tags">
+<meta name="twitter:description" content="Ten chapters of real-life Japanese sentences, built from ten particle tags. Browse examples chapter by chapter.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "en" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../css/tags.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="row" style="justify-content:space-between">
+    <div class="muted small" id="crumb"></div>
+    <div class="row small">
+      <button class="btn ghost small" id="prevCh">← Prev</button>
+      <button class="btn ghost small" id="nextCh">Next →</button>
+    </div>
+  </div>
+  <h1 id="title">Chapter</h1>
+  <p class="lead" id="sub"></p>
+
+  <div id="particlesRow" class="row"></div>
+
+  <div class="panel row" style="justify-content:space-between">
+    <div class="row small">
+      <label class="toggle"><input type="checkbox" id="tglKana" checked> kana</label>
+      <label class="toggle"><input type="checkbox" id="tglRomaji" checked> romaji</label>
+      <label class="toggle"><input type="checkbox" id="tglKanji"> kanji</label>
+      <label class="toggle"><input type="checkbox" id="tglGloss" checked> gloss</label>
+    </div>
+    <div class="row">
+      <a class="btn" id="drillLink" href="#">Start drill →</a>
+      <a class="btn ghost" id="testLink" href="#">Chapter test</a>
+    </div>
+  </div>
+
+  <h2>Examples (<span id="count"></span>)</h2>
+  <div class="tabs" id="sceneTabs"></div>
+  <div id="list"></div>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadChapter, loadParticles, loadScenes, sentenceView, qs, chapterFor, CHAPTERS, getSettings, setSettings } from '../js/app.js';
+renderHeader('');
+
+const n = Math.max(1, Math.min(10, parseInt(qs('n') || '1', 10)));
+const day = qs('day');
+const chapter = chapterFor(n);
+document.title = `Ch${n} ${chapter.title} — にほんご Tags`;
+document.getElementById('crumb').innerHTML = `<a href="../">Home</a> / Chapter ${n}`;
+document.getElementById('title').textContent = `Chapter ${n}. ${chapter.title}`;
+document.getElementById('sub').textContent = chapter.sub;
+document.getElementById('drillLink').href = `../drill/?ch=${n}${day ? '&day=' + day : ''}`;
+document.getElementById('testLink').href = `../test/?ch=${n}`;
+document.getElementById('prevCh').disabled = n <= 1;
+document.getElementById('nextCh').disabled = n >= 10;
+document.getElementById('prevCh').onclick = () => location.href = `?n=${n - 1}`;
+document.getElementById('nextCh').onclick = () => location.href = `?n=${n + 1}`;
+
+const [examples, particles, scenes] = await Promise.all([loadChapter(n), loadParticles(), loadScenes()]);
+const pRow = document.getElementById('particlesRow');
+particles.filter(p => p.chapter <= n).forEach(p => {
+  const pill = document.createElement('span'); pill.className = 'tag-pill'; pill.style.background = p.color; pill.textContent = `${p.p} ${p.label}`;
+  pRow.appendChild(pill);
+});
+if (n >= 7) { const pill = document.createElement('span'); pill.className = 'small muted'; pill.textContent = '(all 10 tags)'; pRow.appendChild(pill); }
+
+document.getElementById('count').textContent = examples.length;
+
+const s = getSettings();
+document.getElementById('tglRomaji').checked = s.romaji !== false;
+document.getElementById('tglKanji').checked = !!s.kanji;
+['tglRomaji', 'tglKanji'].forEach(id => document.getElementById(id).addEventListener('change', e => {
+  setSettings({ [id === 'tglRomaji' ? 'romaji' : 'kanji']: e.target.checked });
+  renderList(currentScene);
+}));
+
+const sceneIds = [...new Set(examples.map(e => e.scene))];
+const sceneTabs = document.getElementById('sceneTabs');
+let currentScene = 'all';
+function makeTab(id, label) {
+  const b = document.createElement('button'); b.textContent = label; b.className = id === currentScene ? 'on' : '';
+  b.addEventListener('click', () => { currentScene = id; [...sceneTabs.children].forEach(c => c.classList.toggle('on', c === b)); renderList(id); });
+  sceneTabs.appendChild(b);
+}
+makeTab('all', `All (${examples.length})`);
+sceneIds.forEach(id => { const sc = scenes.find(s => s.id === id); const count = examples.filter(e => e.scene === id).length; makeTab(id, `${sc ? sc.icon + ' ' + sc.name : id} (${count})`); });
+
+const listEl = document.getElementById('list');
+function renderList(scene) {
+  listEl.innerHTML = '';
+  const items = scene === 'all' ? examples : examples.filter(e => e.scene === scene);
+  items.slice(0, 60).forEach(ex => {
+    const row = document.createElement('div'); row.className = 'list-ex';
+    row.appendChild(sentenceView(ex, { particles, gloss: document.getElementById('tglGloss').checked }));
+    const en = document.createElement('div'); en.className = 'en muted'; en.textContent = ex.en; row.appendChild(en);
+    listEl.appendChild(row);
+  });
+  if (items.length > 60) { const more = document.createElement('p'); more.className = 'muted small'; more.textContent = `+ ${items.length - 60} more — head to the drill to see them all.`; listEl.appendChild(more); }
+}
+document.getElementById('tglGloss').addEventListener('change', () => renderList(currentScene));
+renderList('all');
+
+renderFooter();
+</script>
+</body>
+</html>
