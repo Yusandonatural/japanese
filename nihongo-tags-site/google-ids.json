@@ -1,0 +1,15 @@
+{
+  "site_name": "にほんご Tags",
+  "site_url": "https://nihongo.yusando.com",
+  "ga4_measurement_id": "G-9JG1FFTL1B",
+  "ads_conversion_id": "",
+  "ads_conversion_labels": {
+    "drill_complete": "",
+    "chapter_test_pass": ""
+  },
+  "search_console_verification": "",
+  "default_locale": "en",
+  "locales": ["en"],
+  "og_image": "https://nihongo.yusando.com/og.png",
+  "spa": false
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-base="./">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>にほんご Tags — Learn Japanese in 14 Days</title>
+<meta name="description" content="Learn 2,000 real-life Japanese sentences with Tag Grammar: move the particle tags, build the sentence yourself. No conjugation, ten chapters, two weeks.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="にほんご Tags — Learn Japanese in 14 Days">
+<meta property="og:description" content="Learn 2,000 real-life Japanese sentences with Tag Grammar: move the particle tags, build the sentence yourself. No conjugation, ten chapters, two weeks.">
+<meta property="og:url" content="https://nihongo.yusando.com/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="にほんご Tags — Learn Japanese in 14 Days">
+<meta name="twitter:description" content="Learn 2,000 real-life Japanese sentences with Tag Grammar: move the particle tags, build the sentence yourself. No conjugation, ten chapters, two weeks.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "en" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="css/tags.css">
+</head>
+<body>
+<main class="wrap">
+  <h1>にほんご Tags</h1>
+  <p class="lead">Learn spoken Japanese in 14 days with <b>Tag Grammar</b>: every sentence is a set of tagged chunks in front of one final verb. Move the chunks, keep the tags, say it your way.</p>
+
+  <div class="panel">
+    <div class="row" style="justify-content:space-between">
+      <div><b id="progressLabel">Day 1 of 14</b> <span class="muted small" id="progressSub"></span></div>
+      <a class="btn" id="continueBtn" href="ch/?n=1">Start Day 1 →</a>
+    </div>
+    <div class="progress-bar" style="margin-top:10px"><i id="progressBar" style="width:0%"></i></div>
+  </div>
+
+  <h2>How it works</h2>
+  <div class="grid">
+    <div class="panel"><b>1. Tags, not word order</b><p class="small muted">は が を に で と へ から まで も — ten tags mark each chunk's job. Put the chunks in any order you like.</p></div>
+    <div class="panel"><b>2. No conjugation in level 1</b><p class="small muted">Verbs stay in one polite form. Past and future come from a time word — 昨日、明日、来週.</p></div>
+    <div class="panel"><b>3. Questions just rise ↗</b><p class="small muted">Same words, same order — just lift your voice at the end. No か needed.</p></div>
+  </div>
+
+  <h2>The 10 chapters</h2>
+  <div id="chapters" class="grid"></div>
+
+  <h2>Reference</h2>
+  <div class="row">
+    <a class="btn ghost" href="grammar/">Tag grammar rules</a>
+    <a class="btn ghost" href="scenes/">Browse by scene</a>
+    <a class="btn ghost" href="progress/">Your progress</a>
+    <a class="btn ghost" href="print/">Printable workbooks</a>
+  </div>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, CHAPTERS } from './js/app.js';
+import { loadDayLog, daysDoneCount } from './js/srs.js';
+renderHeader('home');
+
+const chWrap = document.getElementById('chapters');
+CHAPTERS.forEach(c => {
+  const a = document.createElement('a');
+  a.className = 'chapter-card';
+  a.href = `ch/?n=${c.n}`;
+  a.innerHTML = `<div class="n">Chapter ${c.n} · Day ${c.days.join('–')}</div><div class="t">${c.title}</div><div class="small muted">${c.sub}</div>`;
+  chWrap.appendChild(a);
+});
+
+const done = daysDoneCount();
+document.getElementById('progressLabel').textContent = `Day ${Math.min(done + 1, 14)} of 14`;
+document.getElementById('progressSub').textContent = done ? `${done} day${done > 1 ? 's' : ''} done` : 'not started yet';
+document.getElementById('progressBar').style.width = Math.round((done / 14) * 100) + '%';
+const log = loadDayLog();
+let nextDay = 1;
+for (let d = 1; d <= 14; d++) if (!log[d]) { nextDay = d; break; } else nextDay = Math.min(d + 1, 14);
+const nextChapter = CHAPTERS.find(c => c.days.includes(nextDay)) || CHAPTERS[0];
+document.getElementById('continueBtn').href = `ch/?n=${nextChapter.n}&day=${nextDay}`;
+document.getElementById('continueBtn').textContent = done ? `Continue → Day ${nextDay}` : 'Start Day 1 →';
+
+renderFooter();
+</script>
+</body>
+</html>
