@@ -1,199 +1,598 @@
 {
   "principles": [
-    { "n": 1, "title": "The core comes last",
-      "text": "Every sentence ends with one core: a verb (いきます), an adjective (おいしいです) or a noun + です (がくせいです). The core alone is already a full sentence — Japanese drops whatever the listener can guess.",
-      "ex": ["いきます。|I'll go.", "おいしいです。|It's delicious.", "がくせいです。|I'm a student."] },
-    { "n": 2, "title": "A chunk = a noun + a tag",
+    {
+      "n": 1,
+      "title": "The core comes last",
+      "text": "Every sentence ends with one core: a verb (いきます), an adjective (おいしいです) or a noun + です (がくせいです). The core alone is already a full sentence — Japanese drops whatever the listener can guess. And the core has only four endings: ます, ますか, ません, ましょう.",
+      "ex": [
+        "いきます。|I'll go.",
+        "いきましょう。|Let's go.",
+        "おいしいです。|It's delicious.",
+        "がくせいです。|I'm a student."
+      ]
+    },
+    {
+      "n": 2,
+      "title": "A chunk = a noun + a tag",
       "text": "Everything in front of the core is a chunk: a noun (or noun phrase) with a small tag stuck on the end. The tag tells the listener the chunk's job — who, what, where, when, with whom. English uses word order for this; Japanese uses tags.",
-      "ex": ["ともだち.と いきます。|I'll go with a friend.", "えき.で あいます。|We'll meet at the station."] },
-    { "n": 3, "title": "Chunk order is free",
+      "ex": [
+        "ともだち.と いきます。|I'll go with a friend.",
+        "えき.で あいます。|We'll meet at the station."
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Chunk order is free",
       "text": "Because every chunk carries its own tag, you can shuffle the chunks and the meaning stays the same. What changes is the emphasis: the chunk you put first is the one you are setting up, and the chunk right before the core is the one you are stressing.",
-      "ex": ["あした ともだち.と なら.に いきます。|Tomorrow I'll go to Nara with a friend.", "なら.に あした ともだち.と いきます。|To Nara — I'll go tomorrow, with a friend.", "ともだち.と なら.に あした いきます。|With a friend, to Nara — tomorrow."] },
-    { "n": 4, "title": "Drop what is already known",
+      "ex": [
+        "あした ともだち.と なら.に いきます。|Tomorrow I'll go to Nara with a friend.",
+        "なら.に あした ともだち.と いきます。|To Nara — I'll go tomorrow, with a friend.",
+        "ともだち.と なら.に あした いきます。|With a friend, to Nara — tomorrow."
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Drop what is already known",
       "text": "If the listener already knows a chunk, leave it out. Japanese speakers rarely say わたし.は (I) — it is obvious who is talking. Answers usually keep only the new information plus the core.",
-      "ex": ["なに.を のみます？|What will you drink?", "おちゃ.を のみます。|(I'll drink) tea.", "おちゃ.を ください。|Tea, please."] },
-    { "n": 5, "title": "Decorations stay inside the chunk",
+      "ex": [
+        "なに.を のみますか？|What will you drink?",
+        "おちゃ.を のみます。|(I'll drink) tea.",
+        "おちゃ.を ください。|Tea, please."
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Decorations stay inside the chunk",
       "text": "Adjectives, の-links (my, Nara's, the station's) and numbers are part of the noun. They go inside the chunk, before the noun, and the tag still goes at the very end of the whole chunk.",
-      "ex": ["あたらしいくるま.で いきます。|I'll go in the new car.", "わたしのいえ.に きます？|Will you come to my house?", "ならのみせ.で かいます。|I'll buy it at a shop in Nara."] }
+      "ex": [
+        "あたらしいくるま.で いきます。|I'll go in the new car.",
+        "わたしのいえ.に きますか？|Will you come to my house?",
+        "ならのみせ.で かいます。|I'll buy it at a shop in Nara."
+      ]
+    }
   ],
-
   "level1": [
-    { "rule": "The core never changes", "how": "Pick the polite form (〜ます, 〜です) and keep it. No past forms, no plain forms, no te-forms to memorise yet.",
-      "ex": ["まいにち おちゃ.を のみます。|I drink tea every day."] },
-    { "rule": "Past and future come from a time word", "how": "Add a time word as a chunk with no tag: きのう (yesterday), あした (tomorrow), せんしゅう (last week), らいしゅう (next week). The time word does the job the verb ending does in English.",
-      "ex": ["きのう なら.に いきます。|I went to Nara yesterday. (Level 1)", "あした なら.に いきます。|I'll go to Nara tomorrow."],
-      "note": "A native speaker would say いきました (ikimashita) for the past. That is Level 2. At Level 1 you are always understood — the time word makes it clear — and you can speak from day one." },
-    { "rule": "Negative = ません", "how": "Swap ます for ません. That is the only change allowed in Level 1, and it is really a different core word, not a conjugation drill.",
-      "ex": ["きょう.は いきません。|I'm not going today.", "コーヒー.は のみません。|I don't drink coffee."] },
-    { "rule": "Questions just rise ↗", "how": "Same words, same order. Lift your voice on the last syllable. No か needed — in everyday talk, a rising ます or です is exactly how people ask.",
-      "ex": ["あした きます？|Are you coming tomorrow?", "これ.は いくらです？|How much is this?"] }
+    {
+      "rule": "Four endings, nothing else",
+      "how": "The core only ever uses four endings. ます says it, ますか asks it, ません denies it, ましょう invites. That is the whole verb system at Level 1 — no past forms, no plain forms, no te-forms to memorise yet.",
+      "ex": [
+        "いきます。|I'll go.",
+        "いきますか？|Are you going?",
+        "いきません。|I'm not going.",
+        "いきましょう。|Let's go."
+      ],
+      "table": [
+        [
+          "ます",
+          "masu",
+          "statement",
+          "たべます — I eat / I'll eat"
+        ],
+        [
+          "ますか",
+          "masu ka",
+          "question",
+          "たべますか？ — Do you eat? / Will you eat?"
+        ],
+        [
+          "ません",
+          "masen",
+          "negative",
+          "たべません — I don't eat / I won't eat"
+        ],
+        [
+          "ましょう",
+          "mashō",
+          "invitation",
+          "たべましょう — Let's eat"
+        ]
+      ]
+    },
+    {
+      "rule": "Nouns and adjectives: です / ですか",
+      "how": "When the core is a noun or an adjective, the same idea uses です to say it and ですか to ask it.",
+      "ex": [
+        "がくせいです。|I'm a student.",
+        "これ.は いくらですか？|How much is this?",
+        "おいしいですか？|Is it good?"
+      ]
+    },
+    {
+      "rule": "Past and future come from a time word",
+      "how": "Add a time word as a chunk with no tag: きのう (yesterday), あした (tomorrow), せんしゅう (last week), らいしゅう (next week). The time word does the job the verb ending does in English.",
+      "ex": [
+        "きのう なら.に いきます。|I went to Nara yesterday. (Level 1)",
+        "あした なら.に いきます。|I'll go to Nara tomorrow.",
+        "あした なら.に いきましょう。|Let's go to Nara tomorrow."
+      ],
+      "note": "A native speaker would say いきました (ikimashita) for the past. That is Level 2. At Level 1 you are always understood — the time word makes it clear — and you can speak from day one."
+    },
+    {
+      "rule": "Questions: just add か",
+      "how": "Same words, same order — put か on the end of the core and let your voice rise on it. ませんか (won't you…?) is a soft invitation.",
+      "ex": [
+        "あした きますか？|Are you coming tomorrow?",
+        "なに.を たべますか？|What will you eat?",
+        "いっしょに いきませんか？|Won't you come with me?"
+      ]
+    }
   ],
-
   "cores": [
-    { "type": "Verb", "form": "〜ます / 〜ません", "text": "Actions and existence. The most common cores are いきます (go), きます (come), かいます (buy), たべます (eat), のみます (drink), あります (there is — things), います (there is — people, animals).",
-      "ex": ["バス.で いきます。|I'll go by bus.", "じかん.が ありません。|I don't have time."] },
-    { "type": "Adjective", "form": "〜いです / 〜です", "text": "Describing. い-adjectives keep their い and add です (たかいです, おいしいです). な-adjectives just add です (しずかです, きれいです).",
-      "ex": ["このおちゃ.は おいしいです。|This tea is delicious.", "このまち.は しずかです。|This town is quiet."] },
-    { "type": "Noun + です", "form": "〜です", "text": "Saying what something is. Any noun becomes a core by adding です.",
-      "ex": ["わたし.は がくせいです。|I'm a student.", "あした.は やすみです。|Tomorrow is a day off."] },
-    { "type": "Request", "form": "〜ください", "text": "Asking for things. Put what you want in a を chunk and finish with ください.",
-      "ex": ["みず.を ください。|Water, please.", "これ.を ふたつ ください。|Two of these, please."] }
+    {
+      "type": "Verb",
+      "form": "〜ます / 〜ますか / 〜ません / 〜ましょう",
+      "text": "Actions and existence. The most common cores are いきます (go), きます (come), かいます (buy), たべます (eat), のみます (drink), あります (there is — things), います (there is — people, animals).",
+      "ex": [
+        "バス.で いきます。|I'll go by bus.",
+        "じかん.が ありません。|I don't have time.",
+        "えき.で あいましょう。|Let's meet at the station."
+      ]
+    },
+    {
+      "type": "Adjective",
+      "form": "〜いです / 〜です (ですか)",
+      "text": "Describing. い-adjectives keep their い and add です (たかいです, おいしいです). な-adjectives just add です (しずかです, きれいです).",
+      "ex": [
+        "このおちゃ.は おいしいです。|This tea is delicious.",
+        "このまち.は しずかです。|This town is quiet."
+      ]
+    },
+    {
+      "type": "Noun + です",
+      "form": "〜です (ですか)",
+      "text": "Saying what something is. Any noun becomes a core by adding です.",
+      "ex": [
+        "わたし.は がくせいです。|I'm a student.",
+        "あした.は やすみです。|Tomorrow is a day off."
+      ]
+    },
+    {
+      "type": "Request",
+      "form": "〜ください",
+      "text": "Asking for things. Put what you want in a を chunk and finish with ください.",
+      "ex": [
+        "みず.を ください。|Water, please.",
+        "これ.を ふたつ ください。|Two of these, please."
+      ]
+    }
   ],
-
   "tags": [
-    { "p": "は", "picture": "A spotlight. It points at the thing you want to talk about and says: \"now, about this…\"",
+    {
+      "p": "は",
+      "picture": "A spotlight. It points at the thing you want to talk about and says: \"now, about this…\"",
       "asks": "What are we talking about?",
       "uses": [
-        { "h": "The topic of the sentence", "text": "は sets the stage. Everything after it is a comment about that topic. It is usually the first chunk, but it does not have to be.",
-          "ex": ["わたし.は たなかです。|I'm Tanaka.", "このおちゃ.は たかいです。|This tea is expensive."] },
-        { "h": "Contrast", "text": "は can also mean \"as for this one (unlike others)\". That is why negative sentences love は.",
-          "ex": ["コーヒー.は のみません。|Coffee, I don't drink.", "きょう.は いきません。|Today I'm not going (another day, maybe)."] },
-        { "h": "Time words as a topic", "text": "Time words normally take no tag, but adding は turns them into the topic: \"as for tomorrow…\".",
-          "ex": ["あした.は やすみです。|Tomorrow is a day off.", "にちようび.は はたけ.に いきます。|On Sundays I go to the field."] }
+        {
+          "h": "The topic of the sentence",
+          "text": "は sets the stage. Everything after it is a comment about that topic. It is usually the first chunk, but it does not have to be.",
+          "ex": [
+            "わたし.は たなかです。|I'm Tanaka.",
+            "このおちゃ.は たかいです。|This tea is expensive."
+          ]
+        },
+        {
+          "h": "Contrast",
+          "text": "は can also mean \"as for this one (unlike others)\". That is why negative sentences love は.",
+          "ex": [
+            "コーヒー.は のみません。|Coffee, I don't drink.",
+            "きょう.は いきません。|Today I'm not going (another day, maybe)."
+          ]
+        },
+        {
+          "h": "Time words as a topic",
+          "text": "Time words normally take no tag, but adding は turns them into the topic: \"as for tomorrow…\".",
+          "ex": [
+            "あした.は やすみです。|Tomorrow is a day off.",
+            "にちようび.は はたけ.に いきます。|On Sundays I go to the field."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "だれ.は きます？", "right": "だれ.が きます？|Who's coming?", "why": "Question words (だれ, なに, どこ as the doer) can never be the topic — you don't know them yet. Use が." }
-      ] },
-
-    { "p": "が", "picture": "A pointing finger. It singles out who does it, or what is there — often as news.",
+        {
+          "wrong": "だれ.は きますか？",
+          "right": "だれ.が きますか？|Who's coming?",
+          "why": "Question words (だれ, なに, どこ as the doer) can never be the topic — you don't know them yet. Use が."
+        }
+      ]
+    },
+    {
+      "p": "が",
+      "picture": "A pointing finger. It singles out who does it, or what is there — often as news.",
       "asks": "Who? What? (as the answer)",
       "uses": [
-        { "h": "The doer — as new information", "text": "が marks who does the action when that is the news, and it always answers だれ？ (who) and なに？ (what) as the doer.",
-          "ex": ["だれ.が きます？|Who's coming?", "たなかさん.が きます。|Mr Tanaka is coming.", "あめ.が ふります。|It's raining. / Rain falls."] },
-        { "h": "What exists", "text": "With あります / います, が marks the thing or person that is there.",
-          "ex": ["じかん.が あります。|I have time.", "へや.に ねこ.が います。|There's a cat in the room."] },
-        { "h": "Likes, wants, skills", "text": "すきです (like), ほしいです (want), じょうずです (good at), わかります (understand) take が for their object.",
-          "ex": ["おちゃ.が すきです。|I like tea.", "にほんご.が わかります？|Do you understand Japanese?", "あたま.が いたいです。|My head hurts."] }
+        {
+          "h": "The doer — as new information",
+          "text": "が marks who does the action when that is the news, and it always answers だれ？ (who) and なに？ (what) as the doer.",
+          "ex": [
+            "だれ.が きますか？|Who's coming?",
+            "たなかさん.が きます。|Mr Tanaka is coming.",
+            "あめ.が ふります。|It's raining. / Rain falls."
+          ]
+        },
+        {
+          "h": "What exists",
+          "text": "With あります / います, が marks the thing or person that is there.",
+          "ex": [
+            "じかん.が あります。|I have time.",
+            "へや.に ねこ.が います。|There's a cat in the room."
+          ]
+        },
+        {
+          "h": "Likes, wants, skills",
+          "text": "すきです (like), ほしいです (want), じょうずです (good at), わかります (understand) take が for their object.",
+          "ex": [
+            "おちゃ.が すきです。|I like tea.",
+            "にほんご.が わかりますか？|Do you understand Japanese?",
+            "あたま.が いたいです。|My head hurts."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "おちゃ.を すきです。", "right": "おちゃ.が すきです。|I like tea.", "why": "すきです is a description (\"tea is liked\"), not an action, so the liked thing takes が." }
-      ] },
-
-    { "p": "を", "picture": "An arrow landing on its target. The action hits this thing.",
+        {
+          "wrong": "おちゃ.を すきです。",
+          "right": "おちゃ.が すきです。|I like tea.",
+          "why": "すきです is a description (\"tea is liked\"), not an action, so the liked thing takes が."
+        }
+      ]
+    },
+    {
+      "p": "を",
+      "picture": "An arrow landing on its target. The action hits this thing.",
       "asks": "Do what? (the thing acted on)",
       "uses": [
-        { "h": "The object of an action", "text": "What you eat, drink, buy, read, make, see. If you can ask \"(verb) what?\", the answer takes を. Pronounced o.",
-          "ex": ["おちゃ.を のみます。|I drink tea.", "やさい.を かいます。|I'll buy vegetables.", "なに.を たべます？|What will you eat?"] },
-        { "h": "The route you move along", "text": "With moving verbs, を marks the path you go along or through.",
-          "ex": ["このみち.を あるきます。|I'll walk along this road.", "はし.を わたります。|I'll cross the bridge."] },
-        { "h": "The place you leave", "text": "でます (leave), おります (get off) take を for the place you leave.",
-          "ex": ["しちじ.に いえ.を でます。|I leave home at seven.", "つぎのえき.で でんしゃ.を おります。|I'll get off the train at the next station."] }
+        {
+          "h": "The object of an action",
+          "text": "What you eat, drink, buy, read, make, see. If you can ask \"(verb) what?\", the answer takes を. Pronounced o.",
+          "ex": [
+            "おちゃ.を のみます。|I drink tea.",
+            "やさい.を かいます。|I'll buy vegetables.",
+            "なに.を たべますか？|What will you eat?"
+          ]
+        },
+        {
+          "h": "The route you move along",
+          "text": "With moving verbs, を marks the path you go along or through.",
+          "ex": [
+            "このみち.を あるきます。|I'll walk along this road.",
+            "はし.を わたります。|I'll cross the bridge."
+          ]
+        },
+        {
+          "h": "The place you leave",
+          "text": "でます (leave), おります (get off) take を for the place you leave.",
+          "ex": [
+            "しちじ.に いえ.を でます。|I leave home at seven.",
+            "つぎのえき.で でんしゃ.を おります。|I'll get off the train at the next station."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "ともだち.を あいます。", "right": "ともだち.に あいます。|I'll meet a friend.", "why": "In Japanese you meet \"to\" someone — あいます always takes に." }
-      ] },
-
-    { "p": "に", "picture": "A pin on a map. It marks the exact point where something arrives, sits, or happens in time.",
+        {
+          "wrong": "ともだち.を あいます。",
+          "right": "ともだち.に あいます。|I'll meet a friend.",
+          "why": "In Japanese you meet \"to\" someone — あいます always takes に."
+        }
+      ]
+    },
+    {
+      "p": "に",
+      "picture": "A pin on a map. It marks the exact point where something arrives, sits, or happens in time.",
       "asks": "To where? To whom? At what time? Where (it sits)?",
       "uses": [
-        { "h": "Destination", "text": "Where you go, come or return to.",
-          "ex": ["なら.に いきます。|I'll go to Nara.", "いえ.に かえります。|I'll go home."] },
-        { "h": "Receiver / person you meet", "text": "Who you give to, send to, tell, call or meet.",
-          "ex": ["はは.に でんわ.を します。|I'll call my mother.", "ともだち.に あいます。|I'll meet a friend."] },
-        { "h": "Clock time and dates", "text": "Numbers on a clock or calendar take に. Relative words (きょう, あした, まいにち) do not.",
-          "ex": ["しちじ.に おきます。|I get up at seven.", "なんじ.に きます？|What time are you coming?"] },
-        { "h": "Where something is", "text": "With あります / います, に marks the place where something is sitting.",
-          "ex": ["いま いえ.に います。|I'm at home now.", "えきのまえ.に みせ.が あります。|There's a shop in front of the station."] }
+        {
+          "h": "Destination",
+          "text": "Where you go, come or return to.",
+          "ex": [
+            "なら.に いきます。|I'll go to Nara.",
+            "いえ.に かえります。|I'll go home."
+          ]
+        },
+        {
+          "h": "Receiver / person you meet",
+          "text": "Who you give to, send to, tell, call or meet.",
+          "ex": [
+            "はは.に でんわ.を します。|I'll call my mother.",
+            "ともだち.に あいます。|I'll meet a friend."
+          ]
+        },
+        {
+          "h": "Clock time and dates",
+          "text": "Numbers on a clock or calendar take に. Relative words (きょう, あした, まいにち) do not.",
+          "ex": [
+            "しちじ.に おきます。|I get up at seven.",
+            "なんじ.に きますか？|What time are you coming?"
+          ]
+        },
+        {
+          "h": "Where something is",
+          "text": "With あります / います, に marks the place where something is sitting.",
+          "ex": [
+            "いま いえ.に います。|I'm at home now.",
+            "えきのまえ.に みせ.が あります。|There's a shop in front of the station."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "あした.に いきます。", "right": "あした いきます。|I'll go tomorrow.", "why": "Relative time words (あした, きょう, らいしゅう) take no tag. Only clock times and dates get に." },
-        { "wrong": "みせ.に かいます。", "right": "みせ.で かいます。|I'll buy it at the shop.", "why": "Where an action happens takes で. に is only for where something is or where you arrive." }
-      ] },
-
-    { "p": "で", "picture": "A stage. The action is performed here — or with this tool.",
+        {
+          "wrong": "あした.に いきます。",
+          "right": "あした いきます。|I'll go tomorrow.",
+          "why": "Relative time words (あした, きょう, らいしゅう) take no tag. Only clock times and dates get に."
+        },
+        {
+          "wrong": "みせ.に かいます。",
+          "right": "みせ.で かいます。|I'll buy it at the shop.",
+          "why": "Where an action happens takes で. に is only for where something is or where you arrive."
+        }
+      ]
+    },
+    {
+      "p": "で",
+      "picture": "A stage. The action is performed here — or with this tool.",
       "asks": "Where does it happen? By what means?",
       "uses": [
-        { "h": "Place of action", "text": "Where you eat, buy, work, meet — anywhere something is done.",
-          "ex": ["みせ.で かいます。|I'll buy it at the shop.", "かいしゃ.で はたらきます。|I work at a company.", "どこ.で たべます？|Where shall we eat?"] },
-        { "h": "Means and tools", "text": "By bus, with chopsticks, in Japanese, by card.",
-          "ex": ["バス.で いきます。|I'll go by bus.", "にほんご.で はなします。|I'll speak in Japanese.", "カード.で はらいます。|I'll pay by card."] },
-        { "h": "Total and scope", "text": "ぜんぶ.で (all together), ひとり.で (alone).",
-          "ex": ["ぜんぶ.で いくらです？|How much altogether?", "ひとり.で いきます。|I'll go alone."] }
+        {
+          "h": "Place of action",
+          "text": "Where you eat, buy, work, meet — anywhere something is done.",
+          "ex": [
+            "みせ.で かいます。|I'll buy it at the shop.",
+            "かいしゃ.で はたらきます。|I work at a company.",
+            "どこ.で たべますか？|Where shall we eat?"
+          ]
+        },
+        {
+          "h": "Means and tools",
+          "text": "By bus, with chopsticks, in Japanese, by card.",
+          "ex": [
+            "バス.で いきます。|I'll go by bus.",
+            "にほんご.で はなします。|I'll speak in Japanese.",
+            "カード.で はらいます。|I'll pay by card."
+          ]
+        },
+        {
+          "h": "Total and scope",
+          "text": "ぜんぶ.で (all together), ひとり.で (alone).",
+          "ex": [
+            "ぜんぶ.で いくらですか？|How much altogether?",
+            "ひとり.で いきます。|I'll go alone."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "いえ.で います。", "right": "いえ.に います。|I'm at home.", "why": "います / あります only say where something IS — that's に. で is for places where something is DONE." }
-      ] },
-
-    { "p": "と", "picture": "Two hands joined. Together with — or simply \"and\".",
+        {
+          "wrong": "いえ.で います。",
+          "right": "いえ.に います。|I'm at home.",
+          "why": "います / あります only say where something IS — that's に. で is for places where something is DONE."
+        }
+      ]
+    },
+    {
+      "p": "と",
+      "picture": "Two hands joined. Together with — or simply \"and\".",
       "asks": "With whom?",
       "uses": [
-        { "h": "Together with", "text": "The person you do something with.",
-          "ex": ["ともだち.と いきます。|I'll go with a friend.", "だれ.と たべます？|Who are you eating with?"] },
-        { "h": "And (between nouns)", "text": "Joins two nouns into one chunk. The last noun carries the real tag.",
-          "ex": ["おちゃとおかし.を ください。|Tea and sweets, please.", "パンとたまご.を たべます。|I eat bread and eggs."] }
+        {
+          "h": "Together with",
+          "text": "The person you do something with.",
+          "ex": [
+            "ともだち.と いきます。|I'll go with a friend.",
+            "だれ.と たべますか？|Who are you eating with?"
+          ]
+        },
+        {
+          "h": "And (between nouns)",
+          "text": "Joins two nouns into one chunk. The last noun carries the real tag.",
+          "ex": [
+            "おちゃとおかし.を ください。|Tea and sweets, please.",
+            "パンとたまご.を たべます。|I eat bread and eggs."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "ともだち.と あいます。", "right": "ともだち.に あいます。|I'll meet a friend.", "why": "Both exist, but ともだち.に あいます is the everyday one for meeting up. ともだち.と あいます suggests a planned, mutual meeting." }
-      ] },
-
-    { "p": "へ", "picture": "A compass needle. It shows the direction you are heading.",
+        {
+          "wrong": "ともだち.と あいます。",
+          "right": "ともだち.に あいます。|I'll meet a friend.",
+          "why": "Both exist, but ともだち.に あいます is the everyday one for meeting up. ともだち.と あいます suggests a planned, mutual meeting."
+        }
+      ]
+    },
+    {
+      "p": "へ",
+      "picture": "A compass needle. It shows the direction you are heading.",
       "asks": "Which way? Toward where?",
       "uses": [
-        { "h": "Direction of movement", "text": "Very close to に for destinations. へ stresses the direction and journey; に stresses arrival. In daily talk either is fine. Pronounced e.",
-          "ex": ["とうきょう.へ いきます。|I'll head to Tokyo.", "はたけ.へ いきます。|I'm heading to the field."] }
+        {
+          "h": "Direction of movement",
+          "text": "Very close to に for destinations. へ stresses the direction and journey; に stresses arrival. In daily talk either is fine. Pronounced e.",
+          "ex": [
+            "とうきょう.へ いきます。|I'll head to Tokyo.",
+            "はたけ.へ いきます。|I'm heading to the field."
+          ]
+        }
       ],
-      "mistakes": [] },
-
-    { "p": "から", "picture": "A starting line. Where or when it begins.",
+      "mistakes": []
+    },
+    {
+      "p": "から",
+      "picture": "A starting line. Where or when it begins.",
       "asks": "From where? From when? From whom?",
       "uses": [
-        { "h": "Starting place", "text": "Where you come from, where something starts.",
-          "ex": ["なら.から きます。|I'm coming from Nara.", "どこ.から きます？|Where are you coming from?"] },
-        { "h": "Starting time", "text": "When something begins.",
-          "ex": ["くじ.から はたらきます。|I work from nine.", "あした.から やすみです。|I'm off from tomorrow."] },
-        { "h": "Source (person)", "text": "Who you hear, get or receive something from.",
-          "ex": ["ともだち.から ききます。|I hear it from a friend."] }
+        {
+          "h": "Starting place",
+          "text": "Where you come from, where something starts.",
+          "ex": [
+            "なら.から きます。|I'm coming from Nara.",
+            "どこ.から きますか？|Where are you coming from?"
+          ]
+        },
+        {
+          "h": "Starting time",
+          "text": "When something begins.",
+          "ex": [
+            "くじ.から はたらきます。|I work from nine.",
+            "あした.から やすみです。|I'm off from tomorrow."
+          ]
+        },
+        {
+          "h": "Source (person)",
+          "text": "Who you hear, get or receive something from.",
+          "ex": [
+            "ともだち.から ききます。|I hear it from a friend."
+          ]
+        }
       ],
-      "mistakes": [] },
-
-    { "p": "まで", "picture": "A finish line. Where or when it ends.",
+      "mistakes": []
+    },
+    {
+      "p": "まで",
+      "picture": "A finish line. Where or when it ends.",
       "asks": "Until when? Up to where?",
       "uses": [
-        { "h": "End point in time", "text": "Until what time or day.",
-          "ex": ["ごじ.まで はたらきます。|I work until five.", "なんじ.まで あいています？|Until what time is it open?"] },
-        { "h": "End point in space", "text": "As far as a place.",
-          "ex": ["えき.まで あるきます。|I'll walk to the station.", "きょうと.まで バス.で いきます。|I'll go as far as Kyoto by bus."] },
-        { "h": "から〜まで — a span", "text": "Put a から chunk and a まで chunk together for \"from … to …\". Each is its own chunk, so they can move.",
-          "ex": ["くじ.から ごじ.まで はたらきます。|I work from nine to five.", "なら.から きょうと.まで でんしゃ.で いきます。|I'll take the train from Nara to Kyoto."] }
+        {
+          "h": "End point in time",
+          "text": "Until what time or day.",
+          "ex": [
+            "ごじ.まで はたらきます。|I work until five.",
+            "なんじ.まで あいていますか？|Until what time is it open?"
+          ]
+        },
+        {
+          "h": "End point in space",
+          "text": "As far as a place.",
+          "ex": [
+            "えき.まで あるきます。|I'll walk to the station.",
+            "きょうと.まで バス.で いきます。|I'll go as far as Kyoto by bus."
+          ]
+        },
+        {
+          "h": "から〜まで — a span",
+          "text": "Put a から chunk and a まで chunk together for \"from … to …\". Each is its own chunk, so they can move.",
+          "ex": [
+            "くじ.から ごじ.まで はたらきます。|I work from nine to five.",
+            "なら.から きょうと.まで でんしゃ.で いきます。|I'll take the train from Nara to Kyoto."
+          ]
+        }
       ],
-      "mistakes": [] },
-
-    { "p": "も", "picture": "A plus sign. \"This one too.\"",
+      "mistakes": []
+    },
+    {
+      "p": "も",
+      "picture": "A plus sign. \"This one too.\"",
       "asks": "Also / too / even",
       "uses": [
-        { "h": "Replaces は, が, を", "text": "も takes the place of は, が or を — never stack them.",
-          "ex": ["わたし.も いきます。|I'm going too.", "おちゃ.も のみます。|I'll drink tea too."] },
-        { "h": "Added after the other tags", "text": "After に, で, と, へ, から, まで, keep the tag and add も: でも, にも, とも…",
-          "ex": ["なら.でも かいます。|I buy it in Nara too.", "ともだち.にも いいます。|I'll tell my friend too."] },
-        { "h": "Not at all (with ません)", "text": "A question word + も + ません = none at all.",
-          "ex": ["なに.も たべません。|I don't eat anything.", "だれ.も いません。|Nobody is here."] }
+        {
+          "h": "Replaces は, が, を",
+          "text": "も takes the place of は, が or を — never stack them.",
+          "ex": [
+            "わたし.も いきます。|I'm going too.",
+            "おちゃ.も のみます。|I'll drink tea too."
+          ]
+        },
+        {
+          "h": "Added after the other tags",
+          "text": "After に, で, と, へ, から, まで, keep the tag and add も: でも, にも, とも…",
+          "ex": [
+            "なら.でも かいます。|I buy it in Nara too.",
+            "ともだち.にも いいます。|I'll tell my friend too."
+          ]
+        },
+        {
+          "h": "Not at all (with ません)",
+          "text": "A question word + も + ません = none at all.",
+          "ex": [
+            "なに.も たべません。|I don't eat anything.",
+            "だれ.も いません。|Nobody is here."
+          ]
+        }
       ],
       "mistakes": [
-        { "wrong": "わたし.はも いきます。", "right": "わたし.も いきます。|I'm going too.", "why": "も replaces は / が / を. It only stacks after the other tags (でも, にも…)." }
-      ] }
+        {
+          "wrong": "わたし.はも いきます。",
+          "right": "わたし.も いきます。|I'm going too.",
+          "why": "も replaces は / が / を. It only stacks after the other tags (でも, にも…)."
+        }
+      ]
+    }
   ],
-
   "notag": {
     "title": "No tag at all",
     "text": "Some chunks take no tag. Relative time words (きょう, あした, きのう, まいにち, いま, らいしゅう) and amounts (ひとつ, ふたつ, すこし) sit in front of the core just as they are. In Level 1, the tagless time word is what makes a sentence past or future.",
-    "ex": ["あした いきます。|I'll go tomorrow.", "まいにち おちゃ.を のみます。|I drink tea every day.", "おちゃ.を ふたつ ください。|Two teas, please."]
+    "ex": [
+      "あした いきます。|I'll go tomorrow.",
+      "まいにち おちゃ.を のみます。|I drink tea every day.",
+      "おちゃ.を ふたつ ください。|Two teas, please."
+    ]
   },
-
   "no": {
     "title": "の — the glue inside a chunk",
     "text": "の is not a tag. It links two nouns inside one chunk, like English 's or \"of\": わたしのいえ (my house), ならのおちゃ (tea from Nara), えきのまえ (the front of the station). The whole thing is one chunk, and the real tag still goes at the end.",
-    "ex": ["わたしのいえ.に きます？|Are you coming to my house?", "ならのおちゃ.を かいます。|I'll buy tea from Nara.", "えきのまえ.で あいます。|Let's meet in front of the station."]
+    "ex": [
+      "わたしのいえ.に きますか？|Are you coming to my house?",
+      "ならのおちゃ.を かいます。|I'll buy tea from Nara.",
+      "えきのまえ.で あいます。|Let's meet in front of the station."
+    ]
   },
-
   "questionWords": [
-    { "k": "だれ", "en": "who", "ex": ["だれ.が きます？|Who's coming?", "だれ.と いきます？|Who are you going with?"] },
-    { "k": "なに", "en": "what", "ex": ["なに.を たべます？|What will you eat?", "なに.が すきです？|What do you like?"] },
-    { "k": "どこ", "en": "where", "ex": ["どこ.に いきます？|Where are you going?", "どこ.で かいます？|Where do you buy it?"] },
-    { "k": "なんじ", "en": "what time", "ex": ["なんじ.に きます？|What time are you coming?", "なんじ.まで はたらきます？|Until what time do you work?"] },
-    { "k": "いつ", "en": "when", "ex": ["いつ きます？|When are you coming?", "いつ.から やすみです？|From when are you off?"] },
-    { "k": "いくら", "en": "how much", "ex": ["これ.は いくらです？|How much is this?"] },
-    { "k": "どれ", "en": "which one", "ex": ["どれ.が いいです？|Which one is good?"] },
-    { "k": "どう", "en": "how", "ex": ["あじ.は どうです？|How does it taste?"] }
+    {
+      "k": "だれ",
+      "en": "who",
+      "ex": [
+        "だれ.が きますか？|Who's coming?",
+        "だれ.と いきますか？|Who are you going with?"
+      ]
+    },
+    {
+      "k": "なに",
+      "en": "what",
+      "ex": [
+        "なに.を たべますか？|What will you eat?",
+        "なに.が すきですか？|What do you like?"
+      ]
+    },
+    {
+      "k": "どこ",
+      "en": "where",
+      "ex": [
+        "どこ.に いきますか？|Where are you going?",
+        "どこ.で かいますか？|Where do you buy it?"
+      ]
+    },
+    {
+      "k": "なんじ",
+      "en": "what time",
+      "ex": [
+        "なんじ.に きますか？|What time are you coming?",
+        "なんじ.まで はたらきますか？|Until what time do you work?"
+      ]
+    },
+    {
+      "k": "いつ",
+      "en": "when",
+      "ex": [
+        "いつ きますか？|When are you coming?",
+        "いつ.から やすみですか？|From when are you off?"
+      ]
+    },
+    {
+      "k": "いくら",
+      "en": "how much",
+      "ex": [
+        "これ.は いくらですか？|How much is this?"
+      ]
+    },
+    {
+      "k": "どれ",
+      "en": "which one",
+      "ex": [
+        "どれ.が いいですか？|Which one is good?"
+      ]
+    },
+    {
+      "k": "どう",
+      "en": "how",
+      "ex": [
+        "あじ.は どうですか？|How does it taste?"
+      ]
+    }
   ],
-  "questionNote": "A question word sits in the same slot as its answer, with the same tag. Ask なに.を たべます？, answer おちゃ.を のみます / パン.を たべます. And the voice rises at the end — no か."
+  "questionNote": "A question word sits in the same slot as its answer, with the same tag, and the core takes か. Ask なに.を たべますか？, answer おちゃ.を のみます / パン.を たべます. Word order never changes for a question."
 }

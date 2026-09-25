@@ -32,7 +32,7 @@ export function buildWidget(ex, opts = {}) {
     });
     const core = chunkCard(ex.core, { core: true, gloss: false }); core.classList.add('locked');
     slot.appendChild(core);
-    const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '↗' : '。';
+    const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '？' : '。';
     slot.appendChild(punct);
   }
   function render() { renderBank(); renderSlot(); }

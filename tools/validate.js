@@ -13,9 +13,9 @@ const ROLES = new Set([...particles.map(p => p.role), 'time', 'bare']);
 const TENSES = new Set(['past', 'present', 'future']);
 const COUNTS = {1: 150, 2: 200, 3: 200, 4: 200, 5: 200, 6: 200, 7: 200, 8: 200, 9: 200, 10: 250};
 const MAX_CHUNKS = {1: 2, 2: 3, 3: 3, 4: 4, 5: 4, 6: 4, 7: 5, 8: 5, 9: 5, 10: 5};
-const BAD_CORE = /(ましょう|か|ね|よ)$/;
+const BAD_CORE = /(ましょうか|ね|よ)$/;
 const BAD_CORE_UNLESS_PHRASE = /(ました|でした)$/;
-const POLITE_TAIL = /(ます|です|ません|ください|なさい)$/;
+const POLITE_TAIL = /(ます|ますか|です|ですか|ません|ませんか|ましょう|ください|なさい)$/;
 const PHRASE_OK = new Set(['また明日','じゃあ、また','また','ただいま','いってらっしゃい','はじめまして','もしもし','どうぞ','お大事に','こんばんは','こんにちは','さようなら','いただきます','わかりました','ごちそうさまでした']);
 const HAS_PARTICLE_TAIL = /(は|が|を|に|で|と|へ|から|まで|も)$/;
 
@@ -53,7 +53,9 @@ function validateFile(file) {
     if (ex.chunks.length > MAX_CHUNKS[chapter]) err(id, `too many chunks (${ex.chunks.length} > ${MAX_CHUNKS[chapter]})`);
     if (chapter > 1 && ex.chunks.length === 0) err(id, 'needs at least one chunk after chapter 1');
     if (!ex.core || typeof ex.core.w !== 'string') { err(id, 'missing core'); return; }
-    if (BAD_CORE.test(ex.core.w)) err(id, `core "${ex.core.w}" must not end with か/ね/よ/ましょう`);
+    if (BAD_CORE.test(ex.core.w)) err(id, `core "${ex.core.w}" must not end with ね/よ/ましょうか (four endings only: ます・ますか・ません・ましょう)`);
+    if (ex.question && !/か$/.test(ex.core.w) && !PHRASE_OK.has(ex.core.w)) err(id, `question core "${ex.core.w}" must end with か`);
+    if (!ex.question && /(ますか|ですか|ませんか)$/.test(ex.core.w)) err(id, `statement core "${ex.core.w}" must not end with か`);
     if (BAD_CORE_UNLESS_PHRASE.test(ex.core.w) && !PHRASE_OK.has(ex.core.w)) err(id, `core "${ex.core.w}" must not end with ました/でした (except a fixed greeting)`);
     if (!POLITE_TAIL.test(ex.core.w) && !PHRASE_OK.has(ex.core.w)) err(id, `core "${ex.core.w}" must be ます/です form (or a fixed greeting)`);
     if (HAS_PARTICLE_TAIL.test(ex.core.w) && !/^(ある|いる|する|来る|くる)$/.test(ex.core.w)) {

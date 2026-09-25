@@ -1,13 +1,121 @@
 [
-  {"pair": ["は", "が"], "tip": "は = 'as for X' (what we are talking about). が = the one that does it or exists, especially when that is new information or the answer to who? / what?", "ex": ["たなかさん.は きます。|(As for) Mr Tanaka, he's coming.", "たなかさん.が きます。|Mr Tanaka is the one coming."]},
-  {"pair": ["に", "で"], "tip": "に = where something IS or ARRIVES. で = where an action is DONE.", "ex": ["いえ.に います。|I'm at home.", "いえ.で たべます。|I eat at home."]},
-  {"pair": ["に", "へ"], "tip": "に = arriving at. へ = heading toward. For destinations both work; に is more common in speech. For receivers, times and existence only に works.", "ex": ["なら.に いきます。|I'll go to Nara.", "なら.へ いきます。|I'll head for Nara."]},
-  {"pair": ["を", "が"], "tip": "を = the thing acted on. が = the doer, or what exists / is liked / is understood. あります, います, すきです, わかります take が.", "ex": ["おちゃ.を のみます。|I drink tea.", "おちゃ.が すきです。|I like tea."]},
-  {"pair": ["を", "に"], "tip": "を = the object of the action. に = the destination or receiver. Go TO a place = に; leave or pass through a place = を.", "ex": ["いえ.に かえります。|I'll go home.", "いえ.を でます。|I'll leave the house."]},
-  {"pair": ["と", "に"], "tip": "と = together, both sides (chat with). に = one way, toward one person (tell).", "ex": ["ともだち.と はなします。|I'll chat with a friend.", "ともだち.に はなします。|I'll tell a friend."]},
-  {"pair": ["と", "で"], "tip": "と = with a person. で = by means of something, or at a place.", "ex": ["ともだち.と いきます。|I'll go with a friend.", "バス.で いきます。|I'll go by bus."]},
-  {"pair": ["から", "まで"], "tip": "から = start. まで = end. Together they make a span, and each is its own chunk.", "ex": ["くじ.から ごじ.まで はたらきます。|I work from nine to five."]},
-  {"pair": ["も", "は"], "tip": "も replaces は, が and を. Never stack them (no はも, をも). After に, で, と, へ, から, まで, add it: でも, にも.", "ex": ["わたし.も いきます。|I'm going too.", "なら.でも かいます。|I buy it in Nara too."]},
-  {"pair": ["", "に"], "tip": "Clock times and days of the week take に. Relative time words (あした, いま, らいしゅう, まいにち) take nothing.", "ex": ["さんじ.に きます。|I'll come at three.", "あした きます。|I'll come tomorrow."]},
-  {"pair": ["", "は"], "tip": "Time words need no tag. Add は only to make them the topic: 'as for tomorrow…'.", "ex": ["あした.は やすみです。|Tomorrow is a day off."]}
+  {
+    "pair": [
+      "は",
+      "が"
+    ],
+    "tip": "は = 'as for X' (what we are talking about). が = the one that does it or exists, especially when that is new information or the answer to who? / what?",
+    "ex": [
+      "たなかさん.は きます。|(As for) Mr Tanaka, he's coming.",
+      "たなかさん.が きます。|Mr Tanaka is the one coming."
+    ]
+  },
+  {
+    "pair": [
+      "に",
+      "で"
+    ],
+    "tip": "に = where something IS or ARRIVES. で = where an action is DONE.",
+    "ex": [
+      "いえ.に います。|I'm at home.",
+      "いえ.で たべます。|I eat at home."
+    ]
+  },
+  {
+    "pair": [
+      "に",
+      "へ"
+    ],
+    "tip": "に = arriving at. へ = heading toward. For destinations both work; に is more common in speech. For receivers, times and existence only に works.",
+    "ex": [
+      "なら.に いきます。|I'll go to Nara.",
+      "なら.へ いきます。|I'll head for Nara."
+    ]
+  },
+  {
+    "pair": [
+      "を",
+      "が"
+    ],
+    "tip": "を = the thing acted on. が = the doer, or what exists / is liked / is understood. あります, います, すきです, わかります take が.",
+    "ex": [
+      "おちゃ.を のみます。|I drink tea.",
+      "おちゃ.が すきです。|I like tea."
+    ]
+  },
+  {
+    "pair": [
+      "を",
+      "に"
+    ],
+    "tip": "を = the object of the action. に = the destination or receiver. Go TO a place = に; leave or pass through a place = を.",
+    "ex": [
+      "いえ.に かえります。|I'll go home.",
+      "いえ.を でます。|I'll leave the house."
+    ]
+  },
+  {
+    "pair": [
+      "と",
+      "に"
+    ],
+    "tip": "と = together, both sides (chat with). に = one way, toward one person (tell).",
+    "ex": [
+      "ともだち.と はなします。|I'll chat with a friend.",
+      "ともだち.に はなします。|I'll tell a friend."
+    ]
+  },
+  {
+    "pair": [
+      "と",
+      "で"
+    ],
+    "tip": "と = with a person. で = by means of something, or at a place.",
+    "ex": [
+      "ともだち.と いきます。|I'll go with a friend.",
+      "バス.で いきます。|I'll go by bus."
+    ]
+  },
+  {
+    "pair": [
+      "から",
+      "まで"
+    ],
+    "tip": "から = start. まで = end. Together they make a span, and each is its own chunk.",
+    "ex": [
+      "くじ.から ごじ.まで はたらきます。|I work from nine to five."
+    ]
+  },
+  {
+    "pair": [
+      "も",
+      "は"
+    ],
+    "tip": "も replaces は, が and を. Never stack them (no はも, をも). After に, で, と, へ, から, まで, add it: でも, にも.",
+    "ex": [
+      "わたし.も いきます。|I'm going too.",
+      "なら.でも かいます。|I buy it in Nara too."
+    ]
+  },
+  {
+    "pair": [
+      "",
+      "に"
+    ],
+    "tip": "Clock times and days of the week take に. Relative time words (あした, いま, らいしゅう, まいにち) take nothing.",
+    "ex": [
+      "さんじ.に きます。|I'll come at three.",
+      "あした きます。|I'll come tomorrow."
+    ]
+  },
+  {
+    "pair": [
+      "",
+      "は"
+    ],
+    "tip": "Time words need no tag. Add は only to make them the topic: 'as for tomorrow…'.",
+    "ex": [
+      "あした.は やすみです。|Tomorrow is a day off."
+    ]
+  }
 ]

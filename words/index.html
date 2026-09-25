@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Japanese words & phrases — にほんご Tags</title>
-<meta name="description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta name="description" content="A phrase book for twelve everyday scenes, the 200 most useful verbs in four endings, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://nihongo.yusando.com/words/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="にほんご Tags">
 <meta property="og:title" content="Japanese words & phrases — にほんご Tags">
-<meta property="og:description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta property="og:description" content="A phrase book for twelve everyday scenes, the 200 most useful verbs in four endings, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
 <meta property="og:url" content="https://nihongo.yusando.com/words/">
 <meta property="og:image" content="https://nihongo.yusando.com/og.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Japanese words & phrases — にほんご Tags">
-<meta name="twitter:description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta name="twitter:description" content="A phrase book for twelve everyday scenes, the 200 most useful verbs in four endings, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
 <meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
 
 <script type="application/ld+json">
@@ -60,10 +60,11 @@
 <body>
 <main class="wrap prose">
   <h1>Words & phrases</h1>
-  <p class="lead">Ready-to-say phrases for twelve everyday scenes, every word used in the 2,000 examples, and the time words that do the job of past and future.</p>
+  <p class="lead">Ready-to-say phrases for twelve everyday scenes, the 200 most useful verbs, every word used in the 2,000 examples, and the time words that do the job of past and future.</p>
 
   <div class="tabs" id="mainTabs">
     <button data-tab="phrases">Phrase book</button>
+    <button data-tab="verbs">200 verbs</button>
     <button data-tab="words">Word list</button>
     <button data-tab="time">Time words</button>
   </div>
@@ -73,6 +74,14 @@
     <div class="tabs" id="sceneTabs"></div>
     <div id="sceneIntro" class="muted"></div>
     <div id="phraseList"></div>
+  </section>
+
+  <section id="tab-verbs" hidden>
+    <p class="small muted">The 200 verbs you will use most in conversation, each in the four Level-1 endings: <b>ます</b> (do) · <b>ますか</b> (do?) · <b>ません</b> (don't) · <b>ましょう</b> (let's). Tap a verb to hear it and see an example.</p>
+    <input class="search" id="vq" type="search" placeholder="Search kana, romaji or English…" autocomplete="off">
+    <div class="tabs" id="vcatTabs"></div>
+    <div class="small muted" id="vCount"></div>
+    <div id="verbList"></div>
   </section>
 
   <section id="tab-words" hidden>
@@ -90,7 +99,7 @@
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadPhrases, loadVocab, loadAdverbs, loadScenes, exBlock, esc, qs, kanaToRomaji } from '../js/app.js';
+import { renderHeader, renderFooter, loadPhrases, loadVocab, loadAdverbs, loadScenes, loadJSON, exBlock, esc, qs, kanaToRomaji } from '../js/app.js';
 import { speak, canSpeak } from '../js/speech.js';
 renderHeader('words');
 const $ = id => document.getElementById(id);
@@ -100,9 +109,9 @@ let tab = qs('tab') || 'phrases';
 function showTab(t) {
   tab = t;
   document.querySelectorAll('#mainTabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
-  ['phrases', 'words', 'time'].forEach(x => $('tab-' + x).hidden = x !== t);
+  ['phrases', 'verbs', 'words', 'time'].forEach(x => $('tab-' + x).hidden = x !== t);
   const u = new URL(location); u.searchParams.set('tab', t); history.replaceState(null, '', u);
-  if (t === 'phrases') initPhrases(); if (t === 'words') initWords(); if (t === 'time') initTime();
+  if (t === 'phrases') initPhrases(); if (t === 'words') initWords(); if (t === 'verbs') initVerbs(); if (t === 'time') initTime();
 }
 document.querySelectorAll('#mainTabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
 
@@ -134,6 +143,44 @@ async function initPhrases() {
     $('sceneTabs').appendChild(b);
   });
   render();
+}
+
+// ---------- 200 verbs ----------
+const VCATS = [['all', 'All'], ['movement', 'Moving'], ['daily', 'Daily life'], ['food', 'Food'], ['talk', 'Talking'], ['think', 'Thinking'], ['give', 'Giving & getting'], ['work', 'Work'], ['home', 'Home'], ['body', 'Body'], ['feel', 'Feelings'], ['other', 'Other']];
+let verbsReady = false, verbs = [], vcat = 'all';
+async function initVerbs() {
+  if (verbsReady) return; verbsReady = true;
+  verbs = await loadJSON('data/verbs.json');
+  VCATS.forEach(([id, label]) => {
+    const n = id === 'all' ? verbs.length : verbs.filter(v => v.cat === id).length;
+    if (!n) return;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${label} (${n})`;
+    b.addEventListener('click', () => { vcat = id; renderVerbs(); });
+    $('vcatTabs').appendChild(b);
+  });
+  $('vq').addEventListener('input', renderVerbs);
+  renderVerbs();
+}
+function renderVerbs() {
+  [...$('vcatTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === vcat));
+  const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const q = $('vq').value.trim(), qn = norm(q);
+  const items = verbs.filter(v => (vcat === 'all' || v.cat === vcat) && (!q || v.masu.includes(q) || v.dict.includes(q) || norm(kanaToRomaji(v.masu)).includes(qn) || norm(v.en).includes(qn)));
+  $('vCount').textContent = `${items.length} verb${items.length === 1 ? '' : 's'} · most useful first`;
+  const list = $('verbList'); list.innerHTML = '';
+  items.forEach(v => {
+    const stem = v.masu.slice(0, -2);
+    const forms = [['ます', stem + 'ます'], ['ますか', stem + 'ますか'], ['ません', stem + 'ません'], ['ましょう', v.lets ? stem + 'ましょう' : '—']];
+    const tagMeta = v.tag ? `<span class="tag-pill" style="background:var(--p-${v.tag})">${v.tag}</span>` : '';
+    const d = document.createElement('details'); d.className = 'verb';
+    d.innerHTML = `<summary><span class="vr">${v.rank}</span><span class="vk">${esc(v.masu)}</span><span class="ve">${esc(v.en)}</span>${tagMeta}</summary>
+      <div class="vforms">${forms.map(([lab, f]) => `<div><span class="muted small">${lab}</span><b data-say="${f === '—' ? '' : esc(f)}">${esc(f)}</b><span class="muted small">${f === '—' ? 'not used' : esc(kanaToRomaji(f).replace(/(masu|masen)ka$/, '$1 ka'))}</span></div>`).join('')}</div>
+      <div class="small muted">Dictionary form: ${esc(v.dict)} · group ${v.group}${v.tag ? ` · usually with ${v.tag}` : ''}</div>`;
+    d.appendChild(exBlock(v.ex));
+    d.addEventListener('toggle', () => { if (d.open && canSpeak()) speak(v.masu); });
+    d.querySelectorAll('[data-say]').forEach(b => { if (b.dataset.say && canSpeak()) { b.style.cursor = 'pointer'; b.addEventListener('click', () => speak(b.dataset.say)); } });
+    list.appendChild(d);
+  });
 }
 
 // ---------- word list ----------
@@ -194,7 +241,7 @@ async function initTime() {
   });
 }
 
-showTab(['phrases', 'words', 'time'].includes(tab) ? tab : 'phrases');
+showTab(['phrases', 'verbs', 'words', 'time'].includes(tab) ? tab : 'phrases');
 renderFooter();
 </script>
 </body>

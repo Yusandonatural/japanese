@@ -1,5 +1,5 @@
 // Shared helpers: data loading, settings, rendering of chunk cards, header.
-import { kanaToRomaji, romajiParticle, chunkRomaji } from './romaji.js';
+import { kanaToRomaji, romajiParticle, chunkRomaji, coreRomaji } from './romaji.js';
 import { parseEx, exKana, exRomaji } from './exparse.js';
 import { speak, canSpeak } from './speech.js';
 
@@ -69,7 +69,7 @@ export function chunkCard(c, opts = {}) {
   word.appendChild(w);
   if (c.p) { const p = document.createElement('span'); p.className = 'p'; p.textContent = c.p; p.style.background = pColor(c.p); word.appendChild(p); }
   const roma = document.createElement('div'); roma.className = 'roma';
-  roma.textContent = opts.core ? kanaToRomaji(c.k) : chunkRomaji(c);
+  roma.textContent = opts.core ? coreRomaji(c.k) : chunkRomaji(c);
   if (s.romaji === false) roma.style.display = 'none';
   el.append(role, word, roma);
   if (opts.gloss !== false && c.gloss) { const g = document.createElement('div'); g.className = 'roma'; g.textContent = c.gloss; g.style.fontStyle = 'italic'; el.appendChild(g); }
@@ -81,7 +81,7 @@ export function sentenceView(ex, opts = {}) {
   const box = document.createElement('div'); box.className = 'sentence';
   ex.chunks.forEach((c, i) => box.appendChild(chunkCard(c, { idx: i, particles: opts.particles, gloss: opts.gloss })));
   box.appendChild(chunkCard(ex.core, { core: true, gloss: opts.gloss }));
-  const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '↗' : '。';
+  const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '？' : '。';
   box.appendChild(punct);
   return box;
 }
@@ -91,14 +91,14 @@ export function kanaText(chunks, core, question) {
   return chunks.map(c => c.k + c.p).join(' ') + ' ' + core.k + (question ? '？' : '。');
 }
 export function romajiText(chunks, core, question) {
-  const parts = chunks.map(chunkRomaji); parts.push(kanaToRomaji(core.k));
+  const parts = chunks.map(chunkRomaji); parts.push(coreRomaji(core.k));
   let s = parts.join(' '); s = s[0].toUpperCase() + s.slice(1);
   return s + (question ? '?' : '.');
 }
 /** HTML for inline sentence with coloured particles (list views). */
 export function inlineKana(ex) {
   const esc = t => t.replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]));
-  return ex.chunks.map(c => esc(c.k) + (c.p ? `<b style="color:${pColor(c.p)}">${c.p}</b>` : '')).join(' ') + ' ' + esc(ex.core.k) + (ex.question ? '<span class="q-mark">↗</span>' : '。');
+  return ex.chunks.map(c => esc(c.k) + (c.p ? `<b style="color:${pColor(c.p)}">${c.p}</b>` : '')).join(' ') + ' ' + esc(ex.core.k) + (ex.question ? '<span class="q-mark">？</span>' : '。');
 }
 
 // ---------- header ----------
@@ -123,7 +123,7 @@ export function exBlock(str, opts = {}) {
   const s = getSettings();
   const el = document.createElement('div'); el.className = 'exb' + (opts.wrong ? ' wrong' : '') + (opts.right ? ' right' : '');
   const ja = ex.chunks.map(c => `<span class="ck">${escH(c.k)}${c.p ? `<b class="tg" style="color:${pColor(c.p)}">${escH(c.p)}</b>` : ''}</span>`).join(' ')
-    + ` <span class="ck core">${escH(ex.core.k)}</span>` + (ex.question ? '<span class="q-mark">↗</span>' : '');
+    + ` <span class="ck core">${escH(ex.core.k)}</span>` + (ex.question ? '<span class="q-mark">？</span>' : '');
   el.innerHTML = `<div class="exb-ja">${opts.wrong ? '<span class="mark">✗</span>' : opts.right ? '<span class="mark">✓</span>' : ''}${ja}</div>`
     + (s.romaji !== false ? `<div class="exb-ro">${escH(exRomaji(ex))}</div>` : '')
     + (ex.en ? `<div class="exb-en">${escH(ex.en)}</div>` : '');
@@ -144,4 +144,4 @@ export { parseEx, exKana, exRomaji };
 
 export function qs(name) { return new URLSearchParams(location.search).get(name); }
 export function shuffle(arr, rnd = Math.random) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-export { kanaToRomaji, romajiParticle, chunkRomaji };
+export { kanaToRomaji, romajiParticle, chunkRomaji, coreRomaji };

@@ -5,8 +5,8 @@
   "title": "The Core Is the Sentence",
   "ja": "コア だけ",
   "minutes": 15,
-  "goal": "Say complete, polite Japanese sentences using only a core, a time word and a rising voice for questions.",
-  "intro": "Welcome to day one! Today you learn the single most important idea in this course: every Japanese sentence ends in one word or phrase called the core, and that core on its own is already a full, polite sentence. You will not learn any tags yet. By the end of this lesson you can greet people, ask for things, say what you will do tomorrow and ask simple questions, all without changing a single verb.",
+  "goal": "Say complete, polite Japanese sentences with a core, a time word and the four verb endings: ます, ますか, ません and ましょう.",
+  "intro": "Welcome to day one! Today you learn the single most important idea in this course: every Japanese sentence ends in one word or phrase called the core, and that core on its own is already a full, polite sentence. You will not learn any tags yet. By the end of this lesson you can greet people, ask for things, say what you will do tomorrow, ask questions, say no and invite people to do things, all with just four verb endings.",
   "sections": [
    {
     "h": "One word can be a whole sentence",
@@ -24,18 +24,36 @@
     "tip": "Whenever you are unsure what to say, start by choosing the core. Everything else is optional extra."
    },
    {
-    "h": "One polite form, no conjugation",
+    "h": "The four endings",
     "p": [
-     "Japanese verbs have many forms, but at Level 1 you use exactly one family of endings: the polite present. A verb ends in ます (masu) for 'do', ません (masen) for 'don't', and a request ends in ください (kudasai), 'please'. Nouns and adjectives end in です (desu), roughly 'it is'.",
-     "That is the whole system for now. You will never be asked to conjugate. The polite form is also the safest form socially: it is what adults use with shop staff, colleagues, neighbours and anyone they have just met, so you will always sound friendly and respectful.",
-     "To ask for something, put the thing in front of ください (kudasai). In real shops and cafes people say おちゃ ください (ocha kudasai) all the time. A bare noun in front of the core like this is a tagless chunk. Tomorrow you will learn how to tag it, but it already works."
+     "Japanese verbs have many forms, but at Level 1 the core verb only ever uses four endings: ます (masu), ますか (masu ka), ません (masen) and ましょう (mashō). That is your whole verb toolkit. Learn one verb and you automatically have four sentences.",
+     "Here they are side by side. ます (masu) is a statement, 'I do' or 'I'll do': いきます, 'I'll go'. ますか (masu ka) is a question, 'Do you...?' or 'Will you...?': いきますか, 'Are you going?'. ません (masen) is the negative, 'I don't' or 'I won't': いきません, 'I'm not going'. ましょう (mashō) is an invitation, 'Let's...': いきましょう, 'Let's go!'",
+     "Every verb works the same way: keep the front of the verb and swap the ending. たべます, たべますか, たべません, たべましょう. のみます, のみますか, のみません, のみましょう. かえります (go home) and はじめます (begin) follow the very same pattern. You will never be asked to conjugate anything else at Level 1. All four endings are polite, which is also the safest choice socially: it is what adults use with shop staff, colleagues, neighbours and anyone they have just met.",
+     "Use ましょう only for something you and the listener will do together: いきましょう means 'let's go (together)', not 'I'll go'. And nothing comes after the ending: no ね, no よ, no extra decoration. Four endings, nothing else."
     ],
     "ex": [
-     "のみます。|I drink. / I'll drink.",
-     "のみません。|I don't drink.",
+     "いきます。|I'll go. / I'm going.",
+     "いきますか？|Are you going?",
+     "いきません。|I'm not going. / I won't go.",
+     "いきましょう。|Let's go.",
+     "たべましょう。|Let's eat.",
+     "のみますか？|Will you have a drink?",
+     "かえりません。|I'm not going home.",
+     "はじめましょう。|Let's begin."
+    ],
+    "tip": "Four endings, nothing else: ます (I do), ますか (do you?), ません (I don't), ましょう (let's)."
+   },
+   {
+    "h": "です and ください",
+    "p": [
+     "Nouns and adjectives end in です (desu), roughly 'it is'. Questions work exactly like the verbs: add か and you get ですか (desu ka), 'is it?'. げんきです is 'I'm well'; げんきですか is 'Are you well?'. At Level 1 you only need these two for nouns and adjectives.",
+     "To ask for something, put the thing in front of ください (kudasai), 'please'. In real shops and cafes people say おちゃ ください (ocha kudasai) all the time. A bare noun in front of the core like this is a tagless chunk. Tomorrow you will learn how to tag it, but it already works."
+    ],
+    "ex": [
+     "げんきです。|I'm well.",
+     "げんきですか？|Are you well?",
      "おちゃ ください。|Tea, please.",
-     "みず ください。|Water, please.",
-     "げんきです。|I'm well."
+     "みず ください。|Water, please."
     ],
     "wrong": [
      "わたし いきます あした。"
@@ -48,8 +66,8 @@
    {
     "h": "Time words do the work of tense",
     "p": [
-     "How do you talk about tomorrow or yesterday without changing the verb? You put a time word in front of the core. あした (ashita) means tomorrow, so あした いきます (ashita ikimasu) is 'I'll go tomorrow'. きょう (kyou) is today, いま (ima) is now, まいにち (mainichi) is every day. The ます form already covers present and future, so these sentences are completely natural.",
-     "For the past, Level 1 uses the same trick: きのう いきます (kinou ikimasu), 'yesterday I go'. Let's be honest here: a native speaker would say いきました (ikimashita), the past form, and that is what you will learn at Level 2. But the time word makes your meaning crystal clear, and people will understand you perfectly. Getting your message across today beats waiting months until your grammar is perfect.",
+     "How do you talk about tomorrow or yesterday without changing the verb? You put a time word in front of the core. あした (ashita) means tomorrow, so あした いきます (ashita ikimasu) is 'I'll go tomorrow'. きょう (kyō) is today, いま (ima) is now, まいにち (mainichi) is every day. The ます form already covers present and future, so these sentences are completely natural. Time words work with all four endings: あした いきますか？ asks about tomorrow, and あした はじめましょう suggests starting tomorrow.",
+     "For the past, Level 1 uses the same trick: きのう いきます (kinō ikimasu), 'yesterday I go'. Let's be honest here: a native speaker would say いきました (ikimashita), the past form, and that is what you will learn at Level 2. But the time word makes your meaning crystal clear, and people will understand you perfectly. Getting your message across today beats waiting months until your grammar is perfect.",
      "Time words like these take no tag. They simply sit in front of the core as their own chunk."
     ],
     "ex": [
@@ -57,29 +75,33 @@
      "きょう いきます。|I'm going today.",
      "いま たべます。|I'll eat now.",
      "まいにち のみます。|I drink it every day.",
-     "きのう いきます。|(Level 1) I went yesterday. A native would say いきました."
+     "きのう いきます。|(Level 1) I went yesterday. A native would say いきました.",
+     "あした はじめましょう。|Let's start tomorrow.",
+     "きょう かえりません。|I'm not going home today."
     ],
     "tip": "Put the time word first and your listener immediately knows when the action happens."
    },
    {
-    "h": "Questions: just raise your voice",
+    "h": "Questions: just add か",
     "p": [
-     "In textbooks you will see questions ending in か (ka). At Level 1 you don't need it. Keep exactly the same words in exactly the same order and let your voice rise at the end, just like 'Tomorrow? You're going?' in English. In this course a question is written with ？ and marked with a rising arrow ↗.",
-     "This rising question is extremely common in everyday spoken Japanese, especially in friendly conversation. It also means you only have to learn one sentence to both say it and ask it: あした いきます。 is a statement, あした いきます？ with a rising voice is a question."
+     "To turn any sentence into a question, add か (ka) to the ending: ます becomes ますか, です becomes ですか. Nothing else changes: same words, same order, just か at the end. Let your voice rise on the か, a bit like 'Tomorrow? You're going?' in English. In this course a question is written with ？.",
+     "This means you only have to learn one sentence to both say it and ask it: あした いきます。 is a statement, あした いきますか？ is a question. Answering is just as easy: drop the か and say はい、いきます, or switch to the negative: いいえ、いきません.",
+     "A negative question with ませんか (masen ka), 'won't you...?', is a warm, polite invitation: いきませんか？ 'Won't you come along?' The natural yes is the ましょう form: いきましょう, 'Yes, let's go!'"
     ],
     "ex": [
-     "いきます？|Are you going?",
-     "あした きます？|Are you coming tomorrow?",
-     "わかります？|Do you understand?",
-     "だいじょうぶです？|Are you OK?"
+     "いきますか？|Are you going?",
+     "あした きますか？|Are you coming tomorrow?",
+     "わかりますか？|Do you understand?",
+     "だいじょうぶですか？|Are you OK?",
+     "いきませんか？|Won't you come along?"
     ],
-    "tip": "Practise out loud: say the same sentence twice, first flat, then rising at the end."
+    "tip": "Practise out loud: say the same sentence twice, first as a statement, then with か and your voice rising on it."
    },
    {
     "h": "Greetings and fixed phrases",
     "p": [
      "Some cores are fixed phrases that never change. Learn them as sounds, like 'hello' or 'thanks'. They are complete sentences on their own and you will use them dozens of times a day in Japan.",
-     "おはようございます (ohayou gozaimasu) is good morning, こんにちは (konnichiwa) is hello during the day, and こんばんは (konbanwa) is good evening. ありがとうございます (arigatou gozaimasu) is thank you, and すみません (sumimasen) covers 'excuse me', 'sorry' and even 'thanks for the trouble'. おねがいします (onegaishimasu) is a polite 'please' when someone offers to do something for you."
+     "おはようございます (ohayō gozaimasu) is good morning, こんにちは (konnichiwa) is hello during the day, and こんばんは (konbanwa) is good evening. ありがとうございます (arigatō gozaimasu) is thank you, and すみません (sumimasen) covers 'excuse me', 'sorry' and even 'thanks for the trouble'. おねがいします (onegaishimasu) is a polite 'please' when someone offers to do something for you."
     ],
     "ex": [
      "おはようございます。|Good morning.",
@@ -96,12 +118,24 @@
     "a": "あした いきます。|I'll go tomorrow."
    },
    {
-    "q": "Ask with a rising voice: Are you coming tomorrow?",
-    "a": "あした きます？|Are you coming tomorrow?"
+    "q": "Ask (add か): Are you coming tomorrow?",
+    "a": "あした きますか？|Are you coming tomorrow?"
    },
    {
     "q": "Say: I don't understand.",
     "a": "わかりません。|I don't understand."
+   },
+   {
+    "q": "Invite: Let's go.",
+    "a": "いきましょう。|Let's go."
+   },
+   {
+    "q": "Say: I'm not going home.",
+    "a": "かえりません。|I'm not going home."
+   },
+   {
+    "q": "Suggest: Let's start tomorrow.",
+    "a": "あした はじめましょう。|Let's start tomorrow."
    },
    {
     "q": "At a cafe, say: Tea, please.",
@@ -112,8 +146,8 @@
     "a": "きのう いきます。|I went yesterday."
    },
    {
-    "q": "Say: I drink it every day.",
-    "a": "まいにち のみます。|I drink it every day."
+    "q": "Ask: Are you well?",
+    "a": "げんきですか？|Are you well?"
    },
    {
     "q": "Greet someone in the morning.",
@@ -124,6 +158,18 @@
    {
     "k": "いきます",
     "en": "go"
+   },
+   {
+    "k": "いきますか",
+    "en": "are you going? (question)"
+   },
+   {
+    "k": "いきません",
+    "en": "don't go, won't go"
+   },
+   {
+    "k": "いきましょう",
+    "en": "let's go"
    },
    {
     "k": "きます",
@@ -140,6 +186,14 @@
    {
     "k": "わかります",
     "en": "understand"
+   },
+   {
+    "k": "かえります",
+    "en": "go home"
+   },
+   {
+    "k": "はじめます",
+    "en": "begin, start"
    },
    {
     "k": "ください",
@@ -180,9 +234,10 @@
   ],
   "recap": [
    "The core comes last, and the core alone is a full sentence.",
-   "Only one form: ます / ません / です / ください.",
+   "Four endings, nothing else: ます (I do), ますか (do you?), ません (I don't), ましょう (let's).",
+   "Nouns and adjectives end in です, and ですか asks a question.",
    "Time words like あした and きのう give you future and past.",
-   "Questions use the same words with a rising voice ↗."
+   "Questions: same words, same order, add か and let your voice rise on it."
   ],
   "next": "Tomorrow you meet your first two tags, は and が, and start introducing yourself."
  },
@@ -199,7 +254,7 @@
     "h": "What is a chunk?",
     "p": [
      "Think of a tag as a label on a box. The noun is the box, the tag says what the box is for. わたし (watashi) means 'I'. Put the topic tag on it and you get the chunk わたし.は, 'as for me'. In this course a dot shows where the noun ends and the tag begins, so you can always see the two parts. When you speak, you just say them together: watashi wa.",
-     "Every sentence you build from now on is one or more chunks followed by one core. The core still comes last and still never changes."
+     "Every sentence you build from now on is one or more chunks followed by one core. The core still comes last and still uses the same four endings from day one."
     ],
     "ex": [
      "わたし.は ケンです。|I'm Ken.",
@@ -212,14 +267,16 @@
     "h": "は: the topic, 'as for...'",
     "p": [
      "は (wa) marks what you are talking about. It is like saying 'As for me, ...' or 'Speaking of Nara, ...'. The core then says something about that topic: what it is, what it is like or what it does.",
-     "は is perfect for introducing yourself and describing things. Put a person, place or thing in front of は, then finish with a noun or adjective plus です (desu). Time words can become topics too: あした.は (ashita wa) means 'as for tomorrow', which is how you say what tomorrow will be like."
+     "は is perfect for introducing yourself and describing things. Put a person, place or thing in front of は, then finish with a noun or adjective plus です (desu). Time words can become topics too: あした.は (ashita wa) means 'as for tomorrow', which is how you say what tomorrow will be like. は works with every ending, including ましょう: あした.は やすみましょう, 'Let's take tomorrow off.'"
     ],
     "ex": [
      "わたし.は アメリカじんです。|I'm American.",
      "なら.は しずかです。|Nara is quiet.",
      "きょう.は あついです。|It's hot today.",
      "あした.は やすみです。|Tomorrow is my day off.",
-     "トイレ.は どこです？|Where is the toilet?"
+     "トイレ.は どこですか？|Where is the toilet?",
+     "あした.は やすみましょう。|Let's take tomorrow off.",
+     "おちゃ.は あとで のみましょう。|Let's have the tea later."
     ]
    },
    {
@@ -227,19 +284,19 @@
     "p": [
      "が (ga) marks the one who does something or the thing that exists. It also shines a spotlight: が says 'this is the new, important piece of information'. That is why the answer to a question word like だれ (dare, who) or なに (nani, what) takes が.",
      "Compare: わたし.は いきます is 'As for me, I'll go' (talking about myself). わたし.が いきます is 'I'm the one who'll go' (answering 'who will go?'). Same words, different spotlight.",
-     "Question words themselves also take が, never は: ask だれ.が きます？ (dare ga kimasu?), 'Who's coming?'."
+     "Question words themselves also take が, never は: ask だれ.が きますか？ (dare ga kimasu ka?), 'Who's coming?'."
     ],
     "ex": [
-     "だれ.が きます？|Who's coming?",
+     "だれ.が きますか？|Who's coming?",
      "たなかさん.が きます。|Mr Tanaka is coming.",
      "わたし.が いきます。|I'll be the one to go.",
      "あめ.が ふります。|It rains. / It's going to rain."
     ],
     "wrong": [
-     "だれ.は きます？"
+     "だれ.は きますか？"
     ],
     "right": [
-     "だれ.が きます？|Who's coming?"
+     "だれ.が きますか？|Who's coming?"
     ],
     "tip": "Question words (だれ, なに) always take が, and so does their answer."
    },
@@ -254,7 +311,7 @@
      "じかん.が あります。|I have time.",
      "コンビニ.が あります。|There's a convenience store.",
      "いぬ.が います。|There's a dog. / I have a dog.",
-     "なに.が すきです？|What do you like?"
+     "なに.が すきですか？|What do you like?"
     ],
     "tip": "Things and plants: あります. People and animals: います."
    },
@@ -268,7 +325,7 @@
     "ex": [
      "いぬ.が います。|There's a dog.",
      "いぬ.は おおきいです。|The dog is big.",
-     "だれ.が がくせいです？|Who is the student?",
+     "だれ.が がくせいですか？|Who is the student?",
      "わたし.が がくせいです。|I'm the student."
     ],
     "tip": "New thing or answer to a question word: が. Known topic you describe: は."
@@ -289,7 +346,7 @@
    },
    {
     "q": "Ask: Who's coming?",
-    "a": "だれ.が きます？|Who's coming?"
+    "a": "だれ.が きますか？|Who's coming?"
    },
    {
     "q": "Say: It's hot today.",
@@ -301,7 +358,15 @@
    },
    {
     "q": "Ask: Where is the toilet?",
-    "a": "トイレ.は どこです？|Where is the toilet?"
+    "a": "トイレ.は どこですか？|Where is the toilet?"
+   },
+   {
+    "q": "Suggest: Let's take tomorrow off.",
+    "a": "あした.は やすみましょう。|Let's take tomorrow off."
+   },
+   {
+    "q": "Suggest: Let's have the tea later.",
+    "a": "おちゃ.は あとで のみましょう。|Let's have the tea later."
    }
   ],
   "words": [
@@ -391,7 +456,8 @@
      "パン.を たべます。|I eat bread.",
      "わたし.は ほん.を よみます。|I read books.",
      "あした くすり.を かいます。|I'll buy medicine tomorrow.",
-     "なに.を たべます？|What will you eat?"
+     "なに.を たべますか？|What will you eat?",
+     "おちゃ.を のみましょう。|Let's have some tea."
     ],
     "tip": "If you can ask 'what?' about the action (drink what? buy what?), the answer takes を."
    },
@@ -406,7 +472,8 @@
      "がっこう.に いきます。|I go to school.",
      "ともだち.に あいます。|I'll meet a friend.",
      "はは.に でんわ.を します。|I'll call my mother.",
-     "ともだち.に おちゃ.を あげます。|I'll give my friend some tea."
+     "ともだち.に おちゃ.を あげます。|I'll give my friend some tea.",
+     "なら.に いきましょう。|Let's go to Nara."
     ],
     "wrong": [
      "ともだち.を あいます。"
@@ -426,7 +493,8 @@
      "しちじ.に おきます。|I get up at seven.",
      "じゅうじ.に ねます。|I go to bed at ten.",
      "あした くじ.に きます。|I'll come at nine tomorrow.",
-     "なんじ.に いきます？|What time are you going?"
+     "なんじ.に いきますか？|What time are you going?",
+     "しちじ.に あいましょう。|Let's meet at seven."
     ],
     "wrong": [
      "あした.に いきます。"
@@ -440,13 +508,13 @@
     "h": "に for where something is",
     "p": [
      "With あります and います, に marks the place where something exists. The thing takes が, the place takes に: へや.に ねこ.が います, 'There's a cat in the room'.",
-     "Ask where someone is with a simple rising question: いま いえ.に います？ 'Are you at home now?' This pattern is gold on the phone and when meeting friends."
+     "Ask where someone is with a simple か question: いま いえ.に いますか？ 'Are you at home now?' This pattern is gold on the phone and when meeting friends."
     ],
     "ex": [
      "へや.に ねこ.が います。|There's a cat in the room.",
      "つくえ.に ほん.が あります。|There's a book on the desk.",
      "いま いえ.に います。|I'm at home now.",
-     "いま えき.に います？|Are you at the station now?"
+     "いま えき.に いますか？|Are you at the station now?"
     ]
    },
    {
@@ -484,7 +552,7 @@
    },
    {
     "q": "Ask: What will you eat?",
-    "a": "なに.を たべます？|What will you eat?"
+    "a": "なに.を たべますか？|What will you eat?"
    },
    {
     "q": "Say: I'm at home now.",
@@ -493,6 +561,14 @@
    {
     "q": "Say: There's a cat in the room.",
     "a": "へや.に ねこ.が います。|There's a cat in the room."
+   },
+   {
+    "q": "Invite: Let's go to Nara.",
+    "a": "なら.に いきましょう。|Let's go to Nara."
+   },
+   {
+    "q": "Suggest: Let's meet at seven.",
+    "a": "しちじ.に あいましょう。|Let's meet at seven."
    }
   ],
   "words": [
@@ -581,7 +657,8 @@
      "かいしゃ.で はたらきます。|I work at a company.",
      "いえ.で たべます。|I eat at home.",
      "ちゃばたけ.で はたらきます。|I work in the tea field.",
-     "どこ.で たべます？|Where will you eat?"
+     "どこ.で たべますか？|Where will you eat?",
+     "えき.で あいましょう。|Let's meet at the station."
     ],
     "wrong": [
      "みせ.に かいます。"
@@ -601,20 +678,22 @@
      "バス.で いきます。|I'll go by bus.",
      "でんしゃ.で きょうと.に いきます。|I'll go to Kyoto by train.",
      "にほんご.で はなします。|I'll speak in Japanese.",
-     "はし.で たべます。|I eat with chopsticks."
+     "はし.で たべます。|I eat with chopsticks.",
+     "バス.で いきましょう。|Let's go by bus."
     ]
    },
    {
     "h": "と: together with",
     "p": [
      "と (to) marks a partner: the person you do something with. ともだち.と たべます, 'I'll eat with a friend'. かぞく.と なら.に いきます, 'I'll go to Nara with my family'.",
-     "To ask who someone is going with, attach と to the question word: だれ.と いきます？ It is a lovely, natural conversation opener."
+     "To ask who someone is going with, attach と to the question word: だれ.と いきますか？ It is a lovely, natural conversation opener."
     ],
     "ex": [
      "ともだち.と たべます。|I'll eat with a friend.",
      "かぞく.と なら.に いきます。|I'll go to Nara with my family.",
-     "だれ.と いきます？|Who are you going with?",
-     "あした はは.と かいもの.を します。|I'll go shopping with my mother tomorrow."
+     "だれ.と いきますか？|Who are you going with?",
+     "あした はは.と かいもの.を します。|I'll go shopping with my mother tomorrow.",
+     "みんな.と たべましょう。|Let's eat with everyone."
     ]
    },
    {
@@ -634,8 +713,8 @@
     "h": "A whole day with six tags",
     "p": [
      "Six tags are already enough to describe an ordinary day. Read these sentences aloud and notice how each chunk answers one small question: when, where, how, with whom, what.",
-     "Nothing new happens at the core. It is always the same polite form you learned on day one. All the new meaning comes from the tags. If a sentence feels long, find the core first, then read the chunks one by one.",
-     "Try to make one sentence about your own day with at least three chunks. Say it out loud twice, once as a statement and once as a rising question."
+     "Nothing new happens at the core. It always uses one of the four endings you learned on day one: ます, ますか, ません or ましょう. All the new meaning comes from the tags. If a sentence feels long, find the core first, then read the chunks one by one.",
+     "Try to make one sentence about your own day with at least three chunks. Say it out loud twice, once as a statement and once as a question with か."
     ],
     "ex": [
      "あした わたし.は ともだち.と でんしゃ.で なら.に いきます。|Tomorrow I'll go to Nara by train with a friend.",
@@ -661,7 +740,7 @@
    },
    {
     "q": "Ask: Who are you going with?",
-    "a": "だれ.と いきます？|Who are you going with?"
+    "a": "だれ.と いきますか？|Who are you going with?"
    },
    {
     "q": "Say: I'll go to Kyoto by train.",
@@ -674,6 +753,14 @@
    {
     "q": "Say: I'll speak in Japanese.",
     "a": "にほんご.で はなします。|I'll speak in Japanese."
+   },
+   {
+    "q": "Suggest: Let's meet at the station.",
+    "a": "えき.で あいましょう。|Let's meet at the station."
+   },
+   {
+    "q": "Suggest: Let's speak in Japanese.",
+    "a": "にほんご.で はなしましょう。|Let's speak in Japanese."
    }
   ],
   "words": [
@@ -758,7 +845,7 @@
     "ex": [
      "なら.へ いきます。|I'm heading to Nara.",
      "いえ.へ かえります。|I'm going home.",
-     "あした とうきょう.へ いきます？|Are you going to Tokyo tomorrow?",
+     "あした とうきょう.へ いきますか？|Are you going to Tokyo tomorrow?",
      "こちら.へ どうぞ。|This way, please.",
      "いえ.に います。|I'm at home."
     ],
@@ -780,7 +867,8 @@
      "でんしゃ.は おおさか.から きます。|The train comes from Osaka.",
      "なら.から きょうと.へ いきます。|I'll go from Nara to Kyoto.",
      "えき.から あるきます。|I'll walk from the station.",
-     "いえ.から でんわ.を します。|I'll call from home."
+     "いえ.から でんわ.を します。|I'll call from home.",
+     "えき.から あるきましょう。|Let's walk from the station."
     ]
    },
    {
@@ -793,7 +881,8 @@
      "くじ.から はたらきます。|I work from nine.",
      "あした.から やすみです。|I'm on holiday from tomorrow.",
      "かいぎ.は にじ.から です。|The meeting is from two.",
-     "なんじ.から はたらきます？|What time do you start work?"
+     "なんじ.から はたらきますか？|What time do you start work?",
+     "くじ.から はじめましょう。|Let's start at nine."
     ],
     "tip": "に = at one point in time. から = starting at that point and going on."
    },
@@ -807,7 +896,7 @@
      "ともだち.から メール.が きます。|I get emails from a friend.",
      "せんせい.から ほん.を かります。|I'll borrow a book from the teacher.",
      "はは.から おちゃ.を もらいます。|I get tea from my mother.",
-     "だれ.から てがみ.が きます？|Who do you get letters from?"
+     "だれ.から てがみ.が きますか？|Who do you get letters from?"
     ]
    },
    {
@@ -819,7 +908,8 @@
     "ex": [
      "あした ともだち.と なら.から きょうと.へ いきます。|Tomorrow I'll go from Nara to Kyoto with a friend.",
      "くじ.から かいしゃ.で はたらきます。|I work at the office from nine.",
-     "バス.で えき.へ いきます。|I'll head to the station by bus."
+     "バス.で えき.へ いきます。|I'll head to the station by bus.",
+     "あした なら.から きょうと.へ いきましょう。|Let's go from Nara to Kyoto tomorrow."
     ]
    }
   ],
@@ -851,6 +941,14 @@
    {
     "q": "Politely guide a guest: This way, please.",
     "a": "こちら.へ どうぞ。|This way, please."
+   },
+   {
+    "q": "Suggest: Let's start at nine.",
+    "a": "くじ.から はじめましょう。|Let's start at nine."
+   },
+   {
+    "q": "Suggest: Let's walk from the station.",
+    "a": "えき.から あるきましょう。|Let's walk from the station."
    }
   ],
   "words": [
@@ -930,7 +1028,8 @@
      "さんじ.まで まちます。|I'll wait until three.",
      "えき.まで あるきます。|I'll walk to the station.",
      "あした.まで やすみです。|I'm off until tomorrow.",
-     "えき.まで おねがいします。|To the station, please. (in a taxi)"
+     "えき.まで おねがいします。|To the station, please. (in a taxi)",
+     "さんじ.まで まちましょう。|Let's wait until three."
     ],
     "wrong": [
      "さんじ.に まちます。"
@@ -963,20 +1062,21 @@
      "なら.から きょうと.まで でんしゃ.で いきます。|I'll go from Nara to Kyoto by train.",
      "いえ.から えき.まで あるきます。|I walk from home to the station.",
      "とうきょう.から おおさか.まで しんかんせん.で いきます。|I'll go from Tokyo to Osaka by bullet train.",
-     "えき.から かいしゃ.まで バス.で いきます。|I take the bus from the station to the office."
+     "えき.から かいしゃ.まで バス.で いきます。|I take the bus from the station to the office.",
+     "いえ.から えき.まで あるきましょう。|Let's walk from home to the station."
     ]
    },
    {
     "h": "Asking 'how long?' and 'how far?'",
     "p": [
      "Attach まで to a question word and you have instantly useful questions. なんじ.まで (nanji made) asks 'until what time?', いつ.まで (itsu made) asks 'until when?', and どこ.まで (doko made) asks 'how far?', which is what a taxi driver or bus driver asks you.",
-     "Remember that questions are just rising statements. The answer uses exactly the same frame, with the question word swapped for the real information."
+     "Remember that a question is just the statement with か added to the core. The answer uses exactly the same frame, with the question word swapped for the real information."
     ],
     "ex": [
-     "なんじ.まで はたらきます？|Until what time do you work?",
-     "いつ.まで にほん.に います？|Until when are you in Japan?",
-     "どこ.まで いきます？|How far are you going?",
-     "みせ.は なんじ.まで です？|What time does the shop close?"
+     "なんじ.まで はたらきますか？|Until what time do you work?",
+     "いつ.まで にほん.に いますか？|Until when are you in Japan?",
+     "どこ.まで いきますか？|How far are you going?",
+     "みせ.は なんじ.まで ですか？|What time does the shop close?"
     ],
     "tip": "Keep the question frame, swap the question word for the answer: なんじ.まで → ろくじ.まで."
    },
@@ -990,7 +1090,8 @@
     "ex": [
      "ごじ.まで はたらきます。|I work until five.",
      "なつやすみ.は はちがつ.まで です。|Summer holiday lasts until August.",
-     "あした.から にちようび.まで なら.に います。|I'll be in Nara from tomorrow until Sunday."
+     "あした.から にちようび.まで なら.に います。|I'll be in Nara from tomorrow until Sunday.",
+     "ごじ.まで やすみましょう。|Let's rest until five."
     ],
     "tip": "Hear から, think 'start'. Hear まで, think 'end'."
    }
@@ -1014,7 +1115,7 @@
    },
    {
     "q": "Ask: Until when are you in Japan?",
-    "a": "いつ.まで にほん.に います？|Until when are you in Japan?"
+    "a": "いつ.まで にほん.に いますか？|Until when are you in Japan?"
    },
    {
     "q": "Say: I work Monday to Friday.",
@@ -1022,7 +1123,15 @@
    },
    {
     "q": "Ask: What time does the shop close?",
-    "a": "みせ.は なんじ.まで です？|What time does the shop close?"
+    "a": "みせ.は なんじ.まで ですか？|What time does the shop close?"
+   },
+   {
+    "q": "Suggest: Let's wait until three.",
+    "a": "さんじ.まで まちましょう。|Let's wait until three."
+   },
+   {
+    "q": "Suggest: Let's walk from home to the station.",
+    "a": "いえ.から えき.まで あるきましょう。|Let's walk from home to the station."
    }
   ],
   "words": [
@@ -1092,7 +1201,7 @@
     "h": "も replaces は, が and を",
     "p": [
      "も means 'also' or 'too'. When the noun would have taken は, が or を, も takes its place completely. You never stack them: it is わたし.も, not わたし.はも.",
-     "This gives you one of the friendliest sentences in any language: わたし.も, 'me too', followed by the same core the other person used. If someone says おちゃ.が すきです, you answer わたし.も おちゃ.が すきです, 'I like tea too.'"
+     "This gives you one of the friendliest sentences in any language: わたし.も, 'me too', followed by the same core the other person used. If someone says おちゃ.が すきです, you answer わたし.も おちゃ.が すきです, 'I like tea too.' It is also the perfect answer to an invitation: if a friend says きょうと.に いきましょう, you can add your own idea with も: なら.にも いきましょう, 'Let's go to Nara too.'"
     ],
     "ex": [
      "わたし.も いきます。|I'll go too.",
@@ -1120,7 +1229,8 @@
      "きょうと.にも いきます。|I'll go to Kyoto too.",
      "コンビニ.でも かいます。|I buy it at the convenience store too.",
      "ともだち.とも いきます。|I'll go with friends too.",
-     "おおさか.からも きます。|People come from Osaka too."
+     "おおさか.からも きます。|People come from Osaka too.",
+     "なら.にも いきましょう。|Let's go to Nara too."
     ]
    },
    {
@@ -1141,20 +1251,21 @@
     "h": "の: linking nouns inside a chunk",
     "p": [
      "の (no) joins two nouns: the first one describes the second. わたしのいえ is 'my house' (literally 'I-of house'), にほんのおちゃ is 'Japanese tea', ははのくるま is 'my mother's car'. Notice the order is the reverse of English 'of': the describing noun comes first.",
-     "The important thing for Tag Grammar: の is not a chunk tag. It works inside a chunk, and the whole group gets one tag at the end. わたしのいえ.に きます？ is 'Will you come to my house?': the tag に belongs to the whole phrase わたしのいえ."
+     "The important thing for Tag Grammar: の is not a chunk tag. It works inside a chunk, and the whole group gets one tag at the end. わたしのいえ.に きますか？ is 'Will you come to my house?': the tag に belongs to the whole phrase わたしのいえ."
     ],
     "ex": [
-     "わたしのいえ.に きます？|Will you come to my house?",
+     "わたしのいえ.に きますか？|Will you come to my house?",
+     "わたしのいえ.で たべましょう。|Let's eat at my house.",
      "ははのくるま.で いきます。|I'll go in my mother's car.",
      "にほんのおちゃ.が すきです。|I like Japanese tea.",
      "ならのおちゃ.を のみます。|I drink tea from Nara.",
      "ともだちのなまえ.は ケンです。|My friend's name is Ken."
     ],
     "wrong": [
-     "わたし.の いえ.に きます？"
+     "わたし.の いえ.に きますか？"
     ],
     "right": [
-     "わたしのいえ.に きます？|Will you come to my house?"
+     "わたしのいえ.に きますか？|Will you come to my house?"
     ],
     "tip": "One chunk, one tag: everything linked by の travels together."
    },
@@ -1196,11 +1307,19 @@
    },
    {
     "q": "Ask: Will you come to my house?",
-    "a": "わたしのいえ.に きます？|Will you come to my house?"
+    "a": "わたしのいえ.に きますか？|Will you come to my house?"
    },
    {
     "q": "Say: I'll go in my mother's car.",
     "a": "ははのくるま.で いきます。|I'll go in my mother's car."
+   },
+   {
+    "q": "Invite: Let's eat at my house.",
+    "a": "わたしのいえ.で たべましょう。|Let's eat at my house."
+   },
+   {
+    "q": "Suggest: Let's go to Nara too.",
+    "a": "なら.にも いきましょう。|Let's go to Nara too."
    }
   ],
   "words": [
@@ -1286,7 +1405,9 @@
      "おちゃ.を まいにち のみます。|Tea, I drink every day.",
      "まいにち おちゃ.を のみます。|Every day, I drink tea.",
      "ともだち.と バス.で いきます。|With a friend, I'll go by bus.",
-     "バス.で ともだち.と いきます。|By bus, I'll go with a friend."
+     "バス.で ともだち.と いきます。|By bus, I'll go with a friend.",
+     "あした なら.に いきましょう。|Tomorrow, let's go to Nara.",
+     "なら.に あした いきましょう。|Nara, let's go there tomorrow."
     ]
    },
    {
@@ -1329,7 +1450,8 @@
     ],
     "ex": [
      "わたし.は まいにち しちじ.に おきます。|I get up at seven every day.",
-     "きょう.は かぞく.と いえ.で たべます。|Today I'll eat at home with my family."
+     "きょう.は かぞく.と いえ.で たべます。|Today I'll eat at home with my family.",
+     "きょう.は いえ.で たべましょう。|Today let's eat at home."
     ]
    }
   ],
@@ -1357,6 +1479,10 @@
    {
     "q": "Say, starting with Kyoto: I'll meet my mother's friend in Kyoto.",
     "a": "きょうと.で ははのともだち.に あいます。|I'll meet my mother's friend in Kyoto."
+   },
+   {
+    "q": "Suggest, starting with 'today': Let's eat at home today.",
+    "a": "きょう.は いえ.で たべましょう。|Today let's eat at home."
    }
   ],
   "words": [
@@ -1408,13 +1534,13 @@
   "ja": "じゅう の タグ",
   "minutes": 20,
   "goal": "Build longer sentences with several tags and ask questions with だれ, どこ, なんじ and なに plus a tag.",
-  "intro": "You now own all ten tags and you know the chunks can move. Today is a workout: you put many chunks into one sentence and learn the fastest way to ask questions in Japanese. The secret is simple: put a question word where the answer will go, give it the right tag, and raise your voice.",
+  "intro": "You now own all ten tags and you know the chunks can move. Today is a workout: you put many chunks into one sentence and learn the fastest way to ask questions in Japanese. The secret is simple: put a question word where the answer will go, give it the right tag, and end the core with か.",
   "sections": [
    {
     "h": "The ten tags at a glance",
     "p": [
      "Here is your whole toolkit. は (wa) is the topic, 'as for'. が (ga) is the doer or what exists. を (o) is the thing acted on. に (ni) is a goal, receiver, clock time or location of existence. で (de) is where an action happens or the means. と (to) is 'with' or 'and'. へ (e) is 'toward'. から (kara) is 'from'. まで (made) is 'until' or 'as far as'. も (mo) is 'also'.",
-     "Every sentence you will ever build at Level 1 is some of these chunks followed by one polite core. The examples below each use four or more tags. Find the core first, then read the chunks as answers to small questions."
+     "Every sentence you will ever build at Level 1 is some of these chunks followed by one polite core with one of the four endings. The examples below each use four or more tags. Find the core first, then read the chunks as answers to small questions."
     ],
     "ex": [
      "わたし.は あした ともだち.と バス.で なら.に いきます。|Tomorrow I'll go to Nara by bus with a friend.",
@@ -1427,15 +1553,15 @@
    {
     "h": "Question word + tag = instant question",
     "p": [
-     "In Japanese, a question word sits exactly where the answer would sit, and it takes the same tag the answer will take. Want to know who someone is going with? The answer would be ともだち.と, so ask だれ.と いきます？ Want to know where they eat? The answer would be えき.で, so ask どこ.で たべます？",
-     "No word order changes, no か at the end, just a rising voice. Once you know the tags, you know how to ask about every part of a sentence."
+     "In Japanese, a question word sits exactly where the answer would sit, and it takes the same tag the answer will take. Want to know who someone is going with? The answer would be ともだち.と, so ask だれ.と いきますか？ Want to know where they eat? The answer would be えき.で, so ask どこ.で たべますか？",
+     "No word order changes: the question word takes the answer's place, the core ends in か (ますか or ですか), and your voice rises on the か. Once you know the tags, you know how to ask about every part of a sentence."
     ],
     "ex": [
-     "だれ.と いきます？|Who are you going with?",
-     "どこ.で たべます？|Where will you eat?",
-     "なんじ.に おきます？|What time do you get up?",
-     "なに.を のみます？|What will you drink?",
-     "なに.で いきます？|How are you getting there?"
+     "だれ.と いきますか？|Who are you going with?",
+     "どこ.で たべますか？|Where will you eat?",
+     "なんじ.に おきますか？|What time do you get up?",
+     "なに.を のみますか？|What will you drink?",
+     "なに.で いきますか？|How are you getting there?"
     ],
     "tip": "Ask yourself which tag the answer needs. Put that tag on the question word."
    },
@@ -1443,68 +1569,70 @@
     "h": "More question chunks",
     "p": [
      "Each question word can combine with several tags, and each combination asks something different. どこ.に asks 'to where', どこ.で asks 'where (doing)', どこ.から asks 'from where'. だれ.が asks who does it, だれ.に asks to whom. なんじ.から and なんじ.まで ask about start and end times.",
-     "いつ (itsu, when) behaves like the time words from day one: it usually takes no tag at all. いつ いきます？ means 'When are you going?'"
+     "いつ (itsu, when) behaves like the time words from day one: it usually takes no tag at all. いつ いきますか？ means 'When are you going?'"
     ],
     "ex": [
-     "だれ.に あいます？|Who are you meeting?",
-     "どこ.から きます？|Where does it come from?",
-     "なんじ.まで はたらきます？|Until what time do you work?",
-     "いつ なら.に いきます？|When are you going to Nara?",
-     "だれ.が きます？|Who's coming?"
+     "だれ.に あいますか？|Who are you meeting?",
+     "どこ.から きますか？|Where does it come from?",
+     "なんじ.まで はたらきますか？|Until what time do you work?",
+     "いつ なら.に いきますか？|When are you going to Nara?",
+     "だれ.が きますか？|Who's coming?"
     ]
    },
    {
     "h": "Answer by swapping in the real information",
     "p": [
-     "The beauty of this system is that the answer uses the same frame as the question. Take away the question word, put the information in its place, keep the tag, and turn the rising voice into a falling one.",
+     "The beauty of this system is that the answer uses the same frame as the question. Take away the question word, put the information in its place, keep the tag, and drop the か from the core.",
      "This makes conversations much easier to follow, too. When someone asks you a question, listen for the question word and its tag: that tells you exactly what kind of answer they want."
     ],
     "ex": [
-     "どこ.で たべます？|Where will you eat?",
+     "どこ.で たべますか？|Where will you eat?",
      "えきのちかく.で たべます。|I'll eat near the station.",
-     "なに.で いきます？|How are you getting there?",
+     "えきのちかく.で たべましょう。|Let's eat near the station.",
+     "なに.で いきますか？|How are you getting there?",
      "でんしゃ.で いきます。|I'm going by train."
     ],
     "wrong": [
-     "どこ.は たべます？"
+     "どこ.は たべますか？"
     ],
     "right": [
-     "どこ.で たべます？|Where will you eat?"
+     "どこ.で たべますか？|Where will you eat?"
     ]
    },
    {
     "h": "Building a sentence, step by step",
     "p": [
      "When you want to say something long, don't try to translate an English sentence word by word. Start with the core: what happens? Then add chunks one at a time: who, when, where, with whom, how. Give each noun its tag as you go.",
-     "For example, start with いきます. Add a place: なら.に いきます. Add a time: あした なら.に いきます. Add a companion: あした ともだち.と なら.に いきます. Add the means: あした ともだち.と くるま.で なら.に いきます. Every step is a correct sentence, so you can stop whenever you want."
+     "For example, start with いきます. Add a place: なら.に いきます. Add a time: あした なら.に いきます. Add a companion: あした ともだち.と なら.に いきます. Add the means: あした ともだち.と くるま.で なら.に いきます. Every step is a correct sentence, so you can stop whenever you want. The same frame works with any of the four endings: swap いきます for いきましょう and the whole sentence becomes an invitation."
     ],
     "ex": [
      "なら.に いきます。|I'll go to Nara.",
      "あした ともだち.と なら.に いきます。|I'll go to Nara with a friend tomorrow.",
-     "あした ともだち.と くるま.で なら.に いきます。|I'll go to Nara by car with a friend tomorrow."
+     "あした ともだち.と くるま.で なら.に いきます。|I'll go to Nara by car with a friend tomorrow.",
+     "あした ともだち.と くるま.で なら.に いきましょう。|Let's go to Nara by car with friends tomorrow."
     ]
    }
   ],
   "tryit": [
    {
     "q": "Ask: Who are you going with?",
-    "a": "だれ.と いきます？|Who are you going with?"
+    "a": "だれ.と いきますか？|Who are you going with?"
    },
    {
     "q": "Ask: Where will you eat?",
-    "a": "どこ.で たべます？|Where will you eat?"
+    "a": "どこ.で たべますか？|Where will you eat?"
    },
    {
     "q": "Ask: What time do you get up?",
-    "a": "なんじ.に おきます？|What time do you get up?"
+    "a": "なんじ.に おきますか？|What time do you get up?"
    },
    {
     "q": "Ask: What will you drink?",
-    "a": "なに.を のみます？|What will you drink?"
+    "a": "なに.を のみますか？|What will you drink?"
    },
    {
     "q": "Ask: Who are you meeting?",
-    "a": "だれ.に あいます？|Who are you meeting?"
+    "a": "だれ.に あいますか？|Who are you meeting?"
    },
    {
     "q": "Say: Tomorrow I'll go to Nara by bus with a friend.",
@@ -1516,7 +1644,15 @@
    },
    {
     "q": "Ask: When are you going to Nara?",
-    "a": "いつ なら.に いきます？|When are you going to Nara?"
+    "a": "いつ なら.に いきますか？|When are you going to Nara?"
+   },
+   {
+    "q": "Suggest: Let's eat near the station.",
+    "a": "えきのちかく.で たべましょう。|Let's eat near the station."
+   },
+   {
+    "q": "Invite: Let's go to Nara by car with friends tomorrow.",
+    "a": "あした ともだち.と くるま.で なら.に いきましょう。|Let's go to Nara by car with friends tomorrow."
    }
   ],
   "words": [
@@ -1583,43 +1719,47 @@
     "h": "Why Japanese drops chunks",
     "p": [
      "In English, grammar forces you to repeat things: 'Are you going to Nara tomorrow?' 'Yes, I'm going to Nara tomorrow' sounds odd, but 'Yes, I am' still needs 'I'. Japanese has no such rule. If both people know who, when and where, the core alone is a complete answer.",
-     "So when someone asks あした なら.に いきます？, the most natural answer is simply いきます or はい、いきます. Everything else is already on the table."
+     "So when someone asks あした なら.に いきますか？, the most natural answer is simply いきます or はい、いきます. Everything else is already on the table.",
+     "Invitations work the same way. When someone asks おちゃ.を のみませんか？ ('Won't you have some tea?'), the warmest yes is simply the ましょう form of the same core: はい、のみましょう, 'Yes, let's.'"
     ],
     "ex": [
-     "あした なら.に いきます？|Are you going to Nara tomorrow?",
+     "あした なら.に いきますか？|Are you going to Nara tomorrow?",
      "はい、いきます。|Yes, I am.",
      "いいえ、いきません。|No, I'm not.",
-     "おちゃ.を のみます？|Will you have some tea?",
-     "はい、のみます。|Yes, I will."
+     "おちゃ.を のみますか？|Will you have some tea?",
+     "はい、のみます。|Yes, I will.",
+     "おちゃ.を のみませんか？|Won't you have some tea?",
+     "はい、のみましょう。|Yes, let's."
     ],
-    "tip": "Repeat the core of the question to answer yes or no. That is the most natural reply."
+    "tip": "Repeat the core of the question, without the か, to answer yes or no. That is the most natural reply."
    },
    {
     "h": "Keep only the new information",
     "p": [
-     "When the question has a question word, your answer only needs the chunk that replaces it, plus the core. Asked だれ.と いきます？ (who are you going with?), you answer ともだち.と いきます. You don't need わたし.は, あした or なら.に, because those were never in doubt.",
+     "When the question has a question word, your answer only needs the chunk that replaces it, plus the core. Asked だれ.と いきますか？ (who are you going with?), you answer ともだち.と いきます. You don't need わたし.は, あした or なら.に, because those were never in doubt.",
      "Notice that the chunk you keep still has its tag. The tag tells the listener which part of the question you are answering."
     ],
     "ex": [
-     "だれ.と いきます？|Who are you going with?",
+     "だれ.と いきますか？|Who are you going with?",
      "ともだち.と いきます。|With a friend.",
-     "なんじ.に おきます？|What time do you get up?",
+     "なんじ.に おきますか？|What time do you get up?",
      "ろくじ.に おきます。|At six.",
-     "どこ.で まちます？|Where shall we wait?"
+     "どこ.で まちますか？|Where will you wait?",
+     "えきのまえ.で まちましょう。|Let's wait in front of the station."
     ]
    },
    {
     "h": "The shortest answer: noun + です",
     "p": [
-     "When the answer is a single thing, you can often turn it into the core with です. なに.を のみます？ 'What will you drink?' コーヒーです. 'Coffee.' どこ.に いきます？ 'Where are you going?' きょうとです. 'Kyoto.'",
+     "When the answer is a single thing, you can often turn it into the core with です. なに.を のみますか？ 'What will you drink?' コーヒーです. 'Coffee.' どこ.に いきますか？ 'Where are you going?' きょうとです. 'Kyoto.'",
      "This works especially well for what, where and when questions. It is extremely common in shops, at stations and in quick chats. At Level 1, keep a core in every sentence, and です makes any noun into one."
     ],
     "ex": [
-     "なに.を のみます？|What will you drink?",
+     "なに.を のみますか？|What will you drink?",
      "コーヒーです。|Coffee.",
-     "どこ.に いきます？|Where are you going?",
+     "どこ.に いきますか？|Where are you going?",
      "きょうとです。|Kyoto.",
-     "いつ きます？|When are you coming?"
+     "いつ きますか？|When are you coming?"
     ],
     "tip": "Any noun + です is a complete, polite answer."
    },
@@ -1640,7 +1780,7 @@
    {
     "h": "What you never drop",
     "p": [
-     "You can drop any chunk, but at Level 1 you always keep the core. The core is where the politeness lives (ます, です, ください), and it tells the listener what actually happens. A bare chunk without a core can sound blunt or leave people guessing.",
+     "You can drop any chunk, but at Level 1 you always keep the core. The core is where the politeness lives (ます, ますか, ません, ましょう, です, ください), and it tells the listener what actually happens. A bare chunk without a core can sound blunt or leave people guessing.",
      "Also, never drop a chunk the listener does not know yet. If you are starting a new topic, give the key chunks first. Drop them only once they are shared. When in doubt, a slightly longer sentence is always safe."
     ],
     "ex": [
@@ -1678,6 +1818,14 @@
    {
     "q": "Without saying わたし, say: I go to work by bus.",
     "a": "バス.で かいしゃ.に いきます。|I go to work by bus."
+   },
+   {
+    "q": "Asked 'Won't you have some tea?', accept: Yes, let's.",
+    "a": "はい、のみましょう。|Yes, let's."
+   },
+   {
+    "q": "Asked where to wait, suggest: Let's wait in front of the station.",
+    "a": "えきのまえ.で まちましょう。|Let's wait in front of the station."
    }
   ],
   "words": [
@@ -1716,7 +1864,7 @@
   ],
   "recap": [
    "Drop any chunk the listener already knows.",
-   "Answer yes or no by repeating the core.",
+   "Answer yes or no by repeating the core without か.",
    "Answer a question-word question with just the new chunk + core.",
    "Noun + です is the shortest complete answer.",
    "Rarely say わたし.は, and never drop the core."
@@ -1742,7 +1890,8 @@
      "あたらしいくるま.で いきます。|I'll go in the new car.",
      "おいしいおちゃ.を のみます。|I drink delicious tea.",
      "ちいさいみせ.で かいます。|I buy it at a small shop.",
-     "おおきいこうえん.が あります。|There's a big park."
+     "おおきいこうえん.が あります。|There's a big park.",
+     "あたらしいくるま.で いきましょう。|Let's go in the new car."
     ],
     "wrong": [
      "あたらしい.で くるま.で いきます。"
@@ -1762,20 +1911,23 @@
      "しずかなみせ.で たべます。|I'll eat at a quiet restaurant.",
      "きれいなへや.に います。|I'm in a clean room.",
      "ゆうめいなおてら.に いきます。|I'll go to a famous temple.",
-     "やすいホテル.に とまります。|I'll stay at a cheap hotel."
+     "やすいホテル.に とまります。|I'll stay at a cheap hotel.",
+     "しずかなみせ.で たべましょう。|Let's eat at a quiet restaurant."
     ]
    },
    {
     "h": "Adjectives as the core",
     "p": [
      "An adjective can also be the core. Then it describes the topic, and it ends in です: このおちゃ.は おいしいです, 'This tea is delicious'. なら.は しずかです, 'Nara is quiet'.",
-     "Here the two families behave differently: い-adjectives keep their い and add です, while な-adjectives drop the な and add です directly. So it is しずかなみせ (inside a chunk) but みせ.は しずかです (as a core)."
+     "Here the two families behave differently: い-adjectives keep their い and add です, while な-adjectives drop the な and add です directly. So it is しずかなみせ (inside a chunk) but みせ.は しずかです (as a core).",
+     "To ask about a quality, just add か: このおちゃ.は おいしいですか？ 'Is this tea good?' At Level 1 you only need です and ですか with adjectives; leave their negative forms for Level 2."
     ],
     "ex": [
      "このおちゃ.は おいしいです。|This tea is delicious.",
      "なら.は しずかです。|Nara is quiet.",
      "このへや.は きれいです。|This room is clean.",
-     "きょう.は さむいです。|It's cold today."
+     "きょう.は さむいです。|It's cold today.",
+     "このおちゃ.は おいしいですか？|Is this tea good?"
     ],
     "wrong": [
      "なら.は しずかなです。"
@@ -1788,14 +1940,15 @@
    {
     "h": "この, その, あの: this, that, that over there",
     "p": [
-     "この (kono), その (sono) and あの (ano) point at a noun: 'this' (near me), 'that' (near you) and 'that over there' (far from both of us). They are decorations too, so they go inside the chunk: このバス.は なら.に いきます？ 'Does this bus go to Nara?'",
+     "この (kono), その (sono) and あの (ano) point at a noun: 'this' (near me), 'that' (near you) and 'that over there' (far from both of us). They are decorations too, so they go inside the chunk: このバス.は なら.に いきますか？ 'Does this bus go to Nara?'",
      "They are a lifesaver in shops. Point and say そのかさ.を ください, 'That umbrella, please'. You don't even need to know the name of the thing if you use これ (this one) or それ (that one) on their own."
     ],
     "ex": [
-     "このバス.は なら.に いきます？|Does this bus go to Nara?",
+     "このバス.は なら.に いきますか？|Does this bus go to Nara?",
      "そのかさ.を ください。|That umbrella, please.",
      "あのみせ.で たべます。|I'll eat at that shop over there.",
-     "これ.を ください。|This one, please."
+     "これ.を ください。|This one, please.",
+     "あのみせ.に はいりましょう。|Let's go into that shop over there."
     ]
    },
    {
@@ -1831,7 +1984,7 @@
    },
    {
     "q": "Ask: Does this bus go to Nara?",
-    "a": "このバス.は なら.に いきます？|Does this bus go to Nara?"
+    "a": "このバス.は なら.に いきますか？|Does this bus go to Nara?"
    },
    {
     "q": "In a shop, say: That umbrella, please.",
@@ -1840,6 +1993,14 @@
    {
     "q": "Say: I'll go to a famous temple.",
     "a": "ゆうめいなおてら.に いきます。|I'll go to a famous temple."
+   },
+   {
+    "q": "Suggest: Let's eat at a quiet restaurant.",
+    "a": "しずかなみせ.で たべましょう。|Let's eat at a quiet restaurant."
+   },
+   {
+    "q": "Ask: Is this tea good?",
+    "a": "このおちゃ.は おいしいですか？|Is this tea good?"
    }
   ],
   "words": [
@@ -1931,7 +2092,8 @@
      "よじ.に きます。|I'll come at four.",
      "ごごさんじ.に あいます。|We'll meet at 3 p.m.",
      "しちじはん.に おきます。|I get up at half past seven.",
-     "いま くじです。|It's nine o'clock now."
+     "いま くじです。|It's nine o'clock now.",
+     "ごごさんじ.に あいましょう。|Let's meet at 3 p.m."
     ],
     "tip": "4, 7 and 9 o'clock are よじ, しちじ, くじ. Learn those three by heart."
    },
@@ -1947,7 +2109,8 @@
      "ともだちさんにん.と いきます。|I'll go with three friends.",
      "おちゃ.を ふたつ ください。|Two teas, please.",
      "ひとり.で いきます。|I'll go alone.",
-     "なんにん.で いきます？|How many of you are going?"
+     "なんにん.で いきますか？|How many of you are going?",
+     "ふたり.で いきましょう。|Let's go, just the two of us."
     ],
     "tip": "で after a number of people means 'as a group of': ふたり.で = the two of us."
    },
@@ -1955,10 +2118,10 @@
     "h": "Prices",
     "p": [
      "Yen is えん (en). Hundreds are ひゃく (hyaku), thousands are せん (sen): ひゃくえん is 100 yen, せんえん is 1,000 yen, ごひゃくえん is 500 yen. Watch out for さんびゃく (300) and さんぜん (3,000), where the sound changes a little.",
-     "To ask the price, say いくらです？ with a rising voice. A price can decorate a noun with の: ごひゃくえんのおちゃ.を かいます, 'I'll buy the 500-yen tea'."
+     "To ask the price, say いくらですか？ and let your voice rise on the か. A price can decorate a noun with の: ごひゃくえんのおちゃ.を かいます, 'I'll buy the 500-yen tea'."
     ],
     "ex": [
-     "これ.は いくらです？|How much is this?",
+     "これ.は いくらですか？|How much is this?",
      "ひゃくえんです。|It's 100 yen.",
      "ぜんぶで せんえんです。|That's 1,000 yen altogether.",
      "ごひゃくえんのおちゃ.を かいます。|I'll buy the 500-yen tea."
@@ -1974,7 +2137,8 @@
      "あかいかさ.を かいます。|I'll buy the red umbrella.",
      "しろいくるま.で きます。|I'll come in a white car.",
      "くろいかばん.が ありません。|My black bag is missing.",
-     "きょう.は そら.が あおいです。|The sky is blue today."
+     "きょう.は そら.が あおいです。|The sky is blue today.",
+     "あおいかさ.を かいましょう。|Let's buy the blue umbrella."
     ]
    },
    {
@@ -2008,7 +2172,7 @@
    },
    {
     "q": "Ask: How much is this?",
-    "a": "これ.は いくらです？|How much is this?"
+    "a": "これ.は いくらですか？|How much is this?"
    },
    {
     "q": "Say: I'll buy the red umbrella.",
@@ -2021,6 +2185,14 @@
    {
     "q": "Say: I drink tea from a tea field in Nara.",
     "a": "ならのちゃばたけのおちゃ.を のみます。|I drink tea from a tea field in Nara."
+   },
+   {
+    "q": "Suggest: Let's meet at 3 p.m.",
+    "a": "ごごさんじ.に あいましょう。|Let's meet at 3 p.m."
+   },
+   {
+    "q": "Suggest: Let's go, just the two of us.",
+    "a": "ふたり.で いきましょう。|Let's go, just the two of us."
    }
   ],
   "words": [
@@ -2089,7 +2261,7 @@
    "Clock times: number + じ; watch よじ, しちじ, くじ.",
    "Counters: ひとつ, ふたつ for things; ひとり, ふたり, さんにん for people.",
    "Numbers and colours are decorations that live inside the chunk.",
-   "いくらです？ asks the price; ぜんぶで means altogether.",
+   "いくらですか？ asks the price; ぜんぶで means altogether.",
    "の chains can be long, but the chunk still has one tag."
   ],
   "next": "Tomorrow you take everything into real scenes: greetings, shopping, food, trains and the phone."
@@ -2114,7 +2286,8 @@
      "わたし.は ケンです。|I'm Ken.",
      "イギリス.から きます。|I come from the UK.",
      "よろしくおねがいします。|Pleased to meet you.",
-     "おやすみなさい。|Good night."
+     "おやすみなさい。|Good night.",
+     "また あいましょう。|Let's meet again."
     ],
     "tip": "Level 2 will teach イギリスからきました (I came from the UK), the form natives use for 'where are you from'."
    },
@@ -2126,22 +2299,23 @@
      "Staff in Japanese shops use very polite language (keigo) with customers. You don't need to speak it back. Your polite ます and です forms are exactly right for a customer, and a smile plus ありがとうございます finishes any purchase nicely."
     ],
     "ex": [
-     "これ.は いくらです？|How much is this?",
+     "これ.は いくらですか？|How much is this?",
      "これ.を ください。|This one, please.",
      "ふくろ.は いりません。|I don't need a bag.",
      "カード.で はらいます。|I'll pay by card.",
-     "あかいの.も あります？|Do you have a red one too?"
+     "あかいの.も ありますか？|Do you have a red one too?"
     ]
    },
    {
     "h": "Eating out",
     "p": [
-     "Before eating, people say いただきます (itadakimasu); after eating, ごちそうさまでした (gochisousama deshita). These are fixed phrases, so the past-looking ending of the second is fine at Level 1.",
-     "To order, use ください or おねがいします with the dish. To ask for a recommendation, おすすめ.は なんです？ And when you are ready to pay, おかいけい.を おねがいします."
+     "Before eating, people say いただきます (itadakimasu); after eating, ごちそうさまでした (gochisōsama deshita). These are fixed phrases, so the past-looking ending of the second is fine at Level 1.",
+     "To order, use ください or おねがいします with the dish. To ask for a recommendation, おすすめ.は なんですか？ And when you are ready to pay, おかいけい.を おねがいします."
     ],
     "ex": [
      "いただきます。|Let's eat. (said before eating)",
-     "おすすめ.は なんです？|What do you recommend?",
+     "ラーメン.を たべましょう。|Let's have ramen.",
+     "おすすめ.は なんですか？|What do you recommend?",
      "ラーメン.を ください。|Ramen, please.",
      "とても おいしいです。|It's very delicious.",
      "おかいけい.を おねがいします。|The bill, please."
@@ -2151,16 +2325,17 @@
    {
     "h": "Trains, buses and telling time",
     "p": [
-     "On the move, your rising question is your best friend. このでんしゃ.は きょうと.に いきます？ 'Does this train go to Kyoto?' なんばんせん.から でます？ 'Which platform does it leave from?' Announcements often say つぎ.は ならです, 'The next stop is Nara'.",
-     "For times, ask いま なんじです？ and listen for a number plus じ. Arrange to meet with a time chunk and a place chunk: しちじ.に えき.で あいます.",
-     "If you get lost, すみません followed by a rising question is the perfect way to ask a stranger. Station staff are used to helping travellers, and a short, clear sentence with the right tags is much easier for them to understand than a long one."
+     "On the move, a simple か question is your best friend. このでんしゃ.は きょうと.に いきますか？ 'Does this train go to Kyoto?' なんばんせん.から でますか？ 'Which platform does it leave from?' Announcements often say つぎ.は ならです, 'The next stop is Nara'.",
+     "For times, ask いま なんじですか？ and listen for a number plus じ. Arrange to meet with a time chunk and a place chunk: しちじ.に えき.で あいます, or turn it into a suggestion with ましょう: しちじ.に えき.で あいましょう, 'Let's meet at the station at seven.'",
+     "If you get lost, すみません followed by a short か question is the perfect way to ask a stranger. Station staff are used to helping travellers, and a short, clear sentence with the right tags is much easier for them to understand than a long one."
     ],
     "ex": [
-     "このでんしゃ.は きょうと.に いきます？|Does this train go to Kyoto?",
-     "なんばんせん.から でます？|Which platform does it leave from?",
+     "このでんしゃ.は きょうと.に いきますか？|Does this train go to Kyoto?",
+     "なんばんせん.から でますか？|Which platform does it leave from?",
      "つぎ.は ならです。|The next stop is Nara.",
-     "いま なんじです？|What time is it now?",
-     "しちじ.に えき.で あいます。|We'll meet at the station at seven."
+     "いま なんじですか？|What time is it now?",
+     "しちじ.に えき.で あいます。|We'll meet at the station at seven.",
+     "しちじ.に えき.で あいましょう。|Let's meet at the station at seven."
     ]
    },
    {
@@ -2174,6 +2349,7 @@
      "いま えき.に います。|I'm at the station now.",
      "あと じゅっぷん.で つきます。|I'll be there in ten minutes.",
      "あとで でんわ.を します。|I'll call you later.",
+     "あとで また はなしましょう。|Let's talk again later.",
      "じゃあ、また。|See you then."
     ]
    }
@@ -2193,15 +2369,15 @@
    },
    {
     "q": "In a restaurant: What do you recommend?",
-    "a": "おすすめ.は なんです？|What do you recommend?"
+    "a": "おすすめ.は なんですか？|What do you recommend?"
    },
    {
     "q": "Ask: Does this train go to Kyoto?",
-    "a": "このでんしゃ.は きょうと.に いきます？|Does this train go to Kyoto?"
+    "a": "このでんしゃ.は きょうと.に いきますか？|Does this train go to Kyoto?"
    },
    {
     "q": "Ask: What time is it now?",
-    "a": "いま なんじです？|What time is it now?"
+    "a": "いま なんじですか？|What time is it now?"
    },
    {
     "q": "On the phone: I'm at the station now.",
@@ -2210,6 +2386,14 @@
    {
     "q": "On the phone: I'll be there in ten minutes.",
     "a": "あと じゅっぷん.で つきます。|I'll be there in ten minutes."
+   },
+   {
+    "q": "Suggest: Let's meet at the station at seven.",
+    "a": "しちじ.に えき.で あいましょう。|Let's meet at the station at seven."
+   },
+   {
+    "q": "On the phone: Let's talk again later.",
+    "a": "あとで また はなしましょう。|Let's talk again later."
    }
   ],
   "words": [
@@ -2278,7 +2462,7 @@
    "Every scene uses the same system: chunks + one polite core.",
    "Fixed phrases (はじめまして, いただきます, もしもし) are learned as whole cores.",
    "Point with これ and それ when you don't know a word.",
-   "Rising questions get you through stations and shops."
+   "Short か questions get you through stations and shops, and ましょう makes plans with friends."
   ],
   "next": "Tomorrow: more scenes for work, the tea farm, health, people, weather and home, plus a look at Level 2."
  },
@@ -2302,7 +2486,9 @@
      "かいぎ.は さんじ.から です。|The meeting is from three.",
      "ちゃばたけ.で おちゃ.を つみます。|We pick tea in the tea field.",
      "ごがつ.に しんちゃ.を つみます。|We pick the new tea in May.",
-     "まいあさ ちゃばたけ.に いきます。|I go to the tea field every morning."
+     "まいあさ ちゃばたけ.に いきます。|I go to the tea field every morning.",
+     "くじ.から かいぎ.を はじめましょう。|Let's start the meeting at nine.",
+     "ちゃばたけ.で おちゃ.を つみましょう。|Let's pick tea in the tea field."
     ]
    },
    {
@@ -2315,6 +2501,7 @@
      "あたま.が いたいです。|I have a headache.",
      "ねつ.が あります。|I have a fever.",
      "びょういん.に いきます。|I'll go to the hospital.",
+     "びょういん.に いきましょう。|Let's go to the hospital.",
      "おだいじに。|Take care of yourself.",
      "あね.は とうきょう.に います。|My older sister is in Tokyo."
     ],
@@ -2330,6 +2517,7 @@
      "あした.は あめです。|It will rain tomorrow.",
      "きょう.は さむいです。|It's cold today.",
      "かさ.が いります。|I need an umbrella.",
+     "きょう.は いえ.で やすみましょう。|Let's rest at home today.",
      "いってきます。|I'm off. (leaving home)",
      "ただいま。|I'm home."
     ]
@@ -2337,28 +2525,29 @@
    {
     "h": "Preparing for the final test",
     "p": [
-     "The final test mixes everything from the fourteen days. When a question gives you an English sentence, work in this order: first choose the core and its polite form (ます, ません, です or ください). Then list the chunks you need and give each noun its tag. Finally, decide the order: put the most important chunk first, and the core last.",
-     "Check the usual traps: clock times take に but あした and きのう take no tag; あいます takes に; places of action take で; も replaces は, が and を but stacks after other tags; decorations stay inside the chunk. For questions, no か: just ？ and a rising voice. And for the past, use a time word with the unchanged core."
+     "The final test mixes everything from the fourteen days. When a question gives you an English sentence, work in this order: first choose the core and its ending (ます, ますか, ません, ましょう, です, ですか or ください). Then list the chunks you need and give each noun its tag. Finally, decide the order: put the most important chunk first, and the core last.",
+     "Check the usual traps: clock times take に but あした and きのう take no tag; あいます takes に; places of action take で; も replaces は, が and を but stacks after other tags; decorations stay inside the chunk. For questions, add か to the ending (ますか, ですか) and let your voice rise on it; the word order never changes. Use ましょう only for things you and the listener will do together. And for the past, use a time word with the unchanged core."
     ],
     "ex": [
      "きのう ともだち.と きょうと.に いきます。|(Level 1) I went to Kyoto with a friend yesterday.",
      "あした くじ.に えき.で ははのともだち.に あいます。|Tomorrow at nine I'll meet my mother's friend at the station.",
      "わたし.も ならのおちゃ.が すきです。|I like Nara tea too.",
-     "だれ.と どこ.で たべます？|Who are you eating with, and where?"
+     "だれ.と どこ.で たべますか？|Who are you eating with, and where?"
     ],
     "tip": "Core first, then chunks, then order. Three steps for every sentence."
    },
    {
     "h": "What comes at Level 2",
     "p": [
-     "You finish Level 1 able to say a huge amount with one verb form and ten tags. Level 2 keeps everything you know and adds endings to the core. The first is the past: いきます becomes いきました (ikimashita, went), and たべません becomes たべませんでした (tabemasen deshita, didn't eat). You will still use time words, but the verb will agree with them.",
-     "Level 2 also brings the question ending か (ka) for more formal questions, the friendly sentence endings ね (ne, isn't it?) and よ (yo, I'm telling you), 'let's' with ましょう (mashou), and wanting with たいです (tai desu), as in いきたいです (ikitai desu, I want to go). Later come the て-form (te-form) for linking actions and making requests, casual speech for friends, and polite keigo for business.",
+     "You finish Level 1 able to say a huge amount with four verb endings and ten tags. Level 2 keeps everything you know and adds endings to the core. The first is the past: いきます becomes いきました (ikimashita, went), and たべません becomes たべませんでした (tabemasen deshita, didn't eat). You will still use time words, but the verb will agree with them.",
+     "Level 2 also brings the friendly sentence endings ね (ne, isn't it?) and よ (yo, I'm telling you), offers like ましょうか (mashō ka, shall I? / shall we?), and wanting with たいです (tai desu), as in いきたいです (ikitai desu, I want to go). Later come the て-form (te-form) for linking actions and making requests, casual speech for friends, and polite keigo for business.",
      "The important thing: none of this replaces Tag Grammar. The chunks and tags you learned stay exactly the same. Only the core at the end grows new endings. Every sentence below is already correct Japanese that you can use today."
     ],
     "ex": [
      "あした なら.に いきます。|I'll go to Nara tomorrow.",
      "まいにち ならのおちゃ.を のみます。|I drink Nara tea every day.",
-     "にほんご.で はなします。|I speak in Japanese."
+     "にほんご.で はなします。|I speak in Japanese.",
+     "こんど なら.へ いきましょう。|Let's go to Nara sometime."
     ]
    }
   ],
@@ -2394,6 +2583,14 @@
    {
     "q": "Say: My older sister is in Tokyo.",
     "a": "あね.は とうきょう.に います。|My older sister is in Tokyo."
+   },
+   {
+    "q": "Suggest: Let's pick tea in the tea field.",
+    "a": "ちゃばたけ.で おちゃ.を つみましょう。|Let's pick tea in the tea field."
+   },
+   {
+    "q": "Suggest: Let's rest at home today.",
+    "a": "きょう.は いえ.で やすみましょう。|Let's rest at home today."
    }
   ],
   "words": [
@@ -2456,6 +2653,7 @@
   ],
   "recap": [
    "Every scene is still chunks + one polite core.",
+   "Four endings on every verb core: ます, ますか, ません, ましょう.",
    "Body part + が + いたいです; weather: time word.は + noun/adjective + です.",
    "For the test: core, then chunks with tags, then order.",
    "Level 2 adds new endings to the core; the tags never change."

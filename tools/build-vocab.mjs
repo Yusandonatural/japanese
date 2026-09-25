@@ -42,7 +42,7 @@ for (const ex of all) {
     const g2 = g.replace(/^(to|at|in|from|with|for|on) /i, '').replace(/^the /i, '');
     add('n:' + c.k, { k: c.k, en: g2, role: c.role, kind: 'noun' }, ex);
   }
-  const k = ex.core.k.replace(/[、。？]/g, '');
+  const k = ex.core.k.replace(/[、。？]/g, '').replace(/(ます|です|ません)か$/, '$1').replace(/ましょう$/, 'ます');
   add('c:' + k, { k, en: ex.core.gloss || '', kind: 'core' }, ex);
 }
 

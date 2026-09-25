@@ -66,7 +66,7 @@
     <div class="small muted" style="margin-bottom:4px">Sentence anatomy — tap 🔊 to listen</div>
     <div id="anatomyCards"></div>
     <div class="row small" style="gap:14px;margin-top:4px">
-      <span><b>chunk</b> = noun + tag</span><span><b>core</b> = the last word, always</span><span><b>↗</b> = rising voice for a question</span>
+      <span><b>chunk</b> = noun + tag</span><span><b>core</b> = the last word, always</span><span><b>ます・ますか・ません・ましょう</b> = the only four endings</span>
     </div>
     <div id="anatomyEx"></div>
   </div>
@@ -78,8 +78,8 @@
   <h2 id="principles">Five principles</h2>
   <div id="principleList"></div>
 
-  <h2 id="level1">Level 1 — speak without conjugating</h2>
-  <p>Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 you learn four rules and start talking.</p>
+  <h2 id="level1">Level 1 — four endings, nothing else</h2>
+  <p>Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 the core has just four endings — ます, ますか, ません, ましょう — and time words do the rest. Learn these and start talking.</p>
   <div id="levelList"></div>
 
   <h2 id="cores">The core — four kinds</h2>
@@ -119,8 +119,8 @@ const add = (parent, html, cls = '') => { const d = document.createElement('div'
 const addEx = (parent, list, opts) => (list || []).forEach(s => parent.appendChild(exBlock(s, opts)));
 
 // anatomy
-$('anatomyCards').appendChild(exCards('あした ともだち.と なら.に いきます？|Are you going to Nara with a friend tomorrow?', { particles }));
-addEx($('anatomyEx'), ['あした ともだち.と なら.に いきます？|Are you going to Nara with a friend tomorrow?']);
+$('anatomyCards').appendChild(exCards('あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?', { particles }));
+addEx($('anatomyEx'), ['あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?']);
 
 // principles
 g.principles.forEach(p => {
@@ -132,6 +132,7 @@ g.principles.forEach(p => {
 // level 1
 g.level1.forEach(r => {
   const box = add($('levelList'), `<h3 style="margin-top:0">${esc(r.rule)}</h3><p>${esc(r.how)}</p>`, 'panel');
+  if (r.table) add(box, `<table class="tbl"><tr><th>Ending</th><th></th><th>Use</th><th>Example</th></tr>${r.table.map(t => `<tr><td><b style="font-size:18px">${esc(t[0])}</b></td><td class="muted">${esc(t[1])}</td><td>${esc(t[2])}</td><td>${esc(t[3])}</td></tr>`).join('')}</table>`);
   addEx(box, r.ex);
   if (r.note) add(box, esc(r.note), 'note');
 });

@@ -77,9 +77,16 @@ export function chunkRomaji(c) {
 }
 
 /** Full sentence romaji from chunks and core. */
+/** Romaji for a core, with endings split: おいしいですか → oishii desu ka, いきますか → ikimasu ka. */
+export function coreRomaji(k) {
+  let r = kanaToRomaji(k);
+  r = r.replace(/(masu|desu|masen)ka$/, '$1 ka');
+  if (k.length > 2 && /です(か)?$/.test(k)) r = r.replace(/([^ ])desu( ka)?$/, '$1 desu$2');
+  return r;
+}
 export function sentenceRomaji(ex) {
   const parts = ex.chunks.map(chunkRomaji);
-  parts.push(kanaToRomaji(ex.core.k));
+  parts.push(coreRomaji(ex.core.k));
   let s = parts.join(' ').replace(/\s+/g, ' ').trim();
   s = s[0].toUpperCase() + s.slice(1);
   return s + (ex.question ? '?' : '.');

@@ -3,7 +3,8 @@
 // Tokens are separated by spaces. "noun.tag" = a chunk with a tag; a token without "." is a
 // tagless chunk (time word, bare noun). The LAST token is the core. The core ends with 。 or ？.
 // Text after "|" is the English translation. Works in the browser and in Node.
-import { kanaToRomaji, romajiParticle } from './romaji.js';
+import { kanaToRomaji, romajiParticle, coreRomaji } from './romaji.js';
+export { coreRomaji };
 
 export const TAGS = ['は', 'が', 'を', 'に', 'で', 'と', 'へ', 'から', 'まで', 'も'];
 // Compound tags allowed after chapter 6: でも, にも, とも, へも, からも, までも
@@ -33,12 +34,6 @@ function particleRomaji(p) {
   if (!p) return '';
   if (p.length > 1 && p.endsWith('も') && p !== 'も') return romajiParticle(p.slice(0, -1)) + ' mo';
   return romajiParticle(p);
-}
-
-/** Core romaji with "desu" split off: おいしいです → oishii desu. */
-export function coreRomaji(k) {
-  const r = kanaToRomaji(k);
-  return k.length > 2 && k.endsWith('です') ? r.replace(/desu$/, ' desu') : r;
 }
 
 export function exRomaji(ex) {

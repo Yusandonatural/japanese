@@ -5,11 +5,11 @@ import { parseEx, exRomaji, TAGS, COMPOUND } from '../js/exparse.js';
 
 const KANJI = /[㐀-䶿一-鿿豈-﫿々]/;
 const KANA_TOKEN = /^[ぁ-ゖァ-ヺー、]+$/;
-const POLITE_TAIL = /(ます|です|ません|ください|なさい)$/;
+const POLITE_TAIL = /(ます|ますか|です|ですか|ません|ませんか|ましょう|ください|なさい)$/;
 const PHRASES = new Set(['またあした', 'じゃあ、また', 'また', 'ただいま', 'いってらっしゃい', 'はじめまして', 'もしもし', 'どうぞ',
   'おだいじに', 'こんばんは', 'こんにちは', 'さようなら', 'いただきます', 'わかりました', 'ごちそうさまでした', 'はい', 'いいえ',
   'ええ', 'どうも', 'おめでとう', 'ようこそ', 'だいじょうぶ', 'おつかれさま', 'ありがとう', 'すみません', 'おはよう']);
-const BAD_END = /(ましょう|か|ね|よ|な)$/;
+const BAD_END = /(ましょうか|ね|よ|な)$/;
 const PAST_END = /(ました|でした)$/;
 
 const ALLOWED = ch => {
@@ -41,7 +41,9 @@ function checkEx(str, where, chapter) {
   if (!isPhrase) {
     if (PAST_END.test(core)) err(where, `core "${core}" is past tense — Level 1 keeps the verb unchanged; use a time word instead`);
     else if (!POLITE_TAIL.test(core)) err(where, `core "${core}" must end in ます/です/ません/ください (or be a fixed phrase)`);
-    if (BAD_END.test(core)) err(where, `core "${core}" must not end with か/ね/よ/ましょう — questions just rise ↗`);
+    if (BAD_END.test(core)) err(where, `core "${core}" must not end with ね/よ/な/ましょうか — Level 1 uses only ます・ますか・ません・ましょう (and です・ですか)`);
+    if (ex.question && !/か$/.test(core)) err(where, `question core "${core}" must end with か (〜ますか / 〜ですか / 〜ませんか)`);
+    if (!ex.question && /(ますか|ですか|ませんか)$/.test(core)) err(where, `core "${core}" ends with か but the sentence ends with 。 — use ？`);
   }
   try { exRomaji(ex); } catch (e) { err(where, 'romaji failed: ' + e.message); }
 }
