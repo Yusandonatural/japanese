@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japanese words & phrases — にほんご Tags</title>
+<meta name="description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/words/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Japanese words & phrases — にほんご Tags">
+<meta property="og:description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta property="og:url" content="https://nihongo.yusando.com/words/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Japanese words & phrases — にほんご Tags">
+<meta name="twitter:description" content="A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "en" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../css/tags.css">
+</head>
+<body>
+<main class="wrap prose">
+  <h1>Words & phrases</h1>
+  <p class="lead">Ready-to-say phrases for twelve everyday scenes, every word used in the 2,000 examples, and the time words that do the job of past and future.</p>
+
+  <div class="tabs" id="mainTabs">
+    <button data-tab="phrases">Phrase book</button>
+    <button data-tab="words">Word list</button>
+    <button data-tab="time">Time words</button>
+  </div>
+
+  <section id="tab-phrases" hidden>
+    <p class="small muted" id="pNote"></p>
+    <div class="tabs" id="sceneTabs"></div>
+    <div id="sceneIntro" class="muted"></div>
+    <div id="phraseList"></div>
+  </section>
+
+  <section id="tab-words" hidden>
+    <input class="search" id="q" type="search" placeholder="Search kana, romaji or English…" autocomplete="off">
+    <div class="tabs" id="catTabs"></div>
+    <div class="small muted" id="wCount"></div>
+    <div id="wordList"></div>
+    <div style="text-align:center;margin:12px 0"><button class="btn ghost small" id="more" hidden>Show more</button></div>
+  </section>
+
+  <section id="tab-time" hidden>
+    <p id="tNote"></p>
+    <div id="timeLists"></div>
+  </section>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadPhrases, loadVocab, loadAdverbs, loadScenes, exBlock, esc, qs, kanaToRomaji } from '../js/app.js';
+import { speak, canSpeak } from '../js/speech.js';
+renderHeader('words');
+const $ = id => document.getElementById(id);
+
+// ---------- tabs ----------
+let tab = qs('tab') || 'phrases';
+function showTab(t) {
+  tab = t;
+  document.querySelectorAll('#mainTabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  ['phrases', 'words', 'time'].forEach(x => $('tab-' + x).hidden = x !== t);
+  const u = new URL(location); u.searchParams.set('tab', t); history.replaceState(null, '', u);
+  if (t === 'phrases') initPhrases(); if (t === 'words') initWords(); if (t === 'time') initTime();
+}
+document.querySelectorAll('#mainTabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+
+// ---------- phrase book ----------
+let phrasesReady = false;
+async function initPhrases() {
+  if (phrasesReady) return; phrasesReady = true;
+  const [pb, scenes] = await Promise.all([loadPhrases(), loadScenes()]);
+  $('pNote').textContent = pb.note;
+  let current = qs('scene') || pb.scenes[0].id;
+  const render = () => {
+    const sc = pb.scenes.find(s => s.id === current) || pb.scenes[0];
+    [...$('sceneTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === sc.id));
+    $('sceneIntro').textContent = sc.intro || '';
+    const list = $('phraseList'); list.innerHTML = '';
+    sc.phrases.forEach(p => {
+      const el = exBlock(p.ex);
+      if (p.note) { const n = document.createElement('div'); n.className = 'small muted'; n.style.marginTop = '2px'; n.textContent = '→ ' + p.note; el.appendChild(n); }
+      list.appendChild(el);
+    });
+    const more = document.createElement('p'); more.className = 'small';
+    more.innerHTML = `<a href="../scenes/?scene=${sc.id}">See all example sentences for this scene →</a>`;
+    list.appendChild(more);
+  };
+  pb.scenes.forEach(s => {
+    const meta = scenes.find(x => x.id === s.id) || {};
+    const b = document.createElement('button'); b.dataset.id = s.id; b.textContent = `${meta.icon || ''} ${s.name}`;
+    b.addEventListener('click', () => { current = s.id; const u = new URL(location); u.searchParams.set('scene', s.id); history.replaceState(null, '', u); render(); });
+    $('sceneTabs').appendChild(b);
+  });
+  render();
+}
+
+// ---------- word list ----------
+const CATS = [['all', 'All'], ['verb', 'Verbs'], ['describe', 'Describing'], ['thing', 'Things & places'], ['people', 'People & animals'], ['time', 'Time'], ['question', 'Question words'], ['phrase', 'Set phrases'], ['request', 'Requests']];
+let wordsReady = false, vocab = [], cat = qs('cat') || 'all', shown = 120;
+async function initWords() {
+  if (wordsReady) return; wordsReady = true;
+  vocab = await loadVocab();
+  CATS.forEach(([id, label]) => {
+    const n = id === 'all' ? vocab.length : vocab.filter(w => w.cat === id).length;
+    if (!n) return;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${label} (${n})`;
+    b.addEventListener('click', () => { cat = id; shown = 120; renderWords(); });
+    $('catTabs').appendChild(b);
+  });
+  $('q').addEventListener('input', () => { shown = 120; renderWords(); });
+  $('more').addEventListener('click', () => { shown += 200; renderWords(); });
+  renderWords();
+}
+function renderWords() {
+  [...$('catTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === cat));
+  const q = $('q').value.trim().toLowerCase();
+  const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const qn = norm(q);
+  const items = vocab.filter(w => (cat === 'all' || w.cat === cat) && (!q || w.k.includes(q) || norm(w.r).includes(qn) || norm(w.en).includes(qn)));
+  $('wCount').textContent = `${items.length} word${items.length === 1 ? '' : 's'} · sorted by how often they appear`;
+  const list = $('wordList'); list.innerHTML = '';
+  items.slice(0, shown).forEach(w => {
+    const row = document.createElement('div'); row.className = 'vrow';
+    row.innerHTML = `<div><span class="k">${esc(w.k)}</span>${canSpeak() ? ' <button class="say" style="border:none;background:none;cursor:pointer">🔊</button>' : ''}<div class="r">${esc(w.r)}</div></div>
+      <div>${esc(w.en)}<div class="small muted">Chapter ${w.ch} · ${w.n}×</div></div>
+      ${w.ex ? `<div class="ex">${esc(w.ex.k)} — ${esc(w.ex.en)}</div>` : ''}`;
+    const b = row.querySelector('.say'); if (b) b.addEventListener('click', () => speak(w.k));
+    list.appendChild(row);
+  });
+  $('more').hidden = items.length <= shown;
+}
+
+// ---------- time words ----------
+let timeReady = false;
+async function initTime() {
+  if (timeReady) return; timeReady = true;
+  const adv = await loadAdverbs();
+  $('tNote').innerHTML = `At Level 1 the core never changes. These words — placed as a chunk with <b>no tag</b> — tell the listener when. <span class="muted">(In Level 2 you will also change the verb: いきました.)</span>`;
+  const groups = [['past', 'Past', 'きのう なら.に いきます。|I went to Nara yesterday.'], ['present', 'Now & habits', 'まいにち おちゃ.を のみます。|I drink tea every day.'], ['future', 'Future', 'あした なら.に いきます。|I\'ll go to Nara tomorrow.']];
+  groups.forEach(([key, label, ex]) => {
+    const box = document.createElement('div'); box.className = 'panel';
+    box.innerHTML = `<h3 style="margin-top:0">${label}</h3>`;
+    box.appendChild(exBlock(ex));
+    const grid = document.createElement('div'); grid.className = 'wordgrid'; grid.style.marginTop = '8px';
+    adv[key].forEach(w => {
+      const d = document.createElement('div'); d.className = 'w'; if (canSpeak()) { d.style.cursor = 'pointer'; d.addEventListener('click', () => speak(w.k)); }
+      d.innerHTML = `<b>${esc(w.k)}</b><span>${esc(kanaToRomaji(w.k))} · ${esc(w.en)}</span>`;
+      grid.appendChild(d);
+    });
+    box.appendChild(grid);
+    $('timeLists').appendChild(box);
+  });
+}
+
+showTab(['phrases', 'words', 'time'].includes(tab) ? tab : 'phrases');
+renderFooter();
+</script>
+</body>
+</html>

@@ -87,3 +87,47 @@ table.tbl th, table.tbl td { text-align: left; padding: 6px 8px; border-bottom: 
 .big { font-size: 34px; font-weight: 800; }
 footer { color: var(--muted); font-size: 12px; padding: 30px 16px; text-align: center; }
 @media (max-width: 480px) { .chunk .word { font-size: 20px; } h1 { font-size: 22px; } }
+/* ---------- content pages: lessons, grammar, words ---------- */
+.exb { position: relative; padding: 8px 0 8px 12px; border-left: 3px solid var(--line); margin: 8px 0; }
+.exb.wrong { border-left-color: var(--ng); }
+.exb.wrong .exb-ja { text-decoration: line-through; text-decoration-color: rgba(192,57,43,.55); color: var(--muted); }
+.exb.right { border-left-color: var(--ok); }
+.exb .mark { font-weight: 800; margin-right: 6px; }
+.exb.wrong .mark { color: var(--ng); } .exb.right .mark { color: var(--ok); }
+.exb-ja { font-size: 20px; line-height: 1.5; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: .45em; }
+.exb-ja .tg { font-weight: 800; }
+.exb-ja .core { font-weight: 700; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.exb-ro { color: var(--muted); font-size: 13px; }
+.exb-en { font-size: 14px; }
+.exb .say { border: none; background: transparent; cursor: pointer; font-size: 16px; padding: 0 4px; opacity: .7; }
+.exb .say:hover { opacity: 1; }
+.prose p { margin: 8px 0; }
+.tip { background: rgba(47,111,94,.08); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 10px 0; }
+.tip::before { content: '💡 '; }
+.note { background: rgba(230,184,0,.12); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 10px 0; }
+.why { font-size: 14px; color: var(--muted); margin: -2px 0 10px 15px; }
+.lesson-nav { display: flex; justify-content: space-between; gap: 8px; margin: 18px 0; flex-wrap: wrap; }
+.goal { font-size: 15px; font-weight: 600; }
+.tryit details { border-top: 1px solid var(--line); padding: 8px 0; }
+.tryit summary { cursor: pointer; font-size: 15px; }
+.tryit summary::marker { color: var(--accent); }
+.wordgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+.wordgrid .w { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--panel); }
+.wordgrid .w b { font-size: 17px; display: block; }
+.wordgrid .w span { font-size: 12px; color: var(--muted); }
+.toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+.toc a { font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--ink); background: var(--panel); }
+.tagsec { scroll-margin-top: 70px; }
+.tagsec .head { display: flex; align-items: center; gap: 10px; }
+.tagsec .big-tag { font-size: 30px; font-weight: 800; color: #fff; border-radius: 12px; padding: 2px 14px; }
+.tagsec .picture { font-style: italic; color: var(--muted); font-size: 14px; }
+.use { margin-top: 12px; }
+.use h4 { margin: 0 0 2px; font-size: 15px; }
+.vrow { display: grid; grid-template-columns: minmax(110px, 1.1fr) 1.6fr; gap: 4px 12px; padding: 8px 0; border-top: 1px solid var(--line); align-items: baseline; }
+.vrow .k { font-size: 19px; }
+.vrow .r { font-size: 12px; color: var(--muted); }
+.vrow .ex { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.search { width: 100%; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 15px; }
+.lesson-list a { display: flex; gap: 12px; align-items: baseline; padding: 10px 4px; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.lesson-list .d { font-weight: 800; color: var(--accent); min-width: 52px; }
+.lesson-list .done-mark { margin-left: auto; color: var(--ok); }

@@ -82,7 +82,8 @@
     <p id="doneSummary"></p>
     <div id="weakList"></div>
     <div class="row" style="margin-top:10px">
-      <a class="btn" id="toChapter" href="#">Back to chapter</a>
+      <a class="btn" id="nextLesson" href="../lesson/" style="display:none">Next lesson →</a>
+      <a class="btn ghost" id="toChapter" href="#">Back to chapter</a>
       <a class="btn ghost" href="../">Home</a>
     </div>
   </div>
@@ -167,6 +168,7 @@ function finish() {
     wl.innerHTML = '<p class="small muted">Keep an eye on:</p>' + weak.map(([p, acc]) => `<span class="tag-pill" style="background:var(--p-${p === '(none)' ? 'none' : p})">${p === '(none)' ? 'no tag' : p} ${Math.round(acc * 100)}%</span>`).join(' ');
   }
   if (day) markDayDone(day);
+  if (day && Number(day) < 14) { const nl = document.getElementById('nextLesson'); nl.href = `../lesson/?day=${Number(day) + 1}`; nl.textContent = `Day ${Number(day) + 1} lesson →`; nl.style.display = ''; }
   updateBar();
 }
 

@@ -9,12 +9,14 @@ const IDS = JSON.parse(fs.readFileSync(path.join(ROOT, 'google-ids.json'), 'utf8
 
 const PAGES = [
   { file: 'index.html', path: '/', title: 'にほんご Tags — Learn Japanese in 14 Days', desc: 'Learn 2,000 real-life Japanese sentences with Tag Grammar: move the particle tags, build the sentence yourself. No conjugation, ten chapters, two weeks.' },
-  { file: 'grammar/index.html', path: '/grammar/', title: 'Tag Grammar — にほんご Tags', desc: 'The Tag Grammar rules: ten particle tags, five principles, and the level-1 rules for talking without conjugating verbs.' },
+  { file: 'grammar/index.html', path: '/grammar/', title: 'Tag Grammar — Japanese particles explained — にほんご Tags', desc: 'The Tag Grammar reference: five principles, the level-1 rules for talking without conjugating, and every Japanese particle (は が を に で と へ から まで も) with examples and common mistakes.' },
   { file: 'ch/index.html', path: '/ch/', title: 'Chapters — にほんご Tags', desc: 'Ten chapters of real-life Japanese sentences, built from ten particle tags. Browse examples chapter by chapter.', noindex: true },
   { file: 'drill/index.html', path: '/drill/', title: 'Daily drill — にほんご Tags', desc: 'A 30-question daily drill mixing seven exercise types to build tag-grammar reflexes.', noindex: true },
   { file: 'test/index.html', path: '/test/', title: 'Chapter test — にほんご Tags', desc: 'A scored test for each chapter, plus a 100-question final covering all ten.', noindex: true },
   { file: 'progress/index.html', path: '/progress/', title: 'Your progress — にほんご Tags', desc: 'Track your 14-day plan, chapter test scores, and per-tag accuracy.', noindex: true },
   { file: 'scenes/index.html', path: '/scenes/', title: 'Browse by scene — にほんご Tags', desc: 'Browse the 2,000 example sentences by everyday scene: shopping, food, transport, work, farm life and more.' },
+  { file: 'lesson/index.html', path: '/lesson/', title: '14 daily lessons — にほんご Tags', desc: 'Fourteen short daily lessons that teach spoken Japanese step by step with Tag Grammar: particles as tags, free word order, no conjugation.' },
+  { file: 'words/index.html', path: '/words/', title: 'Japanese words & phrases — にほんご Tags', desc: 'A phrase book for twelve everyday scenes, a searchable list of every word in 2,000 example sentences, and the time words for past and future.' },
   { file: 'print/index.html', path: '/print/', title: 'Printable workbooks — にほんご Tags', desc: '50-question printable worksheets for each of the ten chapters, with an answer key.' },
 ];
 
@@ -79,6 +81,7 @@ function head(page) {
 for (const page of PAGES) {
   const p = path.join(ROOT, page.file);
   let html = fs.readFileSync(p, 'utf8');
+  if (html.includes('window.GOOGLE_IDS')) continue; // already injected
   // strip any existing <title>/<meta viewport>/<meta description>/<link stylesheet> block up to the stylesheet link, keep stylesheet
   html = html.replace(/<meta name="viewport"[^>]*>\s*/i, '');
   html = html.replace(/<title>[^<]*<\/title>\s*/i, '');

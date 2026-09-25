@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tag Grammar — にほんご Tags</title>
-<meta name="description" content="The Tag Grammar rules: ten particle tags, five principles, and the level-1 rules for talking without conjugating verbs.">
+<title>Tag Grammar — Japanese particles explained — にほんご Tags</title>
+<meta name="description" content="The Tag Grammar reference: five principles, the level-1 rules for talking without conjugating, and every Japanese particle (は が を に で と へ から まで も) with examples and common mistakes.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://nihongo.yusando.com/grammar/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="にほんご Tags">
-<meta property="og:title" content="Tag Grammar — にほんご Tags">
-<meta property="og:description" content="The Tag Grammar rules: ten particle tags, five principles, and the level-1 rules for talking without conjugating verbs.">
+<meta property="og:title" content="Tag Grammar — Japanese particles explained — にほんご Tags">
+<meta property="og:description" content="The Tag Grammar reference: five principles, the level-1 rules for talking without conjugating, and every Japanese particle (は が を に で と へ から まで も) with examples and common mistakes.">
 <meta property="og:url" content="https://nihongo.yusando.com/grammar/">
 <meta property="og:image" content="https://nihongo.yusando.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tag Grammar — にほんご Tags">
-<meta name="twitter:description" content="The Tag Grammar rules: ten particle tags, five principles, and the level-1 rules for talking without conjugating verbs.">
+<meta name="twitter:title" content="Tag Grammar — Japanese particles explained — にほんご Tags">
+<meta name="twitter:description" content="The Tag Grammar reference: five principles, the level-1 rules for talking without conjugating, and every Japanese particle (は が を に で と へ から まで も) with examples and common mistakes.">
 <meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
 
 <script type="application/ld+json">
@@ -58,59 +58,122 @@
 <link rel="stylesheet" href="../css/tags.css">
 </head>
 <body>
-<main class="wrap">
+<main class="wrap prose">
   <h1>Tag Grammar</h1>
-  <p class="lead">A Japanese sentence is tagged chunks + one core at the end. Learn the tags, and you can say the chunks in whatever order you like.</p>
+  <p class="lead">A Japanese sentence is a row of tagged chunks with one core at the end. Learn what each tag does, and you can put the chunks in whatever order you like.</p>
 
-  <h2>Five principles</h2>
-  <ol class="panel" style="padding-left:34px">
-    <li>The core comes last. A sentence = chunks + core. The core alone can be a full sentence.</li>
-    <li>A chunk = a noun phrase + a tag. The tag says who, what, where, when.</li>
-    <li>Chunk order is free. Whatever you put first is what you're emphasizing.</li>
-    <li>Chunks everyone already knows can be dropped.</li>
-    <li>Decorations (adjectives, の) go inside a chunk, never as their own chunk.</li>
-  </ol>
-
-  <h2>Level 1 rules — no conjugation</h2>
-  <div class="panel">
-    <table class="tbl">
-      <tr><th>Rule</th><th>How</th><th>Example</th></tr>
-      <tr><td>Verb never changes</td><td>Use one polite form (features ます／です) and keep it.</td><td>私は 奈良で お茶を 買います。</td></tr>
-      <tr><td>Past / future = a time word</td><td>Add 昨日・もう / 明日・あとで as a tagless chunk.</td><td>昨日 友達と お茶を 買いました。</td></tr>
-      <tr><td>Questions rise ↗</td><td>Same words, same order — just lift your voice.</td><td>明日 奈良へ 行きます↗</td></tr>
-    </table>
+  <div class="panel" id="anatomy">
+    <div class="small muted" style="margin-bottom:4px">Sentence anatomy — tap 🔊 to listen</div>
+    <div id="anatomyCards"></div>
+    <div class="row small" style="gap:14px;margin-top:4px">
+      <span><b>chunk</b> = noun + tag</span><span><b>core</b> = the last word, always</span><span><b>↗</b> = rising voice for a question</span>
+    </div>
+    <div id="anatomyEx"></div>
   </div>
 
-  <h2>The 10 tags</h2>
-  <div id="particles" class="grid"></div>
+  <nav class="toc" id="toc">
+    <a href="#principles">5 principles</a><a href="#level1">Level 1 rules</a><a href="#cores">The core</a><a href="#tags">The 10 tags</a><a href="#notag">No tag</a><a href="#no">の</a><a href="#questions">Question words</a><a href="#confusions">Easy to confuse</a>
+  </nav>
 
-  <h2>Easy to confuse</h2>
-  <div id="confusions" class="panel"></div>
+  <h2 id="principles">Five principles</h2>
+  <div id="principleList"></div>
+
+  <h2 id="level1">Level 1 — speak without conjugating</h2>
+  <p>Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 you learn four rules and start talking.</p>
+  <div id="levelList"></div>
+
+  <h2 id="cores">The core — four kinds</h2>
+  <div class="grid" id="coreList" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))"></div>
+
+  <h2 id="tags">The 10 tags</h2>
+  <nav class="toc" id="tagToc"></nav>
+  <div id="tagList"></div>
+
+  <h2 id="notag">No tag at all</h2>
+  <div class="panel" id="notagBox"></div>
+
+  <h2 id="no">の — the glue inside a chunk</h2>
+  <div class="panel" id="noBox"></div>
+
+  <h2 id="questions">Question words</h2>
+  <p id="qNote"></p>
+  <div class="panel" id="qList"></div>
+
+  <h2 id="confusions">Easy to confuse</h2>
+  <div id="confList"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="../lesson/">Daily lessons</a>
+    <a class="btn ghost" href="../words/">Words & phrases</a>
+    <a class="btn" href="../lesson/?day=1">Start Day 1 →</a>
+  </div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadParticles, loadConfusions } from '../js/app.js';
+import { renderHeader, renderFooter, loadParticles, loadConfusions, loadGrammar, exBlock, exCards, CHAPTERS, esc } from '../js/app.js';
 renderHeader('grammar');
 
-const [particles, confusions] = await Promise.all([loadParticles(), loadConfusions()]);
-const pWrap = document.getElementById('particles');
-particles.forEach(p => {
-  const card = document.createElement('div'); card.className = 'panel';
-  card.innerHTML = `<div class="row" style="align-items:baseline">
-      <span class="tag-pill" style="background:${p.color}">${p.p}</span>
-      <b>${p.label}</b><span class="muted small">${p.romaji}</span>
-    </div>
-    <p class="small">${p.short}</p>
-    <p class="small muted">${p.explain}</p>
-    <p class="small">${p.examples.map(e => `<span style="white-space:nowrap">${e}</span>`).join(' · ')}</p>`;
-  pWrap.appendChild(card);
+const [particles, confusions, g] = await Promise.all([loadParticles(), loadConfusions(), loadGrammar()]);
+const $ = id => document.getElementById(id);
+const add = (parent, html, cls = '') => { const d = document.createElement('div'); if (cls) d.className = cls; d.innerHTML = html; parent.appendChild(d); return d; };
+const addEx = (parent, list, opts) => (list || []).forEach(s => parent.appendChild(exBlock(s, opts)));
+
+// anatomy
+$('anatomyCards').appendChild(exCards('あした ともだち.と なら.に いきます？|Are you going to Nara with a friend tomorrow?', { particles }));
+addEx($('anatomyEx'), ['あした ともだち.と なら.に いきます？|Are you going to Nara with a friend tomorrow?']);
+
+// principles
+g.principles.forEach(p => {
+  const box = add($('principleList'), `<h3 style="margin-top:0">${p.n}. ${esc(p.title)}</h3><p>${esc(p.text)}</p>`, 'panel');
+  if (p.n === 3) p.ex.forEach(s => { box.appendChild(exCards(s, { particles })); box.lastChild.style.marginBottom = '0'; const en = document.createElement('div'); en.className = 'exb-en muted'; en.textContent = s.split('|')[1]; box.appendChild(en); });
+  else addEx(box, p.ex);
 });
-const cWrap = document.getElementById('confusions');
+
+// level 1
+g.level1.forEach(r => {
+  const box = add($('levelList'), `<h3 style="margin-top:0">${esc(r.rule)}</h3><p>${esc(r.how)}</p>`, 'panel');
+  addEx(box, r.ex);
+  if (r.note) add(box, esc(r.note), 'note');
+});
+
+// cores
+g.cores.forEach(c => {
+  const box = add($('coreList'), `<div class="row" style="align-items:baseline"><b>${esc(c.type)}</b><span class="muted small">${esc(c.form)}</span></div><p class="small">${esc(c.text)}</p>`, 'panel');
+  addEx(box, c.ex);
+});
+
+// tags
+const dayFor = ch => { const c = CHAPTERS.find(x => x.n === ch); return c ? c.days[0] : 1; };
+g.tags.forEach(t => {
+  const meta = particles.find(p => p.p === t.p) || {};
+  const id = 'tag-' + (meta.romaji || t.p);
+  const a = document.createElement('a'); a.href = '#' + id; a.innerHTML = `<b style="color:${meta.color}">${t.p}</b> ${esc(meta.label || '')}`; $('tagToc').appendChild(a);
+  const sec = add($('tagList'), `<div class="head"><span class="big-tag" style="background:${meta.color}">${t.p}</span>
+      <div><div><b>${esc(meta.label || '')}</b> <span class="muted small">· ${esc(meta.romaji || '')} · ${esc(meta.short || '')}</span></div>
+      <div class="picture">${esc(t.picture)}</div></div></div>
+      <p class="small"><b>Answers:</b> ${esc(t.asks)} &nbsp;·&nbsp; <a href="../lesson/?day=${dayFor(meta.chapter)}">Learned on Day ${dayFor(meta.chapter)}</a></p>`, 'panel tagsec');
+  sec.id = id;
+  t.uses.forEach(u => { const box = add(sec, `<h4>${esc(u.h)}</h4><div class="small">${esc(u.text)}</div>`, 'use'); addEx(box, u.ex); });
+  if (t.mistakes && t.mistakes.length) {
+    const m = add(sec, `<h4>Common mistake${t.mistakes.length > 1 ? 's' : ''}</h4>`, 'use');
+    t.mistakes.forEach(x => { m.appendChild(exBlock(x.wrong + '|', { wrong: true })); m.appendChild(exBlock(x.right, { right: true })); add(m, esc(x.why), 'why'); });
+  }
+});
+
+// no tag, の
+add($('notagBox'), `<p>${esc(g.notag.text)}</p>`); addEx($('notagBox'), g.notag.ex);
+add($('noBox'), `<p>${esc(g.no.text)}</p>`); addEx($('noBox'), g.no.ex);
+
+// question words
+$('qNote').textContent = g.questionNote;
+g.questionWords.forEach(q => { const box = add($('qList'), `<div class="row" style="align-items:baseline"><b style="font-size:20px">${esc(q.k)}</b><span class="muted">${esc(q.en)}</span></div>`, 'use'); addEx(box, q.ex); });
+
+// confusions
 confusions.forEach(c => {
-  const row = document.createElement('div'); row.className = 'row'; row.style.padding = '8px 0'; row.style.borderTop = '1px solid var(--line)';
-  const label = c.pair[0] ? `${c.pair[0]} vs ${c.pair[1] || '∅'}` : `(no tag) vs ${c.pair[1]}`;
-  row.innerHTML = `<b style="min-width:90px">${label}</b><span class="small muted">${c.tip}</span>`;
-  cWrap.appendChild(row);
+  const pa = particles.find(p => p.p === c.pair[0]), pb = particles.find(p => p.p === c.pair[1]);
+  const label = (c.pair[0] ? `<b style="color:${pa?.color}">${c.pair[0]}</b>` : '<b>(no tag)</b>') + ' vs ' + `<b style="color:${pb?.color}">${c.pair[1]}</b>`;
+  const box = add($('confList'), `<div style="font-size:18px">${label}</div><p class="small">${esc(c.tip)}</p>`, 'panel');
+  addEx(box, c.ex);
 });
 
 renderFooter();

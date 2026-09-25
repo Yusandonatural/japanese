@@ -1,14 +1,86 @@
 [
-  {"id": "greeting", "name": "Greetings & self-intro", "ja": "挨拶・自己紹介", "icon": "👋", "target": 150},
-  {"id": "home", "name": "Daily life at home", "ja": "家の暮らし", "icon": "🏠", "target": 250},
-  {"id": "shopping", "name": "Shopping", "ja": "買い物", "icon": "🛍️", "target": 200},
-  {"id": "food", "name": "Food & restaurants", "ja": "食事・お店", "icon": "🍵", "target": 200},
-  {"id": "transport", "name": "Transport & directions", "ja": "移動・道案内", "icon": "🚃", "target": 200},
-  {"id": "time", "name": "Time & schedule", "ja": "時間・予定", "icon": "🕒", "target": 150},
-  {"id": "work", "name": "Work", "ja": "仕事", "icon": "💼", "target": 200},
-  {"id": "farm", "name": "Farm & outdoors", "ja": "畑・屋外", "icon": "🌱", "target": 150},
-  {"id": "health", "name": "Health & feelings", "ja": "体調・気持ち", "icon": "💚", "target": 150},
-  {"id": "people", "name": "People & relationships", "ja": "人・人間関係", "icon": "👥", "target": 150},
-  {"id": "weather", "name": "Weather & nature", "ja": "天気・自然", "icon": "🌤️", "target": 100},
-  {"id": "phone", "name": "Phone & online", "ja": "電話・オンライン", "icon": "📱", "target": 100}
+ {
+  "id": "greeting",
+  "name": "Greetings & self-intro",
+  "ja": "あいさつ・じこしょうかい",
+  "icon": "👋",
+  "target": 150
+ },
+ {
+  "id": "home",
+  "name": "Daily life at home",
+  "ja": "いえの くらし",
+  "icon": "🏠",
+  "target": 250
+ },
+ {
+  "id": "shopping",
+  "name": "Shopping",
+  "ja": "かいもの",
+  "icon": "🛍️",
+  "target": 200
+ },
+ {
+  "id": "food",
+  "name": "Food & restaurants",
+  "ja": "しょくじ・おみせ",
+  "icon": "🍵",
+  "target": 200
+ },
+ {
+  "id": "transport",
+  "name": "Transport & directions",
+  "ja": "いどう・みちあんない",
+  "icon": "🚃",
+  "target": 200
+ },
+ {
+  "id": "time",
+  "name": "Time & schedule",
+  "ja": "じかん・よてい",
+  "icon": "🕒",
+  "target": 150
+ },
+ {
+  "id": "work",
+  "name": "Work",
+  "ja": "しごと",
+  "icon": "💼",
+  "target": 200
+ },
+ {
+  "id": "farm",
+  "name": "Farm & outdoors",
+  "ja": "はたけ・おちゃ",
+  "icon": "🌱",
+  "target": 150
+ },
+ {
+  "id": "health",
+  "name": "Health & feelings",
+  "ja": "からだ・びょういん",
+  "icon": "💚",
+  "target": 150
+ },
+ {
+  "id": "people",
+  "name": "People & relationships",
+  "ja": "かぞく・ひと",
+  "icon": "👥",
+  "target": 150
+ },
+ {
+  "id": "weather",
+  "name": "Weather & nature",
+  "ja": "てんき・きせつ",
+  "icon": "🌤️",
+  "target": 100
+ },
+ {
+  "id": "phone",
+  "name": "Phone & online",
+  "ja": "でんわ・れんらく",
+  "icon": "📱",
+  "target": 100
+ }
 ]

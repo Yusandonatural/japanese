@@ -70,6 +70,7 @@
   <p class="lead" id="sub"></p>
 
   <div id="particlesRow" class="row"></div>
+  <div id="lessonLinks" class="row" style="margin-top:10px"></div>
 
   <div class="panel row" style="justify-content:space-between">
     <div class="row small">
@@ -108,6 +109,7 @@ document.getElementById('prevCh').onclick = () => location.href = `?n=${n - 1}`;
 document.getElementById('nextCh').onclick = () => location.href = `?n=${n + 1}`;
 
 const [examples, particles, scenes] = await Promise.all([loadChapter(n), loadParticles(), loadScenes()]);
+chapter.days.forEach(d => { const a = document.createElement('a'); a.className = 'btn ghost small'; a.href = `../lesson/?day=${d}`; a.textContent = `📖 Day ${d} lesson`; document.getElementById('lessonLinks').appendChild(a); });
 const pRow = document.getElementById('particlesRow');
 particles.filter(p => p.chapter <= n).forEach(p => {
   const pill = document.createElement('span'); pill.className = 'tag-pill'; pill.style.background = p.color; pill.textContent = `${p.p} ${p.label}`;
