@@ -127,7 +127,7 @@ function renderLesson(day) {
     ${l.next ? `<p class="muted"><b>${t('Next:')}</b> ${prose(l.next)}</p>` : ''}
     <div class="panel row" style="justify-content:space-between">
       <div><b>${t('Now practise')}</b><div class="small muted">${t('A short drill on Chapter {c}. It marks Day {d} as done.', { c: l.chapter, d: day })}</div></div>
-      <div class="row"><a class="btn ghost" href="../ch/?n=${l.chapter}&day=${day}">${t('Examples')}</a><a class="btn ghost" href="../drill/?ch=${l.chapter}&mode=flash">⚡ ${t('Instant speaking')}</a><a class="btn" href="../drill/?ch=${l.chapter}&day=${day}">${t('Start the drill →')}</a></div>
+      <div class="row"><a class="btn ghost" href="../ch/?n=${l.chapter}&day=${day}">${t('Examples')}</a><a class="btn ghost" href="../drill/?ch=${l.chapter}&day=${day}&mode=flash">⚡ ${t('Instant speaking')}</a><a class="btn" href="../drill/?ch=${l.chapter}&day=${day}">${t('Start the drill →')}</a></div>
     </div>
     <div class="lesson-nav">
       ${prev ? `<a class="btn ghost small" href="?day=${prev.day}">${t('← Day {d}', { d: prev.day })}</a>` : '<span></span>'}

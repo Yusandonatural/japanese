@@ -123,13 +123,14 @@ const RENDERERS = {
   },
 
   // Q7 hear — play audio (or show romaji if no voice), pick the matching English from 4.
-  hear(container, ex, opts, pool = []) {
+  hear(container, ex, opts) {
+    const pool = opts.pool || [];
     const btn = el('button', 'btn', t('🔊 Play'));
     container.appendChild(btn);
     const s = getSettings();
     btn.addEventListener('click', () => opts.speak && opts.speak(fullKanaText(ex), s.rate));
     if (opts.speak) opts.speak(fullKanaText(ex), s.rate);
-    const distractors = shuffle(pool.filter(o => o.id !== ex.id)).slice(0, 3).map(o => o.en);
+    const distractors = shuffle([...new Set(pool.filter(o => o.id !== ex.id && o.en !== ex.en).map(o => o.en))]).slice(0, 3);
     const choices = shuffle([ex.en, ...distractors]);
     const box = el('div', 'choices'); let picked = null;
     choices.forEach(txt => { const b = el('button', 'choice', txt); b.addEventListener('click', () => { picked = txt; box.querySelectorAll('.choice').forEach(x => x.classList.remove('ok')); b.classList.add('ok'); }); box.appendChild(b); });

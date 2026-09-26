@@ -97,7 +97,8 @@
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadChapter, loadParticles, qs, chapterFor, shuffle, t } from '../js/app.js';
+import { renderHeader, renderFooter, loadChapter, loadParticles, loadLessons, qs, chapterFor, shuffle, t } from '../js/app.js';
+import { scopedExamples, lessonExamples } from '../js/scope.js';
 import { renderQuestion, pickType } from '../js/quiz.js';
 import { renderFlash } from '../js/flash.js';
 import { recordAnswer, recordParticle, markDayDone, particleStats } from '../js/srs.js';
@@ -114,10 +115,20 @@ document.getElementById('title').textContent = FLASH ? t('Instant speaking · Ch
 if (FLASH) document.getElementById('flashIntro').hidden = false;
 document.getElementById('toChapter').href = `../ch/?n=${ch}`;
 
-const [examples, particles] = await Promise.all([loadChapter(ch), loadParticles()]);
-const availableParticles = particles.filter(p => p.chapter <= ch || ch >= 7).map(p => p.p);
-const opts = { particles, availableParticles, speak };
-const deck = shuffle(examples).slice(0, Math.min(N, examples.length));
+const [examples, particles, lessons] = await Promise.all([loadChapter(ch), loadParticles(), loadLessons()]);
+// only what this chapter (up to this day) has taught
+const pool = scopedExamples(examples, ch, day);
+const tagsTaught = pool.flatMap(e => e.chunks.map(c => c.p)).filter(Boolean);
+const availableParticles = particles.filter(p => (p.chapter <= ch || ch >= 7) && (tagsTaught.includes(p.p) || p.chapter < ch)).map(p => p.p);
+const opts = { particles, availableParticles, speak, pool };
+let deck;
+if (FLASH) {
+  // instant speaking: half from the lesson itself, half from the chapter's sentences
+  const fromLesson = shuffle(lessonExamples(lessons, ch, day)).slice(0, Math.ceil(N / 2));
+  deck = shuffle([...fromLesson, ...shuffle(pool).slice(0, N - fromLesson.length)]);
+} else {
+  deck = shuffle(pool).slice(0, Math.min(N, pool.length));
+}
 
 let idx = 0, correct = 0, answered = 0;
 let current = null;

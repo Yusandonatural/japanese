@@ -113,7 +113,7 @@ document.getElementById('retryBtn').href = location.pathname + location.search;
 
 const examples = isFinal ? await loadChapters([1,2,3,4,5,6,7,8,9,10]) : await loadChapter(ch);
 const particles = await loadParticles();
-const opts = { particles, availableParticles: particles.map(p => p.p), speak };
+const opts = { particles, availableParticles: particles.map(p => p.p), speak, pool: examples };
 const deck = shuffle(examples).slice(0, Math.min(N, examples.length));
 
 let idx = 0, correct = 0, answered = 0, current = null;

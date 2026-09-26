@@ -16,7 +16,7 @@ then open http://localhost:8000/
 ## Structure
 
 - `data/` — particles.json, scenes.json, confusions.json, adverbs.json, ch01–ch10.json (2,000 examples)
-- `js/` — flash.js (instant speaking / 瞬間作文 cards, `drill/?mode=flash`), app.js (shared rendering/settings), romaji.js (kana→Hepburn), chunks.js (drag/tap sentence
+- `js/` — scope.js (limits drills and instant speaking to what each chapter/day has taught), flash.js (instant speaking / 瞬間作文 cards, `drill/?mode=flash`), app.js (shared rendering/settings), romaji.js (kana→Hepburn), chunks.js (drag/tap sentence
   builder), quiz.js (7 question types), srs.js (3-box Leitner progress in localStorage), speech.js
   (Web Speech API read-aloud)
 - `css/tags.css` — single stylesheet, light/dark aware
