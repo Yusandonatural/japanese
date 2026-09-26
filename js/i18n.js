@@ -140,5 +140,7 @@ export const TR = {
   'Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 the core has just four endings — ます, ますか, ません, ましょう — and time words do the rest. Learn these and start talking.': 'Çoğu kurs, daha tek cümle kuramadan haftalarca fiil çekimi öğretir. Etiket Dilbilgisi bunların hepsini erteler. 1. seviyede çekirdeğin sadece dört eki vardır — ます, ますか, ません, ましょう — gerisini zaman kelimeleri halleder. Bunları öğren ve konuşmaya başla.',
   'Print': 'Yazdır', '50 questions per chapter, with an answer key at the end. Open a chapter and print or save as PDF.': 'Her bölüm için 50 soru, sonunda cevap anahtarı. Bir bölümü aç, yazdır ya da PDF olarak kaydet.', 'Workbook · 50 questions': 'Çalışma kitabı · 50 soru',
   'Chapter 1': 'Bölüm 1', 'Chapter 2': 'Bölüm 2', 'Chapter 3': 'Bölüm 3', 'Chapter 4': 'Bölüm 4', 'Chapter 5': 'Bölüm 5', 'Chapter 6': 'Bölüm 6', 'Chapter 7': 'Bölüm 7', 'Chapter 8': 'Bölüm 8', 'Chapter 9': 'Bölüm 9', 'Chapter 10': 'Bölüm 10',
+  'Speak Japanese in 14 days': '14 günde Japonca konuş', 'Tap the sentence: the chunks move, the meaning stays.': 'Cümleye dokun: parçalar yer değiştirir, anlam aynı kalır.',
+  "あした ともだち.と なら.に いきます。|Tomorrow I'm going to Nara with a friend.": 'あした ともだち.と なら.に いきます。|Yarın bir arkadaşımla Nara’ya gidiyorum.',
   'The core — four kinds': 'Çekirdek — dört tür', 'No tag at all': 'Hiç etiket yok', 'の — the glue inside a chunk': 'の — parçanın içindeki yapıştırıcı',
 };

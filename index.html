@@ -55,6 +55,9 @@
     if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
   };
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="css/tags.css">
 <link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/">
 <link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/">
@@ -62,8 +65,14 @@
 </head>
 <body>
 <main class="wrap">
-  <h1>にほんご Tags</h1>
-  <p class="lead" data-i18n>Learn spoken Japanese in 14 days with <b>Tag Grammar</b>: every sentence is a set of tagged chunks in front of one final verb. Move the chunks, keep the tags, say it your way.</p>
+  <section class="hero">
+    <span class="eyebrow" data-i18n>Speak Japanese in 14 days</span>
+    <h1>にほんご <span class="accent">Tags</span></h1>
+    <p class="lead" data-i18n>Learn spoken Japanese in 14 days with <b>Tag Grammar</b>: every sentence is a set of tagged chunks in front of one final verb. Move the chunks, keep the tags, say it your way.</p>
+    <div class="demo" id="demo"></div>
+    <div class="demo-en" id="demoEn"></div>
+    <div class="demo-note" data-i18n>Tap the sentence: the chunks move, the meaning stays.</div>
+  </section>
 
   <div class="panel">
     <div class="row" style="justify-content:space-between">
@@ -102,9 +111,30 @@
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, CHAPTERS, t } from './js/app.js';
+import { renderHeader, renderFooter, CHAPTERS, t, exCards, loadParticles } from './js/app.js';
 import { loadDayLog, daysDoneCount } from './js/srs.js';
 renderHeader('home');
+
+// hero demo: one sentence, chunks reorder themselves — the meaning never changes
+const DEMO = t('あした ともだち.と なら.に いきます。|Tomorrow I\'m going to Nara with a friend.');
+const [demoJa, demoEn] = DEMO.split('|');
+const demoChunks = demoJa.replace('。', '').split(' ');
+const demoCore = demoChunks.pop();
+const orders = [[0, 1, 2], [2, 0, 1], [1, 2, 0], [0, 2, 1]];
+let oi = 0;
+const particles = await loadParticles();
+function drawDemo(animate) {
+  const o = orders[oi % orders.length];
+  const box = document.getElementById('demo');
+  box.innerHTML = '';
+  const cards = exCards(o.map(i => demoChunks[i]).join(' ') + ' ' + demoCore + '。|', { particles });
+  if (animate) cards.classList.add('shuffling');
+  box.appendChild(cards);
+}
+document.getElementById('demoEn').textContent = demoEn;
+drawDemo(false);
+document.getElementById('demo').addEventListener('click', () => { oi++; drawDemo(true); });
+setInterval(() => { if (!document.hidden) { oi++; drawDemo(true); } }, 4200);
 
 const chWrap = document.getElementById('chapters');
 CHAPTERS.forEach(c => {

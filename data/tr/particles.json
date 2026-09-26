@@ -1,151 +1,151 @@
 [
-  {
-    "p": "は",
-    "romaji": "wa",
-    "role": "topic",
-    "label": "Konu",
-    "color": "#E6B800",
-    "chapter": 2,
-    "tr_case": "— (hâl eki yok; “…ise / …'e gelince”)",
-    "short": "…'e gelince / …ise",
-    "explain": "Cümlenin neyle ilgili olduğunu işaretler. Genellikle başa gelir, ama başka yerde olması yanlış değil. Konuşmak istediğin şeyi parmağınla gösteriyormuşsun gibi düşün. Türkçede tam karşılığı olan bir ek yok.",
-    "examples": [
-      "わたし.は がくせいです。|Ben öğrenciyim.",
-      "おちゃ.は たかいです。|Çay pahalı."
-    ]
-  },
-  {
-    "p": "が",
-    "romaji": "ga",
-    "role": "doer",
-    "label": "Yapan",
-    "color": "#D9534F",
-    "chapter": 2,
-    "tr_case": "yalın hâl (özne) — ek yok",
-    "short": "Yapan ya da var olan",
-    "explain": "Eylemi kimin yaptığını ya da neyin var olduğunu işaretler. Yapan kişi yeni bilgiyse ya da “kim?” / “ne?” sorusunun cevabıysa kullan. Türkçedeki özneye karşılık gelir.",
-    "examples": [
-      "あめ.が ふります。|Yağmur yağıyor.",
-      "じかん.が あります。|Vaktim var."
-    ]
-  },
-  {
-    "p": "を",
-    "romaji": "o",
-    "role": "target",
-    "label": "Hedef",
-    "color": "#337AB7",
-    "chapter": 3,
-    "tr_case": "-(y)ı / -(y)i / -(y)u / -(y)ü",
-    "short": "Eylemin yöneldiği şey",
-    "explain": "Eylemin nesnesini işaretler: yediğin, aldığın, okuduğun, gördüğün şey. Ayrıca içinden geçtiğin ya da ayrıldığın yeri de. Türkçedeki belirtme hâli gibi, ama belirsiz nesnede de düşmez.",
-    "examples": [
-      "おちゃ.を のみます。|Çay içiyorum.",
-      "いえ.を でます。|Evden çıkıyorum."
-    ]
-  },
-  {
-    "p": "に",
-    "romaji": "ni",
-    "role": "goal",
-    "label": "Varış / -a",
-    "color": "#3C9A5F",
-    "chapter": 3,
-    "tr_case": "-(y)a / -(y)e (saat için: -da / -de)",
-    "short": "Varış yeri, alıcı, zaman noktası, bir şeyin bulunduğu yer",
-    "explain": "Varış noktasını işaretler: gittiğin yer, alan kişi, ne zaman (saat / gün) ve bir şeyin bulunduğu ya da yaşadığı yer. “Nara'ya”, “anneme”, “saat üçte”, “evdeyim”.",
-    "examples": [
-      "なら.に いきます。|Nara'ya gidiyorum.",
-      "さんじ.に あいます。|Saat üçte buluşuyoruz."
-    ]
-  },
-  {
-    "p": "で",
-    "romaji": "de",
-    "role": "place",
-    "label": "Yer / Araç",
-    "color": "#7B4EA3",
-    "chapter": 4,
-    "tr_case": "-da / -de (eylemin yeri) · ile / -la / -le (araç)",
-    "short": "Eylemin yapıldığı yer ya da araç",
-    "explain": "Bir eylemin yapıldığı yeri (bir şeyin sadece bulunduğu yeri değil) ve aracı işaretler: otobüsle, yemek çubuğuyla, Japonca.",
-    "examples": [
-      "みせ.で かいます。|Dükkândan alıyorum.",
-      "バス.で いきます。|Otobüsle gidiyorum."
-    ]
-  },
-  {
-    "p": "と",
-    "romaji": "to",
-    "role": "with",
-    "label": "İle / Ve",
-    "color": "#E8823A",
-    "chapter": 4,
-    "tr_case": "ile / -la / -le (birliktelik) · ve",
-    "short": "Birlikte, ya da şeyler arasında “ve”",
-    "explain": "Bir şeyi birlikte yaptığın kişiyi işaretler ve iki ismi bağlar. Söylenen ya da düşünülen şeyi de işaretler. Araç için değil — araç で.",
-    "examples": [
-      "ともだち.と いきます。|Arkadaşımla gidiyorum.",
-      "おちゃとおかし.を ください。|Çay ve tatlı, lütfen."
-    ]
-  },
-  {
-    "p": "へ",
-    "romaji": "e",
-    "role": "toward",
-    "label": "-a doğru",
-    "color": "#7FC8A9",
-    "chapter": 5,
-    "tr_case": "-(y)a doğru",
-    "short": "Hareketin yönü",
-    "explain": "Yöneldiğin tarafı işaretler. Varış yerleri için に'ye çok yakın; へ yönü, に varışı vurgular. Günlük konuşmada ikisi de olur. Zaman için kullanılmaz.",
-    "examples": [
-      "とうきょう.へ いきます。|Tokyo'ya doğru gidiyorum."
-    ]
-  },
-  {
-    "p": "から",
-    "romaji": "kara",
-    "role": "from",
-    "label": "-dan",
-    "color": "#3BB4C1",
-    "chapter": 5,
-    "tr_case": "-dan / -den / -tan / -ten",
-    "short": "Yerde ya da zamanda başlangıç noktası",
-    "explain": "Bir şeyin nerede ya da ne zaman başladığını işaretler: Nara'dan, saat dokuzdan, bir arkadaştan.",
-    "examples": [
-      "なら.から きます。|Nara'dan geliyorum.",
-      "くじ.から はたらきます。|Dokuzdan itibaren çalışıyorum."
-    ]
-  },
-  {
-    "p": "まで",
-    "romaji": "made",
-    "role": "until",
-    "label": "-a kadar",
-    "color": "#1F7F8C",
-    "chapter": 5,
-    "tr_case": "-(y)a kadar",
-    "short": "Yerde ya da zamanda bitiş noktası",
-    "explain": "Bir şeyin nerede ya da ne zaman bittiğini işaretler: beşe kadar, istasyona kadar. Sık sık から ile eşleşir: “…'dan …'a kadar”.",
-    "examples": [
-      "ごじ.まで はたらきます。|Beşe kadar çalışıyorum.",
-      "えき.まで あるきます。|İstasyona kadar yürüyeceğim."
-    ]
-  },
-  {
-    "p": "も",
-    "romaji": "mo",
-    "role": "also",
-    "label": "De / da",
-    "color": "#8A8A8A",
-    "chapter": 6,
-    "tr_case": "de / da (ayrı yazılan)",
-    "short": "De / da, dahi",
-    "explain": "“De / da” anlamı katar. は, が, を'nın yerini alır; に, で, と, へ, から, まden sonra ise eklenir (Nara'da da → なら.でも).",
-    "examples": [
-      "わたし.も いきます。|Ben de gidiyorum.",
-      "なら.でも かいます。|Nara'da da alıyorum."
-    ]
-  }
+ {
+  "p": "は",
+  "romaji": "wa",
+  "role": "topic",
+  "label": "Konu",
+  "color": "#d49a1a",
+  "chapter": 2,
+  "tr_case": "— (hâl eki yok; “…ise / …'e gelince”)",
+  "short": "…'e gelince / …ise",
+  "explain": "Cümlenin neyle ilgili olduğunu işaretler. Genellikle başa gelir, ama başka yerde olması yanlış değil. Konuşmak istediğin şeyi parmağınla gösteriyormuşsun gibi düşün. Türkçede tam karşılığı olan bir ek yok.",
+  "examples": [
+   "わたし.は がくせいです。|Ben öğrenciyim.",
+   "おちゃ.は たかいです。|Çay pahalı."
+  ]
+ },
+ {
+  "p": "が",
+  "romaji": "ga",
+  "role": "doer",
+  "label": "Yapan",
+  "color": "#c9533a",
+  "chapter": 2,
+  "tr_case": "yalın hâl (özne) — ek yok",
+  "short": "Yapan ya da var olan",
+  "explain": "Eylemi kimin yaptığını ya da neyin var olduğunu işaretler. Yapan kişi yeni bilgiyse ya da “kim?” / “ne?” sorusunun cevabıysa kullan. Türkçedeki özneye karşılık gelir.",
+  "examples": [
+   "あめ.が ふります。|Yağmur yağıyor.",
+   "じかん.が あります。|Vaktim var."
+  ]
+ },
+ {
+  "p": "を",
+  "romaji": "o",
+  "role": "target",
+  "label": "Hedef",
+  "color": "#2f5d8c",
+  "chapter": 3,
+  "tr_case": "-(y)ı / -(y)i / -(y)u / -(y)ü",
+  "short": "Eylemin yöneldiği şey",
+  "explain": "Eylemin nesnesini işaretler: yediğin, aldığın, okuduğun, gördüğün şey. Ayrıca içinden geçtiğin ya da ayrıldığın yeri de. Türkçedeki belirtme hâli gibi, ama belirsiz nesnede de düşmez.",
+  "examples": [
+   "おちゃ.を のみます。|Çay içiyorum.",
+   "いえ.を でます。|Evden çıkıyorum."
+  ]
+ },
+ {
+  "p": "に",
+  "romaji": "ni",
+  "role": "goal",
+  "label": "Varış / -a",
+  "color": "#5b8a3c",
+  "chapter": 3,
+  "tr_case": "-(y)a / -(y)e (saat için: -da / -de)",
+  "short": "Varış yeri, alıcı, zaman noktası, bir şeyin bulunduğu yer",
+  "explain": "Varış noktasını işaretler: gittiğin yer, alan kişi, ne zaman (saat / gün) ve bir şeyin bulunduğu ya da yaşadığı yer. “Nara'ya”, “anneme”, “saat üçte”, “evdeyim”.",
+  "examples": [
+   "なら.に いきます。|Nara'ya gidiyorum.",
+   "さんじ.に あいます。|Saat üçte buluşuyoruz."
+  ]
+ },
+ {
+  "p": "で",
+  "romaji": "de",
+  "role": "place",
+  "label": "Yer / Araç",
+  "color": "#86689f",
+  "chapter": 4,
+  "tr_case": "-da / -de (eylemin yeri) · ile / -la / -le (araç)",
+  "short": "Eylemin yapıldığı yer ya da araç",
+  "explain": "Bir eylemin yapıldığı yeri (bir şeyin sadece bulunduğu yeri değil) ve aracı işaretler: otobüsle, yemek çubuğuyla, Japonca.",
+  "examples": [
+   "みせ.で かいます。|Dükkândan alıyorum.",
+   "バス.で いきます。|Otobüsle gidiyorum."
+  ]
+ },
+ {
+  "p": "と",
+  "romaji": "to",
+  "role": "with",
+  "label": "İle / Ve",
+  "color": "#d57a36",
+  "chapter": 4,
+  "tr_case": "ile / -la / -le (birliktelik) · ve",
+  "short": "Birlikte, ya da şeyler arasında “ve”",
+  "explain": "Bir şeyi birlikte yaptığın kişiyi işaretler ve iki ismi bağlar. Söylenen ya da düşünülen şeyi de işaretler. Araç için değil — araç で.",
+  "examples": [
+   "ともだち.と いきます。|Arkadaşımla gidiyorum.",
+   "おちゃとおかし.を ください。|Çay ve tatlı, lütfen."
+  ]
+ },
+ {
+  "p": "へ",
+  "romaji": "e",
+  "role": "toward",
+  "label": "-a doğru",
+  "color": "#4f9a8a",
+  "chapter": 5,
+  "tr_case": "-(y)a doğru",
+  "short": "Hareketin yönü",
+  "explain": "Yöneldiğin tarafı işaretler. Varış yerleri için に'ye çok yakın; へ yönü, に varışı vurgular. Günlük konuşmada ikisi de olur. Zaman için kullanılmaz.",
+  "examples": [
+   "とうきょう.へ いきます。|Tokyo'ya doğru gidiyorum."
+  ]
+ },
+ {
+  "p": "から",
+  "romaji": "kara",
+  "role": "from",
+  "label": "-dan",
+  "color": "#2f8fa6",
+  "chapter": 5,
+  "tr_case": "-dan / -den / -tan / -ten",
+  "short": "Yerde ya da zamanda başlangıç noktası",
+  "explain": "Bir şeyin nerede ya da ne zaman başladığını işaretler: Nara'dan, saat dokuzdan, bir arkadaştan.",
+  "examples": [
+   "なら.から きます。|Nara'dan geliyorum.",
+   "くじ.から はたらきます。|Dokuzdan itibaren çalışıyorum."
+  ]
+ },
+ {
+  "p": "まで",
+  "romaji": "made",
+  "role": "until",
+  "label": "-a kadar",
+  "color": "#2d6474",
+  "chapter": 5,
+  "tr_case": "-(y)a kadar",
+  "short": "Yerde ya da zamanda bitiş noktası",
+  "explain": "Bir şeyin nerede ya da ne zaman bittiğini işaretler: beşe kadar, istasyona kadar. Sık sık から ile eşleşir: “…'dan …'a kadar”.",
+  "examples": [
+   "ごじ.まで はたらきます。|Beşe kadar çalışıyorum.",
+   "えき.まで あるきます。|İstasyona kadar yürüyeceğim."
+  ]
+ },
+ {
+  "p": "も",
+  "romaji": "mo",
+  "role": "also",
+  "label": "De / da",
+  "color": "#8a8076",
+  "chapter": 6,
+  "tr_case": "de / da (ayrı yazılan)",
+  "short": "De / da, dahi",
+  "explain": "“De / da” anlamı katar. は, が, を'nın yerini alır; に, で, と, へ, から, まden sonra ise eklenir (Nara'da da → なら.でも).",
+  "examples": [
+   "わたし.も いきます。|Ben de gidiyorum.",
+   "なら.でも かいます。|Nara'da da alıyorum."
+  ]
+ }
 ]

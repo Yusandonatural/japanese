@@ -1,141 +1,141 @@
 [
-  {
-    "p": "は",
-    "romaji": "wa",
-    "role": "topic",
-    "label": "Topic",
-    "color": "#E6B800",
-    "chapter": 2,
-    "short": "As for ~ / speaking of ~",
-    "explain": "Marks what the sentence is about. Usually goes first, but it is not wrong elsewhere. Think of it as pointing at the thing you want to talk about.",
-    "examples": [
-      "わたし.は がくせいです。|I'm a student.",
-      "おちゃ.は たかいです。|The tea is expensive."
-    ]
-  },
-  {
-    "p": "が",
-    "romaji": "ga",
-    "role": "doer",
-    "label": "Doer",
-    "color": "#D9534F",
-    "chapter": 2,
-    "short": "The one that does / exists",
-    "explain": "Marks who does the action or what exists. Use it when the doer is new information or the answer to 'who?' / 'what?'.",
-    "examples": [
-      "あめ.が ふります。|It's raining.",
-      "じかん.が あります。|I have time."
-    ]
-  },
-  {
-    "p": "を",
-    "romaji": "o",
-    "role": "target",
-    "label": "Target",
-    "color": "#337AB7",
-    "chapter": 3,
-    "short": "The thing acted on",
-    "explain": "Marks the object of the action: what you eat, buy, read, see. Also the place you move through or leave.",
-    "examples": [
-      "おちゃ.を のみます。|I drink tea.",
-      "いえ.を でます。|I leave home."
-    ]
-  },
-  {
-    "p": "に",
-    "romaji": "ni",
-    "role": "goal",
-    "label": "Goal / To",
-    "color": "#3C9A5F",
-    "chapter": 3,
-    "short": "Destination, receiver, point in time, place where something is",
-    "explain": "Marks the arrival point: where you go, who receives, when (clock time / day), and where something is or lives.",
-    "examples": [
-      "なら.に いきます。|I'll go to Nara.",
-      "さんじ.に あいます。|We'll meet at three."
-    ]
-  },
-  {
-    "p": "で",
-    "romaji": "de",
-    "role": "place",
-    "label": "Place / By",
-    "color": "#7B4EA3",
-    "chapter": 4,
-    "short": "Where the action happens, or the tool/means",
-    "explain": "Marks the place where an action takes place (not where something merely is), and the means: by bus, with chopsticks, in Japanese.",
-    "examples": [
-      "みせ.で かいます。|I buy it at the shop.",
-      "バス.で いきます。|I'll go by bus."
-    ]
-  },
-  {
-    "p": "と",
-    "romaji": "to",
-    "role": "with",
-    "label": "With / And",
-    "color": "#E8823A",
-    "chapter": 4,
-    "short": "Together with, or 'and' between things",
-    "explain": "Marks the person you do something with, and joins two nouns. Also marks what is said or thought.",
-    "examples": [
-      "ともだち.と いきます。|I'll go with a friend.",
-      "おちゃとおかし.を ください。|Tea and sweets, please."
-    ]
-  },
-  {
-    "p": "へ",
-    "romaji": "e",
-    "role": "toward",
-    "label": "Toward",
-    "color": "#7FC8A9",
-    "chapter": 5,
-    "short": "Direction of movement",
-    "explain": "Marks the direction you head toward. Very close to に for destinations; へ stresses the direction, に the arrival. Either is fine in daily talk.",
-    "examples": [
-      "とうきょう.へ いきます。|I'll head to Tokyo."
-    ]
-  },
-  {
-    "p": "から",
-    "romaji": "kara",
-    "role": "from",
-    "label": "From",
-    "color": "#3BB4C1",
-    "chapter": 5,
-    "short": "Starting point in place or time",
-    "explain": "Marks where or when something starts: from Nara, from nine o'clock, from a friend.",
-    "examples": [
-      "なら.から きます。|I'm coming from Nara.",
-      "くじ.から はたらきます。|I work from nine."
-    ]
-  },
-  {
-    "p": "まで",
-    "romaji": "made",
-    "role": "until",
-    "label": "Until / Up to",
-    "color": "#1F7F8C",
-    "chapter": 5,
-    "short": "End point in place or time",
-    "explain": "Marks where or when something ends: until five, up to the station. Often pairs with から.",
-    "examples": [
-      "ごじ.まで はたらきます。|I work until five.",
-      "えき.まで あるきます。|I'll walk to the station."
-    ]
-  },
-  {
-    "p": "も",
-    "romaji": "mo",
-    "role": "also",
-    "label": "Also",
-    "color": "#8A8A8A",
-    "chapter": 6,
-    "short": "Too / also",
-    "explain": "Adds 'also'. It replaces は, が, を and is added after に, で, と, へ, から, まで.",
-    "examples": [
-      "わたし.も いきます。|I'm going too.",
-      "なら.でも かいます。|I buy it in Nara too."
-    ]
-  }
+ {
+  "p": "は",
+  "romaji": "wa",
+  "role": "topic",
+  "label": "Topic",
+  "color": "#d49a1a",
+  "chapter": 2,
+  "short": "As for ~ / speaking of ~",
+  "explain": "Marks what the sentence is about. Usually goes first, but it is not wrong elsewhere. Think of it as pointing at the thing you want to talk about.",
+  "examples": [
+   "わたし.は がくせいです。|I'm a student.",
+   "おちゃ.は たかいです。|The tea is expensive."
+  ]
+ },
+ {
+  "p": "が",
+  "romaji": "ga",
+  "role": "doer",
+  "label": "Doer",
+  "color": "#c9533a",
+  "chapter": 2,
+  "short": "The one that does / exists",
+  "explain": "Marks who does the action or what exists. Use it when the doer is new information or the answer to 'who?' / 'what?'.",
+  "examples": [
+   "あめ.が ふります。|It's raining.",
+   "じかん.が あります。|I have time."
+  ]
+ },
+ {
+  "p": "を",
+  "romaji": "o",
+  "role": "target",
+  "label": "Target",
+  "color": "#2f5d8c",
+  "chapter": 3,
+  "short": "The thing acted on",
+  "explain": "Marks the object of the action: what you eat, buy, read, see. Also the place you move through or leave.",
+  "examples": [
+   "おちゃ.を のみます。|I drink tea.",
+   "いえ.を でます。|I leave home."
+  ]
+ },
+ {
+  "p": "に",
+  "romaji": "ni",
+  "role": "goal",
+  "label": "Goal / To",
+  "color": "#5b8a3c",
+  "chapter": 3,
+  "short": "Destination, receiver, point in time, place where something is",
+  "explain": "Marks the arrival point: where you go, who receives, when (clock time / day), and where something is or lives.",
+  "examples": [
+   "なら.に いきます。|I'll go to Nara.",
+   "さんじ.に あいます。|We'll meet at three."
+  ]
+ },
+ {
+  "p": "で",
+  "romaji": "de",
+  "role": "place",
+  "label": "Place / By",
+  "color": "#86689f",
+  "chapter": 4,
+  "short": "Where the action happens, or the tool/means",
+  "explain": "Marks the place where an action takes place (not where something merely is), and the means: by bus, with chopsticks, in Japanese.",
+  "examples": [
+   "みせ.で かいます。|I buy it at the shop.",
+   "バス.で いきます。|I'll go by bus."
+  ]
+ },
+ {
+  "p": "と",
+  "romaji": "to",
+  "role": "with",
+  "label": "With / And",
+  "color": "#d57a36",
+  "chapter": 4,
+  "short": "Together with, or 'and' between things",
+  "explain": "Marks the person you do something with, and joins two nouns. Also marks what is said or thought.",
+  "examples": [
+   "ともだち.と いきます。|I'll go with a friend.",
+   "おちゃとおかし.を ください。|Tea and sweets, please."
+  ]
+ },
+ {
+  "p": "へ",
+  "romaji": "e",
+  "role": "toward",
+  "label": "Toward",
+  "color": "#4f9a8a",
+  "chapter": 5,
+  "short": "Direction of movement",
+  "explain": "Marks the direction you head toward. Very close to に for destinations; へ stresses the direction, に the arrival. Either is fine in daily talk.",
+  "examples": [
+   "とうきょう.へ いきます。|I'll head to Tokyo."
+  ]
+ },
+ {
+  "p": "から",
+  "romaji": "kara",
+  "role": "from",
+  "label": "From",
+  "color": "#2f8fa6",
+  "chapter": 5,
+  "short": "Starting point in place or time",
+  "explain": "Marks where or when something starts: from Nara, from nine o'clock, from a friend.",
+  "examples": [
+   "なら.から きます。|I'm coming from Nara.",
+   "くじ.から はたらきます。|I work from nine."
+  ]
+ },
+ {
+  "p": "まで",
+  "romaji": "made",
+  "role": "until",
+  "label": "Until / Up to",
+  "color": "#2d6474",
+  "chapter": 5,
+  "short": "End point in place or time",
+  "explain": "Marks where or when something ends: until five, up to the station. Often pairs with から.",
+  "examples": [
+   "ごじ.まで はたらきます。|I work until five.",
+   "えき.まで あるきます。|I'll walk to the station."
+  ]
+ },
+ {
+  "p": "も",
+  "romaji": "mo",
+  "role": "also",
+  "label": "Also",
+  "color": "#8a8076",
+  "chapter": 6,
+  "short": "Too / also",
+  "explain": "Adds 'also'. It replaces は, が, を and is added after に, で, と, へ, から, まで.",
+  "examples": [
+   "わたし.も いきます。|I'm going too.",
+   "なら.でも かいます。|I buy it in Nara too."
+  ]
+ }
 ]

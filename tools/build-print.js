@@ -88,7 +88,7 @@ const indexHtml = `<!doctype html>
 <html lang="en" data-base="../">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Printable Workbooks — にほんご Tags</title>
-<link rel="stylesheet" href="../css/tags.css"></head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"><link rel="stylesheet" href="../css/tags.css"></head>
 <body><main class="wrap">
 <div class="muted small"><a href="../" data-i18n>Home</a> / <span data-i18n>Print</span></div>
 <h1 data-i18n>Printable workbooks</h1>
