@@ -66,6 +66,7 @@
 <body>
 <main class="wrap">
   <section class="hero">
+    <nav class="langswitch" id="langSwitch" aria-label="Language"></nav>
     <span class="eyebrow" data-i18n>Tag Grammar · 2,000 real-life sentences</span>
     <h1 data-i18n>Easy Japanese <span class="accent">14 Days</span></h1>
     <p class="lead" data-i18n>Learn spoken Japanese in 14 days with <b>Tag Grammar</b>: every sentence is a set of tagged chunks in front of one final verb. Move the chunks, keep the tags, say it your way.</p>
@@ -111,9 +112,20 @@
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, CHAPTERS, t, exCards, loadParticles } from './js/app.js';
+import { renderHeader, renderFooter, CHAPTERS, t, exCards, loadParticles, BASE, LOCALE } from './js/app.js';
 import { loadDayLog, daysDoneCount } from './js/srs.js';
 renderHeader('home');
+
+// language selector in the hero
+const ls = document.getElementById('langSwitch');
+[['en', '', 'English', 'EN'], ['tr', 'tr/', 'Türkçe', 'TR']].forEach(([code, path, label, short]) => {
+  const a = document.createElement('a');
+  a.href = BASE + path; a.hreflang = code; a.lang = code;
+  a.className = LOCALE === code ? 'on' : '';
+  if (LOCALE === code) a.setAttribute('aria-current', 'page');
+  a.innerHTML = `<span class="code">${short}</span>${label}`;
+  ls.appendChild(a);
+});
 
 // hero demo: one sentence, chunks reorder themselves — the meaning never changes
 const DEMO = t('あした ともだち.と なら.に いきます。|Tomorrow I\'m going to Nara with a friend.');

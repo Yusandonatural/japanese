@@ -291,3 +291,13 @@ details.verb > .small, details.verb > .exb { margin-left: 38px; }
 @media (max-width: 480px) { .vforms { grid-template-columns: repeat(2, 1fr); margin-left: 0; } details.verb > .small, details.verb > .exb { margin-left: 0; } details.verb .vk { min-width: 96px; font-size: 17px; } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* language selector in the hero */
+.langswitch { display: inline-flex; gap: 2px; padding: 3px; margin: 0 auto 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--panel); box-shadow: var(--shadow); }
+.langswitch a { display: inline-flex; align-items: center; gap: 7px; padding: 6px 16px 6px 8px; border-radius: 999px; text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; transition: background .15s, color .15s; }
+.langswitch a .code { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 5px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .06em; background: var(--bg-deep); color: var(--muted); }
+.langswitch a:hover { color: var(--ink); background: var(--accent-soft); }
+.langswitch a.on { background: var(--ink); color: var(--panel); }
+.langswitch a.on .code { background: var(--shu); color: #fbf3ea; }
+.hero .langswitch + .eyebrow { display: block; width: fit-content; max-width: 100%; margin: 0 auto; }
+@media (max-width: 520px) { .hero .eyebrow { letter-spacing: .06em; font-size: 11.5px; } .langswitch a { padding: 5px 13px 5px 6px; font-size: 13px; } }
