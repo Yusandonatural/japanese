@@ -87,6 +87,7 @@
     </div>
     <div class="row">
       <a class="btn" id="drillLink" href="#" data-i18n>Start drill →</a>
+      <a class="btn ghost" id="flashLink" href="#" data-i18n>⚡ Instant speaking</a>
       <a class="btn ghost" id="testLink" href="#" data-i18n>Chapter test</a>
     </div>
   </div>
@@ -109,6 +110,7 @@ document.getElementById('title').textContent = t('Chapter {n}. {title}', { n, ti
 document.getElementById('sub').textContent = chapter.sub;
 document.getElementById('drillLink').href = `../drill/?ch=${n}${day ? '&day=' + day : ''}`;
 document.getElementById('testLink').href = `../test/?ch=${n}`;
+document.getElementById('flashLink').href = `../drill/?ch=${n}&mode=flash`;
 document.getElementById('prevCh').disabled = n <= 1;
 document.getElementById('nextCh').disabled = n >= 10;
 document.getElementById('prevCh').onclick = () => location.href = `?n=${n - 1}`;

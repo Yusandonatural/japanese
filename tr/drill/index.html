@@ -73,6 +73,7 @@
     <div class="small muted" id="score">0 / 0</div>
   </div>
 
+  <div class="panel flash-intro" id="flashIntro" hidden><b data-i18n>⚡ Anında konuşma</b> <span class="small muted" data-i18n>Anlamı gör, çubuk bitmeden Japoncasını yüksek sesle söyle, sonra kendini kontrol et. Hız akıcılık kazandırır.</span></div>
   <div class="panel" id="qbox"></div>
   <div class="row" style="justify-content:space-between">
     <div class="status" id="status"></div>
@@ -98,16 +99,19 @@
 <script type="module">
 import { renderHeader, renderFooter, loadChapter, loadParticles, qs, chapterFor, shuffle, t } from '../../js/app.js';
 import { renderQuestion, pickType } from '../../js/quiz.js';
+import { renderFlash } from '../../js/flash.js';
 import { recordAnswer, recordParticle, markDayDone, particleStats } from '../../js/srs.js';
 import { speak } from '../../js/speech.js';
 renderHeader('');
 
 const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
 const day = qs('day');
-const N = parseInt(qs('n') || '30', 10);
+const FLASH = qs('mode') === 'flash';
+const N = parseInt(qs('n') || (FLASH ? '20' : '30'), 10);
 const chapter = chapterFor(ch);
 document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="../ch/?n=${ch}">${t('Chapter {n}', { n: ch })}</a> / ${t('Drill')}`;
-document.getElementById('title').textContent = t('Drill · Chapter {n}. {title}', { n: ch, title: chapter.title });
+document.getElementById('title').textContent = FLASH ? t('Instant speaking · Chapter {n}. {title}', { n: ch, title: chapter.title }) : t('Drill · Chapter {n}. {title}', { n: ch, title: chapter.title });
+if (FLASH) document.getElementById('flashIntro').hidden = false;
 document.getElementById('toChapter').href = `../ch/?n=${ch}`;
 
 const [examples, particles] = await Promise.all([loadChapter(ch), loadParticles()]);
@@ -132,16 +136,25 @@ function updateBar() {
 function showQuestion() {
   if (idx >= deck.length) return finish();
   const ex = deck[idx];
-  const type = pickType(ex);
-  current = renderQuestion(qbox, ex, type, opts);
+  current?.destroy?.();
+  // instant speaking: every card in flash mode, and about one card in six in a normal drill
+  const type = (FLASH || Math.random() < 0.16) ? 'flash' : pickType(ex);
+  if (type === 'flash') {
+    qbox.innerHTML = '';
+    const label = document.createElement('div'); label.className = 'small muted'; label.textContent = '⚡ ' + t('Instant speaking');
+    qbox.appendChild(label);
+    current = renderFlash(qbox, ex, { ...opts, onGraded: ok => grade({ ok }) });
+  } else {
+    current = renderQuestion(qbox, ex, type, opts);
+  }
   current.ex = ex; current.type = type;
   statusEl.textContent = ''; statusEl.className = 'status';
-  checkBtn.style.display = ''; nextBtn.style.display = 'none';
+  checkBtn.style.display = current.selfGraded ? 'none' : ''; nextBtn.style.display = 'none';
   updateBar();
 }
 
-checkBtn.addEventListener('click', () => {
-  const result = current.check();
+checkBtn.addEventListener('click', () => grade(current.check()));
+function grade(result) {
   answered++;
   const particleTagged = current.ex.chunks.find(c => c.p)?.p || '';
   if (result.ok) {
@@ -156,11 +169,13 @@ checkBtn.addEventListener('click', () => {
   if (particleTagged) recordParticle(particleTagged, !!result.ok);
   checkBtn.style.display = 'none'; nextBtn.style.display = '';
   updateBar();
-});
+  if (FLASH) setTimeout(() => { if (current && current.ex === deck[idx]) { idx++; showQuestion(); } }, 900);
+}
 nextBtn.addEventListener('click', () => { idx++; showQuestion(); });
 skipBtn.addEventListener('click', () => { idx++; showQuestion(); });
 
 function finish() {
+  current?.destroy?.();
   qbox.style.display = 'none';
   document.querySelector('.row.status')?.remove?.();
   checkBtn.style.display = 'none'; nextBtn.style.display = 'none'; skipBtn.style.display = 'none';

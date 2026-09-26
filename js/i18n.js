@@ -143,5 +143,10 @@ export const TR = {
   'Speak Japanese in 14 days': '14 günde Japonca konuş', 'Tap the sentence: the chunks move, the meaning stays.': 'Cümleye dokun: parçalar yer değiştirir, anlam aynı kalır.',
   "あした ともだち.と なら.に いきます。|Tomorrow I'm going to Nara with a friend.": 'あした ともだち.と なら.に いきます。|Yarın bir arkadaşımla Nara’ya gidiyorum.',
   'Easy Japanese 14 Days': '14 Günde Kolay Japonca', 'Tag Grammar · 2,000 real-life sentences': 'Etiket Dilbilgisi · 2.000 gerçek hayat cümlesi', 'Easy Japanese <span class="accent">14 Days</span>': '<span class="accent">14 Günde</span> Kolay Japonca',
+  'Instant speaking': 'Anında konuşma', '⚡ Instant speaking': '⚡ Anında konuşma', 'Instant speaking · Chapter {n}. {title}': 'Anında konuşma · Bölüm {n}. {title}',
+  'See the meaning, say the Japanese out loud before the bar runs out, then check yourself. Speed builds fluency.': 'Anlamı gör, çubuk bitmeden Japoncasını yüksek sesle söyle, sonra kendini kontrol et. Hız akıcılık kazandırır.',
+  'Say it in Japanese, out loud, before time runs out.': 'Süre bitmeden Japonca olarak yüksek sesle söyle.',
+  'Show answer': 'Cevabı göster', '🎤 Speak': '🎤 Konuş', '🎤 Listening…': '🎤 Dinliyorum…', 'Time:': 'Süre:', 'Heard:': 'Duyulan:',
+  '✓ I said it': '✓ Söyledim', '✗ Not yet': '✗ Henüz değil', 'Could not hear you — try again or tap Show answer.': 'Seni duyamadım — tekrar dene ya da Cevabı göster’e dokun.',
   'The core — four kinds': 'Çekirdek — dört tür', 'No tag at all': 'Hiç etiket yok', 'の — the glue inside a chunk': 'の — parçanın içindeki yapıştırıcı',
 };
