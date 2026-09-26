@@ -1,0 +1,858 @@
+{
+  "note": "Japonya'da günlük hayat için hazır cümleler; sahnelere göre gruplandı ve en gerekliden daha az gerekliye doğru sıralandı. Her cümle aynı kalıbı izler: birkaç etiketli parça, en sonda da tek bir çekirdek. Çekirdek yalnızca dört sonek kullanır: ます (yaparım), ますか (yapar mısın?), ません (yapmam) ve ましょう (-alım/-elim); isim ve sıfatlar için de です ve ですか. Bir şeyin ne zaman olduğunu きのう (kinō, dün) ya da あした (aşita, yarın) gibi bir zaman kelimesi gösterir. Soru sormak için aynı kelimeleri aynı sırayla söyle, sona sadece か ekle ve sesini onda yükselt; tıpkı Türkçedeki \"mı/mi\" gibi, ama hiç şekil değiştirmez. Birlikte bir şey yapmayı önermek için ましょう kullan. Bir cümle öğren, sonra bir parçayı kendi kelimenle değiştir: yepyeni bir cümlen oldu.",
+  "scenes": [
+    {
+      "id": "greeting",
+      "name": "Selamlaşma ve sohbet",
+      "intro": "Her gün söylediğin ilk kelimeler. Çoğu, hiçbir şey değiştirmeden kullanabileceğin kalıp ifadeler.",
+      "phrases": [
+        {
+          "ex": "おはようございます。|Günaydın.",
+          "note": "Arkadaş ve aileyle sadece おはよう (ohayō)."
+        },
+        {
+          "ex": "こんにちは。|Merhaba. / İyi günler.",
+          "note": "Öğleye doğrudan akşama kadar. Hava karardıktan sonra こんばんは (konbanwa) de."
+        },
+        {
+          "ex": "ありがとうございます。|Teşekkür ederim.",
+          "note": "Samimi hâli: ありがとう (arigatō)."
+        },
+        {
+          "ex": "すみません。|Afedersiniz. / Pardon.",
+          "note": "Garsonu çağırmak, birinin yanından geçmek ya da küçük bir özür için kullan."
+        },
+        {
+          "ex": "はじめまして。|Tanıştığımıza memnun oldum.",
+          "note": "Sadece ilk tanışmada. Ardından adını söyle."
+        },
+        {
+          "ex": "わたし.は ジョンです。|Ben John.",
+          "note": "Kendi adını koy. Japonlar わたし.は (vataşi wa) kısmını çoğu zaman tamamen atar; Türkçede \"ben\" demeden \"Ahmet'im\" demek gibi."
+        },
+        {
+          "ex": "よろしくおねがいします。|Tanıştığımıza memnun oldum. / Birlikte çalışmayı dört gözle bekliyorum.",
+          "note": "Adını söyledikten hemen sonra söyle. Neredeyse her tanışmayı bu kapatır."
+        },
+        {
+          "ex": "おなまえ.は なんですか？|Adın ne?",
+          "note": "Sona か ekle ve sesini onda yükselt; Türkçedeki soru eki \"mı\" gibi düşün."
+        },
+        {
+          "ex": "おくに.は どこですか？|Nerelisin?",
+          "note": "Ziyaretçilere sık sorulan ilk sorulardan biri."
+        },
+        {
+          "ex": "わたし.は イギリスじんです。|Ben İngilizim.",
+          "note": "Ülke + じん (cin): トルコじん (Türk), アメリカじん, フランスじん. Türkçedeki \"-li\" eki gibi çalışır."
+        },
+        {
+          "ex": "おげんきですか？|Nasılsın?",
+          "note": "Uzun zamandır görmediğin birine sorulur; her günkü selam değildir."
+        },
+        {
+          "ex": "げんきです。|İyiyim.",
+          "note": "おげんきですか？ sorusuna verilen olağan cevap."
+        },
+        {
+          "ex": "にほんご.が すこし わかります。|Biraz Japonca anlıyorum.",
+          "note": "わかります (vakarimasu) ile etiket が (ga) kullanılır, を değil. Türkçedeki \"Japonca-yı anlıyorum\" belirtme hâline kanma!"
+        },
+        {
+          "ex": "もういちど おねがいします。|Bir kez daha, lütfen.",
+          "note": "Bir şeyi kaçırdığında en iyi dostun."
+        },
+        {
+          "ex": "ゆっくり おねがいします。|Yavaş, lütfen.",
+          "note": "İkisini birleştir: もういちど ゆっくり おねがいします."
+        },
+        {
+          "ex": "にほんご.で はなしましょう。|Japonca konuşalım.",
+          "note": "ましょう (maşō) = \"-alım/-elim\". Karşındakiyle birlikte yapacağın şeyler için kullan. Buradaki で (de) Türkçedeki \"ile\" gibi: Japonca ile."
+        },
+        {
+          "ex": "また あいましょう。|Yine görüşelim.",
+          "note": "Yeni tanıştığın birine sıcak bir veda."
+        },
+        {
+          "ex": "おひさしぶりです。|Uzun zaman oldu, görüşmeyeli."
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "name": "Evde",
+      "intro": "Japon evleri çıkarken, dönerken, yemekte ve uyurken söylenen kalıp sözlerle döner. Bunları söylersen aileden biri gibi olursun.",
+      "phrases": [
+        {
+          "ex": "いってきます。|Ben çıkıyorum. / Görüşürüz.",
+          "note": "Evden çıkarken söylenir. Cevabı いってらっしゃい (itterasşai)."
+        },
+        {
+          "ex": "いってらっしゃい。|İyi günler. / Kendine iyi bak.",
+          "note": "Evden çıkan kişiye söylenir."
+        },
+        {
+          "ex": "ただいま。|Ben geldim.",
+          "note": "Kapıdan içeri girerken söylenir."
+        },
+        {
+          "ex": "おかえりなさい。|Hoş geldin.",
+          "note": "ただいま sözünün cevabı. Samimi hâli: おかえり (okaeri)."
+        },
+        {
+          "ex": "トイレ.は どこですか？|Tuvalet nerede?",
+          "note": "Her evde, dükkânda ya da istasyonda işe yarar."
+        },
+        {
+          "ex": "くつ.は ここ.で ぬぎますか？|Ayakkabılarımı burada mı çıkarıyorum?",
+          "note": "Çoğu evde ayakkabılar girişte çıkarılır. で (de) burada \"-da\" gibi: burada."
+        },
+        {
+          "ex": "ごはんです。|Yemek hazır!",
+          "note": "Kelimesi kelimesine \"Yemek.\" Bütün eve seslenilir."
+        },
+        {
+          "ex": "おふろ.に はいります。|Banyoya giriyorum."
+        },
+        {
+          "ex": "まど.を あけます。|Pencereyi açıyorum.",
+          "note": "Çekirdeği değiştir: しめます (şimemasu) = kapatmak."
+        },
+        {
+          "ex": "でんき.を けします。|Işığı kapatıyorum.",
+          "note": "Açmak: つけます (tsukemasu)."
+        },
+        {
+          "ex": "かぎ.は つくえのうえ.に あります。|Anahtar masanın üstünde.",
+          "note": "Yer kelimeleri parçanın içinde durur: つくえのうえ (masanın üstü), ドアのちかく (kapının yanı). Türkçedeki \"masanın üstünde\" yapısına çok benzer."
+        },
+        {
+          "ex": "ごみ.は あした だします。|Çöpü yarın çıkaracağım.",
+          "note": "Japonya'da çöp günleri çok katıdır. Zaman kelimesi başa da gelebilir: あした ごみ.は だします."
+        },
+        {
+          "ex": "あした.は なんじ.に おきますか？|Yarın saat kaçta kalkıyorsun?"
+        },
+        {
+          "ex": "テレビ.を みます。|Televizyon izleyeceğim."
+        },
+        {
+          "ex": "ごはん.を たべましょう。|Yemek yiyelim."
+        },
+        {
+          "ex": "そろそろ ねましょう。|Artık yatalım.",
+          "note": "そろそろ (sorosoro) = birazdan, artık vakti geldi."
+        },
+        {
+          "ex": "もう ねます。|Artık yatıyorum."
+        },
+        {
+          "ex": "おやすみなさい。|İyi geceler.",
+          "note": "Samimi hâli: おやすみ (oyasumi)."
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "name": "Alışveriş",
+      "intro": "Göster, fiyatı sor, öde. これ (kore, bu) ve birkaç çekirdekle neredeyse her yerde alışveriş yapabilirsin.",
+      "phrases": [
+        {
+          "ex": "これ.は いくらですか？|Bu ne kadar?"
+        },
+        {
+          "ex": "これ.を ください。|Bunu alayım, lütfen.",
+          "note": "Göster ve söyle. Bir şey satın almanın en kolay yolu."
+        },
+        {
+          "ex": "これ.を ふたつ ください。|Bundan iki tane, lütfen.",
+          "note": "Sayma: ひとつ, ふたつ, みっつ, よっつ, いつつ (birden beşe)."
+        },
+        {
+          "ex": "ぜんぶ.で いくらですか？|Hepsi ne kadar?",
+          "note": "で (de) burada \"ile/toplam\" anlamında: hepsi ile."
+        },
+        {
+          "ex": "カード.は つかえますか？|Kartla ödeyebilir miyim?",
+          "note": "げんきん (genkin, nakit) ya da アイシー (IC ulaşım kartı) koyabilirsin."
+        },
+        {
+          "ex": "げんきん.で はらいます。|Nakit ödeyeceğim.",
+          "note": "で (de) = \"ile\": nakitle."
+        },
+        {
+          "ex": "ふくろ.は いりません。|Poşete gerek yok.",
+          "note": "İstersen: ふくろ.を ください."
+        },
+        {
+          "ex": "みているだけです。|Sadece bakıyorum.",
+          "note": "Satış görevlisine kibarca \"teşekkürler, gerek yok\" demenin yolu."
+        },
+        {
+          "ex": "おちゃ.は どこ.に ありますか？|Çay nerede?",
+          "note": "Aradığın her şeyi koyabilirsin."
+        },
+        {
+          "ex": "もっと ちいさいの.は ありますか？|Daha küçüğü var mı?",
+          "note": "Daha büyük: おおきいの (ōkii no)."
+        },
+        {
+          "ex": "しちゃく.は できますか？|Deneyebilir miyim?"
+        },
+        {
+          "ex": "ちょっと たかいです。|Biraz pahalı.",
+          "note": "Ucuz: やすいです (yasui desu)."
+        },
+        {
+          "ex": "レジ.は どこですか？|Kasa nerede?"
+        },
+        {
+          "ex": "レシート.を ください。|Fiş alabilir miyim, lütfen?"
+        },
+        {
+          "ex": "つぎのみせ.に いきましょう。|Bir sonraki dükkâna gidelim.",
+          "note": "に (ni) = yönelme hâli \"-a/-e\": dükkâna."
+        },
+        {
+          "ex": "ここ.で かいましょう。|Buradan alalım.",
+          "note": "Dikkat: Türkçede \"buradan\" dersin ama Japoncada eylemin yapıldığı yer で (de) alır: ここ.で."
+        },
+        {
+          "ex": "また きます。|Yine gelirim.",
+          "note": "Bir şey almadan çıkarken samimi bir veda."
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Yeme içme",
+      "intro": "Restoranlar, kafeler ve birinin evinde akşam yemeği. Her yemeğe iki kalıp sözle başla ve bitir.",
+      "phrases": [
+        {
+          "ex": "いただきます。|(Yemeğe başlarken söylenir.)",
+          "note": "Eller birleşik, hafif bir baş eğme. Herkes söyler, yalnızken bile. Türkçedeki \"Afiyet olsun\"un yemek öncesi karşılığı gibi."
+        },
+        {
+          "ex": "ごちそうさまでした。|Yemek için teşekkürler. (Yemekten sonra söylenir.)",
+          "note": "Restorandan çıkarken çalışanlara da söylenir. \"Elinize sağlık\"a benzer."
+        },
+        {
+          "ex": "おいしいです。|Çok lezzetli.",
+          "note": "Her sofrada en sevilen söz."
+        },
+        {
+          "ex": "ふたりです。|İki kişiyiz.",
+          "note": "Girişte kaç kişi olduğunuz sorulduğunda. Bir: ひとりです. Üç: さんにんです."
+        },
+        {
+          "ex": "メニュー.を ください。|Menüyü alabilir miyim, lütfen?"
+        },
+        {
+          "ex": "おすすめ.は なんですか？|Ne önerirsiniz?"
+        },
+        {
+          "ex": "これ.を ひとつ ください。|Bundan bir tane, lütfen.",
+          "note": "Menüyü ya da resmi göster."
+        },
+        {
+          "ex": "これ.は なんですか？|Bu ne?"
+        },
+        {
+          "ex": "おみず.を ください。|Su, lütfen."
+        },
+        {
+          "ex": "あついおちゃ.を ください。|Sıcak çay, lütfen.",
+          "note": "Soğuk: つめたいおちゃ (tsumetai oça)."
+        },
+        {
+          "ex": "わたし.は にく.を たべません。|Ben et yemem.",
+          "note": "さかな (sakana, balık) ya da ぶたにく (butaniku, domuz eti) koyabilirsin."
+        },
+        {
+          "ex": "たまごのアレルギー.が あります。|Yumurta alerjim var.",
+          "note": "そば, こむぎ (buğday), えび (karides) koyabilirsin."
+        },
+        {
+          "ex": "これ.は からいですか？|Bu acı mı?"
+        },
+        {
+          "ex": "おかわり.を おねがいします。|Bir tane daha, lütfen. / Tazeleyebilir misiniz?"
+        },
+        {
+          "ex": "あのみせ.に はいりましょう。|Şu restorana girelim.",
+          "note": "はいります (hairimasu) ile に (ni) kullanılır: restorana girmek; Türkçedeki gibi yönelme hâli."
+        },
+        {
+          "ex": "たべましょう。|Hadi yiyelim!",
+          "note": "Yemek geldiğinde ve herkes hazır olduğunda."
+        },
+        {
+          "ex": "おちゃ.を のみましょう。|Biraz çay içelim."
+        },
+        {
+          "ex": "おなか.が いっぱいです。|Doydum."
+        },
+        {
+          "ex": "おかいけい.を おねがいします。|Hesap, lütfen.",
+          "note": "Birçok yerde ödeme kapının yanındaki kasada yapılır."
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Ulaşım",
+      "intro": "Trenler, otobüsler ve taksiler. Burada işin çoğunu まで (made, -a kadar) ve で (de, ile) etiketleri yapar.",
+      "phrases": [
+        {
+          "ex": "えき.は どこですか？|İstasyon nerede?"
+        },
+        {
+          "ex": "なら.まで いくらですか？|Nara'ya kadar ne kadar?",
+          "note": "Herhangi bir yer adı koyabilirsin. まで = \"-a kadar\"."
+        },
+        {
+          "ex": "なら.まで どのくらい かかりますか？|Nara'ya kadar ne kadar sürer?"
+        },
+        {
+          "ex": "きっぷ.は どこ.で かいますか？|Bileti nereden alıyorum?",
+          "note": "Türkçede \"nereden\" dersin ama Japoncada eylemin yeri で (de) alır: どこ.で."
+        },
+        {
+          "ex": "このでんしゃ.は なら.に いきますか？|Bu tren Nara'ya gider mi?"
+        },
+        {
+          "ex": "きょうとゆき.は なんばんせんですか？|Kyoto treni hangi perondan kalkıyor?",
+          "note": "ゆき (yuki) = \"… yönüne giden\"."
+        },
+        {
+          "ex": "つぎのえき.で おります。|Bir sonraki istasyonda iniyorum."
+        },
+        {
+          "ex": "えき.まで あるきます。|İstasyona kadar yürüyeceğim."
+        },
+        {
+          "ex": "えき.まで あるきましょう。|İstasyona kadar yürüyelim."
+        },
+        {
+          "ex": "タクシー.で いきましょう。|Taksiyle gidelim.",
+          "note": "で (de) = \"ile\": taksiyle."
+        },
+        {
+          "ex": "つぎのえき.で おりましょう。|Bir sonraki istasyonda inelim."
+        },
+        {
+          "ex": "バス.で いきます。|Otobüsle gideceğim.",
+          "note": "でんしゃ (tren), くるま (araba), じてんしゃ (bisiklet) koyabilirsin."
+        },
+        {
+          "ex": "タクシー.を よんでください。|Lütfen bir taksi çağırın."
+        },
+        {
+          "ex": "このじゅうしょ.まで おねがいします。|Bu adrese, lütfen.",
+          "note": "Adresi telefonundan şoföre göster."
+        },
+        {
+          "ex": "ここ.で とめてください。|Lütfen burada durun."
+        },
+        {
+          "ex": "みち.が わかりません。|Kayboldum. / Yolu bilmiyorum."
+        },
+        {
+          "ex": "ここ.は どこですか？|Neredeyim? (kelimesi kelimesine: Burası neresi?)",
+          "note": "Sorarken bir haritayı göster."
+        },
+        {
+          "ex": "えき.から とおいですか？|İstasyondan uzak mı?",
+          "note": "から (kara) = ayrılma hâli \"-dan/-den\". Yakın: ちかいです (çikai desu)."
+        },
+        {
+          "ex": "えき.まで くるま.で むかえ.に いきます。|Seni istasyondan arabayla alırım.",
+          "note": "Parçalar yer değiştirebilir: くるま.で えき.まで むかえ.に いきます. Türkçede de \"arabayla istasyona\" ya da \"istasyona arabayla\" diyebilirsin."
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "name": "Zaman ve planlar",
+      "intro": "Plan yapmak ve ne zaman olduğunu konuşmak. Çekirdek dört sonekini korur; baştaki bir zaman kelimesi geçmişi ya da geleceği belirler, ましょう ise her planı bir davete çevirir.",
+      "phrases": [
+        {
+          "ex": "いま なんじですか？|Şimdi saat kaç?"
+        },
+        {
+          "ex": "あした.は ひまですか？|Yarın boş musun?"
+        },
+        {
+          "ex": "あした.は しごと.が あります。|Yarın işim var."
+        },
+        {
+          "ex": "しゅうまつ.は なに.を しますか？|Hafta sonu ne yapıyorsun?"
+        },
+        {
+          "ex": "なんじ.に あいますか？|Saat kaçta buluşuyoruz?"
+        },
+        {
+          "ex": "さんじ.に えき.で まちます。|Saat üçte istasyonda bekleyeceğim.",
+          "note": "Saat に (ni) alır (\"saat üçte\"), eylemin yapıldığı yer で (de) alır (\"istasyonda\"). Türkçede ikisi de \"-da/-de\", Japoncada farklı!"
+        },
+        {
+          "ex": "さんじ.に えき.で あいましょう。|Saat üçte istasyonda buluşalım.",
+          "note": "Çekirdeği istediğin planla değiştir: たべましょう, いきましょう, はじめましょう."
+        },
+        {
+          "ex": "あした えいが.を みませんか？|Yarın film izlemeye ne dersin?",
+          "note": "ませんか (masen ka) = \"… -maz mısın?\" Nazik bir davet; Türkçedeki \"Gelmez misin?\" gibi. Kabul etmek için ましょう biçimiyle cevap ver: みましょう."
+        },
+        {
+          "ex": "そろそろ いきましょう。|Hadi gidelim artık."
+        },
+        {
+          "ex": "らいしゅう また あいましょう。|Haftaya yine görüşelim."
+        },
+        {
+          "ex": "らいしゅう きょうと.へ いきます。|Haftaya Kyoto'ya gidiyorum.",
+          "note": "へ (e) = \"-a doğru\"."
+        },
+        {
+          "ex": "きのう ともだち.と えいが.を みます。|Dün bir arkadaşımla film izledim.",
+          "note": "Seviye 1'de çekirdek değişmez: きのう (kinō) kelimesi zaten geçmiş olduğunu söylüyor."
+        },
+        {
+          "ex": "ちょっと まってください。|Lütfen biraz bekle."
+        },
+        {
+          "ex": "すこし おくれます。|Biraz gecikeceğim.",
+          "note": "Bunu geç kalmadan önce gönder, sonra değil."
+        },
+        {
+          "ex": "あとで いきます。|Sonra giderim."
+        },
+        {
+          "ex": "みせ.は なんじまでですか？|Dükkân saat kaça kadar açık?"
+        },
+        {
+          "ex": "きょう.は なんようびですか？|Bugün günlerden ne?"
+        },
+        {
+          "ex": "たんじょうび.は いつですか？|Doğum günün ne zaman?"
+        },
+        {
+          "ex": "まだ じかん.が あります。|Daha vakit var."
+        },
+        {
+          "ex": "きょう.は じかん.が ありません。|Bugün vaktim yok."
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "name": "İş yerinde",
+      "intro": "İş yeri Japoncası kalıp sözlerle doludur. Bunlar, özel saygı dilbilgisine gerek kalmadan kibar kalmanı sağlar.",
+      "phrases": [
+        {
+          "ex": "おつかれさまです。|Kolay gelsin. / Emeğine sağlık.",
+          "note": "İş arkadaşları arasında her saatte kullanılan genel selam."
+        },
+        {
+          "ex": "よろしくおねがいします。|Şimdiden teşekkürler. / Sana güveniyorum.",
+          "note": "Bir işin, toplantının ya da ricanın başında."
+        },
+        {
+          "ex": "わかりました。|Anlaşıldı.",
+          "note": "İhtiyacın olan, geçmiş zamanlı görünen iki kalıp sözden biri."
+        },
+        {
+          "ex": "ちょっと しつもん.が あります。|Küçük bir sorum var."
+        },
+        {
+          "ex": "もういちど おしえてください。|Lütfen bir kez daha anlatır mısın?"
+        },
+        {
+          "ex": "これ.で いいですか？|Böyle olur mu?",
+          "note": "Yaptığın işi göster ve sor."
+        },
+        {
+          "ex": "これ.は どこ.に おきますか？|Bunu nereye koyayım?"
+        },
+        {
+          "ex": "てつだいます。|Yardım ederim."
+        },
+        {
+          "ex": "てつだってください。|Lütfen bana yardım et."
+        },
+        {
+          "ex": "はじめましょう。|Başlayalım.",
+          "note": "Bir toplantıyı, dersi ya da işi başlatmak için."
+        },
+        {
+          "ex": "すこし やすみましょう。|Biraz mola verelim."
+        },
+        {
+          "ex": "あした また はなしましょう。|Yarın yine konuşalım."
+        },
+        {
+          "ex": "かいぎ.は なんじ.に はじまりますか？|Toplantı saat kaçta başlıyor?"
+        },
+        {
+          "ex": "しりょう.を メール.で おくります。|Belgeleri e-postayla göndereceğim."
+        },
+        {
+          "ex": "きょう.は ろくじ.まで はたらきます。|Bugün saat altıya kadar çalışıyorum."
+        },
+        {
+          "ex": "かいしゃ.へ でんしゃ.で かよいます。|İşe trenle gidip geliyorum."
+        },
+        {
+          "ex": "あした.は やすみます。|Yarın izinliyim."
+        },
+        {
+          "ex": "もうすこし じかん.を ください。|Lütfen bana biraz daha zaman ver."
+        },
+        {
+          "ex": "おさきにしつれいします。|Müsaadenizle, ben çıkıyorum.",
+          "note": "Başkaları hâlâ çalışırken çıkarken söylenir. Onlar おつかれさまです diye cevap verir."
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "Tarlada / çay bahçesinde",
+      "intro": "Nara'daki doğal çay çiftliğimizden sözler: tarlada, yaprak toplarken ve ardından bir fincan çayı paylaşırken.",
+      "phrases": [
+        {
+          "ex": "ここ.は ちゃばたけです。|Burası bir çay bahçesi."
+        },
+        {
+          "ex": "ここ.で おちゃ.を つくります。|Burada çay yapıyoruz."
+        },
+        {
+          "ex": "のうやく.は つかいません。|Tarım ilacı kullanmıyoruz."
+        },
+        {
+          "ex": "ひりょう.も つかいません。|Gübre de kullanmıyoruz.",
+          "note": "も (mo) etiketi \"de/da\" demektir: gübre de. は (va) yerine geçer."
+        },
+        {
+          "ex": "このおちゃ.は なら.で つくります。|Bu çay Nara'da yapılıyor."
+        },
+        {
+          "ex": "ごがつ.に しんちゃ.を つみます。|Yeni çayı mayısta topluyoruz.",
+          "note": "しんちゃ (şinça) = yılın ilk ve en taze çayı."
+        },
+        {
+          "ex": "て.で ちゃば.を つみます。|Çay yapraklarını elle topluyoruz.",
+          "note": "で (de) = \"ile\": elle."
+        },
+        {
+          "ex": "ちゃばたけ.まで くるま.で いきます。|Çay bahçesine arabayla gideceğiz."
+        },
+        {
+          "ex": "ながぐつ.を はいてください。|Lütfen lastik çizme giy."
+        },
+        {
+          "ex": "へび.に きをつけてください。|Yılanlara dikkat et.",
+          "note": "はち (haçi, arı) ya da むし (muşi, böcek) koyabilirsin."
+        },
+        {
+          "ex": "すこし やすみます。|Biraz dinleneceğim."
+        },
+        {
+          "ex": "ちゃばたけ.に いきましょう。|Çay bahçesine gidelim."
+        },
+        {
+          "ex": "ここ.で やすみましょう。|Burada dinlenelim."
+        },
+        {
+          "ex": "おちゃ.を のみましょう。|Biraz çay içelim.",
+          "note": "Tarlada geçen bir sabahı bitirmenin en güzel yolu."
+        },
+        {
+          "ex": "おちゃ.を いれます。|Çay yapayım.",
+          "note": "いれます (iremasu) = çay demlemek ya da doldurmak."
+        },
+        {
+          "ex": "おちゃ.を どうぞ。|Buyur, çay iç.",
+          "note": "どうぞ (dōzo) her şeyi ikram eder: bir sandalye, yemek, içeri giriş. Türkçedeki \"buyurun\" gibi."
+        },
+        {
+          "ex": "しゃしん.を とってもいいですか？|Fotoğraf çekebilir miyim?"
+        },
+        {
+          "ex": "あめのひ.は はたけしごと.を やすみます。|Yağmurlu günlerde tarlada çalışmıyoruz."
+        },
+        {
+          "ex": "あした.も てつだい.に きます。|Yarın da yardıma gelirim."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "name": "Sağlık ve doktor",
+      "intro": "Kendini kötü hissettiğinde kısa tut: nerenin ağrıdığını が (ga) ile söyle, yardımı ください (kudasai) ile iste.",
+      "phrases": [
+        {
+          "ex": "たすけてください。|İmdat, yardım edin!"
+        },
+        {
+          "ex": "きゅうきゅうしゃ.を よんでください。|Lütfen ambulans çağırın.",
+          "note": "Japonya'da acil numarası 119."
+        },
+        {
+          "ex": "ぐあい.が わるいです。|Kendimi iyi hissetmiyorum."
+        },
+        {
+          "ex": "あたま.が いたいです。|Başım ağrıyor.",
+          "note": "おなか (karın), のど (boğaz), は (diş) koyabilirsin."
+        },
+        {
+          "ex": "ここ.が いたいです。|Burası ağrıyor.",
+          "note": "Ağrıyan yeri göster."
+        },
+        {
+          "ex": "ねつ.が あります。|Ateşim var."
+        },
+        {
+          "ex": "きのう.から せき.が でます。|Dünden beri öksürüyorum.",
+          "note": "Zaman kelimesiyle から (kara) = \"-dan beri\"."
+        },
+        {
+          "ex": "びょういん.は どこですか？|Hastane nerede?"
+        },
+        {
+          "ex": "びょういん.に いきましょう。|Hastaneye gidelim."
+        },
+        {
+          "ex": "きょう.は ゆっくり やすみましょう。|Bugün iyice dinlenelim."
+        },
+        {
+          "ex": "かぜぐすり.を ください。|Soğuk algınlığı ilacı, lütfen.",
+          "note": "Eczanede (やっきょく, yakkyoku)."
+        },
+        {
+          "ex": "このくすり.は いつ のみますか？|Bu ilacı ne zaman alıyorum?",
+          "note": "Japoncada ilaç \"içilir\": のみます (nomimasu). Türkçede de \"ilaç içmek\" denir!"
+        },
+        {
+          "ex": "アレルギー.が あります。|Alerjim var."
+        },
+        {
+          "ex": "えいご.は だいじょうぶですか？|İngilizce olur mu?"
+        },
+        {
+          "ex": "だいじょうぶですか？|İyi misin?"
+        },
+        {
+          "ex": "だいじょうぶです。|İyiyim."
+        },
+        {
+          "ex": "おだいじに。|Geçmiş olsun. / Kendine iyi bak.",
+          "note": "Hasta birine söylenir; klinikten çıkarken çalışanlar da söyler."
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "name": "Aile ve insanlar",
+      "intro": "Aile ve arkadaşlar hakkında konuşmak. Kendi ailen için つま (tsuma, eşim) gibi sade kelimeler kullan.",
+      "phrases": [
+        {
+          "ex": "かぞく.は なんにんですか？|Ailen kaç kişi?"
+        },
+        {
+          "ex": "よにんです。|Dört kişi.",
+          "note": "ふたり (2), さんにん (3), よにん (4), ごにん (5)."
+        },
+        {
+          "ex": "つま.と むすめ.が います。|Bir eşim ve bir kızım var.",
+          "note": "Burada と (to) \"ve\" demektir. Koca: おっと (otto). Oğul: むすこ (musuko)."
+        },
+        {
+          "ex": "こども.は いません。|Çocuğum yok."
+        },
+        {
+          "ex": "むすこ.は じゅっさいです。|Oğlum on yaşında.",
+          "note": "Yaş: sayı + さい (sai)."
+        },
+        {
+          "ex": "おこさん.は なんさいですか？|Çocuğun kaç yaşında?",
+          "note": "おこさん (okosan) başkasının çocuğu için kullanılır."
+        },
+        {
+          "ex": "こちら.は ともだちです。|Bu benim arkadaşım.",
+          "note": "こちら (koçira) birini tanıştırmanın kibar yoludur."
+        },
+        {
+          "ex": "あのひと.は だれですか？|Şu kişi kim?"
+        },
+        {
+          "ex": "あに.は とうきょう.に すんでいます。|Ağabeyim Tokyo'da yaşıyor."
+        },
+        {
+          "ex": "りょうしん.は アメリカ.に います。|Annemle babam Amerika'da."
+        },
+        {
+          "ex": "わたし.は けっこんしています。|Evliyim."
+        },
+        {
+          "ex": "おとうさん.は おげんきですか？|Baban iyi mi?"
+        },
+        {
+          "ex": "うち.に いぬ.が います。|Evde bir köpeğimiz var.",
+          "note": "ねこ (neko, kedi) koyabilirsin."
+        },
+        {
+          "ex": "ともだち.と ひるごはん.を たべます。|Bir arkadaşımla öğle yemeği yiyorum.",
+          "note": "Burada と (to) \"ile\" demektir."
+        },
+        {
+          "ex": "はは.に てがみ.を かきます。|Anneme mektup yazacağım.",
+          "note": "に (ni) = yönelme hâli: anne-m-e."
+        },
+        {
+          "ex": "みんな.で しゃしん.を とります。|Hep birlikte fotoğraf çekeceğiz."
+        },
+        {
+          "ex": "みんな.で たべましょう。|Hep birlikte yiyelim."
+        },
+        {
+          "ex": "ともだち.に なりましょう。|Arkadaş olalım."
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "name": "Hava ve mevsimler",
+      "intro": "Japonya'da en kolay sohbet konusu havadır. Sıfat + です (desu) yeterli.",
+      "phrases": [
+        {
+          "ex": "きょう.は いいてんきです。|Bugün hava güzel."
+        },
+        {
+          "ex": "そと.で たべましょう。|Dışarıda yiyelim."
+        },
+        {
+          "ex": "はる.は はなみ.に いきましょう。|İlkbaharda kiraz çiçeği seyrine gidelim.",
+          "note": "はなみ (hanami) = ağaçların altında yiyip içerek kiraz çiçeklerini seyretmek."
+        },
+        {
+          "ex": "あついです。|Sıcak."
+        },
+        {
+          "ex": "さむいです。|Soğuk."
+        },
+        {
+          "ex": "きょう.は むしあついです。|Bugün hava sıcak ve nemli."
+        },
+        {
+          "ex": "あめ.が ふっています。|Yağmur yağıyor."
+        },
+        {
+          "ex": "あした.は あめです。|Yarın yağmur yağacak.",
+          "note": "はれ (hare, güneşli) ya da くもり (kumori, bulutlu) koyabilirsin."
+        },
+        {
+          "ex": "かさ.は ありますか？|Şemsiyen var mı?"
+        },
+        {
+          "ex": "かさ.を かしてください。|Bana bir şemsiye ödünç verir misin?"
+        },
+        {
+          "ex": "タクシー.で かえりましょう。|Eve taksiyle dönelim."
+        },
+        {
+          "ex": "かぜ.が つよいです。|Rüzgâr sert."
+        },
+        {
+          "ex": "たいふう.が きます。|Tayfun geliyor."
+        },
+        {
+          "ex": "あめ.は あした.まで つづきます。|Yağmur yarına kadar sürecek.",
+          "note": "まで (made) = \"-a kadar\"."
+        },
+        {
+          "ex": "ゆき.が ふります。|Kar yağacak."
+        },
+        {
+          "ex": "はる.は さくら.が きれいです。|İlkbaharda kiraz çiçekleri çok güzel."
+        },
+        {
+          "ex": "ならのなつ.は あついです。|Nara'da yazlar sıcak."
+        },
+        {
+          "ex": "どのきせつ.が すきですか？|Hangi mevsimi seversin?"
+        },
+        {
+          "ex": "わたし.は あき.が すきです。|Ben sonbaharı severim.",
+          "note": "はる (ilkbahar), なつ (yaz), あき (sonbahar), ふゆ (kış). Dikkat: すき (suki) ile が kullanılır, を değil."
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "name": "Telefon ve mesajlar",
+      "intro": "Telefon görüşmeleri ve mesajlaşma uygulamaları. Telefonda biraz daha yavaş konuş, tekrar istemekten çekinme.",
+      "phrases": [
+        {
+          "ex": "もしもし。|Alo? (telefonda)",
+          "note": "Sadece telefonda, asla yüz yüze değil."
+        },
+        {
+          "ex": "スミスです。|Ben Smith.",
+          "note": "Ararken ya da açarken sadece adın + です."
+        },
+        {
+          "ex": "たなかさん.は いますか？|Tanaka Bey orada mı?"
+        },
+        {
+          "ex": "よく きこえません。|Seni iyi duyamıyorum."
+        },
+        {
+          "ex": "もうすこし おおきいこえ.で おねがいします。|Biraz daha yüksek sesle, lütfen."
+        },
+        {
+          "ex": "いま でんしゃのなかです。|Şu an trendeyim.",
+          "note": "Japonya'da trende telefonla konuşulmaz. Bunu söyle ve sonra ara."
+        },
+        {
+          "ex": "あとで かけなおします。|Seni sonra geri ararım."
+        },
+        {
+          "ex": "あとで また でんわします。|Sonra yine ararım."
+        },
+        {
+          "ex": "あとで また はなしましょう。|Sonra yine konuşalım."
+        },
+        {
+          "ex": "でんわばんごう.を おしえてください。|Lütfen telefon numaranı söyler misin?"
+        },
+        {
+          "ex": "ライン.は やっていますか？|LINE kullanıyor musun?",
+          "note": "LINE, Japonya'da çoğu insanın kullandığı mesajlaşma uygulamasıdır."
+        },
+        {
+          "ex": "メッセージ.を おくります。|Sana mesaj göndereceğim."
+        },
+        {
+          "ex": "しゃしん.を ライン.で おくります。|Fotoğrafı LINE'dan göndereceğim."
+        },
+        {
+          "ex": "ライン.で れんらくしましょう。|LINE'dan haberleşelim."
+        },
+        {
+          "ex": "メール.で おくってください。|Lütfen e-postayla gönder."
+        },
+        {
+          "ex": "へんじ.を まっています。|Cevabını bekliyorum."
+        },
+        {
+          "ex": "バッテリー.が すくないです。|Şarjım azaldı."
+        },
+        {
+          "ex": "しつれいします。|Hoşça kalın. (Görüşmeyi bitirmenin kibar yolu.)",
+          "note": "Bir odaya girerken ya da çıkarken de kullanılır."
+        }
+      ]
+    }
+  ]
+}

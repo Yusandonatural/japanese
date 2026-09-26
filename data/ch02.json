@@ -3336,9 +3336,9 @@
   "id": "c02-103",
   "chapter": 2,
   "scene": "weather",
-  "ja": "天気はどいますか？",
-  "kana": "てんきはどいますか？",
-  "romaji": "Tenki wa doimasu ka?",
+  "ja": "天気はどうですか？",
+  "kana": "てんきはどうですか？",
+  "romaji": "Tenki wa dō desu ka?",
   "en": "How's the weather?",
   "question": true,
   "tense": "present",
@@ -3354,8 +3354,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],
@@ -4487,9 +4487,9 @@
   "id": "c02-138",
   "chapter": 2,
   "scene": "health",
-  "ja": "気分はどいますか？",
-  "kana": "きぶんはどいますか？",
-  "romaji": "Kibun wa doimasu ka?",
+  "ja": "気分はどうですか？",
+  "kana": "きぶんはどうですか？",
+  "romaji": "Kibun wa dō desu ka?",
   "en": "How do you feel?",
   "question": true,
   "tense": "present",
@@ -4505,8 +4505,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],
@@ -4558,9 +4558,9 @@
   "id": "c02-140",
   "chapter": 2,
   "scene": "health",
-  "ja": "調子はどいますか？",
-  "kana": "ちょうしはどいますか？",
-  "romaji": "Chōshi wa doimasu ka?",
+  "ja": "調子はどうですか？",
+  "kana": "ちょうしはどうですか？",
+  "romaji": "Chōshi wa dō desu ka?",
   "en": "How are you doing?",
   "question": true,
   "tense": "present",
@@ -4576,8 +4576,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],

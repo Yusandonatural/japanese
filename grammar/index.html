@@ -56,43 +56,46 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/grammar/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/grammar/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/grammar/">
 </head>
 <body>
 <main class="wrap prose">
-  <h1>Tag Grammar</h1>
-  <p class="lead">A Japanese sentence is a row of tagged chunks with one core at the end. Learn what each tag does, and you can put the chunks in whatever order you like.</p>
+  <h1 data-i18n>Tag Grammar</h1>
+  <p class="lead" data-i18n>A Japanese sentence is a row of tagged chunks with one core at the end. Learn what each tag does, and you can put the chunks in whatever order you like.</p>
 
   <div class="panel" id="anatomy">
-    <div class="small muted" style="margin-bottom:4px">Sentence anatomy — tap 🔊 to listen</div>
+    <div class="small muted" style="margin-bottom:4px" data-i18n>Sentence anatomy — tap 🔊 to listen</div>
     <div id="anatomyCards"></div>
     <div class="row small" style="gap:14px;margin-top:4px">
-      <span><b>chunk</b> = noun + tag</span><span><b>core</b> = the last word, always</span><span><b>ます・ますか・ません・ましょう</b> = the only four endings</span>
+      <span data-i18n><b>chunk</b> = noun + tag</span><span data-i18n><b>core</b> = the last word, always</span><span data-i18n><b>ます・ますか・ません・ましょう</b> = the only four endings</span>
     </div>
     <div id="anatomyEx"></div>
   </div>
 
   <nav class="toc" id="toc">
-    <a href="#principles">5 principles</a><a href="#level1">Level 1 rules</a><a href="#cores">The core</a><a href="#tags">The 10 tags</a><a href="#notag">No tag</a><a href="#no">の</a><a href="#questions">Question words</a><a href="#confusions">Easy to confuse</a>
+    <a href="#principles" data-i18n>5 principles</a><a href="#level1" data-i18n>Level 1 rules</a><a href="#cores" data-i18n>The core</a><a href="#tags" data-i18n>The 10 tags</a><a href="#notag" data-i18n>No tag</a><a href="#no">の</a><a href="#questions" data-i18n>Question words</a><a href="#confusions" data-i18n>Easy to confuse</a>
   </nav>
 
-  <h2 id="principles">Five principles</h2>
+  <h2 id="principles" data-i18n>Five principles</h2>
   <div id="principleList"></div>
 
-  <h2 id="level1">Level 1 — four endings, nothing else</h2>
-  <p>Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 the core has just four endings — ます, ますか, ません, ましょう — and time words do the rest. Learn these and start talking.</p>
+  <h2 id="level1" data-i18n>Level 1 — four endings, nothing else</h2>
+  <p data-i18n>Most courses spend weeks on verb forms before you can say anything. Tag Grammar postpones all of that. At Level 1 the core has just four endings — ます, ますか, ません, ましょう — and time words do the rest. Learn these and start talking.</p>
   <div id="levelList"></div>
 
-  <h2 id="cores">The core — four kinds</h2>
+  <h2 id="cores" data-i18n>The core — four kinds</h2>
   <div class="grid" id="coreList" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))"></div>
 
   <h2 id="tags">The 10 tags</h2>
   <nav class="toc" id="tagToc"></nav>
   <div id="tagList"></div>
 
-  <h2 id="notag">No tag at all</h2>
+  <h2 id="notag" data-i18n>No tag at all</h2>
   <div class="panel" id="notagBox"></div>
 
-  <h2 id="no">の — the glue inside a chunk</h2>
+  <h2 id="no" data-i18n>の — the glue inside a chunk</h2>
   <div class="panel" id="noBox"></div>
 
   <h2 id="questions">Question words</h2>
@@ -103,14 +106,14 @@
   <div id="confList"></div>
 
   <div class="lesson-nav">
-    <a class="btn ghost" href="../lesson/">Daily lessons</a>
-    <a class="btn ghost" href="../words/">Words & phrases</a>
-    <a class="btn" href="../lesson/?day=1">Start Day 1 →</a>
+    <a class="btn ghost" href="../lesson/" data-i18n>Daily lessons</a>
+    <a class="btn ghost" href="../words/" data-i18n>Words & phrases</a>
+    <a class="btn" href="../lesson/?day=1" data-i18n>Start Day 1 →</a>
   </div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadParticles, loadConfusions, loadGrammar, exBlock, exCards, CHAPTERS, esc } from '../js/app.js';
+import { renderHeader, renderFooter, loadParticles, loadConfusions, loadGrammar, exBlock, exCards, CHAPTERS, esc, t } from '../js/app.js';
 renderHeader('grammar');
 
 const [particles, confusions, g] = await Promise.all([loadParticles(), loadConfusions(), loadGrammar()]);
@@ -119,8 +122,8 @@ const add = (parent, html, cls = '') => { const d = document.createElement('div'
 const addEx = (parent, list, opts) => (list || []).forEach(s => parent.appendChild(exBlock(s, opts)));
 
 // anatomy
-$('anatomyCards').appendChild(exCards('あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?', { particles }));
-addEx($('anatomyEx'), ['あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?']);
+$('anatomyCards').appendChild(exCards(t('あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?'), { particles }));
+addEx($('anatomyEx'), [t('あした ともだち.と なら.に いきますか？|Are you going to Nara with a friend tomorrow?')]);
 
 // principles
 g.principles.forEach(p => {
@@ -132,7 +135,7 @@ g.principles.forEach(p => {
 // level 1
 g.level1.forEach(r => {
   const box = add($('levelList'), `<h3 style="margin-top:0">${esc(r.rule)}</h3><p>${esc(r.how)}</p>`, 'panel');
-  if (r.table) add(box, `<table class="tbl"><tr><th>Ending</th><th></th><th>Use</th><th>Example</th></tr>${r.table.map(t => `<tr><td><b style="font-size:18px">${esc(t[0])}</b></td><td class="muted">${esc(t[1])}</td><td>${esc(t[2])}</td><td>${esc(t[3])}</td></tr>`).join('')}</table>`);
+  if (r.table) add(box, `<table class="tbl"><tr><th>${t('Ending')}</th><th></th><th>${t('Use')}</th><th>${t('Example')}</th></tr>${r.table.map(t => `<tr><td><b style="font-size:18px">${esc(t[0])}</b></td><td class="muted">${esc(t[1])}</td><td>${esc(t[2])}</td><td>${esc(t[3])}</td></tr>`).join('')}</table>`);
   addEx(box, r.ex);
   if (r.note) add(box, esc(r.note), 'note');
 });
@@ -145,19 +148,19 @@ g.cores.forEach(c => {
 
 // tags
 const dayFor = ch => { const c = CHAPTERS.find(x => x.n === ch); return c ? c.days[0] : 1; };
-g.tags.forEach(t => {
-  const meta = particles.find(p => p.p === t.p) || {};
-  const id = 'tag-' + (meta.romaji || t.p);
-  const a = document.createElement('a'); a.href = '#' + id; a.innerHTML = `<b style="color:${meta.color}">${t.p}</b> ${esc(meta.label || '')}`; $('tagToc').appendChild(a);
-  const sec = add($('tagList'), `<div class="head"><span class="big-tag" style="background:${meta.color}">${t.p}</span>
+g.tags.forEach(tg => {
+  const meta = particles.find(p => p.p === tg.p) || {};
+  const id = 'tag-' + (meta.romaji || tg.p);
+  const a = document.createElement('a'); a.href = '#' + id; a.innerHTML = `<b style="color:${meta.color}">${tg.p}</b> ${esc(meta.label || '')}`; $('tagToc').appendChild(a);
+  const sec = add($('tagList'), `<div class="head"><span class="big-tag" style="background:${meta.color}">${tg.p}</span>
       <div><div><b>${esc(meta.label || '')}</b> <span class="muted small">· ${esc(meta.romaji || '')} · ${esc(meta.short || '')}</span></div>
-      <div class="picture">${esc(t.picture)}</div></div></div>
-      <p class="small"><b>Answers:</b> ${esc(t.asks)} &nbsp;·&nbsp; <a href="../lesson/?day=${dayFor(meta.chapter)}">Learned on Day ${dayFor(meta.chapter)}</a></p>`, 'panel tagsec');
+      <div class="picture">${esc(tg.picture)}</div></div></div>
+      <p class="small"><b>${t('Answers:')}</b> ${esc(tg.asks)} &nbsp;·&nbsp; <a href="../lesson/?day=${dayFor(meta.chapter)}">${t('Learned on Day {d}', { d: dayFor(meta.chapter) })}</a>${meta.tr_case ? ` &nbsp;·&nbsp; ${t('In Turkish: {x}', { x: esc(meta.tr_case) })}` : ''}</p>`, 'panel tagsec');
   sec.id = id;
-  t.uses.forEach(u => { const box = add(sec, `<h4>${esc(u.h)}</h4><div class="small">${esc(u.text)}</div>`, 'use'); addEx(box, u.ex); });
-  if (t.mistakes && t.mistakes.length) {
-    const m = add(sec, `<h4>Common mistake${t.mistakes.length > 1 ? 's' : ''}</h4>`, 'use');
-    t.mistakes.forEach(x => { m.appendChild(exBlock(x.wrong + '|', { wrong: true })); m.appendChild(exBlock(x.right, { right: true })); add(m, esc(x.why), 'why'); });
+  tg.uses.forEach(u => { const box = add(sec, `<h4>${esc(u.h)}</h4><div class="small">${esc(u.text)}</div>`, 'use'); addEx(box, u.ex); });
+  if (tg.mistakes && tg.mistakes.length) {
+    const m = add(sec, `<h4>${t(tg.mistakes.length > 1 ? 'Common mistakes' : 'Common mistake')}</h4>`, 'use');
+    tg.mistakes.forEach(x => { m.appendChild(exBlock(x.wrong + '|', { wrong: true })); m.appendChild(exBlock(x.right, { right: true })); add(m, esc(x.why), 'why'); });
   }
 });
 
@@ -172,7 +175,7 @@ g.questionWords.forEach(q => { const box = add($('qList'), `<div class="row" sty
 // confusions
 confusions.forEach(c => {
   const pa = particles.find(p => p.p === c.pair[0]), pb = particles.find(p => p.p === c.pair[1]);
-  const label = (c.pair[0] ? `<b style="color:${pa?.color}">${c.pair[0]}</b>` : '<b>(no tag)</b>') + ' vs ' + `<b style="color:${pb?.color}">${c.pair[1]}</b>`;
+  const label = (c.pair[0] ? `<b style="color:${pa?.color}">${c.pair[0]}</b>` : `<b>${t('(no tag)')}</b>`) + ' vs ' + `<b style="color:${pb?.color}">${c.pair[1]}</b>`;
   const box = add($('confList'), `<div style="font-size:18px">${label}</div><p class="small">${esc(c.tip)}</p>`, 'panel');
   addEx(box, c.ex);
 });

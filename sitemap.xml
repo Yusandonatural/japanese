@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nihongo.yusando.com/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://nihongo.yusando.com/lesson/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://nihongo.yusando.com/grammar/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://nihongo.yusando.com/words/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://nihongo.yusando.com/scenes/</loc><lastmod>2026-09-25</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://nihongo.yusando.com/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/"/></url>
+  <url><loc>https://nihongo.yusando.com/tr/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/"/></url>
+  <url><loc>https://nihongo.yusando.com/lesson/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/lesson/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/lesson/"/></url>
+  <url><loc>https://nihongo.yusando.com/tr/lesson/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/lesson/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/lesson/"/></url>
+  <url><loc>https://nihongo.yusando.com/grammar/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/grammar/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/grammar/"/></url>
+  <url><loc>https://nihongo.yusando.com/tr/grammar/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/grammar/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/grammar/"/></url>
+  <url><loc>https://nihongo.yusando.com/words/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/words/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/words/"/></url>
+  <url><loc>https://nihongo.yusando.com/tr/words/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/words/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/words/"/></url>
+  <url><loc>https://nihongo.yusando.com/scenes/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/scenes/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/scenes/"/></url>
+  <url><loc>https://nihongo.yusando.com/tr/scenes/</loc><lastmod>2026-09-26</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/scenes/"/><xhtml:link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/scenes/"/></url>
 </urlset>

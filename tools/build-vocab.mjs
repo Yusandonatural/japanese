@@ -30,7 +30,7 @@ function add(key, entry, ex) {
   if (ex.chapter < e.ch) e.ch = ex.chapter;
   // keep the shortest example as the illustration
   const kana = ex.chunks.map(c => c.k + c.p).join(' ') + (ex.chunks.length ? ' ' : '') + ex.core.k + (ex.question ? '？' : '。');
-  if (!e.ex || kana.length < e.ex.k.length) e.ex = { k: kana, en: ex.en };
+  if (!e.ex || kana.length < e.ex.k.length) e.ex = { k: kana, en: ex.en, id: ex.id };
 }
 
 for (const ex of all) {

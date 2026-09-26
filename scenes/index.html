@@ -56,19 +56,22 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/scenes/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/scenes/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/scenes/">
 </head>
 <body>
 <main class="wrap">
-  <div class="muted small" id="crumb"><a href="../">Home</a> / Scenes</div>
-  <h1 id="title">Browse by scene</h1>
-  <p class="lead" id="sub">Every one of the 2,000 sentences belongs to a real-life scene. Pick one to see it in context.</p>
+  <div class="muted small" id="crumb"><a href="../" data-i18n>Home</a> / <span data-i18n>Scenes</span></div>
+  <h1 id="title" data-i18n>Browse by scene</h1>
+  <p class="lead" id="sub" data-i18n>Every one of the 2,000 sentences belongs to a real-life scene. Pick one to see it in context.</p>
 
   <div id="sceneGrid" class="grid"></div>
   <div id="list"></div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadAll, loadParticles, loadScenes, sentenceView, qs } from '../js/app.js';
+import { renderHeader, renderFooter, loadAll, loadParticles, loadScenes, sentenceView, qs, t } from '../js/app.js';
 renderHeader('');
 
 const scene = qs('scene');
@@ -79,21 +82,21 @@ if (!scene) {
   scenes.forEach(s => {
     const count = examples.filter(e => e.scene === s.id).length;
     const a = document.createElement('a'); a.className = 'chapter-card'; a.href = `?scene=${s.id}`;
-    a.innerHTML = `<div class="n">${s.icon} ${count} sentences</div><div class="t">${s.name}</div><div class="small muted">${s.ja}</div>`;
+    a.innerHTML = `<div class="n">${s.icon} ${t('{n} sentences', { n: count })}</div><div class="t">${s.name}</div><div class="small muted">${s.ja}</div>`;
     grid.appendChild(a);
   });
 } else {
   const s = scenes.find(x => x.id === scene);
   document.getElementById('title').textContent = s ? `${s.icon} ${s.name}` : scene;
   document.getElementById('sub').textContent = s ? s.ja : '';
-  document.getElementById('crumb').innerHTML = `<a href="../">Home</a> / <a href="./">Scenes</a> / ${s ? s.name : scene}`;
+  document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="./">${t('Scenes')}</a> / ${s ? s.name : scene}`;
   document.getElementById('sceneGrid').remove();
   const items = examples.filter(e => e.scene === scene).sort((a, b) => a.chapter - b.chapter);
   const listEl = document.getElementById('list');
   items.forEach(ex => {
     const row = document.createElement('div'); row.className = 'list-ex';
     row.appendChild(sentenceView(ex, { particles }));
-    const en = document.createElement('div'); en.className = 'en muted'; en.textContent = `${ex.en} · Ch${ex.chapter}`; row.appendChild(en);
+    const en = document.createElement('div'); en.className = 'en muted'; en.textContent = `${ex.en} · ${t('Ch{n}', { n: ex.chapter })}`; row.appendChild(en);
     listEl.appendChild(row);
   });
 }

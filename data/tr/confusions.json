@@ -1,0 +1,104 @@
+[
+  {
+    "pair": ["は", "が"],
+    "tip": "は = “X'e gelince” (neden bahsettiğimiz). が = işi yapan ya da var olan, özellikle yeni bilgiyse ya da kim? / ne? sorusunun cevabıysa.",
+    "ex": [
+      "たなかさん.は きます。|Tanaka-san'a gelince, o geliyor.",
+      "たなかさん.が きます。|Gelen Tanaka-san."
+    ]
+  },
+  {
+    "pair": ["に", "で"],
+    "tip": "Türkçe ikisine de -da der, ama Japonca ayırır. に = bir şeyin BULUNDUĞU ya da VARDIĞI yer. で = bir eylemin YAPILDIĞI yer.",
+    "ex": [
+      "いえ.に います。|Evdeyim.",
+      "いえ.で たべます。|Evde yemek yiyorum."
+    ]
+  },
+  {
+    "pair": ["に", "へ"],
+    "tip": "に = -a varmak. へ = -a doğru gitmek. Varış yerleri için ikisi de olur; konuşmada に daha yaygın. Alıcı, zaman ve var olma için yalnızca に.",
+    "ex": [
+      "なら.に いきます。|Nara'ya gidiyorum.",
+      "なら.へ いきます。|Nara'ya doğru gidiyorum."
+    ]
+  },
+  {
+    "pair": ["を", "が"],
+    "tip": "を = eylemin yöneldiği şey (-ı). が = yapan, ya da var olan / sevilen / anlaşılan şey. あります, います, すきです, わかります が alır — Türkçede “çayı severim” desen de!",
+    "ex": [
+      "おちゃ.を のみます。|Çay içiyorum.",
+      "おちゃ.が すきです。|Çayı severim."
+    ]
+  },
+  {
+    "pair": ["を", "に"],
+    "tip": "を = eylemin nesnesi. に = varış yeri ya da alıcı. Bir yere GİTMEK = に; bir yerden ÇIKMAK ya da içinden GEÇMEK = を (Türkçe burada -dan der).",
+    "ex": [
+      "いえ.に かえります。|Eve dönüyorum.",
+      "いえ.を でます。|Evden çıkıyorum."
+    ]
+  },
+  {
+    "pair": ["と", "に"],
+    "tip": "と = birlikte, iki taraflı (biriyle sohbet etmek). に = tek yönlü, bir kişiye doğru (birine söylemek). Buluşmak için gündelik dilde に: ともだち.に あいます.",
+    "ex": [
+      "ともだち.と はなします。|Arkadaşımla sohbet edeceğim.",
+      "ともだち.に はなします。|Arkadaşıma anlatacağım."
+    ]
+  },
+  {
+    "pair": ["と", "で"],
+    "tip": "Türkçedeki “ile” ikiye ayrılır: kişiyle birlikte = と, bir araçla = で. “Arkadaşımla” → と, “otobüsle” → で.",
+    "ex": [
+      "ともだち.と いきます。|Arkadaşımla gidiyorum.",
+      "バス.で いきます。|Otobüsle gidiyorum."
+    ]
+  },
+  {
+    "pair": ["から", "まで"],
+    "tip": "から = başlangıç (-dan). まで = bitiş (-a kadar). Birlikte bir aralık yaparlar ve her biri ayrı bir parçadır — tıpkı “dokuzdan beşe kadar”.",
+    "ex": [
+      "くじ.から ごじ.まで はたらきます。|Dokuzdan beşe kadar çalışıyorum."
+    ]
+  },
+  {
+    "pair": ["も", "は"],
+    "tip": "も, は, が ve を'nın yerini alır. Asla üst üste koyma (はも, をも yok). に, で, と, へ, から, まden sonra ekle: でも, にも — Türkçedeki “Nara'da da” gibi.",
+    "ex": [
+      "わたし.も いきます。|Ben de gidiyorum.",
+      "なら.でも かいます。|Nara'da da alıyorum."
+    ]
+  },
+  {
+    "pair": ["", "に"],
+    "tip": "Saatler ve haftanın günleri に alır (Türkçede “saat üçte” -de ile olsa da). Göreli zaman kelimeleri (あした, いま, らいしゅう, まいにち) hiçbir şey almaz.",
+    "ex": [
+      "さんじ.に きます。|Saat üçte geliyorum.",
+      "あした きます。|Yarın geliyorum."
+    ]
+  },
+  {
+    "pair": ["", "は"],
+    "tip": "Zaman kelimeleri etiket istemez. は'yı yalnızca onları konu yapmak için ekle: “yarına gelince…”.",
+    "ex": [
+      "あした.は やすみです。|Yarın tatil."
+    ]
+  },
+  {
+    "pair": ["に", "まで"],
+    "tip": "Türkçedeki “beşe kadar” içinde -e var, ama に “saat beşte” demek. “Kadar” anlamı まで ile gelir.",
+    "ex": [
+      "ごじ.に はたらきます。|Saat beşte çalışıyorum.",
+      "ごじ.まで はたらきます。|Beşe kadar çalışıyorum."
+    ]
+  },
+  {
+    "pair": ["から", "が"],
+    "tip": "Türkçede “hoşlanmak” -dan ister (Japonya'dan hoşlanıyorum), ama すきです her zaman が alır. から yalnızca gerçek bir başlangıç noktası içindir.",
+    "ex": [
+      "にほん.が すきです。|Japonya'yı seviyorum.",
+      "にほん.から きます。|Japonya'dan geliyorum."
+    ]
+  }
+]

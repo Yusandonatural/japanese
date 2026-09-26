@@ -23,7 +23,17 @@ function kataToHira(s) {
 }
 
 /** Convert a kana string to Hepburn romaji. Particles は/へ are handled by romajiParticle. */
+// Turkish edition: spell sounds the way a Turkish reader pronounces them (sh→ş, ch→ç, j→c).
+let SCHEME = (typeof document !== 'undefined' && document.documentElement.dataset.locale === 'tr') ? 'tr' : 'hepburn';
+export function setRomajiScheme(s) { SCHEME = s; }
+export function toTurkishSpelling(r) {
+  return r.replace(/tch/g, 'tç').replace(/Sh/g, 'Ş').replace(/sh/g, 'ş').replace(/Ch/g, 'Ç').replace(/ch/g, 'ç').replace(/J/g, 'C').replace(/j/g, 'c');
+}
 export function kanaToRomaji(input, opts = {}) {
+  const r = kanaToRomajiHepburn(input, opts);
+  return (opts.scheme || SCHEME) === 'tr' ? toTurkishSpelling(r) : r;
+}
+function kanaToRomajiHepburn(input, opts = {}) {
   const s = kataToHira(input);
   let out = '';
   let i = 0;

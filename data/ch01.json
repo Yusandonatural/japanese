@@ -2958,9 +2958,9 @@
   "id": "c01-112",
   "chapter": 1,
   "scene": "time",
-  "ja": "今度いちますか？",
-  "kana": "こんどいちますか？",
-  "romaji": "Kondo ichimasu ka?",
+  "ja": "今度いつですか？",
+  "kana": "こんどいつですか？",
+  "romaji": "Kondo itsu desu ka?",
   "en": "When is the next time?",
   "question": true,
   "tense": "future",
@@ -2976,8 +2976,8 @@
    }
   ],
   "core": {
-   "w": "いちますか",
-   "k": "いちますか",
+   "w": "いつですか",
+   "k": "いつですか",
    "gloss": "when"
   },
   "fixedOrder": [],

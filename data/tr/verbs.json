@@ -1,0 +1,802 @@
+{
+  "1": {
+    "en": "gitmek",
+    "ex": "あした なら.に いきます。|Yarın Nara'ya gideceğim."
+  },
+  "2": {
+    "en": "gelmek",
+    "ex": "あした ともだち.が うち.に きます。|Yarın bir arkadaşım evime geliyor."
+  },
+  "3": {
+    "en": "yapmak; (spor) oynamak",
+    "ex": "しゅうまつ テニス.を します。|Hafta sonları tenis oynarım."
+  },
+  "4": {
+    "en": "olmak, var olmak (eşya); sahip olmak",
+    "ex": "えきのちかく.に コンビニ.が あります。|İstasyonun yakınında bir market var."
+  },
+  "5": {
+    "en": "olmak, bulunmak (insan, hayvan)",
+    "ex": "いま うち.に います。|Şu an evdeyim."
+  },
+  "6": {
+    "en": "yemek",
+    "ex": "まいあさ パン.を たべます。|Her sabah ekmek yerim."
+  },
+  "7": {
+    "en": "içmek",
+    "ex": "コーヒー.を のみますか？|Kahve içer misin?"
+  },
+  "8": {
+    "en": "görmek; izlemek; bakmak",
+    "ex": "よる テレビ.を みます。|Akşamları televizyon izlerim."
+  },
+  "9": {
+    "en": "söylemek; demek",
+    "ex": "これ.は にほんご.で なん.と いいますか？|Buna Japoncada ne denir?"
+  },
+  "10": {
+    "en": "anlamak",
+    "ex": "にほんご.が すこし わかります。|Biraz Japonca anlıyorum."
+  },
+  "11": {
+    "en": "satın almak",
+    "ex": "スーパー.で やさい.を かいます。|Süpermarketten sebze alırım."
+  },
+  "12": {
+    "en": "beklemek",
+    "ex": "えき.で ともだち.を まちます。|Arkadaşımı istasyonda bekleyeceğim."
+  },
+  "13": {
+    "en": "konuşmak",
+    "ex": "えいご.を はなしますか？|İngilizce konuşur musun?"
+  },
+  "14": {
+    "en": "eve dönmek; geri dönmek",
+    "ex": "きょう.は はやく うち.に かえります。|Bugün eve erken dönüyorum."
+  },
+  "15": {
+    "en": "kalkmak; uyanmak",
+    "ex": "まいあさ ろくじ.に おきます。|Her sabah altıda kalkarım."
+  },
+  "16": {
+    "en": "yatmak; uyumak",
+    "ex": "まいばん じゅうじ.に ねます。|Her akşam onda yatarım."
+  },
+  "17": {
+    "en": "yapabilmek; -abilmek",
+    "ex": "にほんご.が できますか？|Japonca konuşabiliyor musun?"
+  },
+  "18": {
+    "en": "kullanmak",
+    "ex": "このパソコン.を つかいますか？|Bu bilgisayarı kullanacak mısın?"
+  },
+  "19": {
+    "en": "yapmak; hazırlamak",
+    "ex": "あさごはん.を つくります。|Kahvaltı hazırlarım."
+  },
+  "20": {
+    "en": "buluşmak; görüşmek (biriyle)",
+    "ex": "あした ともだち.に あいます。|Yarın bir arkadaşımla buluşuyorum."
+  },
+  "21": {
+    "en": "okumak",
+    "ex": "でんしゃ.で ほん.を よみます。|Trende kitap okurum."
+  },
+  "22": {
+    "en": "yazmak; çizmek",
+    "ex": "ここ.に なまえ.を かきます。|Adımı buraya yazarım."
+  },
+  "23": {
+    "en": "dinlemek; duymak; sormak",
+    "ex": "まいにち おんがく.を ききます。|Her gün müzik dinlerim."
+  },
+  "24": {
+    "en": "tanımak; bilmek",
+    "ex": "そのひと.を しりません。|O kişiyi tanımıyorum."
+  },
+  "25": {
+    "en": "düşünmek; sanmak",
+    "ex": "あした.は あめだ.と おもいます。|Sanırım yarın yağmur yağacak."
+  },
+  "26": {
+    "en": "tutmak; taşımak; sahip olmak",
+    "ex": "かさ.を もちます。|Şemsiye alacağım."
+  },
+  "27": {
+    "en": "almak; (fotoğraf) çekmek",
+    "ex": "ここ.で しゃしん.を とりましょう。|Burada fotoğraf çekelim."
+  },
+  "28": {
+    "en": "binmek",
+    "ex": "えき.で でんしゃ.に のります。|Trene istasyonda binerim."
+  },
+  "29": {
+    "en": "inmek",
+    "ex": "つぎのえき.で でんしゃ.を おります。|Bir sonraki istasyonda trenden inerim."
+  },
+  "30": {
+    "en": "girmek",
+    "ex": "まいばん おふろ.に はいります。|Her akşam banyo yaparım."
+  },
+  "31": {
+    "en": "çıkmak; ayrılmak",
+    "ex": "はちじ.に うち.を でます。|Saat sekizde evden çıkarım."
+  },
+  "32": {
+    "en": "yürümek",
+    "ex": "えき.まで あるきます。|İstasyona kadar yürürüm."
+  },
+  "33": {
+    "en": "koşmak",
+    "ex": "まいあさ こうえん.を はしります。|Her sabah parkta koşarım."
+  },
+  "34": {
+    "en": "çalışmak (işte)",
+    "ex": "ぎんこう.で はたらきます。|Bir bankada çalışıyorum."
+  },
+  "35": {
+    "en": "dinlenmek; izin almak",
+    "ex": "あした かいしゃ.を やすみます。|Yarın işten izin alıyorum."
+  },
+  "36": {
+    "en": "oynamak; eğlenmek",
+    "ex": "しゅうまつ ともだち.と あそびます。|Hafta sonları arkadaşlarımla takılırım."
+  },
+  "37": {
+    "en": "ders çalışmak",
+    "ex": "まいにち にほんご.を べんきょうします。|Her gün Japonca çalışırım."
+  },
+  "38": {
+    "en": "öğretmek; söylemek",
+    "ex": "こども.に えいご.を おしえます。|Çocuklara İngilizce öğretiyorum."
+  },
+  "39": {
+    "en": "öğrenmek (birinden)",
+    "ex": "せんせい.に ピアノ.を ならいます。|Bir öğretmenden piyano öğreniyorum."
+  },
+  "40": {
+    "en": "telefon etmek; aramak",
+    "ex": "あとで はは.に でんわします。|Annemi sonra arayacağım."
+  },
+  "41": {
+    "en": "vermek",
+    "ex": "ともだち.に プレゼント.を あげます。|Arkadaşıma bir hediye vereceğim."
+  },
+  "42": {
+    "en": "almak; kabul etmek",
+    "ex": "きのう ともだち.に はな.を もらいます。|Dün bir arkadaşımdan çiçek aldım."
+  },
+  "43": {
+    "en": "vermek (bana)",
+    "ex": "ともだち.が おかし.を くれます。|Arkadaşım bana şeker veriyor."
+  },
+  "44": {
+    "en": "göstermek",
+    "ex": "パスポート.を みせます。|Pasaportumu göstereceğim."
+  },
+  "45": {
+    "en": "ödünç vermek",
+    "ex": "ともだち.に ほん.を かします。|Arkadaşıma bir kitap ödünç vereceğim."
+  },
+  "46": {
+    "en": "ödünç almak; kiralamak",
+    "ex": "としょかん.で ほん.を かります。|Kütüphaneden kitap ödünç alırım."
+  },
+  "47": {
+    "en": "göndermek",
+    "ex": "ともだち.に メール.を おくります。|Arkadaşıma e-posta göndereceğim."
+  },
+  "48": {
+    "en": "yaşamak; oturmak (bir yerde)",
+    "ex": "らいねん おおさか.に すみます。|Seneye Osaka'da yaşayacağım."
+  },
+  "49": {
+    "en": "oturmak",
+    "ex": "ここ.に すわりましょう。|Buraya oturalım."
+  },
+  "50": {
+    "en": "ayakta durmak; ayağa kalkmak",
+    "ex": "ドアのまえ.に たちます。|Kapının önünde duracağım."
+  },
+  "51": {
+    "en": "açmak",
+    "ex": "まど.を あけましょう。|Pencereyi açalım."
+  },
+  "52": {
+    "en": "kapatmak; kapamak",
+    "ex": "ドア.を しめます。|Kapıyı kapatacağım."
+  },
+  "53": {
+    "en": "açmak (ışık, alet)",
+    "ex": "でんき.を つけます。|Işığı açacağım."
+  },
+  "54": {
+    "en": "kapatmak (ışık, alet); silmek",
+    "ex": "テレビ.を けします。|Televizyonu kapatacağım."
+  },
+  "55": {
+    "en": "başlamak",
+    "ex": "かいぎ.は くじ.から はじまります。|Toplantı saat dokuzda başlıyor."
+  },
+  "56": {
+    "en": "bitmek; sona ermek",
+    "ex": "しごと.は ろくじ.に おわります。|İş saat altıda bitiyor."
+  },
+  "57": {
+    "en": "başlatmak; (bir şeye) başlamak",
+    "ex": "そろそろ しごと.を はじめましょう。|Artık işe başlayalım."
+  },
+  "58": {
+    "en": "olmak; hâline gelmek",
+    "ex": "らいねん はたち.に なります。|Seneye yirmi yaşına gireceğim."
+  },
+  "59": {
+    "en": "unutmak; bırakıp gitmek",
+    "ex": "よく かさ.を わすれます。|Şemsiyemi sık sık unuturum."
+  },
+  "60": {
+    "en": "ezberlemek; akılda tutmak",
+    "ex": "たんご.を おぼえましょう。|Kelimeleri ezberleyelim."
+  },
+  "61": {
+    "en": "araştırmak; kontrol etmek",
+    "ex": "インターネット.で みち.を しらべます。|Yolu internetten bakarım."
+  },
+  "62": {
+    "en": "düşünmek; üzerinde düşünmek",
+    "ex": "あしたのよてい.を かんがえます。|Yarınki planları düşünüyorum."
+  },
+  "63": {
+    "en": "karar vermek",
+    "ex": "みせ.を きめましょう。|Hangi restorana gideceğimize karar verelim."
+  },
+  "64": {
+    "en": "seçmek",
+    "ex": "すきないろ.を えらびます。|Sevdiğim bir renk seçerim."
+  },
+  "65": {
+    "en": "aramak (bir şeyi)",
+    "ex": "いま かぎ.を さがします。|Şimdi anahtarlarımı arayacağım."
+  },
+  "66": {
+    "en": "bulmak",
+    "ex": "きのう いいみせ.を みつけます。|Dün güzel bir dükkân buldum."
+  },
+  "67": {
+    "en": "kaybetmek",
+    "ex": "よく かぎ.を なくします。|Anahtarlarımı sık sık kaybederim."
+  },
+  "68": {
+    "en": "düşürmek",
+    "ex": "きのう さいふ.を おとします。|Dün cüzdanımı düşürdüm."
+  },
+  "69": {
+    "en": "ödemek",
+    "ex": "カード.で おかね.を はらいます。|Kartla öderim."
+  },
+  "70": {
+    "en": "çıkarmak; teslim etmek; göndermek",
+    "ex": "あした しゅくだい.を だします。|Ödevimi yarın teslim edeceğim."
+  },
+  "71": {
+    "en": "koymak; (çay) demlemek",
+    "ex": "コーヒー.に さとう.を いれます。|Kahveme şeker koyarım."
+  },
+  "72": {
+    "en": "koymak; yerleştirmek",
+    "ex": "ここ.に かばん.を おきます。|Çantamı buraya koyacağım."
+  },
+  "73": {
+    "en": "atmak; çöpe atmak",
+    "ex": "あさ ごみ.を すてます。|Sabahları çöpü çıkarırım."
+  },
+  "74": {
+    "en": "dönmek (yön)",
+    "ex": "つぎのかど.を みぎ.に まがります。|Bir sonraki köşeden sağa dönerim."
+  },
+  "75": {
+    "en": "geçmek; karşıya geçmek",
+    "ex": "このはし.を わたります。|Bu köprüden geçerim."
+  },
+  "76": {
+    "en": "varmak; ulaşmak",
+    "ex": "さんじ.に くうこう.に つきます。|Saat üçte havalimanına varırım."
+  },
+  "77": {
+    "en": "dışarı çıkmak",
+    "ex": "しゅうまつ かぞく.と でかけます。|Hafta sonları ailemle dışarı çıkarım."
+  },
+  "78": {
+    "en": "geri dönmek",
+    "ex": "すぐ せき.に もどります。|Hemen yerime dönerim."
+  },
+  "79": {
+    "en": "uğramak",
+    "ex": "かえり.に コンビニ.に よります。|Eve dönerken markete uğrarım."
+  },
+  "80": {
+    "en": "yanında götürmek",
+    "ex": "あした おべんとう.を もっていきます。|Yarın yanıma öğle yemeği götüreceğim."
+  },
+  "81": {
+    "en": "getirmek",
+    "ex": "あした のみもの.を もってきます。|Yarın içecek getireceğim."
+  },
+  "82": {
+    "en": "acele etmek",
+    "ex": "えき.まで いそぎましょう。|İstasyona acele edelim."
+  },
+  "83": {
+    "en": "geç kalmak",
+    "ex": "ときどき かいぎ.に おくれます。|Bazen toplantılara geç kalırım."
+  },
+  "84": {
+    "en": "yanılmak; yanlış yapmak",
+    "ex": "よく みち.を まちがえます。|Sık sık yanlış yola saparım."
+  },
+  "85": {
+    "en": "yıkamak",
+    "ex": "ごはんのまえ.に て.を あらいます。|Yemekten önce ellerimi yıkarım."
+  },
+  "86": {
+    "en": "(duş) almak",
+    "ex": "まいあさ シャワー.を あびます。|Her sabah duş alırım."
+  },
+  "87": {
+    "en": "fırçalamak; parlatmak",
+    "ex": "ねるまえ.に は.を みがきます。|Yatmadan önce dişlerimi fırçalarım."
+  },
+  "88": {
+    "en": "giymek (üste)",
+    "ex": "さむいひ.は コート.を きます。|Soğuk günlerde palto giyerim."
+  },
+  "89": {
+    "en": "giymek (ayakkabı, pantolon)",
+    "ex": "あたらしいくつ.を はきます。|Yeni ayakkabılarımı giyeceğim."
+  },
+  "90": {
+    "en": "çıkarmak (giysi, ayakkabı)",
+    "ex": "ここ.で くつ.を ぬぎます。|Ayakkabılar burada çıkarılır."
+  },
+  "91": {
+    "en": "takmak (şapka), başına geçirmek",
+    "ex": "なつ.は ぼうし.を かぶります。|Yazın şapka takarım."
+  },
+  "92": {
+    "en": "takmak (gözlük); asmak; (telefon) etmek",
+    "ex": "ほんをよむとき.は めがね.を かけます。|Kitap okurken gözlük takarım."
+  },
+  "93": {
+    "en": "temizlik yapmak",
+    "ex": "しゅうまつ へや.を そうじします。|Hafta sonları odamı temizlerim."
+  },
+  "94": {
+    "en": "çamaşır yıkamak",
+    "ex": "にちようび.に せんたくします。|Pazar günleri çamaşır yıkarım."
+  },
+  "95": {
+    "en": "yemek pişirmek",
+    "ex": "よる うち.で りょうりします。|Akşamları evde yemek pişiririm."
+  },
+  "96": {
+    "en": "alışveriş yapmak",
+    "ex": "デパート.で かいものします。|Büyük mağazada alışveriş yaparım."
+  },
+  "97": {
+    "en": "yürüyüşe çıkmak",
+    "ex": "いぬ.と こうえん.を さんぽします。|Köpeğimle parkta yürüyüş yaparım."
+  },
+  "98": {
+    "en": "seyahat etmek",
+    "ex": "らいげつ ほっかいどう.を りょこうします。|Gelecek ay Hokkaido'yu gezeceğim."
+  },
+  "99": {
+    "en": "araba sürmek",
+    "ex": "まいにち くるま.を うんてんします。|Her gün araba kullanırım."
+  },
+  "100": {
+    "en": "yemek yemek (öğün)",
+    "ex": "こんばん ともだち.と しょくじします。|Bu akşam bir arkadaşımla yemek yiyorum."
+  },
+  "101": {
+    "en": "evlenmek",
+    "ex": "らいねん かのじょ.と けっこんします。|Seneye onunla evleniyorum."
+  },
+  "102": {
+    "en": "alıştırma yapmak; çalışmak",
+    "ex": "まいにち ピアノ.を れんしゅうします。|Her gün piyano çalışırım."
+  },
+  "103": {
+    "en": "soru sormak",
+    "ex": "じゅぎょうのあと せんせい.に しつもんします。|Dersten sonra öğretmene soru sorarım."
+  },
+  "104": {
+    "en": "açıklamak",
+    "ex": "もういちど ルール.を せつめいします。|Kuralları bir kez daha açıklayacağım."
+  },
+  "105": {
+    "en": "rezervasyon yapmak",
+    "ex": "レストラン.を よやくしましょう。|Bir restoranda yer ayırtalım."
+  },
+  "106": {
+    "en": "sipariş vermek",
+    "ex": "コーヒー.を ちゅうもんします。|Bir kahve sipariş edeceğim."
+  },
+  "107": {
+    "en": "söz vermek; sözleşmek",
+    "ex": "ともだち.と やくそくします。|Bir arkadaşımla sözleşirim."
+  },
+  "108": {
+    "en": "tanıştırmak; tanıtmak",
+    "ex": "あとで ともだち.を しょうかいします。|Arkadaşımı sonra tanıştıracağım."
+  },
+  "109": {
+    "en": "kontrol etmek",
+    "ex": "あさ メール.を チェックします。|Sabahları e-postalarımı kontrol ederim."
+  },
+  "110": {
+    "en": "katılmak",
+    "ex": "あした パーティー.に さんかします。|Yarın partiye katılıyorum."
+  },
+  "111": {
+    "en": "spor yapmak",
+    "ex": "まいにち すこし うんどうします。|Her gün biraz spor yaparım."
+  },
+  "112": {
+    "en": "hazırlanmak; hazırlık yapmak",
+    "ex": "いまから じゅんびしましょう。|Şimdi hazırlanalım."
+  },
+  "113": {
+    "en": "endişelenmek",
+    "ex": "はは.は いつも わたし.を しんぱいします。|Annem hep benim için endişelenir."
+  },
+  "114": {
+    "en": "rahatlamak; keyif yapmak",
+    "ex": "しゅうまつ.は うち.で ゆっくりします。|Hafta sonları evde dinlenirim."
+  },
+  "115": {
+    "en": "fazla mesai yapmak",
+    "ex": "きょう.も ざんぎょうします。|Bugün de fazla mesai yapıyorum."
+  },
+  "116": {
+    "en": "yerden almak; toplamak",
+    "ex": "みんな.で ごみ.を ひろいましょう。|Hep birlikte çöpleri toplayalım."
+  },
+  "117": {
+    "en": "satmak",
+    "ex": "ふるいくるま.を うります。|Eski arabamı satacağım."
+  },
+  "118": {
+    "en": "geri vermek; iade etmek",
+    "ex": "あした ほん.を かえします。|Kitabı yarın geri vereceğim."
+  },
+  "119": {
+    "en": "teslim etmek; vermek",
+    "ex": "せんせい.に しゅくだい.を わたします。|Ödevimi öğretmene veririm."
+  },
+  "120": {
+    "en": "ulaştırmak; götürüp teslim etmek",
+    "ex": "こうばん.に さいふ.を とどけます。|Cüzdanı karakola götüreceğim."
+  },
+  "121": {
+    "en": "yardım etmek",
+    "ex": "ははのしごと.を てつだいます。|Anneme işinde yardım ederim."
+  },
+  "122": {
+    "en": "korumak; (söz) tutmak",
+    "ex": "やくそく.を まもります。|Sözlerimi tutarım."
+  },
+  "123": {
+    "en": "yapmak (samimi)",
+    "ex": "いま しゅくだい.を やります。|Ödevimi şimdi yapacağım."
+  },
+  "124": {
+    "en": "elinden geleni yapmak",
+    "ex": "いっしょに がんばりましょう。|Birlikte elimizden geleni yapalım."
+  },
+  "125": {
+    "en": "yağmak (yağmur, kar)",
+    "ex": "あした あめ.が ふります。|Yarın yağmur yağacak."
+  },
+  "126": {
+    "en": "dinmek (yağmur)",
+    "ex": "ゆうがた あめ.が やみます。|Yağmur akşama doğru dinecek."
+  },
+  "127": {
+    "en": "açmak (çiçek)",
+    "ex": "はる.に さくら.が さきます。|Kiraz çiçekleri ilkbaharda açar."
+  },
+  "128": {
+    "en": "açılmak (hava)",
+    "ex": "あした.は はれます。|Yarın hava açık olacak."
+  },
+  "129": {
+    "en": "görünmek",
+    "ex": "ここ.から ふじさん.が みえます。|Buradan Fuji Dağı görünüyor."
+  },
+  "130": {
+    "en": "duyulmak",
+    "ex": "わたしのこえ.が きこえますか？|Sesimi duyabiliyor musun?"
+  },
+  "131": {
+    "en": "sürmek (zaman); tutmak (para)",
+    "ex": "えき.まで じゅっぷん かかります。|İstasyona on dakika sürüyor."
+  },
+  "132": {
+    "en": "yetmek",
+    "ex": "おかね.が たりません。|Param yetmiyor."
+  },
+  "133": {
+    "en": "açılmak (kendiliğinden)",
+    "ex": "みせ.は じゅうじ.に あきます。|Dükkân saat onda açılıyor."
+  },
+  "134": {
+    "en": "kapanmak (kendiliğinden)",
+    "ex": "ぎんこう.は さんじ.に しまります。|Banka saat üçte kapanıyor."
+  },
+  "135": {
+    "en": "durmak; kalmak (gece)",
+    "ex": "こんばん ホテル.に とまります。|Bu gece bir otelde kalıyorum."
+  },
+  "136": {
+    "en": "durdurmak; park etmek",
+    "ex": "ここ.に くるま.を とめます。|Arabayı buraya park edeceğim."
+  },
+  "137": {
+    "en": "hareket etmek; çalışmak (makine)",
+    "ex": "パソコン.が うごきません。|Bilgisayar çalışmıyor."
+  },
+  "138": {
+    "en": "tamir etmek; düzeltmek",
+    "ex": "あした じてんしゃ.を なおします。|Bisikletimi yarın tamir edeceğim."
+  },
+  "139": {
+    "en": "iyileşmek; düzelmek",
+    "ex": "かぜ.は すぐ なおります。|Soğuk algınlığı yakında geçer."
+  },
+  "140": {
+    "en": "bozulmak (kendiliğinden)",
+    "ex": "きのう パソコン.が こわれます。|Dün bilgisayarım bozuldu."
+  },
+  "141": {
+    "en": "toplamak; toparlamak (ortalığı)",
+    "ex": "へや.を かたづけましょう。|Odayı toplayalım."
+  },
+  "142": {
+    "en": "toplamak; biriktirmek",
+    "ex": "きって.を あつめます。|Pul biriktiririm."
+  },
+  "143": {
+    "en": "toplanmak; bir araya gelmek",
+    "ex": "くじ.に えき.に あつまりましょう。|Saat dokuzda istasyonda toplanalım."
+  },
+  "144": {
+    "en": "ızgara yapmak; pişirmek (fırında)",
+    "ex": "こんばん さかな.を やきます。|Bu akşam balık ızgara yapıyorum."
+  },
+  "145": {
+    "en": "kaynatmak (su)",
+    "ex": "おちゃのおゆ.を わかします。|Çay için su kaynatırım."
+  },
+  "146": {
+    "en": "ısıtmak",
+    "ex": "おべんとう.を あたためますか？|Öğle yemeğinizi ısıtayım mı?"
+  },
+  "147": {
+    "en": "soğutmak",
+    "ex": "れいぞうこ.で ビール.を ひやします。|Birayı buzdolabında soğuturum."
+  },
+  "148": {
+    "en": "bırakmak; artırmak",
+    "ex": "ごはん.を のこしません。|Yemeğimi artırmam."
+  },
+  "149": {
+    "en": "sipariş etmek; rica etmek",
+    "ex": "ビール.を たのみます。|Bir bira söyleyeceğim."
+  },
+  "150": {
+    "en": "cevap vermek",
+    "ex": "しつもん.に こたえます。|Soruya cevap veririm."
+  },
+  "151": {
+    "en": "çağırmak; davet etmek",
+    "ex": "タクシー.を よびましょう。|Bir taksi çağıralım."
+  },
+  "152": {
+    "en": "özür dilemek",
+    "ex": "ともだち.に あやまります。|Arkadaşımdan özür dileyeceğim."
+  },
+  "153": {
+    "en": "davet etmek",
+    "ex": "ともだち.を パーティー.に さそいます。|Arkadaşımı partiye davet edeceğim."
+  },
+  "154": {
+    "en": "sohbet etmek; laflamak",
+    "ex": "ともだち.と よく しゃべります。|Arkadaşlarımla sık sık sohbet ederim."
+  },
+  "155": {
+    "en": "iletmek; haber vermek",
+    "ex": "みんな.に つたえます。|Herkese haber vereceğim."
+  },
+  "156": {
+    "en": "şarkı söylemek",
+    "ex": "カラオケ.で うた.を うたいます。|Karaokede şarkı söylerim."
+  },
+  "157": {
+    "en": "dans etmek",
+    "ex": "みんな.で おどりましょう。|Hep birlikte dans edelim."
+  },
+  "158": {
+    "en": "yüzmek",
+    "ex": "なつ.は うみ.で およぎます。|Yazın denizde yüzerim."
+  },
+  "159": {
+    "en": "çalmak (telli çalgı, piyano); çekmek; (nezle) olmak",
+    "ex": "よる ギター.を ひきます。|Akşamları gitar çalarım."
+  },
+  "160": {
+    "en": "tırmanmak; çıkmak",
+    "ex": "なつ.に ふじさん.に のぼります。|Yazın Fuji Dağı'na tırmanacağım."
+  },
+  "161": {
+    "en": "aktarma yapmak",
+    "ex": "しんじゅく.で のりかえます。|Şinjuku'da aktarma yaparım."
+  },
+  "162": {
+    "en": "çıkmak (yukarı); içeri girmek",
+    "ex": "エレベーター.で にかい.に あがります。|Asansörle ikinci kata çıkarım."
+  },
+  "163": {
+    "en": "geçmek; içinden geçmek",
+    "ex": "まいにち このみち.を とおります。|Her gün bu yoldan geçerim."
+  },
+  "164": {
+    "en": "sıraya girmek",
+    "ex": "ここ.に ならびましょう。|Burada sıraya girelim."
+  },
+  "165": {
+    "en": "yetişmek",
+    "ex": "つぎのでんしゃ.に まにあいます。|Bir sonraki trene yetişeceğim."
+  },
+  "166": {
+    "en": "kaybolmak; kararsız kalmak",
+    "ex": "よく みち.に まよいます。|Sık sık yolumu kaybederim."
+  },
+  "167": {
+    "en": "(sınava) girmek",
+    "ex": "らいげつ しけん.を うけます。|Gelecek ay sınava giriyorum."
+  },
+  "168": {
+    "en": "bırakmak; vazgeçmek",
+    "ex": "らいげつ たばこ.を やめます。|Gelecek ay sigarayı bırakıyorum."
+  },
+  "169": {
+    "en": "sürdürmek; devam ettirmek",
+    "ex": "にほんごのべんきょう.を つづけます。|Japonca çalışmaya devam edeceğim."
+  },
+  "170": {
+    "en": "devam etmek; sürmek",
+    "ex": "あめ.は あした.まで つづきます。|Yağmur yarına kadar sürecek."
+  },
+  "171": {
+    "en": "değişmek",
+    "ex": "らいしゅう よてい.が かわります。|Program gelecek hafta değişiyor."
+  },
+  "172": {
+    "en": "üstünü değiştirmek",
+    "ex": "へや.で きがえます。|Odamda üstümü değiştireceğim."
+  },
+  "173": {
+    "en": "taşınmak",
+    "ex": "らいげつ とうきょう.に ひっこします。|Gelecek ay Tokyo'ya taşınıyorum."
+  },
+  "174": {
+    "en": "(zaman) geçirmek",
+    "ex": "かぞく.と しゅうまつ.を すごします。|Hafta sonlarını ailemle geçiririm."
+  },
+  "175": {
+    "en": "kurutmak için asmak",
+    "ex": "ベランダ.に せんたくもの.を ほします。|Çamaşırları balkona asarım."
+  },
+  "176": {
+    "en": "katlamak",
+    "ex": "ふく.を たたみます。|Giysileri katlarım."
+  },
+  "177": {
+    "en": "kaldırmak; yerine koymak",
+    "ex": "ふゆのふく.を しまいます。|Kışlıkları kaldıracağım."
+  },
+  "178": {
+    "en": "yetiştirmek; büyütmek",
+    "ex": "にわ.で やさい.を そだてます。|Bahçede sebze yetiştiririm."
+  },
+  "179": {
+    "en": "dokunmak",
+    "ex": "このえ.に さわりません。|Bu tabloya dokunmam."
+  },
+  "180": {
+    "en": "itmek; basmak",
+    "ex": "このボタン.を おします。|Bu düğmeye basarım."
+  },
+  "181": {
+    "en": "ölçmek",
+    "ex": "あさ ねつ.を はかります。|Sabahları ateşimi ölçerim."
+  },
+  "182": {
+    "en": "doğmak",
+    "ex": "らいげつ こども.が うまれます。|Bebeğimiz gelecek ay doğacak."
+  },
+  "183": {
+    "en": "yakışmak",
+    "ex": "そのふく.が よく にあいます。|O kıyafetler sana çok yakışıyor."
+  },
+  "184": {
+    "en": "farklı olmak; yanlış olmak",
+    "ex": "これ.は ちがいます。|Bu yanlış."
+  },
+  "185": {
+    "en": "yorulmak",
+    "ex": "まいにち しごと.で つかれます。|Her gün işten yoruluyorum."
+  },
+  "186": {
+    "en": "zor durumda kalmak; ne yapacağını bilememek",
+    "ex": "それ.は こまります。|Bu benim için sorun olur."
+  },
+  "187": {
+    "en": "sevinmek; memnun olmak",
+    "ex": "はは.が よろこびます。|Annem çok sevinecek."
+  },
+  "188": {
+    "en": "gülmek; gülümsemek",
+    "ex": "みんな.で わらいます。|Hep birlikte gülüyoruz."
+  },
+  "189": {
+    "en": "ağlamak",
+    "ex": "あかちゃん.が よく なきます。|Bebek çok ağlıyor."
+  },
+  "190": {
+    "en": "kızmak; sinirlenmek",
+    "ex": "ちち.は すぐ おこります。|Babam çabuk sinirlenir."
+  },
+  "191": {
+    "en": "keyfini çıkarmak; eğlenmek",
+    "ex": "りょこう.を たのしみましょう。|Gezinin tadını çıkaralım."
+  },
+  "192": {
+    "en": "alışmak",
+    "ex": "すぐ しごと.に なれます。|İşe çabuk alışırsın."
+  },
+  "193": {
+    "en": "ağrımak; acımak",
+    "ex": "ときどき あたま.が いたみます。|Bazen başım ağrıyor."
+  },
+  "194": {
+    "en": "boşalmak (acıkmak; tenhalaşmak)",
+    "ex": "よる.は でんしゃ.が すきます。|Akşamları trenler boş olur."
+  },
+  "195": {
+    "en": "kalabalık olmak",
+    "ex": "あさ.は でんしゃ.が こみます。|Sabahları trenler kalabalık olur."
+  },
+  "196": {
+    "en": "kurumak; susamak",
+    "ex": "あついひ.は のど.が かわきます。|Sıcak günlerde susarım."
+  },
+  "197": {
+    "en": "kazanmak (maç)",
+    "ex": "こんど.は しあい.に かちましょう。|Bir dahaki sefere maçı kazanalım."
+  },
+  "198": {
+    "en": "kaybetmek (maç)",
+    "ex": "いつも あに.に まけます。|Ağabeyime hep yenilirim."
+  },
+  "199": {
+    "en": "ulaşmak; gelmek (posta, paket)",
+    "ex": "あした にもつ.が とどきます。|Paket yarın geliyor."
+  },
+  "200": {
+    "en": "hatırlamak; aklına gelmek",
+    "ex": "そのうた.で むかし.を おもいだします。|O şarkı bana eski günleri hatırlatıyor."
+  }
+}

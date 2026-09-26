@@ -56,29 +56,32 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/progress/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/progress/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/progress/">
 </head>
 <body>
 <main class="wrap">
-  <div class="muted small"><a href="../">Home</a> / Progress</div>
-  <h1>Your progress</h1>
+  <div class="muted small"><a href="../" data-i18n>Home</a> / <span data-i18n>Progress</span></div>
+  <h1 data-i18n>Your progress</h1>
 
-  <h2>14-day plan</h2>
+  <h2 data-i18n>14-day plan</h2>
   <div class="day-grid" id="days"></div>
 
-  <h2>Chapter tests</h2>
+  <h2 data-i18n>Chapter tests</h2>
   <div id="tests" class="panel"></div>
 
-  <h2>Tag accuracy</h2>
-  <p class="small muted">Based on your drill and test answers this browser.</p>
+  <h2 data-i18n>Tag accuracy</h2>
+  <p class="small muted" data-i18n>Based on your drill and test answers in this browser.</p>
   <div id="particleAcc" class="panel"></div>
 
   <div class="row">
-    <button class="btn ghost" id="resetBtn">Reset all progress</button>
+    <button class="btn ghost" id="resetBtn" data-i18n>Reset all progress</button>
   </div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadParticles, CHAPTERS, pColor } from '../js/app.js';
+import { renderHeader, renderFooter, loadParticles, CHAPTERS, pColor, t } from '../js/app.js';
 import { loadDayLog, loadTests, particleStats } from '../js/srs.js';
 renderHeader('progress');
 
@@ -89,18 +92,18 @@ for (let d = 1; d <= 14; d++) {
   const el = document.createElement('a');
   el.href = `../ch/?n=${ch.n}&day=${d}`;
   el.className = 'day' + (log[d] ? ' done' : '');
-  el.innerHTML = `Day ${d}<br>${log[d] ? '✓' : 'Ch' + ch.n}`;
+  el.innerHTML = `${t('Day {n}', { n: d })}<br>${log[d] ? '✓' : t('Ch{n}', { n: ch.n })}`;
   daysWrap.appendChild(el);
 }
 
 const tests = loadTests();
 const testsWrap = document.getElementById('tests');
-if (!Object.keys(tests).length) testsWrap.innerHTML = '<p class="muted small">No chapter tests taken yet.</p>';
+if (!Object.keys(tests).length) testsWrap.innerHTML = `<p class="muted small">${t('No chapter tests taken yet.')}</p>`;
 CHAPTERS.forEach(c => {
-  const t = tests[c.n];
+  const tr = tests[c.n];
   const row = document.createElement('div'); row.className = 'row'; row.style.padding = '6px 0';
-  const pct = t ? Math.round((t.correct / t.total) * 100) : null;
-  row.innerHTML = `<b style="min-width:90px">Chapter ${c.n}</b>` + (t ? `<span class="${pct >= 80 ? 'status ok' : 'status ng'}" style="min-height:auto">${t.correct}/${t.total} (${pct}%)</span>` : '<span class="muted small">not taken</span>');
+  const pct = tr ? Math.round((tr.correct / tr.total) * 100) : null;
+  row.innerHTML = `<b style="min-width:90px">${t('Chapter {n}', { n: c.n })}</b>` + (tr ? `<span class="${pct >= 80 ? 'status ok' : 'status ng'}" style="min-height:auto">${tr.correct}/${tr.total} (${pct}%)</span>` : `<span class="muted small">${t('not taken')}</span>`);
   testsWrap.appendChild(row);
 });
 
@@ -108,7 +111,7 @@ const particles = await loadParticles();
 const stats = particleStats();
 const accWrap = document.getElementById('particleAcc');
 const rows = particles.map(p => [p, stats[p.p]]).filter(([, s]) => s && (s.right + s.wrong) > 0);
-if (!rows.length) accWrap.innerHTML = '<p class="muted small">Do a drill or two, and this fills in.</p>';
+if (!rows.length) accWrap.innerHTML = `<p class="muted small">${t('Do a drill or two, and this fills in.')}</p>`;
 rows.sort((a, b) => (a[1].right / (a[1].right + a[1].wrong)) - (b[1].right / (b[1].right + b[1].wrong)));
 rows.forEach(([p, s]) => {
   const acc = s.right / (s.right + s.wrong);
@@ -120,7 +123,7 @@ rows.forEach(([p, s]) => {
 });
 
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if (!confirm('Reset all progress on this device? This cannot be undone.')) return;
+  if (!confirm(t('Reset all progress on this device? This cannot be undone.'))) return;
   ['tags.srs.v1', 'tags.particleStats.v1', 'tags.dayLog.v1', 'tags.chapterTests.v1'].forEach(k => localStorage.removeItem(k));
   location.reload();
 });

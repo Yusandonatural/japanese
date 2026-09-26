@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr" data-locale="tr" data-base="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sahnelere göre — にほんご Tags</title>
+<meta name="description" content="2.000 örnek cümleye günlük sahnelere göre göz at: alışveriş, yemek, ulaşım, iş, çiftlik hayatı ve daha fazlası.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/tr/scenes/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Sahnelere göre — にほんご Tags">
+<meta property="og:description" content="2.000 örnek cümleye günlük sahnelere göre göz at: alışveriş, yemek, ulaşım, iş, çiftlik hayatı ve daha fazlası.">
+<meta property="og:url" content="https://nihongo.yusando.com/tr/scenes/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sahnelere göre — にほんご Tags">
+<meta name="twitter:description" content="2.000 örnek cümleye günlük sahnelere göre göz at: alışveriş, yemek, ulaşım, iş, çiftlik hayatı ve daha fazlası.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "tr" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/scenes/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/scenes/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/scenes/">
+</head>
+<body>
+<main class="wrap">
+  <div class="muted small" id="crumb"><a href="../" data-i18n>Ana sayfa</a> / <span data-i18n>Sahneler</span></div>
+  <h1 id="title" data-i18n>Sahnelere göre göz at</h1>
+  <p class="lead" id="sub" data-i18n>2.000 cümlenin her biri gerçek hayattan bir sahneye ait. Cümleleri bağlamı içinde görmek için bir sahne seç.</p>
+
+  <div id="sceneGrid" class="grid"></div>
+  <div id="list"></div>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadAll, loadParticles, loadScenes, sentenceView, qs, t } from '../../js/app.js';
+renderHeader('');
+
+const scene = qs('scene');
+const [examples, particles, scenes] = await Promise.all([loadAll(), loadParticles(), loadScenes()]);
+
+if (!scene) {
+  const grid = document.getElementById('sceneGrid');
+  scenes.forEach(s => {
+    const count = examples.filter(e => e.scene === s.id).length;
+    const a = document.createElement('a'); a.className = 'chapter-card'; a.href = `?scene=${s.id}`;
+    a.innerHTML = `<div class="n">${s.icon} ${t('{n} sentences', { n: count })}</div><div class="t">${s.name}</div><div class="small muted">${s.ja}</div>`;
+    grid.appendChild(a);
+  });
+} else {
+  const s = scenes.find(x => x.id === scene);
+  document.getElementById('title').textContent = s ? `${s.icon} ${s.name}` : scene;
+  document.getElementById('sub').textContent = s ? s.ja : '';
+  document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="./">${t('Scenes')}</a> / ${s ? s.name : scene}`;
+  document.getElementById('sceneGrid').remove();
+  const items = examples.filter(e => e.scene === scene).sort((a, b) => a.chapter - b.chapter);
+  const listEl = document.getElementById('list');
+  items.forEach(ex => {
+    const row = document.createElement('div'); row.className = 'list-ex';
+    row.appendChild(sentenceView(ex, { particles }));
+    const en = document.createElement('div'); en.className = 'en muted'; en.textContent = `${ex.en} · ${t('Ch{n}', { n: ex.chapter })}`; row.appendChild(en);
+    listEl.appendChild(row);
+  });
+}
+
+renderFooter();
+</script>
+</body>
+</html>

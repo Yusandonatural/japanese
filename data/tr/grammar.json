@@ -1,0 +1,651 @@
+{
+  "principles": [
+    {
+      "n": 1,
+      "title": "Çekirdek en sonda gelir",
+      "text": "Her cümle tek bir çekirdekle biter: bir fiil (いきます), bir sıfat (おいしいです) ya da isim + です (がくせいです). Çekirdek tek başına bile tam bir cümledir — Japonca, dinleyenin tahmin edebileceği her şeyi atar. Türkçede de “Gidiyorum.” tek kelimeyle tam cümledir, yani bu sana hiç yabancı değil. Üstelik çekirdeğin yalnızca dört sonu var: ます, ますか, ません, ましょう.",
+      "ex": [
+        "いきます。|Gidiyorum.",
+        "いきましょう。|Hadi gidelim.",
+        "おいしいです。|Çok lezzetli.",
+        "がくせいです。|Öğrenciyim."
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Bir parça = isim + etiket",
+      "text": "Çekirdeğin önündeki her şey bir parçadır: bir isim (ya da isim öbeği) ve sonuna yapışan küçük bir etiket. Etiket, parçanın görevini söyler — kim, ne, nerede, ne zaman, kiminle. Türkçe bunu hâl ekleriyle yapar (-ı, -a, -da, -dan); Japonca etiketlerle. Tek büyük fark: Japonca etiket isimden ayrı küçük bir kelimedir ve şekli hiç değişmez — ünlü uyumu yok! “Evde” de “okulda” da hep で.",
+      "ex": [
+        "ともだち.と いきます。|Arkadaşımla gidiyorum.",
+        "えき.で あいます。|İstasyonda buluşuyoruz."
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Parçaların sırası serbest",
+      "text": "Her parça kendi etiketini taşıdığı için parçaların yerini değiştirebilirsin, anlam aynı kalır. Türkçede de “Yarın arkadaşımla Nara'ya gidiyorum” ile “Nara'ya yarın arkadaşımla gidiyorum” aynı şeyi söyler. Değişen yalnızca vurgu: başa koyduğun parça konuyu hazırlar, çekirdeğin hemen önündeki parça ise vurgulanır — tıpkı Türkçedeki gibi.",
+      "ex": [
+        "あした ともだち.と なら.に いきます。|Yarın arkadaşımla Nara'ya gidiyorum.",
+        "なら.に あした ともだち.と いきます。|Nara'ya yarın gidiyorum, arkadaşımla.",
+        "ともだち.と なら.に あした いきます。|Arkadaşımla Nara'ya — yarın gidiyoruz."
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Bilineni söyleme",
+      "text": "Dinleyen bir parçayı zaten biliyorsa onu at. Japonlar わたし.は (ben) demeyi pek sevmez — konuşanın kim olduğu belli. Türkçede de “Ben gidiyorum” yerine çoğu zaman sadece “Gidiyorum” dersin. Cevaplarda genellikle yalnızca yeni bilgi ve çekirdek kalır.",
+      "ex": [
+        "なに.を のみますか？|Ne içeceksin?",
+        "おちゃ.を のみます。|Çay (içeceğim).",
+        "おちゃ.を ください。|Çay alayım, lütfen."
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Süsler parçanın içinde kalır",
+      "text": "Sıfatlar, の bağları (benim, Nara'nın, istasyonun) ve sayılar ismin bir parçasıdır. Parçanın içinde, ismin önüne gelirler; etiket yine bütün parçanın en sonuna gelir. Türkçedeki “yeni arabayla” gibi: ek, öbeğin sonunda.",
+      "ex": [
+        "あたらしいくるま.で いきます。|Yeni arabayla gidiyorum.",
+        "わたしのいえ.に きますか？|Benim evime gelir misin?",
+        "ならのみせ.で かいます。|Nara'daki bir dükkândan alacağım."
+      ]
+    }
+  ],
+  "level1": [
+    {
+      "rule": "Dört son, başka hiçbir şey",
+      "how": "Çekirdek yalnızca dört son kullanır. ます söyler, ますか sorar, ません olumsuzlar, ましょう davet eder. Seviye 1'deki bütün fiil sistemi bu kadar — Türkçedeki onlarca zaman ve kip eki gibi ezberlenecek geçmiş zaman, düz biçim ya da te-biçimi henüz yok.",
+      "ex": [
+        "いきます。|Gidiyorum.",
+        "いきますか？|Gidiyor musun?",
+        "いきません。|Gitmiyorum.",
+        "いきましょう。|Hadi gidelim."
+      ],
+      "table": [
+        [
+          "ます",
+          "masu",
+          "söyleme (-iyorum / -ırım)",
+          "たべます — yiyorum / yiyeceğim"
+        ],
+        [
+          "ますか",
+          "masu ka",
+          "soru (-iyor musun?)",
+          "たべますか？ — Yiyor musun? / Yiyecek misin?"
+        ],
+        [
+          "ません",
+          "masen",
+          "olumsuz (-miyorum)",
+          "たべません — yemiyorum / yemeyeceğim"
+        ],
+        [
+          "ましょう",
+          "maşō",
+          "davet (-elim)",
+          "たべましょう — Hadi yiyelim"
+        ]
+      ]
+    },
+    {
+      "rule": "İsimler ve sıfatlar: です / ですか",
+      "how": "Çekirdek bir isim ya da sıfat olduğunda aynı fikir, söylemek için です, sormak için ですか kullanır. Türkçedeki “-dır / -mı?” gibi düşünebilirsin: がくせいです ≈ “öğrenciyim”, おいしいですか ≈ “lezzetli mi?”.",
+      "ex": [
+        "がくせいです。|Öğrenciyim.",
+        "これ.は いくらですか？|Bu ne kadar?",
+        "おいしいですか？|Lezzetli mi?"
+      ]
+    },
+    {
+      "rule": "Geçmiş ve gelecek bir zaman kelimesinden gelir",
+      "how": "Etiketsiz bir parça olarak bir zaman kelimesi ekle: きのう (dün), あした (yarın), せんしゅう (geçen hafta), らいしゅう (gelecek hafta). Türkçede “gittim / gideceğim” farkını fiilin eki yapar; Seviye 1'de bu işi zaman kelimesi üstlenir.",
+      "ex": [
+        "きのう なら.に いきます。|Dün Nara'ya gittim. (Seviye 1)",
+        "あした なら.に いきます。|Yarın Nara'ya gideceğim.",
+        "あした なら.に いきましょう。|Yarın Nara'ya gidelim."
+      ],
+      "note": "Bir Japon geçmiş için いきました (ikimaşita) der. Bu Seviye 2. Seviye 1'de her zaman anlaşılırsın — zaman kelimesi her şeyi netleştirir — ve ilk günden konuşmaya başlarsın."
+    },
+    {
+      "rule": "Sorular: sadece か ekle",
+      "how": "Aynı kelimeler, aynı sıra — çekirdeğin sonuna か koy ve sesini yükselt. Türkçedeki “mı / mi” soru ekine çok benzer, ama か hep aynı kalır ve hep en sonda durur. ませんか (…mez misin?) yumuşak bir davettir: “Gelmez misin?”",
+      "ex": [
+        "あした きますか？|Yarın geliyor musun?",
+        "なに.を たべますか？|Ne yiyeceksin?",
+        "いっしょに いきませんか？|Benimle gelmez misin?"
+      ]
+    }
+  ],
+  "cores": [
+    {
+      "type": "Fiil",
+      "form": "〜ます / 〜ますか / 〜ません / 〜ましょう",
+      "text": "Eylemler ve var olma. En sık kullanılan çekirdekler: いきます (gitmek), きます (gelmek), かいます (satın almak), たべます (yemek), のみます (içmek), あります (var — eşyalar için), います (var — insanlar ve hayvanlar için).",
+      "ex": [
+        "バス.で いきます。|Otobüsle gidiyorum.",
+        "じかん.が ありません。|Vaktim yok.",
+        "えき.で あいましょう。|İstasyonda buluşalım."
+      ]
+    },
+    {
+      "type": "Sıfat",
+      "form": "〜いです / 〜です (ですか)",
+      "text": "Betimleme. い-sıfatları い'larını korur ve です alır (たかいです, おいしいです). な-sıfatları sadece です alır (しずかです, きれいです).",
+      "ex": [
+        "このおちゃ.は おいしいです。|Bu çay çok lezzetli.",
+        "このまち.は しずかです。|Bu kasaba sakin."
+      ]
+    },
+    {
+      "type": "İsim + です",
+      "form": "〜です (ですか)",
+      "text": "Bir şeyin ne olduğunu söyleme. Her isim です alınca çekirdek olur — Türkçedeki “-dır / -im” gibi.",
+      "ex": [
+        "わたし.は がくせいです。|Ben öğrenciyim.",
+        "あした.は やすみです。|Yarın tatil."
+      ]
+    },
+    {
+      "type": "Rica",
+      "form": "〜ください",
+      "text": "Bir şey isteme. İstediğin şeyi を parçasına koy ve ください ile bitir: “… verir misiniz, lütfen”.",
+      "ex": [
+        "みず.を ください。|Su alabilir miyim, lütfen?",
+        "これ.を ふたつ ください。|Bundan iki tane, lütfen."
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "p": "は",
+      "picture": "Bir spot ışığı. Konuşmak istediğin şeyi gösterir ve der ki: “Şimdi, buna gelince…” Türkçede tam karşılığı olan bir hâl eki yok; en yakını “…ise” ya da “…'e gelince”.",
+      "asks": "Neden bahsediyoruz?",
+      "uses": [
+        {
+          "h": "Cümlenin konusu",
+          "text": "は sahneyi kurar. Arkasından gelen her şey o konu hakkında bir yorumdur. “Ben ise öğrenciyim” gibi düşün — ama Japonca bunu çok daha sık ve doğal kullanır. Genellikle ilk parçadır, ama zorunlu değil.",
+          "ex": [
+            "わたし.は たなかです。|Ben Tanaka'yım.",
+            "このおちゃ.は たかいです。|Bu çay pahalı."
+          ]
+        },
+        {
+          "h": "Karşıtlık",
+          "text": "は “bu ise (ötekilerden farklı olarak)” anlamına da gelebilir: “Kahveyse içmem.” Bu yüzden olumsuz cümleler は'yı çok sever.",
+          "ex": [
+            "コーヒー.は のみません。|Kahve içmem (ama başka şeyler içerim).",
+            "きょう.は いきません。|Bugün gitmiyorum (belki başka gün)."
+          ]
+        },
+        {
+          "h": "Konu olarak zaman kelimeleri",
+          "text": "Zaman kelimeleri normalde etiket almaz, ama は eklersen konu olurlar: “Yarına gelince…”.",
+          "ex": [
+            "あした.は やすみです。|Yarın tatil.",
+            "にちようび.は はたけ.に いきます。|Pazar günleri tarlaya giderim."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "だれ.は きますか？",
+          "right": "だれ.が きますか？|Kim geliyor?",
+          "why": "Soru kelimeleri (yapan olarak だれ, なに, どこ) asla konu olamaz — onları henüz bilmiyorsun. “Kim ise geliyor?” diyemeyeceğin gibi. が kullan."
+        },
+        {
+          "wrong": "へや.に ねこ.は います。",
+          "right": "へや.に ねこ.が います。|Odada bir kedi var.",
+          "why": "“Kedi” burada yeni bilgi: “Odada bir kedi var.” Yeni ortaya çıkan, var olan şey が alır. ねこ.は dersen “Kediye gelince, odada” gibi, kediden önceden bahsedilmiş olur."
+        }
+      ]
+    },
+    {
+      "p": "が",
+      "picture": "Uzatılmış bir işaret parmağı. Eylemi kimin yaptığını ya da orada ne olduğunu seçip gösterir — çoğu zaman yeni bir bilgi olarak. Türkçedeki özneye (yalın hâl) en yakın etiket budur.",
+      "asks": "Kim? Ne? (cevap olarak)",
+      "uses": [
+        {
+          "h": "Yapan — yeni bilgi olarak",
+          "text": "が, haber değeri taşıdığında eylemi kimin yaptığını işaretler ve yapan olarak だれ？ (kim) ve なに？ (ne) sorularının cevabı hep が alır. Türkçede vurguyla “Tanaka geliyor” (başkası değil) dediğin durum.",
+          "ex": [
+            "だれ.が きますか？|Kim geliyor?",
+            "たなかさん.が きます。|Tanaka-san geliyor.",
+            "あめ.が ふります。|Yağmur yağıyor."
+          ]
+        },
+        {
+          "h": "Var olan şey",
+          "text": "あります / います ile が, orada olan şeyi ya da kişiyi işaretler. Türkçedeki “var” cümlesinin öznesi gibi: “Vaktim var” → じかん.が あります.",
+          "ex": [
+            "じかん.が あります。|Vaktim var.",
+            "へや.に ねこ.が います。|Odada bir kedi var."
+          ]
+        },
+        {
+          "h": "Sevmek, istemek, becerebilmek",
+          "text": "すきです (sevmek), ほしいです (istemek), じょうずです (iyi olmak), わかります (anlamak) nesneleri için が alır. Dikkat: Türkçede “çayı severim” der, -ı kullanırsın; Japoncada bu が olur.",
+          "ex": [
+            "おちゃ.が すきです。|Çayı severim.",
+            "にほんご.が わかりますか？|Japonca anlıyor musun?",
+            "あたま.が いたいです。|Başım ağrıyor."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "おちゃ.を すきです。",
+          "right": "おちゃ.が すきです。|Çayı severim.",
+          "why": "Türkçedeki “çayı severim” seni を'ya çeker. Ama すきです bir eylem değil, bir betimlemedir (“çay hoşuma gidiyor”), bu yüzden sevilen şey が alır. “Hoşuma gidiyor” diye düşün: çay özne olur."
+        },
+        {
+          "wrong": "にほんご.を わかります。",
+          "right": "にほんご.が わかります。|Japonca anlıyorum.",
+          "why": "“Japoncayı anlıyorum” -ı ister, ama わかります が ister. “Japonca bana anlaşılır geliyor” gibi düşün."
+        }
+      ]
+    },
+    {
+      "p": "を",
+      "picture": "Hedefine saplanan bir ok. Eylem bu şeye çarpar. Türkçedeki belirtme hâli -(y)ı / -i / -u / -ü'nün kardeşi.",
+      "asks": "Neyi? (eylemin yöneldiği şey)",
+      "uses": [
+        {
+          "h": "Eylemin nesnesi",
+          "text": "Yediğin, içtiğin, aldığın, okuduğun, yaptığın, gördüğün şey. “Neyi …?” diye sorabiliyorsan cevap を alır. Türkçeden farkı: Türkçede belirsiz nesnede ek düşer (“kitap okuyorum”), Japoncada を yine de kalır. “o” diye okunur.",
+          "ex": [
+            "おちゃ.を のみます。|Çay içiyorum.",
+            "やさい.を かいます。|Sebze alacağım.",
+            "なに.を たべますか？|Ne yiyeceksin?"
+          ]
+        },
+        {
+          "h": "Üzerinden geçilen yol",
+          "text": "Hareket fiilleriyle を, boyunca ya da içinden geçtiğin yolu işaretler. Türkçede “köprüyü geçmek”, “yolu yürümek” derken de -ı kullanırsın.",
+          "ex": [
+            "このみち.を あるきます。|Bu yol boyunca yürüyeceğim.",
+            "はし.を わたります。|Köprüyü geçeceğim."
+          ]
+        },
+        {
+          "h": "Ayrılınan yer",
+          "text": "でます (çıkmak), おります (inmek) ayrıldığın yer için を alır. Türkçe burada -dan der (“evden çıkıyorum”), Japonca を.",
+          "ex": [
+            "しちじ.に いえ.を でます。|Saat yedide evden çıkıyorum.",
+            "つぎのえき.で でんしゃ.を おります。|Bir sonraki istasyonda trenden ineceğim."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "ともだち.を あいます。",
+          "right": "ともだち.に あいます。|Arkadaşımla buluşacağım.",
+          "why": "“Arkadaşımı göreceğim” seni を'ya çekebilir. Ama Japoncada birine “-a” buluşursun — あいます her zaman に alır."
+        },
+        {
+          "wrong": "ほん よみます。",
+          "right": "ほん.を よみます。|Kitap okuyorum.",
+          "why": "Türkçede belirsiz nesne ek almaz: “kitap okuyorum”. Japoncada nesne hep を alır, belirli ya da belirsiz. Günlük konuşmada bazen düşer, ama başlangıçta hep ekle."
+        }
+      ]
+    },
+    {
+      "p": "に",
+      "picture": "Haritada bir raptiye. Bir şeyin vardığı, durduğu ya da zamanda gerçekleştiği tam noktayı işaretler. Türkçedeki yönelme hâli -(y)a / -e'ye en yakın etiket — ama biraz daha geniş.",
+      "asks": "Nereye? Kime? Saat kaçta? Nerede (duruyor)?",
+      "uses": [
+        {
+          "h": "Varış yeri",
+          "text": "Gittiğin, geldiğin ya da döndüğün yer. Türkçedeki “Nara'ya”, “eve” gibi.",
+          "ex": [
+            "なら.に いきます。|Nara'ya gidiyorum.",
+            "いえ.に かえります。|Eve dönüyorum."
+          ]
+        },
+        {
+          "h": "Alıcı / buluşulan kişi",
+          "text": "Bir şey verdiğin, gönderdiğin, söylediğin, telefon ettiğin ya da buluştuğun kişi. “Anneme telefon ediyorum” → はは.に. Dikkat: Türkçede “arkadaşla buluşmak” dersin, Japoncada ともだち.に あいます.",
+          "ex": [
+            "はは.に でんわ.を します。|Anneme telefon edeceğim.",
+            "ともだち.に あいます。|Arkadaşımla buluşacağım."
+          ]
+        },
+        {
+          "h": "Saat ve tarih",
+          "text": "Saat ya da takvimdeki sayılar に alır. Türkçe burada bulunma hâli kullanır (“saat yedide”), ama Japonca に der: しちじ.に. Göreli kelimeler (きょう, あした, まいにち) etiket almaz.",
+          "ex": [
+            "しちじ.に おきます。|Saat yedide kalkarım.",
+            "なんじ.に きますか？|Saat kaçta geliyorsun?"
+          ]
+        },
+        {
+          "h": "Bir şeyin bulunduğu yer",
+          "text": "あります / います ile に, bir şeyin durduğu yeri işaretler. Türkçedeki “evdeyim”, “evde oturuyorum” (yani orada bulunuyorum) → いえ.に います. Türkçe -da der, ama sadece var olmak için に kullanılır.",
+          "ex": [
+            "いま いえ.に います。|Şu an evdeyim.",
+            "えきのまえ.に みせ.が あります。|İstasyonun önünde bir dükkân var."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "あした.に いきます。",
+          "right": "あした いきます。|Yarın gidiyorum.",
+          "why": "Göreli zaman kelimeleri (あした, きょう, らいしゅう) etiket almaz. Sadece saatler ve tarihler に alır. Türkçede de “yarında gidiyorum” demezsin."
+        },
+        {
+          "wrong": "みせ.に かいます。",
+          "right": "みせ.で かいます。|Dükkândan alacağım.",
+          "why": "Bir eylemin yapıldığı yer で alır. に yalnızca bir şeyin bulunduğu ya da varılan yer içindir."
+        },
+        {
+          "wrong": "さんじ.で あいます。",
+          "right": "さんじ.に あいます。|Saat üçte buluşuyoruz.",
+          "why": "Türkçedeki “saat üçte” -de ekiyle kurulur, bu yüzden で'ye kaymak kolay. Ama saatler Japoncada hep に alır."
+        }
+      ]
+    },
+    {
+      "p": "で",
+      "picture": "Bir sahne. Eylem burada oynanır — ya da bu aletle yapılır. Türkçede iki eke karşılık gelir: bulunma hâli -da / -de (eylemin yapıldığı yer) ve “ile” (araç).",
+      "asks": "Nerede oluyor? Neyle?",
+      "uses": [
+        {
+          "h": "Eylemin yapıldığı yer",
+          "text": "Yemek yediğin, alışveriş yaptığın, çalıştığın, buluştuğun yer — bir şeyin yapıldığı her yer. “Dükkânda”, “şirkette” gibi, ama yalnızca orada bir eylem yapılıyorsa.",
+          "ex": [
+            "みせ.で かいます。|Dükkândan alacağım.",
+            "かいしゃ.で はたらきます。|Bir şirkette çalışıyorum.",
+            "どこ.で たべますか？|Nerede yiyelim?"
+          ]
+        },
+        {
+          "h": "Araç ve yöntem",
+          "text": "Otobüsle, yemek çubuğuyla, Japonca, kartla — Türkçedeki “ile / -la / -le”nin araç anlamı.",
+          "ex": [
+            "バス.で いきます。|Otobüsle gidiyorum.",
+            "にほんご.で はなします。|Japonca konuşacağım.",
+            "カード.で はらいます。|Kartla ödeyeceğim."
+          ]
+        },
+        {
+          "h": "Toplam ve kapsam",
+          "text": "ぜんぶ.で (hepsi birlikte, toplamda), ひとり.で (tek başına).",
+          "ex": [
+            "ぜんぶ.で いくらですか？|Hepsi ne kadar?",
+            "ひとり.で いきます。|Tek başıma gidiyorum."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "いえ.で います。",
+          "right": "いえ.に います。|Evdeyim.",
+          "why": "“Evdeyim” Türkçede -de alır, ama います / あります yalnızca bir şeyin NEREDE OLDUĞUNU söyler — bu に. で, bir şeyin YAPILDIĞI yerler içindir."
+        },
+        {
+          "wrong": "いえ.に たべます。",
+          "right": "いえ.で たべます。|Evde yemek yiyorum.",
+          "why": "“Evde yemek yiyorum” cümlesinde evde bir eylem yapılıyor — yani で. Kural: sadece bulunmak → に, bir şey yapmak → で."
+        }
+      ]
+    },
+    {
+      "p": "と",
+      "picture": "Birleşen iki el. Birlikte — ya da sadece “ve”. Türkçedeki “ile” (birliktelik) ve “ve”ye karşılık gelir.",
+      "asks": "Kiminle?",
+      "uses": [
+        {
+          "h": "Birlikte",
+          "text": "Bir şeyi birlikte yaptığın kişi: “arkadaşımla”, “annemle”.",
+          "ex": [
+            "ともだち.と いきます。|Arkadaşımla gidiyorum.",
+            "だれ.と たべますか？|Kiminle yemek yiyorsun?"
+          ]
+        },
+        {
+          "h": "Ve (isimler arasında)",
+          "text": "İki ismi tek parçada birleştirir. Asıl etiketi son isim taşır: “çay ve tatlı” → おちゃとおかし.を.",
+          "ex": [
+            "おちゃとおかし.を ください。|Çay ve tatlı, lütfen.",
+            "パンとたまご.を たべます。|Ekmek ve yumurta yerim."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "ともだち.と あいます。",
+          "right": "ともだち.に あいます。|Arkadaşımla buluşacağım.",
+          "why": "Türkçedeki “arkadaşla buluşmak” seni と'ya çeker. İkisi de var, ama gündelik buluşma için ともだち.に あいます kullanılır. ともだち.と あいます daha planlı, karşılıklı bir görüşmeyi anlatır."
+        },
+        {
+          "wrong": "バス.と いきます。",
+          "right": "バス.で いきます。|Otobüsle gidiyorum.",
+          "why": "Türkçede “ile” hem kişi hem araç için kullanılır. Japoncada ayrılır: kişiyle birlikte → と, araçla → で. “Otobüsle” → バス.で."
+        }
+      ]
+    },
+    {
+      "p": "へ",
+      "picture": "Bir pusula iğnesi. Gittiğin yönü gösterir. Türkçedeki “-a doğru”ya benzer.",
+      "asks": "Hangi yöne? Nereye doğru?",
+      "uses": [
+        {
+          "h": "Hareketin yönü",
+          "text": "Varış yerleri için に'ye çok yakın. へ yönü ve yolculuğu vurgular, に ise varışı. Günlük konuşmada ikisi de olur. “e” diye okunur.",
+          "ex": [
+            "とうきょう.へ いきます。|Tokyo'ya doğru gidiyorum.",
+            "はたけ.へ いきます。|Tarlaya gidiyorum."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "さんじ.へ きます。",
+          "right": "さんじごろ きます。|Saat üçe doğru geliyorum.",
+          "why": "Türkçede “üçe doğru” “aşağı yukarı üçte” demektir. へ ise yalnızca hareketin yönünü gösterir, zaman için kullanılmaz. “Civarında” için ごろ eklenir: さんじごろ."
+        }
+      ]
+    },
+    {
+      "p": "から",
+      "picture": "Bir başlangıç çizgisi. Nerede ya da ne zaman başladığı. Türkçedeki ayrılma hâli -dan / -den'e karşılık gelir.",
+      "asks": "Nereden? Ne zamandan? Kimden?",
+      "uses": [
+        {
+          "h": "Başlangıç yeri",
+          "text": "Geldiğin yer, bir şeyin başladığı yer: “Nara'dan”.",
+          "ex": [
+            "なら.から きます。|Nara'dan geliyorum.",
+            "どこ.から きますか？|Nereden geliyorsun?"
+          ]
+        },
+        {
+          "h": "Başlangıç zamanı",
+          "text": "Bir şeyin başladığı zaman: “dokuzdan”, “yarından itibaren”.",
+          "ex": [
+            "くじ.から はたらきます。|Dokuzdan itibaren çalışıyorum.",
+            "あした.から やすみです。|Yarından itibaren tatildeyim."
+          ]
+        },
+        {
+          "h": "Kaynak (kişi)",
+          "text": "Bir şeyi duyduğun, aldığın kişi: “arkadaşımdan”.",
+          "ex": [
+            "ともだち.から ききます。|Arkadaşımdan duyuyorum."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "にほん.から すきです。",
+          "right": "にほん.が すきです。|Japonya'dan hoşlanıyorum.",
+          "why": "Türkçede “hoşlanmak” -dan ister, ama bu bir başlangıç noktası değil. すきです her zaman が alır. から yalnızca gerçek bir başlangıç (yer, zaman, kişi) içindir."
+        }
+      ]
+    },
+    {
+      "p": "まで",
+      "picture": "Bir bitiş çizgisi. Nerede ya da ne zaman bittiği. Türkçedeki “-a kadar”.",
+      "asks": "Ne zamana kadar? Nereye kadar?",
+      "uses": [
+        {
+          "h": "Zamanda bitiş noktası",
+          "text": "Hangi saate ya da güne kadar: “beşe kadar”.",
+          "ex": [
+            "ごじ.まで はたらきます。|Beşe kadar çalışıyorum.",
+            "なんじ.まで あいていますか？|Saat kaça kadar açık?"
+          ]
+        },
+        {
+          "h": "Mekânda bitiş noktası",
+          "text": "Bir yere kadar: “istasyona kadar”.",
+          "ex": [
+            "えき.まで あるきます。|İstasyona kadar yürüyeceğim.",
+            "きょうと.まで バス.で いきます。|Kyoto'ya kadar otobüsle gideceğim."
+          ]
+        },
+        {
+          "h": "から〜まで — bir aralık",
+          "text": "“…'dan …'a kadar” için bir から parçası ile bir まで parçasını yan yana koy. Türkçedeki “dokuzdan beşe kadar” ile birebir aynı. Her biri ayrı bir parça olduğu için yer değiştirebilirler.",
+          "ex": [
+            "くじ.から ごじ.まで はたらきます。|Dokuzdan beşe kadar çalışıyorum.",
+            "なら.から きょうと.まで でんしゃ.で いきます。|Nara'dan Kyoto'ya kadar trenle gideceğim."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "ごじ.に はたらきます。",
+          "right": "ごじ.まで はたらきます。|Beşe kadar çalışıyorum.",
+          "why": "“Beşe kadar” içindeki -e seni に'ye çekebilir. Ama に “saat beşte” demektir. Anlamı “kadar” taşır — o da まで."
+        }
+      ]
+    },
+    {
+      "p": "も",
+      "picture": "Bir artı işareti. “Bu da.” Türkçedeki “de / da” (ben de, çay da) ile aynı görev.",
+      "asks": "De / da / bile",
+      "uses": [
+        {
+          "h": "は, が, を yerine geçer",
+          "text": "も, は, が ya da を'nın yerini alır — asla üst üste koyma. “Ben de” → わたし.も.",
+          "ex": [
+            "わたし.も いきます。|Ben de gidiyorum.",
+            "おちゃ.も のみます。|Çay da içeceğim."
+          ]
+        },
+        {
+          "h": "Diğer etiketlerin arkasına eklenir",
+          "text": "に, で, と, へ, から, まで'den sonra etiketi koru ve も ekle: でも, にも, とも… Türkçedeki “Nara'da da” gibi: önce -da, sonra “da”.",
+          "ex": [
+            "なら.でも かいます。|Nara'da da alıyorum.",
+            "ともだち.にも いいます。|Arkadaşıma da söyleyeceğim."
+          ]
+        },
+        {
+          "h": "Hiç (ません ile)",
+          "text": "Soru kelimesi + も + ません = hiçbiri. Türkçedeki “hiçbir şey … -mıyorum” gibi.",
+          "ex": [
+            "なに.も たべません。|Hiçbir şey yemiyorum.",
+            "だれ.も いません。|Kimse yok."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "わたし.はも いきます。",
+          "right": "わたし.も いきます。|Ben de gidiyorum.",
+          "why": "も, は / が / を'nın yerini alır. Yalnızca diğer etiketlerin arkasına eklenir (でも, にも…)."
+        },
+        {
+          "wrong": "なら.も かいます。",
+          "right": "なら.でも かいます。|Nara'da da alıyorum.",
+          "why": "“Nara'da da” içinde iki şey var: -da (で) ve “da” (も). で'yi atarsan “Nara'yı da alıyorum” gibi garip bir anlam çıkar. で'yi koru, も'yu ekle: でも."
+        }
+      ]
+    }
+  ],
+  "notag": {
+    "title": "Hiç etiket yok",
+    "text": "Bazı parçalar etiket almaz. Göreli zaman kelimeleri (きょう, あした, きのう, まいにち, いま, らいしゅう) ve miktarlar (ひとつ, ふたつ, すこし) çekirdeğin önünde oldukları gibi dururlar — Türkçedeki “yarın”, “her gün”, “biraz” gibi. Seviye 1'de cümleyi geçmiş ya da gelecek yapan şey bu etiketsiz zaman kelimesidir.",
+    "ex": [
+      "あした いきます。|Yarın gidiyorum.",
+      "まいにち おちゃ.を のみます。|Her gün çay içerim.",
+      "おちゃ.を ふたつ ください。|İki çay, lütfen."
+    ]
+  },
+  "no": {
+    "title": "の — parçanın içindeki yapıştırıcı",
+    "text": "の bir etiket değildir. Bir parçanın içinde iki ismi bağlar, tıpkı Türkçedeki ad tamlaması (-ın / -in) gibi: わたしのいえ (benim evim), ならのおちゃ (Nara'nın çayı), えきのまえ (istasyonun önü). Sıra da Türkçeyle aynı: sahip önce, sahip olunan sonra! Hepsi tek bir parçadır ve asıl etiket yine en sona gelir.",
+    "ex": [
+      "わたしのいえ.に きますか？|Benim evime geliyor musun?",
+      "ならのおちゃ.を かいます。|Nara çayı alacağım.",
+      "えきのまえ.で あいます。|İstasyonun önünde buluşalım."
+    ]
+  },
+  "questionWords": [
+    {
+      "k": "だれ",
+      "en": "kim",
+      "ex": [
+        "だれ.が きますか？|Kim geliyor?",
+        "だれ.と いきますか？|Kiminle gidiyorsun?"
+      ]
+    },
+    {
+      "k": "なに",
+      "en": "ne",
+      "ex": [
+        "なに.を たべますか？|Ne yiyeceksin?",
+        "なに.が すきですか？|Neyi seversin?"
+      ]
+    },
+    {
+      "k": "どこ",
+      "en": "nerede / nereye",
+      "ex": [
+        "どこ.に いきますか？|Nereye gidiyorsun?",
+        "どこ.で かいますか？|Nereden alıyorsun?"
+      ]
+    },
+    {
+      "k": "なんじ",
+      "en": "saat kaç",
+      "ex": [
+        "なんじ.に きますか？|Saat kaçta geliyorsun?",
+        "なんじ.まで はたらきますか？|Saat kaça kadar çalışıyorsun?"
+      ]
+    },
+    {
+      "k": "いつ",
+      "en": "ne zaman",
+      "ex": [
+        "いつ きますか？|Ne zaman geliyorsun?",
+        "いつ.から やすみですか？|Ne zamandan itibaren tatildesin?"
+      ]
+    },
+    {
+      "k": "いくら",
+      "en": "ne kadar (fiyat)",
+      "ex": [
+        "これ.は いくらですか？|Bu ne kadar?"
+      ]
+    },
+    {
+      "k": "どれ",
+      "en": "hangisi",
+      "ex": [
+        "どれ.が いいですか？|Hangisi iyi?"
+      ]
+    },
+    {
+      "k": "どう",
+      "en": "nasıl",
+      "ex": [
+        "あじ.は どうですか？|Tadı nasıl?"
+      ]
+    }
+  ],
+  "questionNote": "Soru kelimesi, cevabıyla aynı yerde ve aynı etiketle durur; çekirdek か alır. Türkçede de böyledir: “Ne yiyorsun?” — “Ekmek yiyorum.” Sor: なに.を たべますか？, cevap ver: おちゃ.を のみます / パン.を たべます. Soru için kelime sırası asla değişmez."
+}

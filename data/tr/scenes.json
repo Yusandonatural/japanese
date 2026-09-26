@@ -1,0 +1,86 @@
+[
+ {
+  "id": "greeting",
+  "name": "Selamlaşma ve tanışma",
+  "ja": "あいさつ・じこしょうかい",
+  "icon": "👋",
+  "target": 150
+ },
+ {
+  "id": "home",
+  "name": "Evde günlük yaşam",
+  "ja": "いえの くらし",
+  "icon": "🏠",
+  "target": 250
+ },
+ {
+  "id": "shopping",
+  "name": "Alışveriş",
+  "ja": "かいもの",
+  "icon": "🛍️",
+  "target": 200
+ },
+ {
+  "id": "food",
+  "name": "Yemek ve restoranlar",
+  "ja": "しょくじ・おみせ",
+  "icon": "🍵",
+  "target": 200
+ },
+ {
+  "id": "transport",
+  "name": "Ulaşım ve yol tarifi",
+  "ja": "いどう・みちあんない",
+  "icon": "🚃",
+  "target": 200
+ },
+ {
+  "id": "time",
+  "name": "Zaman ve program",
+  "ja": "じかん・よてい",
+  "icon": "🕒",
+  "target": 150
+ },
+ {
+  "id": "work",
+  "name": "İş",
+  "ja": "しごと",
+  "icon": "💼",
+  "target": 200
+ },
+ {
+  "id": "farm",
+  "name": "Tarla ve açık hava",
+  "ja": "はたけ・おちゃ",
+  "icon": "🌱",
+  "target": 150
+ },
+ {
+  "id": "health",
+  "name": "Sağlık ve duygular",
+  "ja": "からだ・びょういん",
+  "icon": "💚",
+  "target": 150
+ },
+ {
+  "id": "people",
+  "name": "İnsanlar ve ilişkiler",
+  "ja": "かぞく・ひと",
+  "icon": "👥",
+  "target": 150
+ },
+ {
+  "id": "weather",
+  "name": "Hava ve doğa",
+  "ja": "てんき・きせつ",
+  "icon": "🌤️",
+  "target": 100
+ },
+ {
+  "id": "phone",
+  "name": "Telefon ve internet",
+  "ja": "でんわ・れんらく",
+  "icon": "📱",
+  "target": 100
+ }
+]

@@ -142,3 +142,4 @@ details.verb .ve { flex: 1; font-size: 14px; }
 .vforms b { font-size: 16px; }
 details.verb > .small, details.verb > .exb { margin-left: 38px; }
 @media (max-width: 480px) { .vforms { grid-template-columns: repeat(2, 1fr); margin-left: 0; } details.verb > .small, details.verb > .exb { margin-left: 0; } details.verb .vk { min-width: 96px; font-size: 17px; } }
+header.top nav a.lang { border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; font-weight: 600; color: var(--accent); }

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="tr" data-locale="tr" data-base="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japonca kelimeler ve ifadeler — にほんご Tags</title>
+<meta name="description" content="On iki günlük sahne için ifade kılavuzu, dört ekiyle en kullanışlı 200 Japonca fiil, aranabilir kelime listesi ve zaman kelimeleri — Türkçe açıklamalı.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://nihongo.yusando.com/tr/words/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="にほんご Tags">
+<meta property="og:title" content="Japonca kelimeler ve ifadeler — にほんご Tags">
+<meta property="og:description" content="On iki günlük sahne için ifade kılavuzu, dört ekiyle en kullanışlı 200 Japonca fiil, aranabilir kelime listesi ve zaman kelimeleri — Türkçe açıklamalı.">
+<meta property="og:url" content="https://nihongo.yusando.com/tr/words/">
+<meta property="og:image" content="https://nihongo.yusando.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Japonca kelimeler ve ifadeler — にほんご Tags">
+<meta name="twitter:description" content="On iki günlük sahne için ifade kılavuzu, dört ekiyle en kullanışlı 200 Japonca fiil, aranabilir kelime listesi ve zaman kelimeleri — Türkçe açıklamalı.">
+<meta name="twitter:image" content="https://nihongo.yusando.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://yusando.com/#organization", "name": "株式会社悠三堂", "url": "https://yusando.com" },
+    { "@type": "WebSite", "@id": "https://nihongo.yusando.com/#website", "name": "にほんご Tags", "url": "https://nihongo.yusando.com", "publisher": { "@id": "https://yusando.com/#organization" }, "inLanguage": "tr" }
+  ]
+}
+</script>
+
+<script>
+  window.GOOGLE_IDS = {"site_name":"にほんご Tags","site_url":"https://nihongo.yusando.com","ga4_measurement_id":"G-9JG1FFTL1B","ads_conversion_id":"","ads_conversion_labels":{"drill_complete":"","chapter_test_pass":""},"search_console_verification":"","default_locale":"en","locales":["en"],"og_image":"https://nihongo.yusando.com/og.png","spa":false};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
+  window.__GTAG_ENABLED = (location.hostname === (function(){ try { return new URL(GOOGLE_IDS.site_url).hostname; } catch(e){ return ''; } })());
+</script>
+<script>
+  if (window.__GTAG_ENABLED) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_IDS.ga4_measurement_id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GOOGLE_IDS.ga4_measurement_id, { send_page_view: true });
+  }
+  window.trackConversion = function(name, params) {
+    params = params || {};
+    if (!window.__GTAG_ENABLED) { return; }
+    gtag('event', name, params);
+    var label = GOOGLE_IDS.ads_conversion_labels && GOOGLE_IDS.ads_conversion_labels[name];
+    if (label && GOOGLE_IDS.ads_conversion_id) gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_IDS.ads_conversion_id + '/' + label }, params));
+  };
+</script>
+<link rel="stylesheet" href="../../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/words/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/words/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/words/">
+</head>
+<body>
+<main class="wrap prose">
+  <h1 data-i18n>Kelimeler ve ifadeler</h1>
+  <p class="lead" data-i18n>On iki günlük sahne için hazır ifadeler, en kullanışlı 200 fiil, 2.000 örnekte geçen her kelime ve geçmişle geleceği anlatan zaman kelimeleri.</p>
+
+  <div class="tabs" id="mainTabs">
+    <button data-tab="phrases" data-i18n>İfade kılavuzu</button>
+    <button data-tab="verbs" data-i18n>200 fiil</button>
+    <button data-tab="words" data-i18n>Kelime listesi</button>
+    <button data-tab="time" data-i18n>Zaman kelimeleri</button>
+  </div>
+
+  <section id="tab-phrases" hidden>
+    <p class="small muted" id="pNote"></p>
+    <div class="tabs" id="sceneTabs"></div>
+    <div id="sceneIntro" class="muted"></div>
+    <div id="phraseList"></div>
+  </section>
+
+  <section id="tab-verbs" hidden>
+    <p class="small muted" data-i18n>Konuşmada en çok kullanacağın 200 fiil, 1. seviyenin dört ekiyle: <b>ます</b> (-iyorum) · <b>ますか</b> (-iyor musun?) · <b>ません</b> (-miyorum) · <b>ましょう</b> (-elim). Dinlemek ve örnek görmek için bir fiile dokun.</p>
+    <input class="search" id="vq" type="search" placeholder="Kana, romaji veya Türkçe ara…" data-i18n-placeholder autocomplete="off">
+    <div class="tabs" id="vcatTabs"></div>
+    <div class="small muted" id="vCount"></div>
+    <div id="verbList"></div>
+  </section>
+
+  <section id="tab-words" hidden>
+    <input class="search" id="q" type="search" placeholder="Kana, romaji veya Türkçe ara…" data-i18n-placeholder autocomplete="off">
+    <div class="tabs" id="catTabs"></div>
+    <div class="small muted" id="wCount"></div>
+    <div id="wordList"></div>
+    <div style="text-align:center;margin:12px 0"><button class="btn ghost small" id="more" hidden data-i18n>Daha fazla göster</button></div>
+  </section>
+
+  <section id="tab-time" hidden>
+    <p id="tNote"></p>
+    <div id="timeLists"></div>
+  </section>
+</main>
+
+<script type="module">
+import { renderHeader, renderFooter, loadPhrases, loadVocab, loadVerbs, loadAdverbs, loadScenes, exBlock, esc, qs, kanaToRomaji, coreRomaji, t, LOCALE } from '../../js/app.js';
+import { speak, canSpeak } from '../../js/speech.js';
+renderHeader('words');
+const $ = id => document.getElementById(id);
+
+// ---------- tabs ----------
+let tab = qs('tab') || 'phrases';
+function showTab(t) {
+  tab = t;
+  document.querySelectorAll('#mainTabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  ['phrases', 'verbs', 'words', 'time'].forEach(x => $('tab-' + x).hidden = x !== t);
+  const u = new URL(location); u.searchParams.set('tab', t); history.replaceState(null, '', u);
+  if (t === 'phrases') initPhrases(); if (t === 'words') initWords(); if (t === 'verbs') initVerbs(); if (t === 'time') initTime();
+}
+document.querySelectorAll('#mainTabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+
+// ---------- phrase book ----------
+let phrasesReady = false;
+async function initPhrases() {
+  if (phrasesReady) return; phrasesReady = true;
+  const [pb, scenes] = await Promise.all([loadPhrases(), loadScenes()]);
+  $('pNote').textContent = pb.note;
+  let current = qs('scene') || pb.scenes[0].id;
+  const render = () => {
+    const sc = pb.scenes.find(s => s.id === current) || pb.scenes[0];
+    [...$('sceneTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === sc.id));
+    $('sceneIntro').textContent = sc.intro || '';
+    const list = $('phraseList'); list.innerHTML = '';
+    sc.phrases.forEach(p => {
+      const el = exBlock(p.ex);
+      if (p.note) { const n = document.createElement('div'); n.className = 'small muted'; n.style.marginTop = '2px'; n.textContent = '→ ' + p.note; el.appendChild(n); }
+      list.appendChild(el);
+    });
+    const more = document.createElement('p'); more.className = 'small';
+    more.innerHTML = `<a href="../scenes/?scene=${sc.id}">${t('See all example sentences for this scene →')}</a>`;
+    list.appendChild(more);
+  };
+  pb.scenes.forEach(s => {
+    const meta = scenes.find(x => x.id === s.id) || {};
+    const b = document.createElement('button'); b.dataset.id = s.id; b.textContent = `${meta.icon || ''} ${s.name}`;
+    b.addEventListener('click', () => { current = s.id; const u = new URL(location); u.searchParams.set('scene', s.id); history.replaceState(null, '', u); render(); });
+    $('sceneTabs').appendChild(b);
+  });
+  render();
+}
+
+// ---------- 200 verbs ----------
+const VCATS = [['all', 'All'], ['movement', 'Moving'], ['daily', 'Daily life'], ['food', 'Food'], ['talk', 'Talking'], ['think', 'Thinking'], ['give', 'Giving & getting'], ['work', 'Work'], ['home', 'At home'], ['body', 'Body'], ['feel', 'Feelings'], ['other', 'Other']];
+let verbsReady = false, verbs = [], vcat = 'all';
+async function initVerbs() {
+  if (verbsReady) return; verbsReady = true;
+  verbs = await loadVerbs();
+  VCATS.forEach(([id, label]) => {
+    const n = id === 'all' ? verbs.length : verbs.filter(v => v.cat === id).length;
+    if (!n) return;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${t(label)} (${n})`;
+    b.addEventListener('click', () => { vcat = id; renderVerbs(); });
+    $('vcatTabs').appendChild(b);
+  });
+  $('vq').addEventListener('input', renderVerbs);
+  renderVerbs();
+}
+function renderVerbs() {
+  [...$('vcatTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === vcat));
+  const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const q = $('vq').value.trim(), qn = norm(q);
+  const items = verbs.filter(v => (vcat === 'all' || v.cat === vcat) && (!q || v.masu.includes(q) || v.dict.includes(q) || norm(kanaToRomaji(v.masu)).includes(qn) || norm(v.en).includes(qn)));
+  $('vCount').textContent = t(items.length === 1 ? '{n} verb · most useful first' : '{n} verbs · most useful first', { n: items.length });
+  const list = $('verbList'); list.innerHTML = '';
+  items.forEach(v => {
+    const stem = v.masu.slice(0, -2);
+    const forms = [['ます', stem + 'ます'], ['ますか', stem + 'ますか'], ['ません', stem + 'ません'], ['ましょう', v.lets ? stem + 'ましょう' : '—']];
+    const tagMeta = v.tag ? `<span class="tag-pill" style="background:var(--p-${v.tag})">${v.tag}</span>` : '';
+    const d = document.createElement('details'); d.className = 'verb';
+    d.innerHTML = `<summary><span class="vr">${v.rank}</span><span class="vk">${esc(v.masu)}</span><span class="ve">${esc(v.en)}</span>${tagMeta}</summary>
+      <div class="vforms">${forms.map(([lab, f]) => `<div><span class="muted small">${lab}</span><b data-say="${f === '—' ? '' : esc(f)}">${esc(f)}</b><span class="muted small">${f === '—' ? t('not used') : esc(coreRomaji(f))}</span></div>`).join('')}</div>
+      <div class="small muted">${t('Dictionary form: {d} · group {g}', { d: esc(v.dict), g: v.group })}${v.tag ? t(' · usually with {t}', { t: v.tag }) : ''}</div>`;
+    d.appendChild(exBlock(v.ex));
+    d.addEventListener('toggle', () => { if (d.open && canSpeak()) speak(v.masu); });
+    d.querySelectorAll('[data-say]').forEach(b => { if (b.dataset.say && canSpeak()) { b.style.cursor = 'pointer'; b.addEventListener('click', () => speak(b.dataset.say)); } });
+    list.appendChild(d);
+  });
+}
+
+// ---------- word list ----------
+const CATS = [['all', 'All'], ['verb', 'Verbs'], ['describe', 'Describing'], ['thing', 'Things & places'], ['people', 'People & animals'], ['time', 'Time'], ['question', 'Question words'], ['phrase', 'Set phrases'], ['request', 'Requests']];
+let wordsReady = false, vocab = [], cat = qs('cat') || 'all', shown = 120;
+async function initWords() {
+  if (wordsReady) return; wordsReady = true;
+  vocab = await loadVocab();
+  CATS.forEach(([id, label]) => {
+    const n = id === 'all' ? vocab.length : vocab.filter(w => w.cat === id).length;
+    if (!n) return;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${t(label)} (${n})`;
+    b.addEventListener('click', () => { cat = id; shown = 120; renderWords(); });
+    $('catTabs').appendChild(b);
+  });
+  $('q').addEventListener('input', () => { shown = 120; renderWords(); });
+  $('more').addEventListener('click', () => { shown += 200; renderWords(); });
+  renderWords();
+}
+function renderWords() {
+  [...$('catTabs').children].forEach(b => b.classList.toggle('on', b.dataset.id === cat));
+  const q = $('q').value.trim().toLowerCase();
+  const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const qn = norm(q);
+  const items = vocab.filter(w => (cat === 'all' || w.cat === cat) && (!q || w.k.includes(q) || norm(w.r).includes(qn) || norm(w.en).includes(qn)));
+  $('wCount').textContent = t(items.length === 1 ? '{n} word · sorted by how often they appear' : '{n} words · sorted by how often they appear', { n: items.length });
+  const list = $('wordList'); list.innerHTML = '';
+  items.slice(0, shown).forEach(w => {
+    const row = document.createElement('div'); row.className = 'vrow';
+    row.innerHTML = `<div><span class="k">${esc(w.k)}</span>${canSpeak() ? ' <button class="say" style="border:none;background:none;cursor:pointer">🔊</button>' : ''}<div class="r">${esc(w.r)}</div></div>
+      <div>${esc(w.en)}<div class="small muted">${t('Chapter {c} · {n}×', { c: w.ch, n: w.n })}</div></div>
+      ${w.ex ? `<div class="ex">${esc(w.ex.k)} — ${esc(w.ex.en)}</div>` : ''}`;
+    const b = row.querySelector('.say'); if (b) b.addEventListener('click', () => speak(w.k));
+    list.appendChild(row);
+  });
+  $('more').hidden = items.length <= shown;
+}
+
+// ---------- time words ----------
+let timeReady = false;
+async function initTime() {
+  if (timeReady) return; timeReady = true;
+  const adv = await loadAdverbs();
+  $('tNote').innerHTML = t('At Level 1 the core never changes. These words — placed as a chunk with <b>no tag</b> — tell the listener when. <span class="muted">(In Level 2 you will also change the verb: いきました.)</span>');
+  const groups = [['past', 'Past', 'きのう なら.に いきます。|I went to Nara yesterday.'], ['present', 'Now & habits', 'まいにち おちゃ.を のみます。|I drink tea every day.'], ['future', 'Future', 'あした なら.に いきます。|I\'ll go to Nara tomorrow.']];
+  groups.forEach(([key, label, ex]) => {
+    const box = document.createElement('div'); box.className = 'panel';
+    box.innerHTML = `<h3 style="margin-top:0">${t(label)}</h3>`;
+    box.appendChild(exBlock(t(ex)));
+    const grid = document.createElement('div'); grid.className = 'wordgrid'; grid.style.marginTop = '8px';
+    adv[key].forEach(w => {
+      const d = document.createElement('div'); d.className = 'w'; if (canSpeak()) { d.style.cursor = 'pointer'; d.addEventListener('click', () => speak(w.k)); }
+      d.innerHTML = `<b>${esc(w.k)}</b><span>${esc(kanaToRomaji(w.k))} · ${esc(w.en)}</span>`;
+      grid.appendChild(d);
+    });
+    box.appendChild(grid);
+    $('timeLists').appendChild(box);
+  });
+}
+
+showTab(['phrases', 'verbs', 'words', 'time'].includes(tab) ? tab : 'phrases');
+renderFooter();
+</script>
+</body>
+</html>

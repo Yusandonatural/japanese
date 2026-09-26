@@ -56,14 +56,17 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/lesson/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/lesson/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/lesson/">
 </head>
 <body>
 <main class="wrap prose" id="main">
-  <p class="muted">Loading…</p>
+  <p class="muted" data-i18n>Loading…</p>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadLessons, loadParticles, exBlock, esc, qs, CHAPTERS, kanaToRomaji } from '../js/app.js';
+import { renderHeader, renderFooter, loadLessons, loadParticles, exBlock, esc, qs, CHAPTERS, kanaToRomaji, t } from '../js/app.js';
 import { isDayDone } from '../js/srs.js';
 import { speak, canSpeak } from '../js/speech.js';
 renderHeader('lessons');
@@ -86,14 +89,14 @@ function prose(t) {
 if (!dayParam || !lessons.find(l => l.day === dayParam)) renderIndex(); else renderLesson(dayParam);
 
 function renderIndex() {
-  document.title = 'Daily lessons — にほんご Tags';
-  main.innerHTML = `<h1>14 daily lessons</h1>
-    <p class="lead">Read the day's lesson (about 15 minutes), then do the drill. Each lesson explains one step of Tag Grammar with examples you can listen to.</p>
+  document.title = `${t('Daily lessons')} — にほんご Tags`;
+  main.innerHTML = `<h1>${t('14 daily lessons')}</h1>
+    <p class="lead">${t("Read the day's lesson (about 15 minutes), then do the drill. Each lesson explains one step of Tag Grammar with examples you can listen to.")}</p>
     <div class="panel lesson-list" id="list" style="padding-top:4px;padding-bottom:4px"></div>`;
   const list = document.getElementById('list');
   lessons.forEach(l => {
     const a = document.createElement('a'); a.href = `?day=${l.day}`;
-    a.innerHTML = `<span class="d">Day ${l.day}</span><span><b>${esc(l.title)}</b><br><span class="small muted">${esc(l.goal)}</span></span>${isDayDone(l.day) ? '<span class="done-mark">✓</span>' : ''}`;
+    a.innerHTML = `<span class="d">${t('Day {n}', { n: l.day })}</span><span><b>${esc(l.title)}</b><br><span class="small muted">${esc(l.goal)}</span></span>${isDayDone(l.day) ? '<span class="done-mark">✓</span>' : ''}`;
     list.appendChild(a);
   });
 }
@@ -101,32 +104,32 @@ function renderIndex() {
 function renderLesson(day) {
   const l = lessons.find(x => x.day === day);
   const ch = CHAPTERS.find(c => c.n === l.chapter);
-  document.title = `Day ${day}: ${l.title} — にほんご Tags`;
+  document.title = `${t('Day {n}', { n: day })}: ${l.title} — にほんご Tags`;
   const prev = lessons.find(x => x.day === day - 1), next = lessons.find(x => x.day === day + 1);
   main.innerHTML = `
-    <div class="muted small"><a href="../">Home</a> / <a href="./">Lessons</a> / Day ${day}</div>
-    <div class="small muted" style="margin-top:10px">Day ${day} of 14 · Chapter ${l.chapter}: ${esc(ch ? ch.title : '')} · about ${l.minutes || 15} min</div>
+    <div class="muted small"><a href="../">${t('Home')}</a> / <a href="./">${t('Lessons')}</a> / ${t('Day {n}', { n: day })}</div>
+    <div class="small muted" style="margin-top:10px">${t('Day {d} of 14 · Chapter {c}: {t} · about {m} min', { d: day, c: l.chapter, t: esc(ch ? ch.title : ''), m: l.minutes || 15 })}</div>
     <h1>${esc(l.title)}</h1>
     <div class="muted" style="font-size:18px">${esc(l.ja || '')}</div>
     <div class="panel goal">🎯 ${esc(l.goal)}</div>
     <p>${prose(l.intro)}</p>
     <div id="sections"></div>
-    <h2>Try it</h2>
-    <p class="small muted">Say it out loud first, then tap to check.</p>
+    <h2>${t('Try it')}</h2>
+    <p class="small muted">${t('Say it out loud first, then tap to check.')}</p>
     <div class="panel tryit" id="tryit"></div>
-    <h2>Key words</h2>
+    <h2>${t('Key words')}</h2>
     <div class="wordgrid" id="words"></div>
-    <h2>Recap</h2>
+    <h2>${t('Recap')}</h2>
     <div class="panel"><ul id="recap" style="margin:0;padding-left:20px"></ul></div>
-    ${l.next ? `<p class="muted"><b>Next:</b> ${prose(l.next)}</p>` : ''}
+    ${l.next ? `<p class="muted"><b>${t('Next:')}</b> ${prose(l.next)}</p>` : ''}
     <div class="panel row" style="justify-content:space-between">
-      <div><b>Now practise</b><div class="small muted">A short drill on Chapter ${l.chapter}. It marks Day ${day} as done.</div></div>
-      <div class="row"><a class="btn ghost" href="../ch/?n=${l.chapter}&day=${day}">Examples</a><a class="btn" href="../drill/?ch=${l.chapter}&day=${day}">Start the drill →</a></div>
+      <div><b>${t('Now practise')}</b><div class="small muted">${t('A short drill on Chapter {c}. It marks Day {d} as done.', { c: l.chapter, d: day })}</div></div>
+      <div class="row"><a class="btn ghost" href="../ch/?n=${l.chapter}&day=${day}">${t('Examples')}</a><a class="btn" href="../drill/?ch=${l.chapter}&day=${day}">${t('Start the drill →')}</a></div>
     </div>
     <div class="lesson-nav">
-      ${prev ? `<a class="btn ghost small" href="?day=${prev.day}">← Day ${prev.day}</a>` : '<span></span>'}
-      <a class="btn ghost small" href="./">All lessons</a>
-      ${next ? `<a class="btn ghost small" href="?day=${next.day}">Day ${next.day} →</a>` : '<span></span>'}
+      ${prev ? `<a class="btn ghost small" href="?day=${prev.day}">${t('← Day {d}', { d: prev.day })}</a>` : '<span></span>'}
+      <a class="btn ghost small" href="./">${t('All lessons')}</a>
+      ${next ? `<a class="btn ghost small" href="?day=${next.day}">${t('Day {d} →', { d: next.day })}</a>` : '<span></span>'}
     </div>`;
 
   const secs = document.getElementById('sections');
@@ -135,7 +138,7 @@ function renderLesson(day) {
     box.innerHTML = `<h2>${prose(s.h)}</h2>` + (s.p || []).map(p => `<p>${prose(p)}</p>`).join('');
     (s.ex || []).forEach(e => box.appendChild(exBlock(e)));
     if (s.wrong && s.wrong.length) {
-      const m = document.createElement('div'); m.className = 'panel'; m.innerHTML = '<div class="small"><b>Watch out</b></div>';
+      const m = document.createElement('div'); m.className = 'panel'; m.innerHTML = `<div class="small"><b>${t('Watch out')}</b></div>`;
       s.wrong.forEach((w, i) => { m.appendChild(exBlock(w.includes('|') ? w : w + '|', { wrong: true })); if (s.right && s.right[i]) m.appendChild(exBlock(s.right[i], { right: true })); });
       box.appendChild(m);
     }

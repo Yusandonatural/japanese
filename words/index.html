@@ -56,17 +56,20 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/words/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/words/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/words/">
 </head>
 <body>
 <main class="wrap prose">
-  <h1>Words & phrases</h1>
-  <p class="lead">Ready-to-say phrases for twelve everyday scenes, the 200 most useful verbs, every word used in the 2,000 examples, and the time words that do the job of past and future.</p>
+  <h1 data-i18n>Words & phrases</h1>
+  <p class="lead" data-i18n>Ready-to-say phrases for twelve everyday scenes, the 200 most useful verbs, every word used in the 2,000 examples, and the time words that do the job of past and future.</p>
 
   <div class="tabs" id="mainTabs">
-    <button data-tab="phrases">Phrase book</button>
-    <button data-tab="verbs">200 verbs</button>
-    <button data-tab="words">Word list</button>
-    <button data-tab="time">Time words</button>
+    <button data-tab="phrases" data-i18n>Phrase book</button>
+    <button data-tab="verbs" data-i18n>200 verbs</button>
+    <button data-tab="words" data-i18n>Word list</button>
+    <button data-tab="time" data-i18n>Time words</button>
   </div>
 
   <section id="tab-phrases" hidden>
@@ -77,19 +80,19 @@
   </section>
 
   <section id="tab-verbs" hidden>
-    <p class="small muted">The 200 verbs you will use most in conversation, each in the four Level-1 endings: <b>ます</b> (do) · <b>ますか</b> (do?) · <b>ません</b> (don't) · <b>ましょう</b> (let's). Tap a verb to hear it and see an example.</p>
-    <input class="search" id="vq" type="search" placeholder="Search kana, romaji or English…" autocomplete="off">
+    <p class="small muted" data-i18n>The 200 verbs you will use most in conversation, each in the four Level-1 endings: <b>ます</b> (do) · <b>ますか</b> (do?) · <b>ません</b> (don't) · <b>ましょう</b> (let's). Tap a verb to hear it and see an example.</p>
+    <input class="search" id="vq" type="search" placeholder="Search kana, romaji or English…" data-i18n-placeholder autocomplete="off">
     <div class="tabs" id="vcatTabs"></div>
     <div class="small muted" id="vCount"></div>
     <div id="verbList"></div>
   </section>
 
   <section id="tab-words" hidden>
-    <input class="search" id="q" type="search" placeholder="Search kana, romaji or English…" autocomplete="off">
+    <input class="search" id="q" type="search" placeholder="Search kana, romaji or English…" data-i18n-placeholder autocomplete="off">
     <div class="tabs" id="catTabs"></div>
     <div class="small muted" id="wCount"></div>
     <div id="wordList"></div>
-    <div style="text-align:center;margin:12px 0"><button class="btn ghost small" id="more" hidden>Show more</button></div>
+    <div style="text-align:center;margin:12px 0"><button class="btn ghost small" id="more" hidden data-i18n>Show more</button></div>
   </section>
 
   <section id="tab-time" hidden>
@@ -99,7 +102,7 @@
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadPhrases, loadVocab, loadAdverbs, loadScenes, loadJSON, exBlock, esc, qs, kanaToRomaji } from '../js/app.js';
+import { renderHeader, renderFooter, loadPhrases, loadVocab, loadVerbs, loadAdverbs, loadScenes, exBlock, esc, qs, kanaToRomaji, coreRomaji, t, LOCALE } from '../js/app.js';
 import { speak, canSpeak } from '../js/speech.js';
 renderHeader('words');
 const $ = id => document.getElementById(id);
@@ -133,7 +136,7 @@ async function initPhrases() {
       list.appendChild(el);
     });
     const more = document.createElement('p'); more.className = 'small';
-    more.innerHTML = `<a href="../scenes/?scene=${sc.id}">See all example sentences for this scene →</a>`;
+    more.innerHTML = `<a href="../scenes/?scene=${sc.id}">${t('See all example sentences for this scene →')}</a>`;
     list.appendChild(more);
   };
   pb.scenes.forEach(s => {
@@ -146,15 +149,15 @@ async function initPhrases() {
 }
 
 // ---------- 200 verbs ----------
-const VCATS = [['all', 'All'], ['movement', 'Moving'], ['daily', 'Daily life'], ['food', 'Food'], ['talk', 'Talking'], ['think', 'Thinking'], ['give', 'Giving & getting'], ['work', 'Work'], ['home', 'Home'], ['body', 'Body'], ['feel', 'Feelings'], ['other', 'Other']];
+const VCATS = [['all', 'All'], ['movement', 'Moving'], ['daily', 'Daily life'], ['food', 'Food'], ['talk', 'Talking'], ['think', 'Thinking'], ['give', 'Giving & getting'], ['work', 'Work'], ['home', 'At home'], ['body', 'Body'], ['feel', 'Feelings'], ['other', 'Other']];
 let verbsReady = false, verbs = [], vcat = 'all';
 async function initVerbs() {
   if (verbsReady) return; verbsReady = true;
-  verbs = await loadJSON('data/verbs.json');
+  verbs = await loadVerbs();
   VCATS.forEach(([id, label]) => {
     const n = id === 'all' ? verbs.length : verbs.filter(v => v.cat === id).length;
     if (!n) return;
-    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${label} (${n})`;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${t(label)} (${n})`;
     b.addEventListener('click', () => { vcat = id; renderVerbs(); });
     $('vcatTabs').appendChild(b);
   });
@@ -166,7 +169,7 @@ function renderVerbs() {
   const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const q = $('vq').value.trim(), qn = norm(q);
   const items = verbs.filter(v => (vcat === 'all' || v.cat === vcat) && (!q || v.masu.includes(q) || v.dict.includes(q) || norm(kanaToRomaji(v.masu)).includes(qn) || norm(v.en).includes(qn)));
-  $('vCount').textContent = `${items.length} verb${items.length === 1 ? '' : 's'} · most useful first`;
+  $('vCount').textContent = t(items.length === 1 ? '{n} verb · most useful first' : '{n} verbs · most useful first', { n: items.length });
   const list = $('verbList'); list.innerHTML = '';
   items.forEach(v => {
     const stem = v.masu.slice(0, -2);
@@ -174,8 +177,8 @@ function renderVerbs() {
     const tagMeta = v.tag ? `<span class="tag-pill" style="background:var(--p-${v.tag})">${v.tag}</span>` : '';
     const d = document.createElement('details'); d.className = 'verb';
     d.innerHTML = `<summary><span class="vr">${v.rank}</span><span class="vk">${esc(v.masu)}</span><span class="ve">${esc(v.en)}</span>${tagMeta}</summary>
-      <div class="vforms">${forms.map(([lab, f]) => `<div><span class="muted small">${lab}</span><b data-say="${f === '—' ? '' : esc(f)}">${esc(f)}</b><span class="muted small">${f === '—' ? 'not used' : esc(kanaToRomaji(f).replace(/(masu|masen)ka$/, '$1 ka'))}</span></div>`).join('')}</div>
-      <div class="small muted">Dictionary form: ${esc(v.dict)} · group ${v.group}${v.tag ? ` · usually with ${v.tag}` : ''}</div>`;
+      <div class="vforms">${forms.map(([lab, f]) => `<div><span class="muted small">${lab}</span><b data-say="${f === '—' ? '' : esc(f)}">${esc(f)}</b><span class="muted small">${f === '—' ? t('not used') : esc(coreRomaji(f))}</span></div>`).join('')}</div>
+      <div class="small muted">${t('Dictionary form: {d} · group {g}', { d: esc(v.dict), g: v.group })}${v.tag ? t(' · usually with {t}', { t: v.tag }) : ''}</div>`;
     d.appendChild(exBlock(v.ex));
     d.addEventListener('toggle', () => { if (d.open && canSpeak()) speak(v.masu); });
     d.querySelectorAll('[data-say]').forEach(b => { if (b.dataset.say && canSpeak()) { b.style.cursor = 'pointer'; b.addEventListener('click', () => speak(b.dataset.say)); } });
@@ -192,7 +195,7 @@ async function initWords() {
   CATS.forEach(([id, label]) => {
     const n = id === 'all' ? vocab.length : vocab.filter(w => w.cat === id).length;
     if (!n) return;
-    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${label} (${n})`;
+    const b = document.createElement('button'); b.dataset.id = id; b.textContent = `${t(label)} (${n})`;
     b.addEventListener('click', () => { cat = id; shown = 120; renderWords(); });
     $('catTabs').appendChild(b);
   });
@@ -206,12 +209,12 @@ function renderWords() {
   const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   const qn = norm(q);
   const items = vocab.filter(w => (cat === 'all' || w.cat === cat) && (!q || w.k.includes(q) || norm(w.r).includes(qn) || norm(w.en).includes(qn)));
-  $('wCount').textContent = `${items.length} word${items.length === 1 ? '' : 's'} · sorted by how often they appear`;
+  $('wCount').textContent = t(items.length === 1 ? '{n} word · sorted by how often they appear' : '{n} words · sorted by how often they appear', { n: items.length });
   const list = $('wordList'); list.innerHTML = '';
   items.slice(0, shown).forEach(w => {
     const row = document.createElement('div'); row.className = 'vrow';
     row.innerHTML = `<div><span class="k">${esc(w.k)}</span>${canSpeak() ? ' <button class="say" style="border:none;background:none;cursor:pointer">🔊</button>' : ''}<div class="r">${esc(w.r)}</div></div>
-      <div>${esc(w.en)}<div class="small muted">Chapter ${w.ch} · ${w.n}×</div></div>
+      <div>${esc(w.en)}<div class="small muted">${t('Chapter {c} · {n}×', { c: w.ch, n: w.n })}</div></div>
       ${w.ex ? `<div class="ex">${esc(w.ex.k)} — ${esc(w.ex.en)}</div>` : ''}`;
     const b = row.querySelector('.say'); if (b) b.addEventListener('click', () => speak(w.k));
     list.appendChild(row);
@@ -224,12 +227,12 @@ let timeReady = false;
 async function initTime() {
   if (timeReady) return; timeReady = true;
   const adv = await loadAdverbs();
-  $('tNote').innerHTML = `At Level 1 the core never changes. These words — placed as a chunk with <b>no tag</b> — tell the listener when. <span class="muted">(In Level 2 you will also change the verb: いきました.)</span>`;
+  $('tNote').innerHTML = t('At Level 1 the core never changes. These words — placed as a chunk with <b>no tag</b> — tell the listener when. <span class="muted">(In Level 2 you will also change the verb: いきました.)</span>');
   const groups = [['past', 'Past', 'きのう なら.に いきます。|I went to Nara yesterday.'], ['present', 'Now & habits', 'まいにち おちゃ.を のみます。|I drink tea every day.'], ['future', 'Future', 'あした なら.に いきます。|I\'ll go to Nara tomorrow.']];
   groups.forEach(([key, label, ex]) => {
     const box = document.createElement('div'); box.className = 'panel';
-    box.innerHTML = `<h3 style="margin-top:0">${label}</h3>`;
-    box.appendChild(exBlock(ex));
+    box.innerHTML = `<h3 style="margin-top:0">${t(label)}</h3>`;
+    box.appendChild(exBlock(t(ex)));
     const grid = document.createElement('div'); grid.className = 'wordgrid'; grid.style.marginTop = '8px';
     adv[key].forEach(w => {
       const d = document.createElement('div'); d.className = 'w'; if (canSpeak()) { d.style.cursor = 'pointer'; d.addEventListener('click', () => speak(w.k)); }

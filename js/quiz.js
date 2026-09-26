@@ -1,5 +1,5 @@
 // Question generation + rendering for the 7 drill/test types (see DATA_SPEC.md §5).
-import { chunkCard, kanaToRomaji, chunkRomaji, pColor, shuffle, getSettings } from './app.js';
+import { chunkCard, kanaToRomaji, chunkRomaji, pColor, shuffle, getSettings, t } from './app.js';
 import { buildWidget, dropWidget, moveWidget } from './chunks.js';
 
 export const TYPE_RANGE = { split: [1, 10], tag: [2, 10], build: [1, 10], move: [7, 10], drop: [8, 10], sayit: [3, 10], hear: [4, 10] };
@@ -24,7 +24,7 @@ export function pickType(ex, rnd = Math.random) {
 /** Render one question into `container`. Returns { check(): boolean, reveal(): void }. */
 export function renderQuestion(container, ex, type, opts = {}) {
   container.innerHTML = '';
-  const label = el('div', 'small muted', TYPE_LABEL[type] + (opts.showChapter ? ` · Ch${ex.chapter}` : ''));
+  const label = el('div', 'small muted', t(TYPE_LABEL[type]) + (opts.showChapter ? ` · ${t('Ch{n}', { n: ex.chapter })}` : ''));
   container.appendChild(label);
   const fn = RENDERERS[type] || RENDERERS.sayit;
   return fn(container, ex, opts);
@@ -35,7 +35,7 @@ function fullKanaText(ex) { return ex.chunks.map(c => c.k + c.p).join('') + ex.c
 const RENDERERS = {
   // Q1 split — multiple choice: pick the correctly-chunked reading.
   split(container, ex, opts) {
-    const q = el('div', 'lead', 'Where do the tags split this sentence?');
+    const q = el('div', 'lead', t('Where do the tags split this sentence?'));
     const target = el('div', 'big', fullKanaText(ex));
     container.append(q, target);
     const correct = ex.chunks.map(c => c.k + (c.p ? '/' + c.p : '')).join(' + ') + ' + ' + ex.core.k;
@@ -56,7 +56,7 @@ const RENDERERS = {
   tag(container, ex, opts) {
     const taggable = ex.chunks.filter(c => c.p);
     if (!taggable.length) return RENDERERS.build(container, ex, opts);
-    const q = el('div', 'lead', 'Pick the right tag for each highlighted chunk.');
+    const q = el('div', 'lead', t('Pick the right tag for each highlighted chunk.'));
     container.appendChild(q);
     const row = el('div', 'sentence');
     const answers = new Map();
@@ -86,7 +86,7 @@ const RENDERERS = {
 
   // Q3 build — assemble the chunk cards (any order unless fixedOrder) + core last.
   build(container, ex, opts) {
-    container.appendChild(el('div', 'lead', 'Tap the pieces in an order that works. Core stays last.'));
+    container.appendChild(el('div', 'lead', t('Tap the pieces in an order that works. Core stays last.')));
     const w = buildWidget(ex, opts);
     container.appendChild(w.el);
     return { check: () => w.check() };
@@ -97,7 +97,7 @@ const RENDERERS = {
     const movable = ex.chunks.map((c, i) => i).filter(i => !(ex.fixedOrder || []).flat().includes(i) || ex.fixedOrder.every(g => g[0] === i));
     const targetIdx = movable[Math.floor(Math.random() * movable.length)] ?? 0;
     const target = ex.chunks[targetIdx];
-    container.appendChild(el('div', 'lead', `Tap the chunk to bring to the front, to stress "${target.gloss}".`));
+    container.appendChild(el('div', 'lead', t('Tap the chunk to bring to the front, to stress "{g}".', { g: target.gloss })));
     const w = moveWidget(ex, targetIdx, opts);
     container.appendChild(w.el);
     return { check: () => w.check() };
@@ -105,7 +105,7 @@ const RENDERERS = {
 
   // Q5 drop — tap to remove chunks that a natural reply would omit.
   drop(container, ex, opts) {
-    const q = ex.context ? ex.context.q_ja : 'What can you drop when the context is already clear?';
+    const q = ex.context ? ex.context.q_ja : t('What can you drop when the context is already clear?');
     container.appendChild(el('div', 'lead', q));
     if (ex.context) container.appendChild(el('div', 'small muted', ex.context.q_en));
     const w = dropWidget(ex, opts);
@@ -124,7 +124,7 @@ const RENDERERS = {
 
   // Q7 hear — play audio (or show romaji if no voice), pick the matching English from 4.
   hear(container, ex, opts, pool = []) {
-    const btn = el('button', 'btn', '🔊 Play');
+    const btn = el('button', 'btn', t('🔊 Play'));
     container.appendChild(btn);
     const s = getSettings();
     btn.addEventListener('click', () => opts.speak && opts.speak(fullKanaText(ex), s.rate));

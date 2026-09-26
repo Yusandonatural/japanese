@@ -53,3 +53,21 @@ node tools/build-vocab.mjs   # after changing data/chNN.json
   doc's open decisions). DNS is Route 53 under yusando.com.
 - Before going live: Search Console (verify + submit `sitemap.xml`), confirm GA4 real-time hits,
   check `robots.txt` matches what should/shouldn't be indexed.
+
+## Turkish edition (/tr/)
+
+The Turkish site shares all code and the 2,000 examples with the English one.
+
+- UI strings: `js/i18n.js` (English text is the key, `TR` holds the Turkish). JavaScript uses `t('…')`;
+  static HTML text is marked with `data-i18n` and translated at build time.
+- Turkish data: `data/tr/` — `lessons.json`, `grammar.json`, `phrases.json`, `particles.json`, `confusions.json`,
+  `scenes.json`, `adverbs.json` (full Turkish versions), plus `ex.json` (id → Turkish translation of each example),
+  `gloss.json` (English gloss → Turkish) and `verbs.json` (rank → Turkish meaning/example).
+- Romaji on /tr/ uses Turkish spelling (ş, ç, c) — see `toTurkishSpelling` in `js/romaji.js`.
+- After changing any English page or `js/i18n.js`, rebuild:
+
+```
+node tools/build-print.js && node tools/build-print.js tr && node tools/inject-seo.mjs && node tools/build-tr.mjs
+```
+
+`build-tr.mjs` writes `tr/…` pages and adds hreflang links to both editions; it fails if a marked string has no Turkish.

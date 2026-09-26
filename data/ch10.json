@@ -1661,9 +1661,9 @@
   "id": "c10-037",
   "chapter": 10,
   "scene": "home",
-  "ja": "誰がお風呂に先に入ますか？",
-  "kana": "だれがおふろにさきにはいますか？",
-  "romaji": "Dare ga ofuro ni sakinihaimasu ka?",
+  "ja": "誰がお風呂に先に入りますか？",
+  "kana": "だれがおふろにさきにはいりますか？",
+  "romaji": "Dare ga ofuro ni sakinihairimasu ka?",
   "en": "Who takes a bath first?",
   "question": true,
   "tense": "present",
@@ -1687,8 +1687,8 @@
    }
   ],
   "core": {
-   "w": "先に入ますか",
-   "k": "さきにはいますか",
+   "w": "先に入りますか",
+   "k": "さきにはいりますか",
    "gloss": "get in first"
   },
   "fixedOrder": [],
@@ -1700,9 +1700,9 @@
   "id": "c10-038",
   "chapter": 10,
   "scene": "home",
-  "ja": "今日は子どもが先に入ます。",
-  "kana": "きょうはこどもがさきにはいます。",
-  "romaji": "Kyō wa kodomo ga sakinihaimasu.",
+  "ja": "今日は子どもが先に入ります。",
+  "kana": "きょうはこどもがさきにはいります。",
+  "romaji": "Kyō wa kodomo ga sakinihairimasu.",
   "en": "Today the kids go in first.",
   "question": false,
   "tense": "present",
@@ -1726,8 +1726,8 @@
    }
   ],
   "core": {
-   "w": "先に入ます",
-   "k": "さきにはいます",
+   "w": "先に入ります",
+   "k": "さきにはいります",
    "gloss": "get in first"
   },
   "fixedOrder": [],
@@ -3408,9 +3408,9 @@
   "id": "c10-079",
   "chapter": 10,
   "scene": "food",
-  "ja": "味はどいますか？",
-  "kana": "あじはどいますか？",
-  "romaji": "Aji wa doimasu ka?",
+  "ja": "味はどうですか？",
+  "kana": "あじはどうですか？",
+  "romaji": "Aji wa dō desu ka?",
   "en": "How is the taste?",
   "question": true,
   "tense": "present",
@@ -3426,8 +3426,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],
@@ -9192,9 +9192,9 @@
   "id": "c10-211",
   "chapter": 10,
   "scene": "weather",
-  "ja": "今日の天気はどいますか？",
-  "kana": "きょうのてんきはどいますか？",
-  "romaji": "Kyōnotenki wa doimasu ka?",
+  "ja": "今日の天気はどうですか？",
+  "kana": "きょうのてんきはどうですか？",
+  "romaji": "Kyōnotenki wa dō desu ka?",
   "en": "How is the weather today?",
   "question": true,
   "tense": "present",
@@ -9210,8 +9210,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],

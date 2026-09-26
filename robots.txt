@@ -6,5 +6,10 @@ Disallow: /ch/index.html
 Disallow: /drill/index.html
 Disallow: /progress/index.html
 Disallow: /test/index.html
+Disallow: /tr/print/
+Disallow: /tr/ch/index.html
+Disallow: /tr/drill/index.html
+Disallow: /tr/progress/index.html
+Disallow: /tr/test/index.html
 
 Sitemap: https://nihongo.yusando.com/sitemap.xml

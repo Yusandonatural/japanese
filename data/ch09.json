@@ -5279,9 +5279,9 @@
   "id": "c09-123",
   "chapter": 9,
   "scene": "weather",
-  "ja": "明日の天気はどいますか？",
-  "kana": "あしたのてんきはどいますか？",
-  "romaji": "Ashitanotenki wa doimasu ka?",
+  "ja": "明日の天気はどうですか？",
+  "kana": "あしたのてんきはどうですか？",
+  "romaji": "Ashitanotenki wa dō desu ka?",
   "en": "How's the weather tomorrow?",
   "question": true,
   "tense": "present",
@@ -5297,8 +5297,8 @@
    }
   ],
   "core": {
-   "w": "どいますか",
-   "k": "どいますか",
+   "w": "どうですか",
+   "k": "どうですか",
    "gloss": "how"
   },
   "fixedOrder": [],

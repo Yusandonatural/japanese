@@ -56,11 +56,14 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/drill/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/drill/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/drill/">
 </head>
 <body>
 <main class="wrap">
   <div class="muted small" id="crumb"></div>
-  <h1 id="title">Drill</h1>
+  <h1 id="title" data-i18n>Drill</h1>
   <div class="row" style="justify-content:space-between">
     <div class="small muted" id="counter"></div>
     <div class="progress-bar" style="flex:1;margin:0 12px"><i id="bar" style="width:0%"></i></div>
@@ -71,26 +74,26 @@
   <div class="row" style="justify-content:space-between">
     <div class="status" id="status"></div>
     <div class="row">
-      <button class="btn ghost" id="skipBtn">Skip</button>
-      <button class="btn" id="checkBtn">Check</button>
-      <button class="btn" id="nextBtn" style="display:none">Next →</button>
+      <button class="btn ghost" id="skipBtn" data-i18n>Skip</button>
+      <button class="btn" id="checkBtn" data-i18n>Check</button>
+      <button class="btn" id="nextBtn" style="display:none" data-i18n>Next →</button>
     </div>
   </div>
 
   <div class="panel" id="doneBox" style="display:none">
-    <h2>Nice work 🎉</h2>
+    <h2 data-i18n>Nice work 🎉</h2>
     <p id="doneSummary"></p>
     <div id="weakList"></div>
     <div class="row" style="margin-top:10px">
-      <a class="btn" id="nextLesson" href="../lesson/" style="display:none">Next lesson →</a>
-      <a class="btn ghost" id="toChapter" href="#">Back to chapter</a>
-      <a class="btn ghost" href="../">Home</a>
+      <a class="btn" id="nextLesson" href="../lesson/" style="display:none" data-i18n>Next lesson →</a>
+      <a class="btn ghost" id="toChapter" href="#" data-i18n>Back to chapter</a>
+      <a class="btn ghost" href="../" data-i18n>Home</a>
     </div>
   </div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadChapter, loadParticles, qs, chapterFor, shuffle } from '../js/app.js';
+import { renderHeader, renderFooter, loadChapter, loadParticles, qs, chapterFor, shuffle, t } from '../js/app.js';
 import { renderQuestion, pickType } from '../js/quiz.js';
 import { recordAnswer, recordParticle, markDayDone, particleStats } from '../js/srs.js';
 import { speak } from '../js/speech.js';
@@ -100,8 +103,8 @@ const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
 const day = qs('day');
 const N = parseInt(qs('n') || '30', 10);
 const chapter = chapterFor(ch);
-document.getElementById('crumb').innerHTML = `<a href="../">Home</a> / <a href="../ch/?n=${ch}">Chapter ${ch}</a> / Drill`;
-document.getElementById('title').textContent = `Drill · Chapter ${ch}. ${chapter.title}`;
+document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="../ch/?n=${ch}">${t('Chapter {n}', { n: ch })}</a> / ${t('Drill')}`;
+document.getElementById('title').textContent = t('Drill · Chapter {n}. {title}', { n: ch, title: chapter.title });
 document.getElementById('toChapter').href = `../ch/?n=${ch}`;
 
 const [examples, particles] = await Promise.all([loadChapter(ch), loadParticles()]);
@@ -118,7 +121,7 @@ const nextBtn = document.getElementById('nextBtn');
 const skipBtn = document.getElementById('skipBtn');
 
 function updateBar() {
-  document.getElementById('counter').textContent = `Question ${idx + 1} / ${deck.length}`;
+  document.getElementById('counter').textContent = t('Question {n} / {total}', { n: idx + 1, total: deck.length });
   document.getElementById('bar').style.width = Math.round((idx / deck.length) * 100) + '%';
   document.getElementById('score').textContent = `${correct} / ${answered}`;
 }
@@ -140,10 +143,10 @@ checkBtn.addEventListener('click', () => {
   const particleTagged = current.ex.chunks.find(c => c.p)?.p || '';
   if (result.ok) {
     correct++;
-    statusEl.textContent = '✓ That works.';
+    statusEl.textContent = t('✓ That works.');
     statusEl.className = 'status ok';
   } else {
-    statusEl.textContent = current.correctText ? `Not quite. → ${current.correctText}` : '✗ Not quite — try to notice the difference and move on.';
+    statusEl.textContent = current.correctText ? t('Not quite. → {x}', { x: current.correctText }) : t('✗ Not quite — try to notice the difference and move on.');
     statusEl.className = 'status ng';
   }
   recordAnswer(current.ex.id, !!result.ok);
@@ -160,15 +163,15 @@ function finish() {
   checkBtn.style.display = 'none'; nextBtn.style.display = 'none'; skipBtn.style.display = 'none';
   statusEl.textContent = '';
   document.getElementById('doneBox').style.display = '';
-  document.getElementById('doneSummary').textContent = `You got ${correct} of ${answered} right.`;
+  document.getElementById('doneSummary').textContent = t('You got {c} of {a} right.', { c: correct, a: answered });
   const stats = particleStats();
   const weak = Object.entries(stats).filter(([, s]) => s.right + s.wrong >= 2).map(([p, s]) => [p, s.right / (s.right + s.wrong)]).sort((a, b) => a[1] - b[1]).slice(0, 3);
   const wl = document.getElementById('weakList');
   if (weak.length) {
-    wl.innerHTML = '<p class="small muted">Keep an eye on:</p>' + weak.map(([p, acc]) => `<span class="tag-pill" style="background:var(--p-${p === '(none)' ? 'none' : p})">${p === '(none)' ? 'no tag' : p} ${Math.round(acc * 100)}%</span>`).join(' ');
+    wl.innerHTML = `<p class="small muted">${t('Keep an eye on:')}</p>` + weak.map(([p, acc]) => `<span class="tag-pill" style="background:var(--p-${p === '(none)' ? 'none' : p})">${p === '(none)' ? t('no tag') : p} ${Math.round(acc * 100)}%</span>`).join(' ');
   }
   if (day) markDayDone(day);
-  if (day && Number(day) < 14) { const nl = document.getElementById('nextLesson'); nl.href = `../lesson/?day=${Number(day) + 1}`; nl.textContent = `Day ${Number(day) + 1} lesson →`; nl.style.display = ''; }
+  if (day && Number(day) < 14) { const nl = document.getElementById('nextLesson'); nl.href = `../lesson/?day=${Number(day) + 1}`; nl.textContent = t('Day {n} lesson →', { n: Number(day) + 1 }); nl.style.display = ''; }
   updateBar();
 }
 

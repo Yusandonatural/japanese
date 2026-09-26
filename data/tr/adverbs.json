@@ -1,0 +1,189 @@
+{
+  "note": "Seviye 1'de fiil hiç değişmez. Geçmiş ve gelecek bu zaman kelimelerinden gelir; etiketsiz bir parça olarak çekirdeğin önüne konur. Türkçedeki “dün”, “yarın” gibi, ama fiile ek eklemeden.",
+  "past": [
+    {
+      "w": "昨日",
+      "k": "きのう",
+      "romaji": "kinō",
+      "en": "dün"
+    },
+    {
+      "w": "さっき",
+      "k": "さっき",
+      "romaji": "sakki",
+      "en": "az önce"
+    },
+    {
+      "w": "もう",
+      "k": "もう",
+      "romaji": "mō",
+      "en": "çoktan / artık"
+    },
+    {
+      "w": "先週",
+      "k": "せんしゅう",
+      "romaji": "senshū",
+      "en": "geçen hafta"
+    },
+    {
+      "w": "先月",
+      "k": "せんげつ",
+      "romaji": "sengetsu",
+      "en": "geçen ay"
+    },
+    {
+      "w": "去年",
+      "k": "きょねん",
+      "romaji": "kyonen",
+      "en": "geçen yıl"
+    },
+    {
+      "w": "今朝",
+      "k": "けさ",
+      "romaji": "kesa",
+      "en": "bu sabah"
+    },
+    {
+      "w": "昨夜",
+      "k": "ゆうべ",
+      "romaji": "yūbe",
+      "en": "dün gece"
+    },
+    {
+      "w": "前に",
+      "k": "まえに",
+      "romaji": "mae ni",
+      "en": "önceden / daha önce"
+    },
+    {
+      "w": "この前",
+      "k": "このまえ",
+      "romaji": "kono mae",
+      "en": "geçen gün"
+    }
+  ],
+  "future": [
+    {
+      "w": "明日",
+      "k": "あした",
+      "romaji": "ashita",
+      "en": "yarın"
+    },
+    {
+      "w": "あとで",
+      "k": "あとで",
+      "romaji": "ato de",
+      "en": "sonra"
+    },
+    {
+      "w": "これから",
+      "k": "これから",
+      "romaji": "kore kara",
+      "en": "bundan sonra / şimdi"
+    },
+    {
+      "w": "来週",
+      "k": "らいしゅう",
+      "romaji": "raishū",
+      "en": "gelecek hafta"
+    },
+    {
+      "w": "来月",
+      "k": "らいげつ",
+      "romaji": "raigetsu",
+      "en": "gelecek ay"
+    },
+    {
+      "w": "来年",
+      "k": "らいねん",
+      "romaji": "rainen",
+      "en": "gelecek yıl"
+    },
+    {
+      "w": "今晩",
+      "k": "こんばん",
+      "romaji": "konban",
+      "en": "bu akşam"
+    },
+    {
+      "w": "すぐ",
+      "k": "すぐ",
+      "romaji": "sugu",
+      "en": "hemen"
+    },
+    {
+      "w": "今度",
+      "k": "こんど",
+      "romaji": "kondo",
+      "en": "bir dahaki sefere"
+    },
+    {
+      "w": "明後日",
+      "k": "あさって",
+      "romaji": "asatte",
+      "en": "öbür gün"
+    }
+  ],
+  "present": [
+    {
+      "w": "今",
+      "k": "いま",
+      "romaji": "ima",
+      "en": "şimdi"
+    },
+    {
+      "w": "今日",
+      "k": "きょう",
+      "romaji": "kyō",
+      "en": "bugün"
+    },
+    {
+      "w": "毎日",
+      "k": "まいにち",
+      "romaji": "mainichi",
+      "en": "her gün"
+    },
+    {
+      "w": "いつも",
+      "k": "いつも",
+      "romaji": "itsumo",
+      "en": "her zaman"
+    },
+    {
+      "w": "よく",
+      "k": "よく",
+      "romaji": "yoku",
+      "en": "sık sık"
+    },
+    {
+      "w": "ときどき",
+      "k": "ときどき",
+      "romaji": "tokidoki",
+      "en": "bazen"
+    },
+    {
+      "w": "毎朝",
+      "k": "まいあさ",
+      "romaji": "maiasa",
+      "en": "her sabah"
+    },
+    {
+      "w": "毎週",
+      "k": "まいしゅう",
+      "romaji": "maishū",
+      "en": "her hafta"
+    },
+    {
+      "w": "今週",
+      "k": "こんしゅう",
+      "romaji": "konshū",
+      "en": "bu hafta"
+    },
+    {
+      "w": "まだ",
+      "k": "まだ",
+      "romaji": "mada",
+      "en": "henüz / hâlâ"
+    }
+  ]
+}

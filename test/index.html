@@ -56,11 +56,14 @@
   };
 </script>
 <link rel="stylesheet" href="../css/tags.css">
+<link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/test/">
+<link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/test/">
+<link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/test/">
 </head>
 <body>
 <main class="wrap">
   <div class="muted small" id="crumb"></div>
-  <h1 id="title">Chapter test</h1>
+  <h1 id="title" data-i18n>Chapter test</h1>
   <p class="lead" id="sub"></p>
 
   <div class="row" style="justify-content:space-between">
@@ -72,24 +75,24 @@
   <div class="panel" id="qbox"></div>
   <div class="row" style="justify-content:flex-end">
     <div class="status" id="status" style="flex:1"></div>
-    <button class="btn" id="checkBtn">Check</button>
-    <button class="btn" id="nextBtn" style="display:none">Next →</button>
+    <button class="btn" id="checkBtn" data-i18n>Check</button>
+    <button class="btn" id="nextBtn" style="display:none" data-i18n>Next →</button>
   </div>
 
   <div class="panel" id="doneBox" style="display:none">
-    <h2 id="resultTitle">Result</h2>
+    <h2 id="resultTitle" data-i18n>Result</h2>
     <p id="doneSummary" class="big"></p>
     <p class="muted small" id="doneNote"></p>
     <div class="row" style="margin-top:10px">
-      <a class="btn" id="retryBtn" href="#">Try again</a>
-      <a class="btn ghost" id="toChapter" href="#">Back to chapter</a>
-      <a class="btn ghost" href="../progress/">See progress</a>
+      <a class="btn" id="retryBtn" href="#" data-i18n>Try again</a>
+      <a class="btn ghost" id="toChapter" href="#" data-i18n>Back to chapter</a>
+      <a class="btn ghost" href="../progress/" data-i18n>See progress</a>
     </div>
   </div>
 </main>
 
 <script type="module">
-import { renderHeader, renderFooter, loadChapter, loadChapters, loadParticles, qs, chapterFor, shuffle } from '../js/app.js';
+import { renderHeader, renderFooter, loadChapter, loadChapters, loadParticles, qs, chapterFor, shuffle, t } from '../js/app.js';
 import { renderQuestion, pickType } from '../js/quiz.js';
 import { recordAnswer, recordParticle, recordChapterTest } from '../js/srs.js';
 import { speak } from '../js/speech.js';
@@ -99,9 +102,9 @@ const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
 const isFinal = ch === 10;
 const N = isFinal ? 100 : 30;
 const chapter = chapterFor(ch);
-document.getElementById('crumb').innerHTML = `<a href="../">Home</a> / <a href="../ch/?n=${ch}">Chapter ${ch}</a> / Test`;
-document.getElementById('title').textContent = isFinal ? 'Final test · all 10 chapters' : `Chapter ${ch} test`;
-document.getElementById('sub').textContent = isFinal ? 'A mix of 100 questions drawn from everything you have learned.' : `30 questions from Chapter ${ch}. ${chapter.title}.`;
+document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="../ch/?n=${ch}">${t('Chapter {n}', { n: ch })}</a> / ${t('Test')}`;
+document.getElementById('title').textContent = isFinal ? t('Final test · all 10 chapters') : t('Chapter {n} test', { n: ch });
+document.getElementById('sub').textContent = isFinal ? t('A mix of 100 questions drawn from everything you have learned.') : t('30 questions from Chapter {n}. {title}.', { n: ch, title: chapter.title });
 document.getElementById('toChapter').href = `../ch/?n=${ch}`;
 document.getElementById('retryBtn').href = location.pathname + location.search;
 
@@ -150,10 +153,10 @@ function finish() {
   document.getElementById('doneBox').style.display = '';
   const pct = Math.round((correct / answered) * 100);
   document.getElementById('doneSummary').textContent = `${correct} / ${answered} (${pct}%)`;
-  document.getElementById('resultTitle').textContent = pct >= 80 ? 'Passed 🎉' : 'Keep practicing';
+  document.getElementById('resultTitle').textContent = pct >= 80 ? t('Passed 🎉') : t('Keep practicing');
   document.getElementById('doneNote').textContent = pct >= 80
-    ? (isFinal ? 'You have the basics. Time to talk.' : 'Chapter ' + (ch + 1) + ' is ready when you are.')
-    : 'No rush — drill this chapter again before moving on.';
+    ? (isFinal ? t('You have the basics. Time to talk.') : t('Chapter {n} is ready when you are.', { n: ch + 1 }))
+    : t('No rush — drill this chapter again before moving on.');
   recordChapterTest(ch, correct, answered);
   updateBar();
 }
