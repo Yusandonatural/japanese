@@ -13,16 +13,16 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://nihongo.yusando.com';
 
 const PAGES = [
-  { file: 'index.html', path: '/', title: 'にほんご Tags — 14 günde Japonca konuş', desc: 'Etiket Dilbilgisi ile 2.000 gerçek hayat cümlesinden Japonca öğren: parçacıkları etiket gibi kullan, cümleyi kendin kur. Fiil çekimi yok, on bölüm, iki hafta. Türkçe konuşanlar için.' },
-  { file: 'lesson/index.html', path: '/lesson/', title: '14 günlük Japonca dersi — にほんご Tags', desc: 'Türkçe konuşanlar için 14 kısa günlük ders: Japonca parçacıklar Türkçe hâl ekleriyle karşılaştırmalı, serbest kelime sırası, fiil çekimi yok.' },
-  { file: 'grammar/index.html', path: '/grammar/', title: 'Etiket Dilbilgisi — Japonca parçacıklar Türkçe anlatım — にほんご Tags', desc: 'Japonca parçacıklar (は が を に で と へ から まで も) Türkçe hâl ekleriyle karşılaştırmalı olarak: beş ilke, 1. seviyenin dört eki, örnekler ve sık yapılan hatalar.' },
-  { file: 'words/index.html', path: '/words/', title: 'Japonca kelimeler ve ifadeler — にほんご Tags', desc: 'On iki günlük sahne için ifade kılavuzu, dört ekiyle en kullanışlı 200 Japonca fiil, aranabilir kelime listesi ve zaman kelimeleri — Türkçe açıklamalı.' },
-  { file: 'ch/index.html', path: '/ch/', title: 'Bölümler — にほんご Tags', desc: 'On etiketten kurulmuş gerçek hayat Japonca cümleleri, bölüm bölüm.' },
-  { file: 'drill/index.html', path: '/drill/', title: 'Günlük alıştırma — にほんご Tags', desc: 'Yedi alıştırma türüyle günlük Japonca pratiği.' },
-  { file: 'test/index.html', path: '/test/', title: 'Bölüm sınavı — にほんご Tags', desc: 'Her bölüm için puanlı bir sınav ve on bölümün tamamını kapsayan 100 soruluk final.' },
-  { file: 'progress/index.html', path: '/progress/', title: 'İlerlemen — にほんご Tags', desc: '14 günlük planını, bölüm sınavı puanlarını ve etiket doğruluğunu takip et.' },
-  { file: 'scenes/index.html', path: '/scenes/', title: 'Sahnelere göre — にほんご Tags', desc: '2.000 örnek cümleye günlük sahnelere göre göz at: alışveriş, yemek, ulaşım, iş, çiftlik hayatı ve daha fazlası.' },
-  { file: 'print/index.html', path: '/print/', title: 'Yazdırılabilir çalışma kitapları — にほんご Tags', desc: 'Her bölüm için cevap anahtarlı 50 soruluk yazdırılabilir çalışma kağıtları.' },
+  { file: 'index.html', path: '/', title: '14 Günde Kolay Japonca — İki haftada Japonca konuş', desc: 'Etiket Dilbilgisi ile 2.000 gerçek hayat cümlesinden Japonca öğren: parçacıkları etiket gibi kullan, cümleyi kendin kur. Fiil çekimi yok, on bölüm, iki hafta. Türkçe konuşanlar için.' },
+  { file: 'lesson/index.html', path: '/lesson/', title: '14 günlük Japonca dersi — 14 Günde Kolay Japonca', desc: 'Türkçe konuşanlar için 14 kısa günlük ders: Japonca parçacıklar Türkçe hâl ekleriyle karşılaştırmalı, serbest kelime sırası, fiil çekimi yok.' },
+  { file: 'grammar/index.html', path: '/grammar/', title: 'Etiket Dilbilgisi — Japonca parçacıklar Türkçe anlatım — 14 Günde Kolay Japonca', desc: 'Japonca parçacıklar (は が を に で と へ から まで も) Türkçe hâl ekleriyle karşılaştırmalı olarak: beş ilke, 1. seviyenin dört eki, örnekler ve sık yapılan hatalar.' },
+  { file: 'words/index.html', path: '/words/', title: 'Japonca kelimeler ve ifadeler — 14 Günde Kolay Japonca', desc: 'On iki günlük sahne için ifade kılavuzu, dört ekiyle en kullanışlı 200 Japonca fiil, aranabilir kelime listesi ve zaman kelimeleri — Türkçe açıklamalı.' },
+  { file: 'ch/index.html', path: '/ch/', title: 'Bölümler — 14 Günde Kolay Japonca', desc: 'On etiketten kurulmuş gerçek hayat Japonca cümleleri, bölüm bölüm.' },
+  { file: 'drill/index.html', path: '/drill/', title: 'Günlük alıştırma — 14 Günde Kolay Japonca', desc: 'Yedi alıştırma türüyle günlük Japonca pratiği.' },
+  { file: 'test/index.html', path: '/test/', title: 'Bölüm sınavı — 14 Günde Kolay Japonca', desc: 'Her bölüm için puanlı bir sınav ve on bölümün tamamını kapsayan 100 soruluk final.' },
+  { file: 'progress/index.html', path: '/progress/', title: 'İlerlemen — 14 Günde Kolay Japonca', desc: '14 günlük planını, bölüm sınavı puanlarını ve etiket doğruluğunu takip et.' },
+  { file: 'scenes/index.html', path: '/scenes/', title: 'Sahnelere göre — 14 Günde Kolay Japonca', desc: '2.000 örnek cümleye günlük sahnelere göre göz at: alışveriş, yemek, ulaşım, iş, çiftlik hayatı ve daha fazlası.' },
+  { file: 'print/index.html', path: '/print/', title: 'Yazdırılabilir çalışma kitapları — 14 Günde Kolay Japonca', desc: 'Her bölüm için cevap anahtarlı 50 soruluk yazdırılabilir çalışma kağıtları.' },
 ];
 
 const norm = s => s.replace(/\s+/g, ' ').replace(/&amp;/g, '&').trim();
@@ -78,6 +78,7 @@ for (const page of PAGES) {
              .replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escAttr(page.desc)}">`)
              .replace(/"inLanguage": "en"/, '"inLanguage": "tr"');
   html = translateStatic(html, page.file);
+  html = html.split('Easy Japanese 14 Days').join('14 Günde Kolay Japonca');
   const out = path.join(ROOT, 'tr', page.file);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, html, 'utf8');

@@ -11,10 +11,10 @@ const TRMODE = process.argv[2] === 'tr';
 const OUT = path.join(ROOT, TRMODE ? 'tr/print' : 'print');
 const TRX = TRMODE ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tr/ex.json'), 'utf8')) : {};
 const L = TRMODE ? {
-  back: '← Yazdırılabilir çalışma kitapları', title: ch => `にほんご Tags — Bölüm ${ch} Çalışma Kitabı`, doc: ch => `Bölüm ${ch} — Yazdırılabilir Çalışma Kitabı`,
+  back: '← Yazdırılabilir çalışma kitapları', title: ch => `Easy Japanese 14 Days — Bölüm ${ch} Çalışma Kitabı`, doc: ch => `Bölüm ${ch} — Yazdırılabilir Çalışma Kitabı`,
   intro: 'İşaretli parçanın etiketini (は が を に で と へ から まで も) yaz ya da her Türkçe cümlenin Japoncasını yaz. Cevaplar son sayfada.', answers: 'Cevaplar', lang: 'tr'
 } : {
-  back: '← Printable workbooks', title: ch => `にほんご Tags — Chapter ${ch} Workbook`, doc: ch => `Chapter ${ch} — Printable Workbook`,
+  back: '← Printable workbooks', title: ch => `Easy Japanese 14 Days — Chapter ${ch} Workbook`, doc: ch => `Chapter ${ch} — Printable Workbook`,
   intro: 'Fill in the tag (は が を に で と へ から まで も) for the marked chunk, or write the Japanese for each English sentence. Answers on the last page.', answers: 'Answers', lang: 'en'
 };
 const enOf = ex => (TRMODE && TRX[ex.id]?.tr) || ex.en;
@@ -87,7 +87,7 @@ if (TRMODE) { console.log(`Generated ${links.length} Turkish workbooks.`); proce
 const indexHtml = `<!doctype html>
 <html lang="en" data-base="../">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Printable Workbooks — にほんご Tags</title>
+<title>Printable Workbooks — Easy Japanese 14 Days</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"><link rel="stylesheet" href="../css/tags.css"></head>
 <body><main class="wrap">
 <div class="muted small"><a href="../" data-i18n>Home</a> / <span data-i18n>Print</span></div>

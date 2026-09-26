@@ -1,4 +1,4 @@
-# にほんご Tags
+# Easy Japanese 14 Days
 
 Learn 2,000 real-life Japanese sentences in 14 days with **Tag Grammar**: every sentence is
 tagged chunks in front of one final polite-form verb. Move the chunks, keep the tags.

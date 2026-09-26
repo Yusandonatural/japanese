@@ -149,7 +149,7 @@ export function renderHeader(active) {
   const langLink = LOCALE === 'tr'
     ? `<a class="lang" href="${root}${other}${location.search}" hreflang="en" title="${t('Learn Japanese in English')}">EN</a>`
     : `<a class="lang" href="${root}${other}${location.search}" hreflang="tr" title="Japoncayı Türkçe öğren">TR</a>`;
-  h.innerHTML = `<a class="brand" href="${LBASE}">にほんご Tags</a><nav>${links.map(([p, label]) => `<a href="${LBASE}${p}" class="${active === label.toLowerCase() ? 'on' : ''}">${t(label)}</a>`).join('')}${langLink}</nav>`;
+  h.innerHTML = `<a class="brand" href="${LBASE}">${t('Easy Japanese 14 Days')}</a><nav>${links.map(([p, label]) => `<a href="${LBASE}${p}" class="${active === label.toLowerCase() ? 'on' : ''}">${t(label)}</a>`).join('')}${langLink}</nav>`;
   document.body.prepend(h);
 }
 export function renderFooter() {

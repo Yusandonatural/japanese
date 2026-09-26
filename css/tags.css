@@ -1,4 +1,4 @@
-/* にほんご Tags — 和モダン theme
+/* Easy Japanese 14 Days — 和モダン theme
    Paper (生成り) background, sumi ink text, Shippori Mincho headings, Zen Kaku Gothic body,
    and the ten tags coloured with traditional Japanese colours. */
 :root {
@@ -199,14 +199,15 @@ table.tbl th { font-family: var(--font-head); color: var(--muted); font-weight: 
 
 /* ---------- footer ---------- */
 footer { color: var(--muted); font-size: 12.5px; padding: 40px 16px 36px; text-align: center; margin-top: 30px; background: var(--seigaiha); background-size: 56px 28px; border-top: 1px solid var(--line); }
-footer::before { content: 'にほんご Tags'; display: block; font-family: var(--font-head); font-size: 15px; color: var(--ink); margin-bottom: 6px; letter-spacing: .06em; }
+html[lang="tr"] footer::before { content: '14 Günde Kolay Japonca' !important; }
+footer::before { content: 'Easy Japanese 14 Days'; display: block; font-family: var(--font-head); font-size: 15px; color: var(--ink); margin-bottom: 6px; letter-spacing: .06em; }
 
 /* ---------- home hero ---------- */
 .hero { position: relative; margin: -20px calc(50% - 50vw) 8px; padding: 44px 20px 30px; text-align: center; background: var(--seigaiha); background-size: 56px 28px; border-bottom: 1px solid var(--line); overflow: hidden; }
 .hero::after { content: ''; position: absolute; inset: auto 0 0 0; height: 60px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; }
 .hero > * { position: relative; z-index: 1; }
 .hero .eyebrow { display: inline-block; font-size: 12.5px; letter-spacing: .18em; color: var(--shu); border: 1px solid color-mix(in srgb, var(--shu) 45%, transparent); padding: 2px 12px; border-radius: 999px; background: var(--panel); }
-.hero h1 { font-size: 46px; margin: 14px 0 6px; letter-spacing: .06em; }
+.hero h1 { font-size: 44px; margin: 14px 0 6px; letter-spacing: .03em; line-height: 1.2; }
 .hero h1 .accent { color: var(--shu); }
 .hero .lead { max-width: 560px; margin: 8px auto 0; }
 .hero .demo { display: flex; justify-content: center; margin: 22px auto 6px; }
@@ -216,7 +217,7 @@ footer::before { content: 'にほんご Tags'; display: block; font-family: var(
 .hero .cta { display: flex; justify-content: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
 .sentence.shuffling .chunk:not(.core) { animation: hop .45s ease; }
 @keyframes hop { 0% { transform: translateY(0); } 40% { transform: translateY(-8px) rotate(-1.5deg); } 100% { transform: translateY(0); } }
-@media (max-width: 520px) { .hero { padding: 32px 14px 24px; } .hero h1 { font-size: 34px; } .hero .demo .chunk .word { font-size: 19px; } }
+@media (max-width: 520px) { .hero { padding: 32px 14px 24px; } .hero h1 { font-size: 31px; } .hero .demo .chunk .word { font-size: 19px; } }
 .steps { counter-reset: step; }
 .steps .panel { position: relative; padding-top: 22px; }
 .steps .panel .num { position: absolute; top: -12px; left: 16px; font-family: var(--font-head); font-size: 13px; background: var(--ink); color: var(--panel); border-radius: 999px; padding: 1px 10px; letter-spacing: .06em; }

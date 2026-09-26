@@ -142,5 +142,6 @@ export const TR = {
   'Chapter 1': 'Bölüm 1', 'Chapter 2': 'Bölüm 2', 'Chapter 3': 'Bölüm 3', 'Chapter 4': 'Bölüm 4', 'Chapter 5': 'Bölüm 5', 'Chapter 6': 'Bölüm 6', 'Chapter 7': 'Bölüm 7', 'Chapter 8': 'Bölüm 8', 'Chapter 9': 'Bölüm 9', 'Chapter 10': 'Bölüm 10',
   'Speak Japanese in 14 days': '14 günde Japonca konuş', 'Tap the sentence: the chunks move, the meaning stays.': 'Cümleye dokun: parçalar yer değiştirir, anlam aynı kalır.',
   "あした ともだち.と なら.に いきます。|Tomorrow I'm going to Nara with a friend.": 'あした ともだち.と なら.に いきます。|Yarın bir arkadaşımla Nara’ya gidiyorum.',
+  'Easy Japanese 14 Days': '14 Günde Kolay Japonca', 'Tag Grammar · 2,000 real-life sentences': 'Etiket Dilbilgisi · 2.000 gerçek hayat cümlesi', 'Easy Japanese <span class="accent">14 Days</span>': '<span class="accent">14 Günde</span> Kolay Japonca',
   'The core — four kinds': 'Çekirdek — dört tür', 'No tag at all': 'Hiç etiket yok', 'の — the glue inside a chunk': 'の — parçanın içindeki yapıştırıcı',
 };
