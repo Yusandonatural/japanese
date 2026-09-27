@@ -1,0 +1,1290 @@
+[
+ {
+  "day": 8,
+  "chapter": 7,
+  "title": "Déplace les blocs",
+  "ja": "チャンク を うごかす",
+  "minutes": 15,
+  "goal": "Réorganiser librement les blocs d'une phrase pour changer l'accent, tout en gardant le noyau à la fin.",
+  "intro": "Tu as maintenant les dix étiquettes. Voici la raison pour laquelle cette méthode s'appelle la Grammaire des étiquettes : comme chaque bloc porte sa propre étiquette, les blocs peuvent bouger. En français, l'ordre des mots fixe le sens (« le chien mord l'homme » n'est pas « l'homme mord le chien »), mais en japonais, les étiquettes protègent le sens, alors tu es libre de dire d'abord ce qui compte le plus. Seul le noyau doit rester à la fin.",
+  "sections": [
+   {
+    "h": "Mêmes blocs, autre ordre, même sens",
+    "p": [
+     "Prends une phrase avec trois blocs : わたし.は, あした et なら.に, plus le noyau いきます. Tu peux dire ces trois blocs dans n'importe quel ordre, le sens de base ne change jamais, car les étiquettes indiquent à l'auditeur qui, quand et où. La seule chose qui bouge, c'est l'accent.",
+     "Lis les exemples ci-dessous. Ce sont tous des phrases japonaises correctes. En français, on changerait l'intonation ou on ajouterait « c'est ... que » pour obtenir le même effet."
+    ],
+    "ex": [
+     "わたし.は あした なら.に いきます。|Je vais à Nara demain.",
+     "あした わたし.は なら.に いきます。|Demain, moi, je vais à Nara.",
+     "なら.に あした いきます。|C'est à Nara que je vais demain.",
+     "あした なら.に いきます。|Demain, je vais à Nara."
+    ],
+    "tip": "Les étiquettes portent le sens, donc l'ordre, c'est toi qui le choisis."
+   },
+   {
+    "h": "Ce qui vient en premier est sous les projecteurs",
+    "p": [
+     "Mets en premier ce qui compte le plus pour toi ou ce qui fait le lien avec la conversation. Si un ami te pose une question sur demain, commence par あした. Si vous parlez de thé, commence par le thé.",
+     "Ça rend aussi la parole plus facile. Pas besoin de préparer toute la phrase avant d'ouvrir la bouche : commence par le bloc que tu as en tête, ajoute le suivant, et termine par le noyau."
+    ],
+    "ex": [
+     "おちゃ.を まいにち のみます。|Le thé, j'en bois tous les jours.",
+     "まいにち おちゃ.を のみます。|Tous les jours, je bois du thé.",
+     "ともだち.と バス.で いきます。|Avec un ami, j'irai en bus.",
+     "バス.で ともだち.と いきます。|En bus, j'irai avec un ami.",
+     "あした なら.に いきましょう。|Demain, allons à Nara.",
+     "なら.に あした いきましょう。|Nara, allons-y demain."
+    ]
+   },
+   {
+    "h": "L'étiquette voyage avec son nom",
+    "p": [
+     "Voici la preuve que ce sont les étiquettes qui portent le sens. いぬ.が ねこ.を みます signifie « Le chien regarde le chat ». Inverse les blocs, ねこ.を いぬ.が みます, et ça veut toujours dire que le chien regarde le chat : le chat garde son を, le chien garde son が.",
+     "Mais si tu inverses les étiquettes, tu changes l'histoire : ねこ.が いぬ.を みます signifie que le chat regarde le chien. Donc quand tu déplaces un bloc, déplace toujours le nom et son étiquette ensemble, comme un seul bloc."
+    ],
+    "ex": [
+     "いぬ.が ねこ.を みます。|Le chien regarde le chat.",
+     "ねこ.を いぬ.が みます。|Le chien regarde le chat. (le chat est cité en premier)",
+     "ねこ.が いぬ.を みます。|Le chat regarde le chien."
+    ],
+    "tip": "Ne sépare jamais un nom de son étiquette. Ils forment un seul bloc."
+   },
+   {
+    "h": "Le noyau ne bouge jamais",
+    "p": [
+     "Il y a exactement une règle fixe : le noyau vient en dernier. En français, « Demain irai-je à Nara » sonne bizarre ; en japonais, un noyau au milieu de la phrase la casse complètement. Quel que soit l'ordre des blocs, termine par le noyau.",
+     "Si tu remarques que tu as déjà dit le noyau et que tu as oublié un bloc, pas de panique. Redis simplement la phrase en incluant le bloc. C'est bien mieux que d'ajouter des blocs après le noyau."
+    ],
+    "ex": [
+     "きょうと.で ははのともだち.に あいます。|Je verrai l'amie de ma mère à Kyoto.",
+     "ははのともだち.に きょうと.で あいます。|L'amie de ma mère, je la verrai à Kyoto."
+    ],
+    "wrong": [
+     "わたし.は いきます なら.に。",
+     "いきます あした。"
+    ],
+    "right": [
+     "わたし.は なら.に いきます。|Je vais à Nara.",
+     "あした いきます。|J'irai demain."
+    ]
+   },
+   {
+    "h": "Les habitudes naturelles",
+    "p": [
+     "Même si tous les ordres sont corrects, tu remarqueras certaines habitudes chez les natifs. Un thème avec は et les mots de temps comme あした viennent souvent en premier, parce qu'ils posent le décor. Le bloc juste avant le noyau est souvent l'information nouvelle.",
+     "Utilise l'ordre libre comme un filet de sécurité, pas comme un casse-tête. Si un bloc te vient en tête un peu tard, glisse-le simplement avant le noyau. Les étiquettes garantissent qu'on te comprendra."
+    ],
+    "ex": [
+     "わたし.は まいにち しちじ.に おきます。|Je me lève à sept heures tous les jours.",
+     "きょう.は かぞく.と いえ.で たべます。|Aujourd'hui, je mange à la maison avec ma famille.",
+     "きょう.は いえ.で たべましょう。|Aujourd'hui, mangeons à la maison."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Dis, en mettant l'accent sur « demain » : Demain, je vais à Nara.",
+    "a": "あした なら.に いきます。|Demain, je vais à Nara."
+   },
+   {
+    "q": "Dis, en mettant l'accent sur « Nara » : C'est à Nara que je vais demain.",
+    "a": "なら.に あした いきます。|C'est à Nara que je vais demain."
+   },
+   {
+    "q": "Dis, en mettant l'accent sur le thé : Le thé, j'en bois tous les jours.",
+    "a": "おちゃ.を まいにち のみます。|Le thé, j'en bois tous les jours."
+   },
+   {
+    "q": "Dis, en commençant par le bus : J'irai en bus avec un ami.",
+    "a": "バス.で ともだち.と いきます。|J'irai en bus avec un ami."
+   },
+   {
+    "q": "Dis : Le chien regarde le chat (cite le chat en premier).",
+    "a": "ねこ.を いぬ.が みます。|Le chien regarde le chat."
+   },
+   {
+    "q": "Dis, en commençant par Kyoto : Je verrai l'amie de ma mère à Kyoto.",
+    "a": "きょうと.で ははのともだち.に あいます。|Je verrai l'amie de ma mère à Kyoto."
+   },
+   {
+    "q": "Propose, en commençant par « aujourd'hui » : Mangeons à la maison aujourd'hui.",
+    "a": "きょう.は いえ.で たべましょう。|Aujourd'hui, mangeons à la maison."
+   }
+  ],
+  "words": [
+   {
+    "k": "みます",
+    "en": "voir, regarder"
+   },
+   {
+    "k": "いぬ",
+    "en": "chien"
+   },
+   {
+    "k": "ねこ",
+    "en": "chat"
+   },
+   {
+    "k": "まいにち",
+    "en": "tous les jours"
+   },
+   {
+    "k": "しちじ",
+    "en": "sept heures"
+   },
+   {
+    "k": "ともだち",
+    "en": "ami, amie"
+   },
+   {
+    "k": "かぞく",
+    "en": "famille"
+   },
+   {
+    "k": "ははのともだち",
+    "en": "l'ami(e) de ma mère"
+   }
+  ],
+  "recap": [
+   "Les blocs peuvent aller dans n'importe quel ordre ; les étiquettes gardent le sens.",
+   "Le bloc que tu dis en premier reçoit l'accent.",
+   "Un nom et son étiquette bougent toujours ensemble.",
+   "Le noyau est fixé à la fin, toujours."
+  ],
+  "next": "Demain, tu utilises les dix étiquettes à la fois et tu poses des questions avec だれ, どこ, なんじ et なに."
+ },
+ {
+  "day": 9,
+  "chapter": 7,
+  "title": "Les dix étiquettes ensemble",
+  "ja": "じゅう の タグ",
+  "minutes": 20,
+  "goal": "Construire des phrases plus longues avec plusieurs étiquettes et poser des questions avec だれ, どこ, なんじ et なに plus une étiquette.",
+  "intro": "Tu possèdes maintenant les dix étiquettes et tu sais que les blocs peuvent bouger. Aujourd'hui, c'est l'entraînement : tu mets beaucoup de blocs dans une seule phrase et tu apprends la façon la plus rapide de poser des questions en japonais. Le secret est simple : place un mot interrogatif là où ira la réponse, donne-lui la bonne étiquette, et termine le noyau par か.",
+  "sections": [
+   {
+    "h": "Les dix étiquettes en un coup d'œil",
+    "p": [
+     "Voici toute ta boîte à outils. は (wa) est le thème, « quant à ». が (ga) est celui qui agit ou ce qui existe. を (o) est la chose sur laquelle on agit. に (ni) est un but, un destinataire, une heure précise ou le lieu où l'on se trouve. で (de) est le lieu où se passe une action, ou le moyen. と (to) signifie « avec » ou « et ». へ (e) signifie « vers ». から (kara) signifie « depuis, de ». まで (made) signifie « jusqu'à ». も (mo) signifie « aussi ».",
+     "Chaque phrase que tu construiras au Niveau 1 est une série de ces blocs suivie d'un noyau poli avec l'une des quatre terminaisons. Les exemples ci-dessous utilisent chacun quatre étiquettes ou plus. Trouve d'abord le noyau, puis lis les blocs comme des réponses à de petites questions."
+    ],
+    "ex": [
+     "わたし.は あした ともだち.と バス.で なら.に いきます。|Demain, j'irai à Nara en bus avec un ami.",
+     "ちち.は くじ.から ごじ.まで かいしゃ.で はたらきます。|Mon père travaille à l'entreprise de neuf heures à dix-sept heures.",
+     "ははのともだち.が きょうと.から わたしのいえ.へ きます。|L'amie de ma mère vient de Kyoto chez moi.",
+     "わたし.も いえ.で かぞく.と おちゃ.を のみます。|Moi aussi, je bois du thé à la maison avec ma famille."
+    ],
+    "tip": "Phrase longue ? Trouve le noyau, puis lis à rebours, bloc par bloc."
+   },
+   {
+    "h": "Mot interrogatif + étiquette = question instantanée",
+    "p": [
+     "En japonais, un mot interrogatif se place exactement là où serait la réponse, et il prend la même étiquette que la réponse. Tu veux savoir avec qui quelqu'un y va ? La réponse serait ともだち.と, donc tu demandes だれ.と いきますか？ Tu veux savoir où il mange ? La réponse serait えき.で, donc tu demandes どこ.で たべますか？",
+     "L'ordre des mots ne change pas : le mot interrogatif prend la place de la réponse, le noyau se termine par か (ますか ou ですか), et ta voix monte sur le か. Dès que tu connais les étiquettes, tu sais poser une question sur n'importe quelle partie d'une phrase."
+    ],
+    "ex": [
+     "だれ.と いきますか？|Avec qui tu y vas ?",
+     "どこ.で たべますか？|Où est-ce que tu vas manger ?",
+     "なんじ.に おきますか？|À quelle heure tu te lèves ?",
+     "なに.を のみますか？|Qu'est-ce que tu vas boire ?",
+     "なに.で いきますか？|Comment tu y vas ?"
+    ],
+    "tip": "Demande-toi de quelle étiquette la réponse a besoin. Mets cette étiquette sur le mot interrogatif."
+   },
+   {
+    "h": "D'autres blocs interrogatifs",
+    "p": [
+     "Chaque mot interrogatif peut se combiner avec plusieurs étiquettes, et chaque combinaison demande quelque chose de différent. どこ.に demande « vers où », どこ.で demande « où (on fait quelque chose) », どこ.から demande « d'où ». だれ.が demande qui le fait, だれ.に demande à qui. なんじ.から et なんじ.まで demandent l'heure de début et de fin.",
+     "いつ (itsu, quand) se comporte comme les mots de temps du premier jour : en général, il ne prend aucune étiquette. いつ いきますか？ signifie « Quand est-ce que tu y vas ? »"
+    ],
+    "ex": [
+     "だれ.に あいますか？|Qui est-ce que tu vas voir ?",
+     "どこ.から きますか？|D'où ça vient ?",
+     "なんじ.まで はたらきますか？|Jusqu'à quelle heure tu travailles ?",
+     "いつ なら.に いきますか？|Quand est-ce que tu vas à Nara ?",
+     "だれ.が きますか？|Qui vient ?"
+    ]
+   },
+   {
+    "h": "Réponds en mettant la vraie information à la place",
+    "p": [
+     "Ce qui est génial avec ce système, c'est que la réponse utilise le même cadre que la question. Retire le mot interrogatif, mets l'information à sa place, garde l'étiquette, et enlève le か du noyau.",
+     "Ça rend aussi les conversations beaucoup plus faciles à suivre. Quand quelqu'un te pose une question, repère le mot interrogatif et son étiquette : ils te disent exactement quel type de réponse on attend."
+    ],
+    "ex": [
+     "どこ.で たべますか？|Où est-ce que tu vas manger ?",
+     "えきのちかく.で たべます。|Je mangerai près de la gare.",
+     "えきのちかく.で たべましょう。|Mangeons près de la gare.",
+     "なに.で いきますか？|Comment tu y vas ?",
+     "でんしゃ.で いきます。|J'y vais en train."
+    ],
+    "wrong": [
+     "どこ.は たべますか？"
+    ],
+    "right": [
+     "どこ.で たべますか？|Où est-ce que tu vas manger ?"
+    ]
+   },
+   {
+    "h": "Construire une phrase, étape par étape",
+    "p": [
+     "Quand tu veux dire quelque chose de long, n'essaie pas de traduire une phrase française mot à mot. Commence par le noyau : que se passe-t-il ? Puis ajoute les blocs un par un : qui, quand, où, avec qui, comment. Donne à chaque nom son étiquette au fur et à mesure.",
+     "Par exemple, commence par いきます. Ajoute un lieu : なら.に いきます. Ajoute un moment : あした なら.に いきます. Ajoute une personne : あした ともだち.と なら.に いきます. Ajoute le moyen : あした ともだち.と くるま.で なら.に いきます. Chaque étape est une phrase correcte, alors tu peux t'arrêter quand tu veux. Le même cadre fonctionne avec chacune des quatre terminaisons : remplace いきます par いきましょう et toute la phrase devient une invitation."
+    ],
+    "ex": [
+     "なら.に いきます。|J'irai à Nara.",
+     "あした ともだち.と なら.に いきます。|J'irai à Nara avec un ami demain.",
+     "あした ともだち.と くるま.で なら.に いきます。|J'irai à Nara en voiture avec un ami demain.",
+     "あした ともだち.と くるま.で なら.に いきましょう。|Allons à Nara en voiture entre amis demain."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Demande : Avec qui tu y vas ?",
+    "a": "だれ.と いきますか？|Avec qui tu y vas ?"
+   },
+   {
+    "q": "Demande : Où est-ce que tu vas manger ?",
+    "a": "どこ.で たべますか？|Où est-ce que tu vas manger ?"
+   },
+   {
+    "q": "Demande : À quelle heure tu te lèves ?",
+    "a": "なんじ.に おきますか？|À quelle heure tu te lèves ?"
+   },
+   {
+    "q": "Demande : Qu'est-ce que tu vas boire ?",
+    "a": "なに.を のみますか？|Qu'est-ce que tu vas boire ?"
+   },
+   {
+    "q": "Demande : Qui est-ce que tu vas voir ?",
+    "a": "だれ.に あいますか？|Qui est-ce que tu vas voir ?"
+   },
+   {
+    "q": "Dis : Demain, j'irai à Nara en bus avec un ami.",
+    "a": "あした ともだち.と バス.で なら.に いきます。|Demain, j'irai à Nara en bus avec un ami."
+   },
+   {
+    "q": "Dis : Mon père travaille à l'entreprise de neuf heures à dix-sept heures.",
+    "a": "ちち.は くじ.から ごじ.まで かいしゃ.で はたらきます。|Mon père travaille à l'entreprise de neuf heures à dix-sept heures."
+   },
+   {
+    "q": "Demande : Quand est-ce que tu vas à Nara ?",
+    "a": "いつ なら.に いきますか？|Quand est-ce que tu vas à Nara ?"
+   },
+   {
+    "q": "Propose : Mangeons près de la gare.",
+    "a": "えきのちかく.で たべましょう。|Mangeons près de la gare."
+   },
+   {
+    "q": "Invite : Allons à Nara en voiture entre amis demain.",
+    "a": "あした ともだち.と くるま.で なら.に いきましょう。|Allons à Nara en voiture entre amis demain."
+   }
+  ],
+  "words": [
+   {
+    "k": "だれ",
+    "en": "qui"
+   },
+   {
+    "k": "どこ",
+    "en": "où"
+   },
+   {
+    "k": "なに",
+    "en": "quoi"
+   },
+   {
+    "k": "なんじ",
+    "en": "quelle heure"
+   },
+   {
+    "k": "いつ",
+    "en": "quand"
+   },
+   {
+    "k": "ちかく",
+    "en": "près, à proximité"
+   },
+   {
+    "k": "くるま",
+    "en": "voiture"
+   },
+   {
+    "k": "かいしゃ",
+    "en": "entreprise, bureau"
+   },
+   {
+    "k": "ちち",
+    "en": "(mon) père"
+   },
+   {
+    "k": "まで",
+    "en": "jusqu'à"
+   }
+  ],
+  "recap": [
+   "Dix étiquettes, un noyau : voilà toutes les phrases du Niveau 1.",
+   "Mets le mot interrogatif là où va la réponse, avec l'étiquette de la réponse.",
+   "いつ ne prend généralement pas d'étiquette, comme あした.",
+   "Réponds en glissant la vraie information dans le cadre de la question.",
+   "Construis des phrases longues en ajoutant un bloc à la fois."
+  ],
+  "next": "Demain, tu apprends à supprimer des blocs et à répondre uniquement avec l'information nouvelle, comme les natifs."
+ },
+ {
+  "day": 10,
+  "chapter": 8,
+  "title": "Supprime des blocs",
+  "ja": "チャンク を おとす",
+  "minutes": 15,
+  "goal": "Répondre aux questions naturellement en gardant seulement l'information nouvelle et en supprimant les blocs que tout le monde connaît déjà.",
+  "intro": "Hier, tu as construit de longues phrases. Aujourd'hui, tu apprends à les raccourcir, comme les gens parlent vraiment. Les Japonais suppriment sans cesse les blocs déjà clairs dans la conversation. Ce n'est ni paresseux ni impoli : tout répéter sonne en fait raide et étrange. Apprendre ce qu'on peut laisser de côté est l'un des plus grands pas vers un japonais naturel.",
+  "sections": [
+   {
+    "h": "Pourquoi le japonais supprime des blocs",
+    "p": [
+     "En français, la grammaire t'oblige à répéter des choses : « Tu vas à Nara demain ? » « Oui, je vais à Nara demain » sonne lourd, et même « Oui, j'y vais » a encore besoin de « je ». Le japonais n'a pas cette règle. Si les deux personnes savent qui, quand et où, le noyau seul est une réponse complète.",
+     "Donc quand quelqu'un demande あした なら.に いきますか？, la réponse la plus naturelle est simplement いきます ou はい、いきます. Tout le reste est déjà sur la table.",
+     "Les invitations fonctionnent de la même façon. Quand quelqu'un demande おちゃ.を のみませんか？ (« Tu ne prendrais pas un thé ? »), le oui le plus chaleureux est simplement la forme en ましょう du même noyau : はい、のみましょう, « Oui, volontiers. »"
+    ],
+    "ex": [
+     "あした なら.に いきますか？|Tu vas à Nara demain ?",
+     "はい、いきます。|Oui, j'y vais.",
+     "いいえ、いきません。|Non, je n'y vais pas.",
+     "おちゃ.を のみますか？|Tu prends du thé ?",
+     "はい、のみます。|Oui, j'en prends.",
+     "おちゃ.を のみませんか？|Tu ne prendrais pas un thé ?",
+     "はい、のみましょう。|Oui, volontiers."
+    ],
+    "tip": "Pour répondre oui ou non, répète le noyau de la question, sans le か. C'est la réponse la plus naturelle."
+   },
+   {
+    "h": "Garde seulement l'information nouvelle",
+    "p": [
+     "Quand la question contient un mot interrogatif, ta réponse n'a besoin que du bloc qui le remplace, plus le noyau. Si on te demande だれ.と いきますか？ (avec qui tu y vas ?), tu réponds ともだち.と いきます. Pas besoin de わたし.は, あした ou なら.に, car ils n'ont jamais fait de doute.",
+     "Remarque que le bloc que tu gardes a toujours son étiquette. L'étiquette indique à l'auditeur à quelle partie de la question tu réponds."
+    ],
+    "ex": [
+     "だれ.と いきますか？|Avec qui tu y vas ?",
+     "ともだち.と いきます。|Avec un ami.",
+     "なんじ.に おきますか？|À quelle heure tu te lèves ?",
+     "ろくじ.に おきます。|À six heures.",
+     "どこ.で まちますか？|Où est-ce que tu vas attendre ?",
+     "えきのまえ.で まちましょう。|Attendons devant la gare."
+    ]
+   },
+   {
+    "h": "La réponse la plus courte : nom + です",
+    "p": [
+     "Quand la réponse est une seule chose, tu peux souvent en faire le noyau avec です. なに.を のみますか？ « Qu'est-ce que tu vas boire ? » コーヒーです. « Un café. » どこ.に いきますか？ « Où est-ce que tu vas ? » きょうとです. « À Kyoto. »",
+     "Ça marche particulièrement bien pour les questions « quoi », « où » et « quand ». C'est extrêmement courant dans les magasins, dans les gares et dans les petites discussions. Au Niveau 1, garde un noyau dans chaque phrase, et です transforme n'importe quel nom en noyau."
+    ],
+    "ex": [
+     "なに.を のみますか？|Qu'est-ce que tu vas boire ?",
+     "コーヒーです。|Un café.",
+     "どこ.に いきますか？|Où est-ce que tu vas ?",
+     "きょうとです。|À Kyoto.",
+     "いつ きますか？|Quand est-ce que tu viens ?"
+    ],
+    "tip": "N'importe quel nom + です est une réponse complète et polie."
+   },
+   {
+    "h": "Supprimer わたし",
+    "p": [
+     "Le bloc qu'on supprime le plus souvent, c'est わたし.は. Dans une conversation, il est généralement évident que tu parles de toi, donc les natifs disent rarement わたし.は, sauf pour se présenter ou pour se distinguer de quelqu'un d'autre.",
+     "Si tu commences chaque phrase par わたし.は, tu vas sonner comme un manuel. Essaie ceci : dis-le une fois pour poser le décor, puis laisse-le de côté. Ne le reprends que pour un contraste : « Mon ami boit du café, mais moi, je bois du thé. »",
+     "Une bonne habitude pour t'entraîner : raconte une petite histoire sur ta journée, dis わたし.は seulement dans la première phrase, et remarque à quel point le reste reste clair."
+    ],
+    "ex": [
+     "しちじ.に おきます。|Je me lève à sept heures.",
+     "バス.で かいしゃ.に いきます。|Je vais au travail en bus.",
+     "ともだち.は コーヒー.を のみます。|Mon ami boit du café.",
+     "わたし.は おちゃ.を のみます。|Moi, je bois du thé."
+    ]
+   },
+   {
+    "h": "Ce que tu ne supprimes jamais",
+    "p": [
+     "Tu peux supprimer n'importe quel bloc, mais au Niveau 1, tu gardes toujours le noyau. C'est dans le noyau que vit la politesse (ます, ますか, ません, ましょう, です, ください), et c'est lui qui dit à l'auditeur ce qui se passe vraiment. Un bloc seul sans noyau peut sonner sec ou laisser les gens deviner.",
+     "Et ne supprime jamais un bloc que l'auditeur ne connaît pas encore. Si tu lances un nouveau sujet, donne d'abord les blocs clés. Ne les supprime qu'une fois qu'ils sont partagés. Dans le doute, une phrase un peu plus longue est toujours sûre."
+    ],
+    "ex": [
+     "えきのまえ.で まちます。|J'attendrai devant la gare.",
+     "さんじです。|Il est trois heures.",
+     "ありがとうございます。|Merci."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "On te demande « Tu vas à Nara demain ? », réponds : Oui, j'y vais.",
+    "a": "はい、いきます。|Oui, j'y vais."
+   },
+   {
+    "q": "On te demande « Avec qui tu y vas ? », réponds : Avec un ami.",
+    "a": "ともだち.と いきます。|Avec un ami."
+   },
+   {
+    "q": "On te demande « À quelle heure tu te lèves ? », réponds : À six heures.",
+    "a": "ろくじ.に おきます。|À six heures."
+   },
+   {
+    "q": "On te demande « Qu'est-ce que tu vas boire ? », réponds : Un café.",
+    "a": "コーヒーです。|Un café."
+   },
+   {
+    "q": "On te demande « Où est-ce que tu vas ? », réponds : À Kyoto.",
+    "a": "きょうとです。|À Kyoto."
+   },
+   {
+    "q": "On te demande « Tu prends du thé ? », réponds : Non, je n'en prends pas.",
+    "a": "いいえ、のみません。|Non, je n'en prends pas."
+   },
+   {
+    "q": "Sans dire わたし, dis : Je vais au travail en bus.",
+    "a": "バス.で かいしゃ.に いきます。|Je vais au travail en bus."
+   },
+   {
+    "q": "On te demande « Tu ne prendrais pas un thé ? », accepte : Oui, volontiers.",
+    "a": "はい、のみましょう。|Oui, volontiers."
+   },
+   {
+    "q": "On te demande où attendre, propose : Attendons devant la gare.",
+    "a": "えきのまえ.で まちましょう。|Attendons devant la gare."
+   }
+  ],
+  "words": [
+   {
+    "k": "はい",
+    "en": "oui"
+   },
+   {
+    "k": "いいえ",
+    "en": "non"
+   },
+   {
+    "k": "ろくじ",
+    "en": "six heures"
+   },
+   {
+    "k": "さんじ",
+    "en": "trois heures"
+   },
+   {
+    "k": "まえ",
+    "en": "devant"
+   },
+   {
+    "k": "コーヒー",
+    "en": "café"
+   },
+   {
+    "k": "いきません",
+    "en": "ne pas aller, ne va pas"
+   },
+   {
+    "k": "のみません",
+    "en": "ne pas boire"
+   }
+  ],
+  "recap": [
+   "Supprime tout bloc que l'auditeur connaît déjà.",
+   "Réponds oui ou non en répétant le noyau sans か.",
+   "Réponds à une question avec mot interrogatif par le seul bloc nouveau + le noyau.",
+   "Nom + です est la réponse complète la plus courte.",
+   "Dis rarement わたし.は, et ne supprime jamais le noyau."
+  ],
+  "next": "Demain, tu décores tes blocs avec des adjectifs : voitures neuves, boutiques calmes, thé délicieux."
+ },
+ {
+  "day": 11,
+  "chapter": 9,
+  "title": "Décore tes blocs : les adjectifs",
+  "ja": "チャンク を かざる",
+  "minutes": 15,
+  "goal": "Placer des adjectifs et この, その, あの devant les noms à l'intérieur d'un bloc, et utiliser des adjectifs comme noyau.",
+  "intro": "Jusqu'ici, tes blocs étaient de simples noms. Aujourd'hui, tu leur donnes des couleurs. Dans la Grammaire des étiquettes, toute description va à l'intérieur du bloc, devant le nom, et l'étiquette reste tout à la fin. La structure de la phrase ne change pas du tout ; tes blocs deviennent juste plus riches.",
+  "sections": [
+   {
+    "h": "Les décorations vont dans le bloc",
+    "p": [
+     "En japonais, les descriptions viennent avant le nom (souvent l'inverse du français) : あたらしいくるま, c'est « une voiture neuve », おいしいおちゃ, « un thé délicieux ». Toute l'expression forme un seul bloc, donc l'étiquette va à la fin : あたらしいくるま.で いきます, « J'irai avec la nouvelle voiture ».",
+     "Tu ne mets jamais d'étiquette entre l'adjectif et le nom. L'adjectif fait partie de la boîte, et l'étiquette est collée à l'extérieur de la boîte."
+    ],
+    "ex": [
+     "あたらしいくるま.で いきます。|J'irai avec la nouvelle voiture.",
+     "おいしいおちゃ.を のみます。|Je bois un thé délicieux.",
+     "ちいさいみせ.で かいます。|Je l'achète dans une petite boutique.",
+     "おおきいこうえん.が あります。|Il y a un grand parc.",
+     "あたらしいくるま.で いきましょう。|Allons-y avec la nouvelle voiture."
+    ],
+    "wrong": [
+     "あたらしい.で くるま.で いきます。"
+    ],
+    "right": [
+     "あたらしいくるま.で いきます。|J'irai avec la nouvelle voiture."
+    ],
+    "tip": "Adjectif + nom = un bloc = une étiquette à la fin."
+   },
+   {
+    "h": "Deux sortes d'adjectifs",
+    "p": [
+     "Le japonais a deux familles d'adjectifs. Les adjectifs en い se terminent par い (i) et se placent directement devant le nom : たかい (cher), やすい (pas cher), あつい (chaud), おいしい (délicieux). Les adjectifs en な ont besoin d'un petit な (na) entre eux et le nom : しずか (calme) devient しずかなみせ, « une boutique calme » ; きれい (joli, propre) devient きれいなへや, « une chambre propre ».",
+     "Tes listes de mots t'indiqueront à quelle famille appartient chaque adjectif. Ne t'inquiète pas de tous les mémoriser maintenant : si tu oublies le な, on te comprend quand même."
+    ],
+    "ex": [
+     "しずかなみせ.で たべます。|Je mangerai dans un restaurant calme.",
+     "きれいなへや.に います。|Je suis dans une chambre propre.",
+     "ゆうめいなおてら.に いきます。|J'irai dans un temple célèbre.",
+     "やすいホテル.に とまります。|Je logerai dans un hôtel pas cher.",
+     "しずかなみせ.で たべましょう。|Mangeons dans un restaurant calme."
+    ]
+   },
+   {
+    "h": "Les adjectifs comme noyau",
+    "p": [
+     "Un adjectif peut aussi être le noyau. Il décrit alors le thème, et il se termine par です : このおちゃ.は おいしいです, « Ce thé est délicieux ». なら.は しずかです, « Nara est calme ».",
+     "Là, les deux familles se comportent différemment : les adjectifs en い gardent leur い et ajoutent です, tandis que les adjectifs en な perdent le な et ajoutent です directement. On dit donc しずかなみせ (dans un bloc) mais みせ.は しずかです (comme noyau).",
+     "Pour poser une question sur une qualité, ajoute simplement か : このおちゃ.は おいしいですか？ « Ce thé est bon ? » Au Niveau 1, tu n'as besoin que de です et ですか avec les adjectifs ; garde leurs formes négatives pour le Niveau 2."
+    ],
+    "ex": [
+     "このおちゃ.は おいしいです。|Ce thé est délicieux.",
+     "なら.は しずかです。|Nara est calme.",
+     "このへや.は きれいです。|Cette chambre est propre.",
+     "きょう.は さむいです。|Il fait froid aujourd'hui.",
+     "このおちゃ.は おいしいですか？|Ce thé est bon ?"
+    ],
+    "wrong": [
+     "なら.は しずかなです。"
+    ],
+    "right": [
+     "なら.は しずかです。|Nara est calme."
+    ],
+    "tip": "な n'apparaît que devant un nom, jamais devant です."
+   },
+   {
+    "h": "この, その, あの : ce ...-ci, ce ...-là, ce ... là-bas",
+    "p": [
+     "この (kono), その (sono) et あの (ano) désignent un nom : « ce ...-ci » (près de moi), « ce ...-là » (près de toi) et « ce ... là-bas » (loin de nous deux). Ce sont aussi des décorations, donc ils vont dans le bloc : このバス.は なら.に いきますか？ « Ce bus va à Nara ? »",
+     "Ils te sauvent la vie dans les magasins. Montre du doigt et dis そのかさ.を ください, « Ce parapluie-là, s'il vous plaît ». Tu n'as même pas besoin de connaître le nom de l'objet si tu utilises これ (celui-ci) ou それ (celui-là) tout seuls."
+    ],
+    "ex": [
+     "このバス.は なら.に いきますか？|Ce bus va à Nara ?",
+     "そのかさ.を ください。|Ce parapluie-là, s'il vous plaît.",
+     "あのみせ.で たべます。|Je mangerai dans ce restaurant là-bas.",
+     "これ.を ください。|Celui-ci, s'il vous plaît.",
+     "あのみせ.に はいりましょう。|Entrons dans cette boutique là-bas."
+    ]
+   },
+   {
+    "h": "Empiler les décorations",
+    "p": [
+     "Tu peux combiner les adjectifs avec les liens の du septième jour. ならのしずかなみせ, c'est « une boutique calme de Nara », おいしいならのおちゃ, « du délicieux thé de Nara ». Quoi que tu ajoutes, ça reste un seul bloc avec une seule étiquette à la fin, et le noyau attend toujours à la fin de la phrase.",
+     "Reste simple au début : une décoration par bloc, c'est largement suffisant. N'en ajoute plus que si tu en as besoin.",
+     "Une astuce pratique pour l'écoute : quand une longue expression arrive, attends l'étiquette. Tout ce qui précède l'étiquette est un grand nom, et l'étiquette te dit son rôle. Puis attends le noyau à la fin pour savoir ce qui se passe vraiment. Cette habitude d'écoute en deux temps, étiquette puis noyau, marche pour chaque phrase de ce cours."
+    ],
+    "ex": [
+     "ならのしずかなみせ.で たべます。|Je mangerai dans un restaurant calme de Nara.",
+     "おいしいならのおちゃ.を かいます。|J'achèterai du délicieux thé de Nara.",
+     "わたしのあたらしいくるま.で いきます。|J'irai avec ma nouvelle voiture."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Dis : J'irai avec la nouvelle voiture.",
+    "a": "あたらしいくるま.で いきます。|J'irai avec la nouvelle voiture."
+   },
+   {
+    "q": "Dis : Je mangerai dans un restaurant calme.",
+    "a": "しずかなみせ.で たべます。|Je mangerai dans un restaurant calme."
+   },
+   {
+    "q": "Dis : Ce thé est délicieux.",
+    "a": "このおちゃ.は おいしいです。|Ce thé est délicieux."
+   },
+   {
+    "q": "Dis : Nara est calme.",
+    "a": "なら.は しずかです。|Nara est calme."
+   },
+   {
+    "q": "Demande : Ce bus va à Nara ?",
+    "a": "このバス.は なら.に いきますか？|Ce bus va à Nara ?"
+   },
+   {
+    "q": "Dans un magasin, dis : Ce parapluie-là, s'il vous plaît.",
+    "a": "そのかさ.を ください。|Ce parapluie-là, s'il vous plaît."
+   },
+   {
+    "q": "Dis : J'irai dans un temple célèbre.",
+    "a": "ゆうめいなおてら.に いきます。|J'irai dans un temple célèbre."
+   },
+   {
+    "q": "Propose : Mangeons dans un restaurant calme.",
+    "a": "しずかなみせ.で たべましょう。|Mangeons dans un restaurant calme."
+   },
+   {
+    "q": "Demande : Ce thé est bon ?",
+    "a": "このおちゃ.は おいしいですか？|Ce thé est bon ?"
+   }
+  ],
+  "words": [
+   {
+    "k": "あたらしい",
+    "en": "nouveau, neuf"
+   },
+   {
+    "k": "おいしい",
+    "en": "délicieux"
+   },
+   {
+    "k": "ちいさい",
+    "en": "petit"
+   },
+   {
+    "k": "おおきい",
+    "en": "grand"
+   },
+   {
+    "k": "たかい",
+    "en": "cher, haut"
+   },
+   {
+    "k": "やすい",
+    "en": "pas cher"
+   },
+   {
+    "k": "さむい",
+    "en": "froid (temps)"
+   },
+   {
+    "k": "しずか",
+    "en": "calme (adjectif en な)"
+   },
+   {
+    "k": "きれい",
+    "en": "joli, propre (adjectif en な)"
+   },
+   {
+    "k": "ゆうめい",
+    "en": "célèbre (adjectif en な)"
+   },
+   {
+    "k": "この",
+    "en": "ce ...-ci (+ nom)"
+   },
+   {
+    "k": "その",
+    "en": "ce ...-là (+ nom)"
+   },
+   {
+    "k": "あの",
+    "en": "ce ... là-bas (+ nom)"
+   },
+   {
+    "k": "かさ",
+    "en": "parapluie"
+   },
+   {
+    "k": "おてら",
+    "en": "temple"
+   }
+  ],
+  "recap": [
+   "Les descriptions vont dans le bloc, devant le nom ; l'étiquette reste à la fin.",
+   "Les adjectifs en い se placent directement devant le nom ; les adjectifs en な ajoutent な.",
+   "Comme noyau : おいしいです, しずかです (pas de な devant です).",
+   "この, その, あの désignent un nom à l'intérieur d'un bloc."
+  ],
+  "next": "Demain, tu ajoutes des nombres, des compteurs et des couleurs à tes blocs."
+ },
+ {
+  "day": 12,
+  "chapter": 9,
+  "title": "Nombres, compteurs et couleurs",
+  "ja": "かず と いろ",
+  "minutes": 20,
+  "goal": "Mettre des nombres, des compteurs, des prix et des couleurs dans tes blocs, et construire des chaînes en の plus longues.",
+  "intro": "Les nombres sont partout dans la vie quotidienne : les heures, les prix, combien de cafés, combien de personnes. Aujourd'hui, tu apprends à les glisser dans tes blocs, avec les couleurs et des chaînes en の plus longues. La bonne nouvelle : la structure de la phrase ne change pas. Les nombres et les couleurs sont juste d'autres décorations.",
+  "sections": [
+   {
+    "h": "Les nombres et l'heure",
+    "p": [
+     "Les nombres japonais sont très réguliers : いち (1), に (2), さん (3), よん (4), ご (5), ろく (6), なな (7), はち (8), きゅう (9), じゅう (10). Onze se dit じゅういち (dix-un), vingt se dit にじゅう (deux-dix). Dès que tu connais un à dix, tu peux compter jusqu'à quatre-vingt-dix-neuf.",
+     "Pour l'heure, ajoute じ (ji) : いちじ, c'est une heure, さんじ, trois heures. Attention à trois cas particuliers : よじ (4 h), しちじ (7 h) et くじ (9 h). « Et demie » se dit はん (han) : さんじはん, c'est 3 h 30. Le matin et l'après-midi, ごぜん (gozen) et ごご (gogo), se placent devant, le tout dans un seul bloc : ごごさんじ.に, « à 15 h »."
+    ],
+    "ex": [
+     "よじ.に きます。|Je viendrai à quatre heures.",
+     "ごごさんじ.に あいます。|On se voit à 15 h.",
+     "しちじはん.に おきます。|Je me lève à sept heures et demie.",
+     "いま くじです。|Il est neuf heures maintenant.",
+     "ごごさんじ.に あいましょう。|Retrouvons-nous à 15 h."
+    ],
+    "tip": "4 h, 7 h et 9 h se disent よじ, しちじ, くじ. Apprends ces trois-là par cœur."
+   },
+   {
+    "h": "Compter les objets et les personnes",
+    "p": [
+     "Le japonais utilise des compteurs : de petits mots qui s'attachent aux nombres selon ce que tu comptes. Pour les objets du quotidien, il existe une série passe-partout bien pratique : ひとつ (1), ふたつ (2), みっつ (3), よっつ (4), いつつ (5). Pour les personnes, utilise ひとり (1 personne), ふたり (2 personnes), puis さんにん, よにん, ごにん.",
+     "Au Niveau 1, le nombre va dans le bloc, juste après le nom : コーヒーふたつ ください, « Deux cafés, s'il vous plaît ». ともだちさんにん.と いきます, « J'irai avec trois amis ». Tu entendras aussi le nombre comme un petit bloc sans étiquette juste avant le noyau (おちゃ.を ふたつ ください). Les deux sont naturels.",
+     "N'essaie pas d'apprendre tous les compteurs maintenant. Le japonais en a des dizaines (pour les objets plats, les objets longs, les animaux, les machines et plus encore), mais ひとつ, ふたつ, みっつ marchent pour presque tous les objets, et le personnel des magasins te comprendra parfaitement. Montre du doigt, dis le nombre et ajoute ください."
+    ],
+    "ex": [
+     "コーヒーふたつ ください。|Deux cafés, s'il vous plaît.",
+     "ともだちさんにん.と いきます。|J'irai avec trois amis.",
+     "おちゃ.を ふたつ ください。|Deux thés, s'il vous plaît.",
+     "ひとり.で いきます。|J'irai seul.",
+     "なんにん.で いきますか？|Vous y allez à combien ?",
+     "ふたり.で いきましょう。|Allons-y, rien que nous deux."
+    ],
+    "tip": "で après un nombre de personnes signifie « en groupe de » : ふたり.で = à deux."
+   },
+   {
+    "h": "Les prix",
+    "p": [
+     "Le yen se dit えん (en). Les centaines se disent ひゃく (hyaku), les milliers せん (sen) : ひゃくえん, c'est 100 yens, せんえん, 1 000 yens, ごひゃくえん, 500 yens. Attention à さんびゃく (300) et さんぜん (3 000), où le son change un peu.",
+     "Pour demander le prix, dis いくらですか？ en faisant monter ta voix sur le か. Un prix peut décorer un nom avec の : ごひゃくえんのおちゃ.を かいます, « J'achète le thé à 500 yens »."
+    ],
+    "ex": [
+     "これ.は いくらですか？|Combien ça coûte ?",
+     "ひゃくえんです。|C'est 100 yens.",
+     "ぜんぶで せんえんです。|Ça fait 1 000 yens en tout.",
+     "ごひゃくえんのおちゃ.を かいます。|J'achète le thé à 500 yens."
+    ]
+   },
+   {
+    "h": "Les couleurs",
+    "p": [
+     "Les couleurs de base sont des adjectifs en い, donc elles se placent directement devant un nom : あかい (rouge), あおい (bleu), しろい (blanc), くろい (noir), きいろい (jaune). あかいかさ, c'est « un parapluie rouge », et l'étiquette va à la fin : あかいかさ.を かいます.",
+     "Comme noyau, elles se comportent comme les autres adjectifs en い : そら.は あおいです, « Le ciel est bleu ». Les couleurs sont parfaites pour faire du shopping et pour décrire des objets perdus."
+    ],
+    "ex": [
+     "あかいかさ.を かいます。|J'achète le parapluie rouge.",
+     "しろいくるま.で きます。|Je viendrai dans une voiture blanche.",
+     "くろいかばん.が ありません。|Mon sac noir a disparu.",
+     "きょう.は そら.が あおいです。|Le ciel est bleu aujourd'hui.",
+     "あおいかさ.を かいましょう。|Achetons le parapluie bleu."
+    ]
+   },
+   {
+    "h": "Des chaînes en の plus longues",
+    "p": [
+     "Tu peux maintenant tout combiner dans un seul bloc : possession, lieu, couleur et nombre. ともだちのははのみせ, c'est « la boutique de la mère de mon ami ». ならのちゃばたけのおちゃ, c'est « le thé d'un champ de thé de Nara ».",
+     "Lis-les de droite à gauche si l'ordre du français t'aide : le dernier nom est la vraie chose, et tout ce qui le précède la décrit. Et même si la chaîne s'allonge, le bloc se termine toujours par exactement une étiquette.",
+     "Entraîne-toi en décrivant ce qui t'entoure en ce moment : la couleur de ton sac, à qui est le téléphone sur le bureau, où se trouve la maison de ton ami. Chaque description est un bloc ; ajoute une étiquette et un noyau, et tu as une phrase complète."
+    ],
+    "ex": [
+     "ともだちのははのみせ.で かいます。|Je l'achète dans la boutique de la mère de mon ami.",
+     "ならのちゃばたけのおちゃ.を のみます。|Je bois le thé d'un champ de thé de Nara.",
+     "わたしのかいしゃのちかく.に えき.が あります。|Il y a une gare près de mon bureau.",
+     "ははのあかいくるま.で いきます。|J'irai avec la voiture rouge de ma mère."
+    ],
+    "tip": "Le dernier nom avant l'étiquette est la vraie chose ; tout ce qui le précède le décrit."
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Dans un café : Deux cafés, s'il vous plaît.",
+    "a": "コーヒーふたつ ください。|Deux cafés, s'il vous plaît."
+   },
+   {
+    "q": "Dis : J'irai avec trois amis.",
+    "a": "ともだちさんにん.と いきます。|J'irai avec trois amis."
+   },
+   {
+    "q": "Dis : On se voit à 15 h.",
+    "a": "ごごさんじ.に あいます。|On se voit à 15 h."
+   },
+   {
+    "q": "Demande : Combien ça coûte ?",
+    "a": "これ.は いくらですか？|Combien ça coûte ?"
+   },
+   {
+    "q": "Dis : J'achète le parapluie rouge.",
+    "a": "あかいかさ.を かいます。|J'achète le parapluie rouge."
+   },
+   {
+    "q": "Dis : J'irai seul.",
+    "a": "ひとり.で いきます。|J'irai seul."
+   },
+   {
+    "q": "Dis : Je bois le thé d'un champ de thé de Nara.",
+    "a": "ならのちゃばたけのおちゃ.を のみます。|Je bois le thé d'un champ de thé de Nara."
+   },
+   {
+    "q": "Propose : Retrouvons-nous à 15 h.",
+    "a": "ごごさんじ.に あいましょう。|Retrouvons-nous à 15 h."
+   },
+   {
+    "q": "Propose : Allons-y, rien que nous deux.",
+    "a": "ふたり.で いきましょう。|Allons-y, rien que nous deux."
+   }
+  ],
+  "words": [
+   {
+    "k": "ひとつ",
+    "en": "un (objet)"
+   },
+   {
+    "k": "ふたつ",
+    "en": "deux (objets)"
+   },
+   {
+    "k": "みっつ",
+    "en": "trois (objets)"
+   },
+   {
+    "k": "ひとり",
+    "en": "une personne, seul"
+   },
+   {
+    "k": "ふたり",
+    "en": "deux personnes"
+   },
+   {
+    "k": "さんにん",
+    "en": "trois personnes"
+   },
+   {
+    "k": "ごご",
+    "en": "après-midi (p.m.)"
+   },
+   {
+    "k": "はん",
+    "en": "et demie"
+   },
+   {
+    "k": "えん",
+    "en": "yen"
+   },
+   {
+    "k": "いくら",
+    "en": "combien (prix)"
+   },
+   {
+    "k": "ぜんぶで",
+    "en": "en tout"
+   },
+   {
+    "k": "あかい",
+    "en": "rouge"
+   },
+   {
+    "k": "あおい",
+    "en": "bleu"
+   },
+   {
+    "k": "しろい",
+    "en": "blanc"
+   },
+   {
+    "k": "くろい",
+    "en": "noir"
+   }
+  ],
+  "recap": [
+   "L'heure : nombre + じ ; attention à よじ, しちじ, くじ.",
+   "Compteurs : ひとつ, ふたつ pour les objets ; ひとり, ふたり, さんにん pour les personnes.",
+   "Les nombres et les couleurs sont des décorations qui vivent dans le bloc.",
+   "いくらですか？ demande le prix ; ぜんぶで veut dire « en tout ».",
+   "Les chaînes en の peuvent être longues, mais le bloc n'a toujours qu'une étiquette."
+  ],
+  "next": "Demain, tu emmènes tout dans des situations réelles : salutations, shopping, repas, trains et téléphone."
+ },
+ {
+  "day": 13,
+  "chapter": 10,
+  "title": "Parler en situation, partie 1",
+  "ja": "ばめん で はなす 1",
+  "minutes": 20,
+  "goal": "Gérer les situations du quotidien au Japon : salutations, shopping, restaurant, trains, heure et appels téléphoniques.",
+  "intro": "Tu as tout le système du Niveau 1. Aujourd'hui et demain, tu l'utilises là où ça compte : dans des situations réelles. Chaque situation ci-dessous est un petit ensemble de phrases que tu pourrais utiliser dès demain au Japon. Remarque qu'il n'y a rien de nouveau en grammaire. Ce ne sont que des étiquettes, des blocs et un noyau poli. Ce qui change, c'est le vocabulaire et les expressions toutes faites propres à chaque situation.",
+  "sections": [
+   {
+    "h": "Salutations et présentations",
+    "p": [
+     "Quand tu rencontres quelqu'un pour la première fois, dis はじめまして (hajimemashite, enchanté), puis ton nom avec わたし.は, puis よろしくおねがいします (yoroshiku onegaishimasu). Cette dernière expression n'a pas de traduction française simple. Elle veut dire quelque chose comme « je me réjouis de notre relation, sois bienveillant avec moi », et elle clôt presque toutes les présentations.",
+     "Pour les salutations quotidiennes, pense au moment de la journée : おはようございます le matin, こんにちは dans la journée, こんばんは le soir et おやすみなさい avant d'aller dormir."
+    ],
+    "ex": [
+     "はじめまして。|Enchanté.",
+     "わたし.は ケンです。|Je suis Ken.",
+     "イギリス.から きます。|Je viens du Royaume-Uni.",
+     "よろしくおねがいします。|Ravi de faire ta connaissance.",
+     "おやすみなさい。|Bonne nuit.",
+     "また あいましょう。|Revoyons-nous."
+    ],
+    "tip": "Le Niveau 2 t'apprendra イギリスからきました (je suis venu du Royaume-Uni), la forme qu'utilisent les natifs pour dire d'où l'on vient."
+   },
+   {
+    "h": "Faire les courses",
+    "p": [
+     "Dans les magasins, tu as surtout besoin de trois choses : demander le prix, choisir et payer. Montre avec これ (celui-ci) ou それ (celui-là) quand tu ne connais pas le mot. À la caisse, on te demandera souvent si tu veux un sac. ふくろ.は いりません, « Je n'ai pas besoin de sac », est une réponse très utile.",
+     "Pour dire comment tu paies, utilise で pour le moyen : カード.で はらいます, « Je paie par carte ». げんきん (espèces) fonctionne de la même façon.",
+     "Le personnel des magasins japonais parle aux clients dans une langue très polie (le keigo). Tu n'as pas besoin de répondre sur le même registre. Tes formes polies en ます et です sont exactement ce qu'il faut pour un client, et un sourire avec ありがとうございます conclut joliment n'importe quel achat."
+    ],
+    "ex": [
+     "これ.は いくらですか？|Combien ça coûte ?",
+     "これ.を ください。|Celui-ci, s'il vous plaît.",
+     "ふくろ.は いりません。|Je n'ai pas besoin de sac.",
+     "カード.で はらいます。|Je paie par carte.",
+     "あかいの.も ありますか？|Vous l'avez aussi en rouge ?"
+    ]
+   },
+   {
+    "h": "Au restaurant",
+    "p": [
+     "Avant de manger, on dit いただきます (itadakimasu) ; après avoir mangé, ごちそうさまでした (gochisōsama deshita). Ce sont des expressions figées, donc la terminaison d'allure passée de la seconde ne pose pas de problème au Niveau 1.",
+     "Pour commander, utilise ください ou おねがいします avec le plat. Pour demander une recommandation : おすすめ.は なんですか？ Et quand tu es prêt à payer : おかいけい.を おねがいします."
+    ],
+    "ex": [
+     "いただきます。|Bon appétit. (dit avant de manger)",
+     "ラーメン.を たべましょう。|Prenons des ramen.",
+     "おすすめ.は なんですか？|Qu'est-ce que vous recommandez ?",
+     "ラーメン.を ください。|Des ramen, s'il vous plaît.",
+     "とても おいしいです。|C'est très bon.",
+     "おかいけい.を おねがいします。|L'addition, s'il vous plaît."
+    ],
+    "tip": "ごちそうさまでした est une expression figée : dis-la pour remercier la personne qui a cuisiné quand tu as fini."
+   },
+   {
+    "h": "Trains, bus et heure",
+    "p": [
+     "En déplacement, une simple question en か est ta meilleure amie. このでんしゃ.は きょうと.に いきますか？ « Ce train va à Kyoto ? » なんばんせん.から でますか？ « Il part de quel quai ? » Les annonces disent souvent つぎ.は ならです, « Le prochain arrêt est Nara ».",
+     "Pour l'heure, demande いま なんじですか？ et guette un nombre suivi de じ. Pour fixer un rendez-vous, utilise un bloc de temps et un bloc de lieu : しちじ.に えき.で あいます, ou transforme-le en proposition avec ましょう : しちじ.に えき.で あいましょう, « Retrouvons-nous à la gare à sept heures. »",
+     "Si tu te perds, すみません suivi d'une courte question en か est la façon idéale de demander à un inconnu. Le personnel des gares a l'habitude d'aider les voyageurs, et une phrase courte et claire avec les bonnes étiquettes est bien plus facile à comprendre pour eux qu'une longue."
+    ],
+    "ex": [
+     "このでんしゃ.は きょうと.に いきますか？|Ce train va à Kyoto ?",
+     "なんばんせん.から でますか？|Il part de quel quai ?",
+     "つぎ.は ならです。|Le prochain arrêt est Nara.",
+     "いま なんじですか？|Quelle heure est-il ?",
+     "しちじ.に えき.で あいます。|On se retrouve à la gare à sept heures.",
+     "しちじ.に えき.で あいましょう。|Retrouvons-nous à la gare à sept heures."
+    ]
+   },
+   {
+    "h": "Au téléphone",
+    "p": [
+     "Les appels commencent par もしもし (moshi moshi), « allô ». Ce qu'on dit le plus souvent, c'est où on est et quand on arrive : いま えき.に います, « Je suis à la gare, là ». あと じゅっぷん.で つきます, « J'arrive dans dix minutes » (ici, で veut dire « d'ici »).",
+     "Termine avec じゃあ、また (« à plus, alors ») ou またあした (« à demain »)."
+    ],
+    "ex": [
+     "もしもし。|Allô ? (au téléphone)",
+     "いま えき.に います。|Je suis à la gare, là.",
+     "あと じゅっぷん.で つきます。|J'arrive dans dix minutes.",
+     "あとで でんわ.を します。|Je t'appelle plus tard.",
+     "あとで また はなしましょう。|On se reparle plus tard.",
+     "じゃあ、また。|À plus, alors."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Tu rencontres quelqu'un : Enchanté.",
+    "a": "はじめまして。|Enchanté."
+   },
+   {
+    "q": "Dans un magasin : Je n'ai pas besoin de sac.",
+    "a": "ふくろ.は いりません。|Je n'ai pas besoin de sac."
+   },
+   {
+    "q": "Dis : Je paie par carte.",
+    "a": "カード.で はらいます。|Je paie par carte."
+   },
+   {
+    "q": "Au restaurant : Qu'est-ce que vous recommandez ?",
+    "a": "おすすめ.は なんですか？|Qu'est-ce que vous recommandez ?"
+   },
+   {
+    "q": "Demande : Ce train va à Kyoto ?",
+    "a": "このでんしゃ.は きょうと.に いきますか？|Ce train va à Kyoto ?"
+   },
+   {
+    "q": "Demande : Quelle heure est-il ?",
+    "a": "いま なんじですか？|Quelle heure est-il ?"
+   },
+   {
+    "q": "Au téléphone : Je suis à la gare, là.",
+    "a": "いま えき.に います。|Je suis à la gare, là."
+   },
+   {
+    "q": "Au téléphone : J'arrive dans dix minutes.",
+    "a": "あと じゅっぷん.で つきます。|J'arrive dans dix minutes."
+   },
+   {
+    "q": "Propose : Retrouvons-nous à la gare à sept heures.",
+    "a": "しちじ.に えき.で あいましょう。|Retrouvons-nous à la gare à sept heures."
+   },
+   {
+    "q": "Au téléphone : On se reparle plus tard.",
+    "a": "あとで また はなしましょう。|On se reparle plus tard."
+   }
+  ],
+  "words": [
+   {
+    "k": "はじめまして",
+    "en": "enchanté"
+   },
+   {
+    "k": "よろしくおねがいします",
+    "en": "ravi de te connaître / merci de ta bienveillance"
+   },
+   {
+    "k": "ふくろ",
+    "en": "sac (de courses)"
+   },
+   {
+    "k": "いります",
+    "en": "avoir besoin"
+   },
+   {
+    "k": "はらいます",
+    "en": "payer"
+   },
+   {
+    "k": "カード",
+    "en": "carte"
+   },
+   {
+    "k": "おすすめ",
+    "en": "recommandation"
+   },
+   {
+    "k": "おかいけい",
+    "en": "l'addition"
+   },
+   {
+    "k": "なんばんせん",
+    "en": "quel quai"
+   },
+   {
+    "k": "でます",
+    "en": "partir, sortir"
+   },
+   {
+    "k": "つぎ",
+    "en": "suivant, prochain"
+   },
+   {
+    "k": "つきます",
+    "en": "arriver"
+   },
+   {
+    "k": "じゅっぷん",
+    "en": "dix minutes"
+   },
+   {
+    "k": "もしもし",
+    "en": "allô (téléphone)"
+   },
+   {
+    "k": "あとで",
+    "en": "plus tard"
+   }
+  ],
+  "recap": [
+   "Chaque situation utilise le même système : des blocs + un noyau poli.",
+   "Les expressions figées (はじめまして, いただきます, もしもし) s'apprennent comme des noyaux entiers.",
+   "Montre avec これ et それ quand tu ne connais pas un mot.",
+   "De courtes questions en か te font passer les gares et les magasins, et ましょう permet de faire des projets entre amis."
+  ],
+  "next": "Demain : d'autres situations pour le travail, le champ de thé, la santé, les gens, la météo et la maison, plus un aperçu du Niveau 2."
+ },
+ {
+  "day": 14,
+  "chapter": 10,
+  "title": "Parler en situation, partie 2",
+  "ja": "ばめん で はなす 2",
+  "minutes": 20,
+  "goal": "Parler du travail, de l'agriculture, de la santé, des gens, de la météo et de la vie à la maison, et te préparer au test final.",
+  "intro": "Félicitations, c'est le dernier jour du cours ! Aujourd'hui, tu t'entraînes aux situations de la vie quotidienne au-delà des magasins et des gares : le travail, une plantation de thé à Nara, le médecin, la famille, la météo et la maison. Ensuite, on voit comment aborder le test final, et on jette un coup d'œil à ce que le Niveau 2 ajoute à tout ce que tu as construit.",
+  "sections": [
+   {
+    "h": "Au travail et à la plantation de thé",
+    "p": [
+     "Le Japon du bureau tourne autour de quelques phrases clés. おつかれさまです (otsukaresama desu) est la salutation passe-partout du travail, à peu près « merci pour tes efforts ». Utilise-la quand tu croises des collègues, à la fin d'une réunion, ou quand quelqu'un part en fin de journée.",
+     "Dans une plantation de thé à Nara, le travail suit les saisons. つみます (tsumimasu) veut dire cueillir, et しんちゃ (shincha) est le premier thé frais de l'année, cueilli en mai. Toutes les phrases relèvent de la Grammaire des étiquettes ordinaire : un lieu avec で, une chose avec を, un moment avec に."
+    ],
+    "ex": [
+     "おつかれさまです。|Merci pour ton travail.",
+     "かいぎ.は さんじ.から です。|La réunion commence à trois heures.",
+     "ちゃばたけ.で おちゃ.を つみます。|On cueille le thé dans le champ de thé.",
+     "ごがつ.に しんちゃ.を つみます。|On cueille le thé nouveau en mai.",
+     "まいあさ ちゃばたけ.に いきます。|Je vais au champ de thé tous les matins.",
+     "くじ.から かいぎ.を はじめましょう。|Commençons la réunion à neuf heures.",
+     "ちゃばたけ.で おちゃ.を つみましょう。|Cueillons le thé dans le champ de thé."
+    ]
+   },
+   {
+    "h": "Santé et personnes",
+    "p": [
+     "Pour dire que quelque chose te fait mal, mets la partie du corps avec が et termine par いたいです : あたま.が いたいです, « J'ai mal à la tête ». Pour la fièvre : ねつ.が あります. Chez le médecin, tu sais déjà dire où tu vas et ce que tu prends : びょういん.に いきます, くすり.を のみます (en japonais, on « boit » les médicaments). Quand quelqu'un est malade, souhaite-lui un bon rétablissement avec おだいじに.",
+     "Pour décrire des personnes, utilise は pour la personne et un nom ou un adjectif comme noyau : あね.は とうきょう.に います, ともだち.は やさしいです. Rappelle-toi les mots de la famille des jours précédents : はは, ちち, et aujourd'hui あね (grande sœur) et おっと (mari)."
+    ],
+    "ex": [
+     "あたま.が いたいです。|J'ai mal à la tête.",
+     "ねつ.が あります。|J'ai de la fièvre.",
+     "びょういん.に いきます。|J'irai à l'hôpital.",
+     "びょういん.に いきましょう。|Allons à l'hôpital.",
+     "おだいじに。|Prends soin de toi.",
+     "あね.は とうきょう.に います。|Ma grande sœur est à Tokyo."
+    ],
+    "tip": "Partie du corps + が + いたいです = « j'ai mal à ... »."
+   },
+   {
+    "h": "Météo et maison",
+    "p": [
+     "Parler de la météo, c'est la conversation de politesse au Japon. Utilise un mot de temps comme thème et un nom ou un adjectif météo comme noyau : あした.は あめです, « Il va pleuvoir demain ». きょう.は さむいです, « Il fait froid aujourd'hui ». Les mots ne changent pas entre présent et futur : c'est le mot de temps qui fait le travail.",
+     "À la maison, quelques expressions figées rythment la journée. En partant, tu dis いってきます (« j'y vais »), et la famille répond いってらっしゃい (« à tout à l'heure »). En rentrant, tu dis ただいま (« je suis rentré »), et on te répond おかえりなさい (« bon retour »)."
+    ],
+    "ex": [
+     "あした.は あめです。|Il va pleuvoir demain.",
+     "きょう.は さむいです。|Il fait froid aujourd'hui.",
+     "かさ.が いります。|J'ai besoin d'un parapluie.",
+     "きょう.は いえ.で やすみましょう。|Reposons-nous à la maison aujourd'hui.",
+     "いってきます。|J'y vais. (en quittant la maison)",
+     "ただいま。|Je suis rentré."
+    ]
+   },
+   {
+    "h": "Se préparer au test final",
+    "p": [
+     "Le test final mélange tout ce que tu as vu pendant les quatorze jours. Quand une question te donne une phrase en français, procède dans cet ordre : choisis d'abord le noyau et sa terminaison (ます, ますか, ません, ましょう, です, ですか ou ください). Puis liste les blocs dont tu as besoin et donne une étiquette à chaque nom. Enfin, décide de l'ordre : mets le bloc le plus important en premier, et le noyau en dernier.",
+     "Vérifie les pièges habituels : les heures prennent に mais あした et きのう ne prennent pas d'étiquette ; あいます prend に ; les lieux d'action prennent で ; も remplace は, が et を mais s'ajoute après les autres étiquettes ; les décorations restent dans le bloc. Pour les questions, ajoute か à la terminaison (ますか, ですか) et fais monter ta voix dessus ; l'ordre des mots ne change jamais. N'utilise ましょう que pour ce que toi et ton interlocuteur ferez ensemble. Et pour le passé, utilise un mot de temps avec le noyau inchangé."
+    ],
+    "ex": [
+     "きのう ともだち.と きょうと.に いきます。|(Niveau 1) Hier, je suis allé à Kyoto avec un ami.",
+     "あした くじ.に えき.で ははのともだち.に あいます。|Demain à neuf heures, je verrai l'amie de ma mère à la gare.",
+     "わたし.も ならのおちゃ.が すきです。|Moi aussi, j'aime le thé de Nara.",
+     "だれ.と どこ.で たべますか？|Avec qui et où est-ce que tu manges ?"
+    ],
+    "tip": "D'abord le noyau, puis les blocs, puis l'ordre. Trois étapes pour chaque phrase."
+   },
+   {
+    "h": "Ce qui t'attend au Niveau 2",
+    "p": [
+     "Tu termines le Niveau 1 capable de dire énormément de choses avec quatre terminaisons verbales et dix étiquettes. Le Niveau 2 garde tout ce que tu sais et ajoute des terminaisons au noyau. La première, c'est le passé : いきます devient いきました (ikimashita, je suis allé), et たべません devient たべませんでした (tabemasen deshita, je n'ai pas mangé). Tu utiliseras toujours les mots de temps, mais le verbe s'accordera avec eux.",
+     "Le Niveau 2 apporte aussi les terminaisons amicales ね (ne, n'est-ce pas ?) et よ (yo, je te le dis), les offres comme ましょうか (mashō ka, je le fais ? / on le fait ?), et le souhait avec たいです (tai desu), comme dans いきたいです (ikitai desu, je veux y aller). Ensuite viennent la forme en て (forme te) pour enchaîner des actions et faire des demandes, le langage familier entre amis, et le keigo poli pour le monde professionnel.",
+     "L'essentiel : rien de tout cela ne remplace la Grammaire des étiquettes. Les blocs et les étiquettes que tu as appris restent exactement les mêmes. Seul le noyau à la fin gagne de nouvelles terminaisons. Chaque phrase ci-dessous est déjà du japonais correct que tu peux utiliser dès aujourd'hui."
+    ],
+    "ex": [
+     "あした なら.に いきます。|J'irai à Nara demain.",
+     "まいにち ならのおちゃ.を のみます。|Je bois du thé de Nara tous les jours.",
+     "にほんご.で はなします。|Je parle en japonais.",
+     "こんど なら.へ いきましょう。|Allons à Nara un de ces jours."
+    ]
+   }
+  ],
+  "tryit": [
+   {
+    "q": "Salue un collègue au travail.",
+    "a": "おつかれさまです。|Merci pour ton travail."
+   },
+   {
+    "q": "Dis : On cueille le thé dans le champ de thé.",
+    "a": "ちゃばたけ.で おちゃ.を つみます。|On cueille le thé dans le champ de thé."
+   },
+   {
+    "q": "Dis : J'ai mal à la tête.",
+    "a": "あたま.が いたいです。|J'ai mal à la tête."
+   },
+   {
+    "q": "Dis : J'irai à l'hôpital.",
+    "a": "びょういん.に いきます。|J'irai à l'hôpital."
+   },
+   {
+    "q": "Dis : Il va pleuvoir demain.",
+    "a": "あした.は あめです。|Il va pleuvoir demain."
+   },
+   {
+    "q": "Dis-le en rentrant à la maison.",
+    "a": "ただいま。|Je suis rentré."
+   },
+   {
+    "q": "Dis (style Niveau 1) : Hier, je suis allé à Kyoto avec un ami.",
+    "a": "きのう ともだち.と きょうと.に いきます。|Hier, je suis allé à Kyoto avec un ami."
+   },
+   {
+    "q": "Dis : Ma grande sœur est à Tokyo.",
+    "a": "あね.は とうきょう.に います。|Ma grande sœur est à Tokyo."
+   },
+   {
+    "q": "Propose : Cueillons le thé dans le champ de thé.",
+    "a": "ちゃばたけ.で おちゃ.を つみましょう。|Cueillons le thé dans le champ de thé."
+   },
+   {
+    "q": "Propose : Reposons-nous à la maison aujourd'hui.",
+    "a": "きょう.は いえ.で やすみましょう。|Reposons-nous à la maison aujourd'hui."
+   }
+  ],
+  "words": [
+   {
+    "k": "おつかれさまです",
+    "en": "merci pour tes efforts"
+   },
+   {
+    "k": "つみます",
+    "en": "cueillir (des feuilles de thé)"
+   },
+   {
+    "k": "しんちゃ",
+    "en": "thé nouveau (première cueillette)"
+   },
+   {
+    "k": "ごがつ",
+    "en": "mai"
+   },
+   {
+    "k": "あたま",
+    "en": "tête"
+   },
+   {
+    "k": "いたい",
+    "en": "douloureux, avoir mal"
+   },
+   {
+    "k": "ねつ",
+    "en": "fièvre"
+   },
+   {
+    "k": "びょういん",
+    "en": "hôpital, clinique"
+   },
+   {
+    "k": "くすり",
+    "en": "médicament"
+   },
+   {
+    "k": "あね",
+    "en": "(ma) grande sœur"
+   },
+   {
+    "k": "あめ",
+    "en": "pluie"
+   },
+   {
+    "k": "いってきます",
+    "en": "j'y vais (en quittant la maison)"
+   },
+   {
+    "k": "ただいま",
+    "en": "je suis rentré"
+   },
+   {
+    "k": "おかえりなさい",
+    "en": "bon retour"
+   }
+  ],
+  "recap": [
+   "Chaque situation reste des blocs + un noyau poli.",
+   "Quatre terminaisons pour chaque noyau verbal : ます, ますか, ません, ましょう.",
+   "Partie du corps + が + いたいです ; météo : mot de temps.は + nom/adjectif + です.",
+   "Pour le test : le noyau, puis les blocs avec leurs étiquettes, puis l'ordre.",
+   "Le Niveau 2 ajoute de nouvelles terminaisons au noyau ; les étiquettes ne changent jamais."
+  ],
+  "next": "Tu as terminé le cours. Passe le test final, puis continue à faire les exercices des situations chaque jour."
+ }
+]
