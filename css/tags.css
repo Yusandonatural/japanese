@@ -1,5 +1,5 @@
 /* Easy Japanese 14 Days — 和モダン theme
-   Paper (生成り) background, sumi ink text, Shippori Mincho headings, Zen Kaku Gothic body,
+   Paper (生成り) background, sumi ink text, Zen Kaku Gothic headings and body (gothic throughout for readability),
    and the ten tags coloured with traditional Japanese colours. */
 :root {
   --bg: #f5efe3;            /* 生成り */
@@ -30,7 +30,7 @@
   --shadow: 0 1px 0 rgba(90, 70, 40, .05), 0 6px 18px -10px rgba(90, 70, 40, .28);
   --shadow-lift: 0 2px 0 rgba(90, 70, 40, .05), 0 12px 26px -12px rgba(90, 70, 40, .38);
   --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-head: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  --font-head: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
   --paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='%233e5c3b' stroke-opacity='.10' stroke-width='1.2'%3E%3Cpath d='M0 28a28 28 0 0 1 56 0M8 28a20 20 0 0 1 40 0M16 28a12 12 0 0 1 24 0M-28 14a28 28 0 0 1 56 0M28 14a28 28 0 0 1 56 0M-20 14a20 20 0 0 1 40 0M36 14a20 20 0 0 1 40 0M-12 14a12 12 0 0 1 24 0M44 14a12 12 0 0 1 24 0'/%3E%3C/g%3E%3C/svg%3E");
   font-family: var(--font-body);
