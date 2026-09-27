@@ -2,8 +2,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
-<link rel="stylesheet" href="css/tags.css">
+<link rel="stylesheet" href="css/tags-v3.css">
 <style>
+  /* gothic everywhere (set here too, so a cached stylesheet can't bring Mincho back) */
+  :root { --font-head: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
+          --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  body, h1, h2, h3, h4, .big, .flash-prompt, .punit .t, .gstat b, .chunk .word, .punct, #qbox .lead, .lesson-list b, .lesson-list .d { font-family: var(--font-head); }
   /* artifact shell: one page, views swap in place */
   header.top { top: env(safe-area-inset-top, 0px); }
   header.top nav button { font: inherit; background: none; border: 0; cursor: pointer; color: var(--muted); padding: 4px 9px; border-radius: 999px; }
