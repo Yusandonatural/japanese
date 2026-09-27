@@ -1,0 +1,802 @@
+{
+ "1": {
+  "en": "aller",
+  "ex": "あした なら.に いきます。|J'irai à Nara demain."
+ },
+ "2": {
+  "en": "venir",
+  "ex": "あした ともだち.が うち.に きます。|Un ami vient chez moi demain."
+ },
+ "3": {
+  "en": "faire; jouer (à un sport)",
+  "ex": "しゅうまつ テニス.を します。|Je joue au tennis le week-end."
+ },
+ "4": {
+  "en": "y avoir; avoir (choses)",
+  "ex": "えきのちかく.に コンビニ.が あります。|Il y a une supérette près de la gare."
+ },
+ "5": {
+  "en": "être; y avoir (personnes, animaux)",
+  "ex": "いま うち.に います。|Je suis à la maison en ce moment."
+ },
+ "6": {
+  "en": "manger",
+  "ex": "まいあさ パン.を たべます。|Je mange du pain tous les matins."
+ },
+ "7": {
+  "en": "boire",
+  "ex": "コーヒー.を のみますか？|Tu prends un café ?"
+ },
+ "8": {
+  "en": "voir; regarder",
+  "ex": "よる テレビ.を みます。|Je regarde la télé le soir."
+ },
+ "9": {
+  "en": "dire",
+  "ex": "これ.は にほんご.で なん.と いいますか？|Comment dit-on ceci en japonais ?"
+ },
+ "10": {
+  "en": "comprendre",
+  "ex": "にほんご.が すこし わかります。|Je comprends un peu le japonais."
+ },
+ "11": {
+  "en": "acheter",
+  "ex": "スーパー.で やさい.を かいます。|J'achète des légumes au supermarché."
+ },
+ "12": {
+  "en": "attendre",
+  "ex": "えき.で ともだち.を まちます。|J'attendrai mon ami à la gare."
+ },
+ "13": {
+  "en": "parler",
+  "ex": "えいご.を はなしますか？|Tu parles anglais ?"
+ },
+ "14": {
+  "en": "rentrer; retourner",
+  "ex": "きょう.は はやく うち.に かえります。|Aujourd'hui, je rentre tôt à la maison."
+ },
+ "15": {
+  "en": "se lever; se réveiller",
+  "ex": "まいあさ ろくじ.に おきます。|Je me lève à six heures tous les matins."
+ },
+ "16": {
+  "en": "se coucher; dormir",
+  "ex": "まいばん じゅうじ.に ねます。|Je me couche à dix heures tous les soirs."
+ },
+ "17": {
+  "en": "savoir faire; pouvoir",
+  "ex": "にほんご.が できますか？|Tu sais parler japonais ?"
+ },
+ "18": {
+  "en": "utiliser",
+  "ex": "このパソコン.を つかいますか？|Tu vas utiliser cet ordinateur ?"
+ },
+ "19": {
+  "en": "fabriquer; préparer",
+  "ex": "あさごはん.を つくります。|Je prépare le petit-déjeuner."
+ },
+ "20": {
+  "en": "rencontrer; voir (quelqu'un)",
+  "ex": "あした ともだち.に あいます。|Je vois un ami demain."
+ },
+ "21": {
+  "en": "lire",
+  "ex": "でんしゃ.で ほん.を よみます。|Je lis des livres dans le train."
+ },
+ "22": {
+  "en": "écrire; dessiner",
+  "ex": "ここ.に なまえ.を かきます。|J'écris mon nom ici."
+ },
+ "23": {
+  "en": "écouter; entendre; demander",
+  "ex": "まいにち おんがく.を ききます。|J'écoute de la musique tous les jours."
+ },
+ "24": {
+  "en": "apprendre (à connaître); connaître",
+  "ex": "そのひと.を しりません。|Je ne connais pas cette personne."
+ },
+ "25": {
+  "en": "penser",
+  "ex": "あした.は あめだ.と おもいます。|Je pense qu'il pleuvra demain."
+ },
+ "26": {
+  "en": "tenir; porter; avoir",
+  "ex": "かさ.を もちます。|Je prends un parapluie."
+ },
+ "27": {
+  "en": "prendre",
+  "ex": "ここ.で しゃしん.を とりましょう。|Prenons une photo ici."
+ },
+ "28": {
+  "en": "monter (dans); prendre (un véhicule)",
+  "ex": "えき.で でんしゃ.に のります。|Je monte dans le train à la gare."
+ },
+ "29": {
+  "en": "descendre (d'un véhicule)",
+  "ex": "つぎのえき.で でんしゃ.を おります。|Je descends du train à la prochaine gare."
+ },
+ "30": {
+  "en": "entrer",
+  "ex": "まいばん おふろ.に はいります。|Je prends un bain tous les soirs."
+ },
+ "31": {
+  "en": "sortir; partir",
+  "ex": "はちじ.に うち.を でます。|Je quitte la maison à huit heures."
+ },
+ "32": {
+  "en": "marcher",
+  "ex": "えき.まで あるきます。|Je vais à la gare à pied."
+ },
+ "33": {
+  "en": "courir",
+  "ex": "まいあさ こうえん.を はしります。|Je cours dans le parc tous les matins."
+ },
+ "34": {
+  "en": "travailler",
+  "ex": "ぎんこう.で はたらきます。|Je travaille dans une banque."
+ },
+ "35": {
+  "en": "se reposer; prendre congé",
+  "ex": "あした かいしゃ.を やすみます。|Demain, je ne vais pas au travail."
+ },
+ "36": {
+  "en": "jouer; sortir (entre amis)",
+  "ex": "しゅうまつ ともだち.と あそびます。|Je sors avec des amis le week-end."
+ },
+ "37": {
+  "en": "étudier",
+  "ex": "まいにち にほんご.を べんきょうします。|J'étudie le japonais tous les jours."
+ },
+ "38": {
+  "en": "enseigner; indiquer",
+  "ex": "こども.に えいご.を おしえます。|J'enseigne l'anglais aux enfants."
+ },
+ "39": {
+  "en": "apprendre (auprès de quelqu'un)",
+  "ex": "せんせい.に ピアノ.を ならいます。|J'apprends le piano avec un professeur."
+ },
+ "40": {
+  "en": "téléphoner; appeler",
+  "ex": "あとで はは.に でんわします。|J'appellerai ma mère plus tard."
+ },
+ "41": {
+  "en": "donner",
+  "ex": "ともだち.に プレゼント.を あげます。|Je vais offrir un cadeau à mon ami."
+ },
+ "42": {
+  "en": "recevoir; obtenir",
+  "ex": "きのう ともだち.に はな.を もらいます。|Hier, un ami m'a offert des fleurs."
+ },
+ "43": {
+  "en": "donner (à moi)",
+  "ex": "ともだち.が おかし.を くれます。|Mon ami me donne des friandises."
+ },
+ "44": {
+  "en": "montrer",
+  "ex": "パスポート.を みせます。|Je montre mon passeport."
+ },
+ "45": {
+  "en": "prêter",
+  "ex": "ともだち.に ほん.を かします。|Je vais prêter un livre à mon ami."
+ },
+ "46": {
+  "en": "emprunter; louer",
+  "ex": "としょかん.で ほん.を かります。|J'emprunte des livres à la bibliothèque."
+ },
+ "47": {
+  "en": "envoyer",
+  "ex": "ともだち.に メール.を おくります。|J'enverrai un e-mail à mon ami."
+ },
+ "48": {
+  "en": "habiter; vivre (quelque part)",
+  "ex": "らいねん おおさか.に すみます。|L'année prochaine, j'habiterai à Osaka."
+ },
+ "49": {
+  "en": "s'asseoir",
+  "ex": "ここ.に すわりましょう。|Asseyons-nous ici."
+ },
+ "50": {
+  "en": "se tenir debout; se lever",
+  "ex": "ドアのまえ.に たちます。|Je me mets devant la porte."
+ },
+ "51": {
+  "en": "ouvrir",
+  "ex": "まど.を あけましょう。|Ouvrons la fenêtre."
+ },
+ "52": {
+  "en": "fermer",
+  "ex": "ドア.を しめます。|Je ferme la porte."
+ },
+ "53": {
+  "en": "allumer",
+  "ex": "でんき.を つけます。|J'allume la lumière."
+ },
+ "54": {
+  "en": "éteindre; effacer",
+  "ex": "テレビ.を けします。|J'éteins la télé."
+ },
+ "55": {
+  "en": "commencer",
+  "ex": "かいぎ.は くじ.から はじまります。|La réunion commence à neuf heures."
+ },
+ "56": {
+  "en": "se terminer; finir",
+  "ex": "しごと.は ろくじ.に おわります。|Le travail finit à six heures."
+ },
+ "57": {
+  "en": "commencer (quelque chose)",
+  "ex": "そろそろ しごと.を はじめましょう。|Il est temps de se mettre au travail."
+ },
+ "58": {
+  "en": "devenir",
+  "ex": "らいねん はたち.に なります。|L'année prochaine, j'aurai vingt ans."
+ },
+ "59": {
+  "en": "oublier; laisser (derrière soi)",
+  "ex": "よく かさ.を わすれます。|J'oublie souvent mon parapluie."
+ },
+ "60": {
+  "en": "mémoriser; retenir",
+  "ex": "たんご.を おぼえましょう。|Mémorisons les mots."
+ },
+ "61": {
+  "en": "chercher (une information); vérifier",
+  "ex": "インターネット.で みち.を しらべます。|Je cherche le chemin sur Internet."
+ },
+ "62": {
+  "en": "réfléchir à; penser à",
+  "ex": "あしたのよてい.を かんがえます。|Je réfléchis au programme de demain."
+ },
+ "63": {
+  "en": "décider",
+  "ex": "みせ.を きめましょう。|Choisissons un restaurant."
+ },
+ "64": {
+  "en": "choisir",
+  "ex": "すきないろ.を えらびます。|Je choisis une couleur que j'aime."
+ },
+ "65": {
+  "en": "chercher",
+  "ex": "いま かぎ.を さがします。|Je vais chercher mes clés maintenant."
+ },
+ "66": {
+  "en": "trouver",
+  "ex": "きのう いいみせ.を みつけます。|Hier, j'ai trouvé une bonne boutique."
+ },
+ "67": {
+  "en": "perdre",
+  "ex": "よく かぎ.を なくします。|Je perds souvent mes clés."
+ },
+ "68": {
+  "en": "faire tomber",
+  "ex": "きのう さいふ.を おとします。|Hier, j'ai fait tomber mon portefeuille."
+ },
+ "69": {
+  "en": "payer",
+  "ex": "カード.で おかね.を はらいます。|Je paie par carte."
+ },
+ "70": {
+  "en": "sortir; rendre (un devoir); envoyer",
+  "ex": "あした しゅくだい.を だします。|Je rendrai mes devoirs demain."
+ },
+ "71": {
+  "en": "mettre dedans; préparer (du thé)",
+  "ex": "コーヒー.に さとう.を いれます。|Je mets du sucre dans mon café."
+ },
+ "72": {
+  "en": "poser; mettre",
+  "ex": "ここ.に かばん.を おきます。|Je pose mon sac ici."
+ },
+ "73": {
+  "en": "jeter",
+  "ex": "あさ ごみ.を すてます。|Je sors les poubelles le matin."
+ },
+ "74": {
+  "en": "tourner",
+  "ex": "つぎのかど.を みぎ.に まがります。|Je tourne à droite au prochain coin de rue."
+ },
+ "75": {
+  "en": "traverser",
+  "ex": "このはし.を わたります。|Je traverse ce pont."
+ },
+ "76": {
+  "en": "arriver",
+  "ex": "さんじ.に くうこう.に つきます。|J'arrive à l'aéroport à trois heures."
+ },
+ "77": {
+  "en": "sortir",
+  "ex": "しゅうまつ かぞく.と でかけます。|Je sors avec ma famille le week-end."
+ },
+ "78": {
+  "en": "revenir; retourner",
+  "ex": "すぐ せき.に もどります。|Je reviens tout de suite à ma place."
+ },
+ "79": {
+  "en": "passer (par); s'arrêter à",
+  "ex": "かえり.に コンビニ.に よります。|Je m'arrête à la supérette en rentrant."
+ },
+ "80": {
+  "en": "emporter (quelque chose)",
+  "ex": "あした おべんとう.を もっていきます。|Demain, j'emporterai un bentô."
+ },
+ "81": {
+  "en": "apporter",
+  "ex": "あした のみもの.を もってきます。|J'apporterai des boissons demain."
+ },
+ "82": {
+  "en": "se dépêcher",
+  "ex": "えき.まで いそぎましょう。|Dépêchons-nous jusqu'à la gare."
+ },
+ "83": {
+  "en": "être en retard",
+  "ex": "ときどき かいぎ.に おくれます。|Je suis parfois en retard aux réunions."
+ },
+ "84": {
+  "en": "se tromper; faire une erreur",
+  "ex": "よく みち.を まちがえます。|Je me trompe souvent de chemin."
+ },
+ "85": {
+  "en": "laver",
+  "ex": "ごはんのまえ.に て.を あらいます。|Je me lave les mains avant de manger."
+ },
+ "86": {
+  "en": "prendre (une douche)",
+  "ex": "まいあさ シャワー.を あびます。|Je prends une douche tous les matins."
+ },
+ "87": {
+  "en": "brosser; polir",
+  "ex": "ねるまえ.に は.を みがきます。|Je me brosse les dents avant de me coucher."
+ },
+ "88": {
+  "en": "porter; mettre (le haut)",
+  "ex": "さむいひ.は コート.を きます。|Je mets un manteau quand il fait froid."
+ },
+ "89": {
+  "en": "porter; mettre (chaussures, pantalon)",
+  "ex": "あたらしいくつ.を はきます。|Je vais mettre mes nouvelles chaussures."
+ },
+ "90": {
+  "en": "enlever (vêtements, chaussures)",
+  "ex": "ここ.で くつ.を ぬぎます。|On enlève ses chaussures ici."
+ },
+ "91": {
+  "en": "mettre (un chapeau)",
+  "ex": "なつ.は ぼうし.を かぶります。|L'été, je porte un chapeau."
+ },
+ "92": {
+  "en": "mettre (des lunettes); accrocher; passer (un appel)",
+  "ex": "ほんをよむとき.は めがね.を かけます。|Je mets mes lunettes pour lire."
+ },
+ "93": {
+  "en": "nettoyer; faire le ménage",
+  "ex": "しゅうまつ へや.を そうじします。|Je fais le ménage dans ma chambre le week-end."
+ },
+ "94": {
+  "en": "faire la lessive",
+  "ex": "にちようび.に せんたくします。|Je fais la lessive le dimanche."
+ },
+ "95": {
+  "en": "cuisiner",
+  "ex": "よる うち.で りょうりします。|Le soir, je cuisine à la maison."
+ },
+ "96": {
+  "en": "faire les courses",
+  "ex": "デパート.で かいものします。|Je fais mes achats au grand magasin."
+ },
+ "97": {
+  "en": "se promener",
+  "ex": "いぬ.と こうえん.を さんぽします。|Je me promène dans le parc avec mon chien."
+ },
+ "98": {
+  "en": "voyager",
+  "ex": "らいげつ ほっかいどう.を りょこうします。|Le mois prochain, je voyagerai à Hokkaidō."
+ },
+ "99": {
+  "en": "conduire",
+  "ex": "まいにち くるま.を うんてんします。|Je conduis une voiture tous les jours."
+ },
+ "100": {
+  "en": "prendre un repas",
+  "ex": "こんばん ともだち.と しょくじします。|Ce soir, je dîne avec un ami."
+ },
+ "101": {
+  "en": "se marier",
+  "ex": "らいねん かのじょ.と けっこんします。|Je l'épouse l'année prochaine."
+ },
+ "102": {
+  "en": "s'entraîner",
+  "ex": "まいにち ピアノ.を れんしゅうします。|Je m'entraîne au piano tous les jours."
+ },
+ "103": {
+  "en": "poser une question",
+  "ex": "じゅぎょうのあと せんせい.に しつもんします。|Après le cours, je pose des questions au professeur."
+ },
+ "104": {
+  "en": "expliquer",
+  "ex": "もういちど ルール.を せつめいします。|Je vais réexpliquer les règles."
+ },
+ "105": {
+  "en": "réserver",
+  "ex": "レストラン.を よやくしましょう。|Réservons un restaurant."
+ },
+ "106": {
+  "en": "commander",
+  "ex": "コーヒー.を ちゅうもんします。|Je vais commander un café."
+ },
+ "107": {
+  "en": "promettre; prendre rendez-vous",
+  "ex": "ともだち.と やくそくします。|Je prends rendez-vous avec un ami."
+ },
+ "108": {
+  "en": "présenter",
+  "ex": "あとで ともだち.を しょうかいします。|Je te présenterai mon ami plus tard."
+ },
+ "109": {
+  "en": "vérifier",
+  "ex": "あさ メール.を チェックします。|Je vérifie mes e-mails le matin."
+ },
+ "110": {
+  "en": "participer",
+  "ex": "あした パーティー.に さんかします。|Je vais à la fête demain."
+ },
+ "111": {
+  "en": "faire de l'exercice",
+  "ex": "まいにち すこし うんどうします。|Je fais un peu d'exercice tous les jours."
+ },
+ "112": {
+  "en": "préparer; se préparer",
+  "ex": "いまから じゅんびしましょう。|Préparons-nous maintenant."
+ },
+ "113": {
+  "en": "s'inquiéter",
+  "ex": "はは.は いつも わたし.を しんぱいします。|Ma mère s'inquiète toujours pour moi."
+ },
+ "114": {
+  "en": "prendre son temps; se détendre",
+  "ex": "しゅうまつ.は うち.で ゆっくりします。|Le week-end, je me détends à la maison."
+ },
+ "115": {
+  "en": "faire des heures supplémentaires",
+  "ex": "きょう.も ざんぎょうします。|Aujourd'hui encore, je fais des heures supplémentaires."
+ },
+ "116": {
+  "en": "ramasser",
+  "ex": "みんな.で ごみ.を ひろいましょう。|Ramassons tous ensemble les déchets."
+ },
+ "117": {
+  "en": "vendre",
+  "ex": "ふるいくるま.を うります。|Je vais vendre ma vieille voiture."
+ },
+ "118": {
+  "en": "rendre",
+  "ex": "あした ほん.を かえします。|Je rendrai le livre demain."
+ },
+ "119": {
+  "en": "remettre",
+  "ex": "せんせい.に しゅくだい.を わたします。|Je remets mes devoirs au professeur."
+ },
+ "120": {
+  "en": "livrer; apporter à",
+  "ex": "こうばん.に さいふ.を とどけます。|Je vais apporter le portefeuille au poste de police."
+ },
+ "121": {
+  "en": "aider",
+  "ex": "ははのしごと.を てつだいます。|J'aide ma mère dans son travail."
+ },
+ "122": {
+  "en": "respecter; protéger",
+  "ex": "やくそく.を まもります。|Je tiens mes promesses."
+ },
+ "123": {
+  "en": "faire (familier)",
+  "ex": "いま しゅくだい.を やります。|Je fais mes devoirs maintenant."
+ },
+ "124": {
+  "en": "faire de son mieux",
+  "ex": "いっしょに がんばりましょう。|Faisons de notre mieux ensemble."
+ },
+ "125": {
+  "en": "tomber (pluie, neige)",
+  "ex": "あした あめ.が ふります。|Il pleuvra demain."
+ },
+ "126": {
+  "en": "s'arrêter (pluie)",
+  "ex": "ゆうがた あめ.が やみます。|La pluie s'arrêtera dans la soirée."
+ },
+ "127": {
+  "en": "fleurir",
+  "ex": "はる.に さくら.が さきます。|Les cerisiers fleurissent au printemps."
+ },
+ "128": {
+  "en": "s'éclaircir (temps)",
+  "ex": "あした.は はれます。|Demain, il fera beau."
+ },
+ "129": {
+  "en": "être visible; se voir",
+  "ex": "ここ.から ふじさん.が みえます。|D'ici, on voit le mont Fuji."
+ },
+ "130": {
+  "en": "être audible; s'entendre",
+  "ex": "わたしのこえ.が きこえますか？|Tu m'entends ?"
+ },
+ "131": {
+  "en": "prendre (du temps, de l'argent)",
+  "ex": "えき.まで じゅっぷん かかります。|Il faut dix minutes jusqu'à la gare."
+ },
+ "132": {
+  "en": "suffire",
+  "ex": "おかね.が たりません。|Je n'ai pas assez d'argent."
+ },
+ "133": {
+  "en": "s'ouvrir",
+  "ex": "みせ.は じゅうじ.に あきます。|Le magasin ouvre à dix heures."
+ },
+ "134": {
+  "en": "se fermer",
+  "ex": "ぎんこう.は さんじ.に しまります。|La banque ferme à trois heures."
+ },
+ "135": {
+  "en": "s'arrêter; loger (pour la nuit)",
+  "ex": "こんばん ホテル.に とまります。|Ce soir, je dors à l'hôtel."
+ },
+ "136": {
+  "en": "arrêter; garer",
+  "ex": "ここ.に くるま.を とめます。|Je gare la voiture ici."
+ },
+ "137": {
+  "en": "bouger; fonctionner (machines)",
+  "ex": "パソコン.が うごきません。|L'ordinateur ne marche pas."
+ },
+ "138": {
+  "en": "réparer",
+  "ex": "あした じてんしゃ.を なおします。|Je réparerai mon vélo demain."
+ },
+ "139": {
+  "en": "guérir; être réparé",
+  "ex": "かぜ.は すぐ なおります。|Le rhume va vite passer."
+ },
+ "140": {
+  "en": "se casser",
+  "ex": "きのう パソコン.が こわれます。|Hier, mon ordinateur est tombé en panne."
+ },
+ "141": {
+  "en": "ranger",
+  "ex": "へや.を かたづけましょう。|Rangeons la chambre."
+ },
+ "142": {
+  "en": "collectionner; rassembler",
+  "ex": "きって.を あつめます。|Je collectionne les timbres."
+ },
+ "143": {
+  "en": "se rassembler; se retrouver",
+  "ex": "くじ.に えき.に あつまりましょう。|Retrouvons-nous à la gare à neuf heures."
+ },
+ "144": {
+  "en": "griller; cuire au four",
+  "ex": "こんばん さかな.を やきます。|Ce soir, je fais griller du poisson."
+ },
+ "145": {
+  "en": "faire bouillir (de l'eau)",
+  "ex": "おちゃのおゆ.を わかします。|Je fais bouillir de l'eau pour le thé."
+ },
+ "146": {
+  "en": "réchauffer; chauffer",
+  "ex": "おべんとう.を あたためますか？|Je vous réchauffe votre bentô ?"
+ },
+ "147": {
+  "en": "refroidir; mettre au frais",
+  "ex": "れいぞうこ.で ビール.を ひやします。|Je mets la bière au frais dans le frigo."
+ },
+ "148": {
+  "en": "laisser (des restes)",
+  "ex": "ごはん.を のこしません。|Je ne laisse rien dans mon assiette."
+ },
+ "149": {
+  "en": "commander; demander (un service)",
+  "ex": "ビール.を たのみます。|Je vais commander une bière."
+ },
+ "150": {
+  "en": "répondre",
+  "ex": "しつもん.に こたえます。|Je réponds à la question."
+ },
+ "151": {
+  "en": "appeler; inviter",
+  "ex": "タクシー.を よびましょう。|Appelons un taxi."
+ },
+ "152": {
+  "en": "s'excuser",
+  "ex": "ともだち.に あやまります。|Je vais m'excuser auprès de mon ami."
+ },
+ "153": {
+  "en": "inviter",
+  "ex": "ともだち.を パーティー.に さそいます。|J'invite mon ami à la fête."
+ },
+ "154": {
+  "en": "bavarder",
+  "ex": "ともだち.と よく しゃべります。|Je bavarde souvent avec mes amis."
+ },
+ "155": {
+  "en": "transmettre (un message)",
+  "ex": "みんな.に つたえます。|Je vais prévenir tout le monde."
+ },
+ "156": {
+  "en": "chanter",
+  "ex": "カラオケ.で うた.を うたいます。|Je chante des chansons au karaoké."
+ },
+ "157": {
+  "en": "danser",
+  "ex": "みんな.で おどりましょう。|Dansons tous ensemble."
+ },
+ "158": {
+  "en": "nager",
+  "ex": "なつ.は うみ.で およぎます。|L'été, je nage dans la mer."
+ },
+ "159": {
+  "en": "jouer (d'un instrument à cordes, du piano); tirer; attraper (un rhume)",
+  "ex": "よる ギター.を ひきます。|Le soir, je joue de la guitare."
+ },
+ "160": {
+  "en": "grimper; gravir",
+  "ex": "なつ.に ふじさん.に のぼります。|Cet été, je vais gravir le mont Fuji."
+ },
+ "161": {
+  "en": "changer (de train)",
+  "ex": "しんじゅく.で のりかえます。|Je change de train à Shinjuku."
+ },
+ "162": {
+  "en": "monter; entrer",
+  "ex": "エレベーター.で にかい.に あがります。|Je monte au premier étage en ascenseur."
+ },
+ "163": {
+  "en": "passer (par)",
+  "ex": "まいにち このみち.を とおります。|Je prends cette route tous les jours."
+ },
+ "164": {
+  "en": "faire la queue; s'aligner",
+  "ex": "ここ.に ならびましょう。|Faisons la queue ici."
+ },
+ "165": {
+  "en": "être à l'heure",
+  "ex": "つぎのでんしゃ.に まにあいます。|J'aurai le prochain train."
+ },
+ "166": {
+  "en": "se perdre; hésiter",
+  "ex": "よく みち.に まよいます。|Je me perds souvent."
+ },
+ "167": {
+  "en": "passer (un examen)",
+  "ex": "らいげつ しけん.を うけます。|Je passe un examen le mois prochain."
+ },
+ "168": {
+  "en": "arrêter; cesser",
+  "ex": "らいげつ たばこ.を やめます。|J'arrête de fumer le mois prochain."
+ },
+ "169": {
+  "en": "continuer (quelque chose)",
+  "ex": "にほんごのべんきょう.を つづけます。|Je vais continuer à étudier le japonais."
+ },
+ "170": {
+  "en": "continuer; durer",
+  "ex": "あめ.は あした.まで つづきます。|La pluie va continuer jusqu'à demain."
+ },
+ "171": {
+  "en": "changer",
+  "ex": "らいしゅう よてい.が かわります。|Le programme change la semaine prochaine."
+ },
+ "172": {
+  "en": "se changer (de vêtements)",
+  "ex": "へや.で きがえます。|Je me change dans ma chambre."
+ },
+ "173": {
+  "en": "déménager",
+  "ex": "らいげつ とうきょう.に ひっこします。|Je déménage à Tokyo le mois prochain."
+ },
+ "174": {
+  "en": "passer (du temps)",
+  "ex": "かぞく.と しゅうまつ.を すごします。|Je passe le week-end avec ma famille."
+ },
+ "175": {
+  "en": "faire sécher",
+  "ex": "ベランダ.に せんたくもの.を ほします。|J'étends le linge sur le balcon."
+ },
+ "176": {
+  "en": "plier",
+  "ex": "ふく.を たたみます。|Je plie les vêtements."
+ },
+ "177": {
+  "en": "ranger",
+  "ex": "ふゆのふく.を しまいます。|Je range les vêtements d'hiver."
+ },
+ "178": {
+  "en": "cultiver; élever",
+  "ex": "にわ.で やさい.を そだてます。|Je cultive des légumes dans le jardin."
+ },
+ "179": {
+  "en": "toucher",
+  "ex": "このえ.に さわりません。|Je ne toucherai pas ce tableau."
+ },
+ "180": {
+  "en": "pousser; appuyer",
+  "ex": "このボタン.を おします。|J'appuie sur ce bouton."
+ },
+ "181": {
+  "en": "mesurer",
+  "ex": "あさ ねつ.を はかります。|Je prends ma température le matin."
+ },
+ "182": {
+  "en": "naître",
+  "ex": "らいげつ こども.が うまれます。|Notre bébé naîtra le mois prochain."
+ },
+ "183": {
+  "en": "aller bien (à quelqu'un)",
+  "ex": "そのふく.が よく にあいます。|Ces vêtements te vont très bien."
+ },
+ "184": {
+  "en": "être différent; être faux",
+  "ex": "これ.は ちがいます。|Ce n'est pas ça."
+ },
+ "185": {
+  "en": "se fatiguer",
+  "ex": "まいにち しごと.で つかれます。|Le travail me fatigue tous les jours."
+ },
+ "186": {
+  "en": "être embêté; ne pas savoir quoi faire",
+  "ex": "それ.は こまります。|Ça m'embête."
+ },
+ "187": {
+  "en": "se réjouir; être content",
+  "ex": "はは.が よろこびます。|Ma mère sera contente."
+ },
+ "188": {
+  "en": "rire; sourire",
+  "ex": "みんな.で わらいます。|Tout le monde rit ensemble."
+ },
+ "189": {
+  "en": "pleurer",
+  "ex": "あかちゃん.が よく なきます。|Le bébé pleure beaucoup."
+ },
+ "190": {
+  "en": "se fâcher",
+  "ex": "ちち.は すぐ おこります。|Mon père se fâche facilement."
+ },
+ "191": {
+  "en": "profiter de; s'amuser",
+  "ex": "りょこう.を たのしみましょう。|Profitons bien du voyage."
+ },
+ "192": {
+  "en": "s'habituer",
+  "ex": "すぐ しごと.に なれます。|Tu vas vite t'habituer au travail."
+ },
+ "193": {
+  "en": "faire mal",
+  "ex": "ときどき あたま.が いたみます。|J'ai parfois mal à la tête."
+ },
+ "194": {
+  "en": "se vider (avoir faim; être peu fréquenté)",
+  "ex": "よる.は でんしゃ.が すきます。|Le soir, les trains sont vides."
+ },
+ "195": {
+  "en": "être bondé",
+  "ex": "あさ.は でんしゃ.が こみます。|Le matin, les trains sont bondés."
+ },
+ "196": {
+  "en": "sécher; avoir soif",
+  "ex": "あついひ.は のど.が かわきます。|J'ai soif quand il fait chaud."
+ },
+ "197": {
+  "en": "gagner",
+  "ex": "こんど.は しあい.に かちましょう。|La prochaine fois, gagnons le match."
+ },
+ "198": {
+  "en": "perdre (un match)",
+  "ex": "いつも あに.に まけます。|Je perds toujours contre mon grand frère."
+ },
+ "199": {
+  "en": "arriver (courrier, colis)",
+  "ex": "あした にもつ.が とどきます。|Le colis arrive demain."
+ },
+ "200": {
+  "en": "se souvenir; se rappeler",
+  "ex": "そのうた.で むかし.を おもいだします。|Cette chanson me rappelle le passé."
+ }
+}
