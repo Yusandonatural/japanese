@@ -106,6 +106,7 @@ import { renderHeader, renderFooter, loadChapter, loadChapters, loadParticles, q
 import { renderQuestion, pickType } from '../js/quiz.js';
 import { recordAnswer, recordParticle, recordChapterTest } from '../js/srs.js';
 import { speak } from '../js/speech.js';
+import { addXP, sound, confetti } from '../js/game.js';
 renderHeader('');
 
 const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
@@ -148,8 +149,8 @@ checkBtn.addEventListener('click', () => {
   const result = current.check();
   answered++;
   const p = current.ex.chunks.find(c => c.p)?.p || '';
-  if (result.ok) { correct++; statusEl.textContent = '✓'; statusEl.className = 'status ok'; }
-  else { statusEl.textContent = current.correctText ? `→ ${current.correctText}` : '✗'; statusEl.className = 'status ng'; }
+  if (result.ok) { correct++; statusEl.textContent = '✓'; statusEl.className = 'status ok'; sound('ok'); }
+  else { statusEl.textContent = current.correctText ? `→ ${current.correctText}` : '✗'; statusEl.className = 'status ng'; sound('ng'); }
   recordAnswer(current.ex.id, !!result.ok);
   if (p) recordParticle(p, !!result.ok);
   checkBtn.style.display = 'none'; nextBtn.style.display = '';
@@ -168,6 +169,10 @@ function finish() {
     ? (isFinal ? t('You have the basics. Time to talk.') : t('Chapter {n} is ready when you are.', { n: ch + 1 }))
     : t('No rush — drill this chapter again before moving on.');
   recordChapterTest(ch, correct, answered);
+  const xp = correct + (pct >= 80 ? 20 : 0);
+  addXP(xp);
+  document.getElementById('doneNote').textContent += ' ' + t('+{x} XP', { x: xp });
+  if (pct >= 80) { sound('done'); confetti(); }
   updateBar();
 }
 showQuestion();

@@ -75,6 +75,21 @@
   <div class="muted small"><a href="../" data-i18n>Home</a> / <span data-i18n>Progress</span></div>
   <h1 data-i18n>Your progress</h1>
 
+  <div class="panel gamebar">
+    <div class="gstat streak"><span class="gi">🔥</span><b id="gStreak">0</b><span class="small muted" data-i18n>day streak</span></div>
+    <div class="gstat best"><span class="gi">🏅</span><b id="gBest">0</b><span class="small muted" data-i18n>best streak</span></div>
+    <div class="gstat xp"><span class="gi">⚡</span><b id="gXP">0</b><span class="small muted" data-i18n>total XP</span></div>
+  </div>
+
+  <h2 data-i18n>This week</h2>
+  <div class="panel"><div class="week" id="week"></div></div>
+
+  <h2 data-i18n>Settings</h2>
+  <div class="panel">
+    <div class="row"><b data-i18n>Daily goal</b> <div class="choices" id="goals" style="margin:0"></div></div>
+    <label class="row small" style="margin-top:10px"><input type="checkbox" id="soundOn"> <span data-i18n>Sound effects</span></label>
+  </div>
+
   <h2 data-i18n>14-day plan</h2>
   <div class="day-grid" id="days"></div>
 
@@ -93,7 +108,25 @@
 <script type="module">
 import { renderHeader, renderFooter, loadParticles, CHAPTERS, pColor, t } from '../js/app.js';
 import { loadDayLog, loadTests, particleStats } from '../js/srs.js';
+import { getGame, lastDays, setGoal, setSound, resetGame, GOALS } from '../js/game.js';
 renderHeader('progress');
+
+const game = getGame();
+document.getElementById('gStreak').textContent = game.streak;
+document.getElementById('gBest').textContent = game.best || 0;
+document.getElementById('gXP').textContent = game.xp;
+const days = lastDays(7);
+const maxXP = Math.max(game.goal, ...days.map(d => d.xp));
+const locale = document.documentElement.lang || 'en';
+document.getElementById('week').innerHTML = days.map(d => `<div class="wk${d.xp >= game.goal ? ' hit' : ''}"><small>${d.xp}</small><i style="height:${Math.round((d.xp / maxXP) * 100)}%"></i><span>${new Date(d.date + 'T12:00:00').toLocaleDateString(locale, { weekday: 'short' })}</span></div>`).join('');
+const goals = document.getElementById('goals');
+GOALS.forEach(g => {
+  const b = document.createElement('button'); b.className = 'choice' + (g === game.goal ? ' ok' : ''); b.textContent = `${g} XP`;
+  b.addEventListener('click', () => { setGoal(g); location.reload(); });
+  goals.appendChild(b);
+});
+const snd = document.getElementById('soundOn'); snd.checked = game.sound !== false;
+snd.addEventListener('change', () => setSound(snd.checked));
 
 const log = loadDayLog();
 const daysWrap = document.getElementById('days');
@@ -135,6 +168,7 @@ rows.forEach(([p, s]) => {
 document.getElementById('resetBtn').addEventListener('click', () => {
   if (!confirm(t('Reset all progress on this device? This cannot be undone.'))) return;
   ['tags.srs.v1', 'tags.particleStats.v1', 'tags.dayLog.v1', 'tags.chapterTests.v1'].forEach(k => localStorage.removeItem(k));
+  resetGame();
   location.reload();
 });
 

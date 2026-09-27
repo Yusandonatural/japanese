@@ -70,38 +70,55 @@
 <link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/drill/">
 <link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/drill/">
 </head>
-<body>
+<body class="lesson-mode">
 <main class="wrap">
+  <div class="lesson-top">
+    <a class="lesson-x" id="quitBtn" href="../" title="Quit" aria-label="Quit">✕</a>
+    <div class="progress-bar big"><i id="bar" style="width:0%"></i></div>
+    <div class="hearts" id="hearts" title="Hearts">❤️ <b id="heartsN">5</b></div>
+  </div>
   <div class="muted small" id="crumb"></div>
-  <h1 id="title" data-i18n>Drill</h1>
-  <div class="row" style="justify-content:space-between">
-    <div class="small muted" id="counter"></div>
-    <div class="progress-bar" style="flex:1;margin:0 12px"><i id="bar" style="width:0%"></i></div>
-    <div class="small muted" id="score">0 / 0</div>
+  <h1 id="title" class="lesson-title" data-i18n>Drill</h1>
+  <div class="row small muted" style="justify-content:space-between">
+    <div id="counter"></div>
+    <div id="score">0 / 0</div>
   </div>
 
   <div class="panel flash-intro" id="flashIntro" hidden><b data-i18n>⚡ Instant speaking</b> <span class="small muted" data-i18n>See the meaning, say the Japanese out loud before the bar runs out, then check yourself. Speed builds fluency.</span></div>
-  <div class="panel" id="qbox"></div>
-  <div class="row" style="justify-content:space-between">
-    <div class="status" id="status"></div>
-    <div class="row">
-      <button class="btn ghost" id="skipBtn" data-i18n>Skip</button>
-      <button class="btn" id="checkBtn" data-i18n>Check</button>
-      <button class="btn" id="nextBtn" style="display:none" data-i18n>Next →</button>
-    </div>
-  </div>
+  <div class="combo" id="combo" hidden></div>
+  <div class="panel qpanel" id="qbox"></div>
 
-  <div class="panel" id="doneBox" style="display:none">
-    <h2 data-i18n>Nice work 🎉</h2>
-    <p id="doneSummary"></p>
+  <div class="panel result" id="doneBox" style="display:none">
+    <div class="result-mascot" id="doneIcon">🎉</div>
+    <h2 id="doneTitle" data-i18n>Lesson complete!</h2>
+    <div class="result-stats">
+      <div class="stat xp"><span data-i18n>Total XP</span><b id="statXP">0</b></div>
+      <div class="stat acc"><span data-i18n>Accuracy</span><b id="statAcc">0%</b></div>
+      <div class="stat time"><span data-i18n>Time</span><b id="statTime">0:00</b></div>
+    </div>
+    <div class="streak-banner" id="streakBanner" hidden></div>
+    <div class="goal-line"><span class="small muted" id="goalText"></span><div class="progress-bar"><i id="goalBar" style="width:0%"></i></div></div>
+    <p id="doneSummary" class="small muted"></p>
     <div id="weakList"></div>
-    <div class="row" style="margin-top:10px">
+    <div class="row" style="margin-top:14px;justify-content:center">
       <a class="btn" id="nextLesson" href="../lesson/" style="display:none" data-i18n>Next lesson →</a>
+      <a class="btn" id="retryBtn" href="#" style="display:none" data-i18n>Try again</a>
       <a class="btn ghost" id="toChapter" href="#" data-i18n>Back to chapter</a>
       <a class="btn ghost" href="../" data-i18n>Home</a>
     </div>
   </div>
 </main>
+
+<div class="lesson-foot" id="foot">
+  <div class="lesson-foot-in">
+    <div class="status" id="status"></div>
+    <div class="row">
+      <button class="btn ghost" id="skipBtn" data-i18n>Skip</button>
+      <button class="btn" id="checkBtn" data-i18n>Check</button>
+      <button class="btn" id="nextBtn" style="display:none" data-i18n>Continue</button>
+    </div>
+  </div>
+</div>
 
 <script type="module">
 import { renderHeader, renderFooter, loadChapter, loadParticles, loadLessons, qs, chapterFor, shuffle, t } from '../js/app.js';
@@ -109,18 +126,20 @@ import { scopedExamples, lessonExamples } from '../js/scope.js';
 import { renderQuestion, pickType } from '../js/quiz.js';
 import { renderFlash } from '../js/flash.js';
 import { recordAnswer, recordParticle, markDayDone, particleStats } from '../js/srs.js';
+import { addXP, getGame, sound, confetti, HEARTS } from '../js/game.js';
 import { speak } from '../js/speech.js';
 renderHeader('');
 
 const ch = Math.max(1, Math.min(10, parseInt(qs('ch') || '1', 10)));
 const day = qs('day');
 const FLASH = qs('mode') === 'flash';
-const N = parseInt(qs('n') || (FLASH ? '20' : '30'), 10);
+const N = parseInt(qs('n') || (FLASH ? '20' : '15'), 10);
 const chapter = chapterFor(ch);
 document.getElementById('crumb').innerHTML = `<a href="../">${t('Home')}</a> / <a href="../ch/?n=${ch}">${t('Chapter {n}', { n: ch })}</a> / ${t('Drill')}`;
 document.getElementById('title').textContent = FLASH ? t('Instant speaking · Chapter {n}. {title}', { n: ch, title: chapter.title }) : t('Drill · Chapter {n}. {title}', { n: ch, title: chapter.title });
-if (FLASH) document.getElementById('flashIntro').hidden = false;
+if (FLASH) { document.getElementById('flashIntro').hidden = false; document.getElementById('hearts').hidden = true; }
 document.getElementById('toChapter').href = `../ch/?n=${ch}`;
+document.getElementById('quitBtn').title = t('Quit');
 
 const [examples, particles, lessons] = await Promise.all([loadChapter(ch), loadParticles(), loadLessons()]);
 // only what this chapter (up to this day) has taught
@@ -137,18 +156,23 @@ if (FLASH) {
   deck = shuffle(pool).slice(0, Math.min(N, pool.length));
 }
 
-let idx = 0, correct = 0, answered = 0;
+let idx = 0, correct = 0, answered = 0, hearts = HEARTS, combo = 0, bestCombo = 0;
 let current = null;
+const started = Date.now();
+const requeued = new Set();
 const qbox = document.getElementById('qbox');
+const foot = document.getElementById('foot');
 const statusEl = document.getElementById('status');
 const checkBtn = document.getElementById('checkBtn');
 const nextBtn = document.getElementById('nextBtn');
 const skipBtn = document.getElementById('skipBtn');
+const comboEl = document.getElementById('combo');
 
 function updateBar() {
-  document.getElementById('counter').textContent = t('Question {n} / {total}', { n: idx + 1, total: deck.length });
+  document.getElementById('counter').textContent = t('Question {n} / {total}', { n: Math.min(idx + 1, deck.length), total: deck.length });
   document.getElementById('bar').style.width = Math.round((idx / deck.length) * 100) + '%';
   document.getElementById('score').textContent = `${correct} / ${answered}`;
+  document.getElementById('heartsN').textContent = hearts;
 }
 
 function showQuestion() {
@@ -165,9 +189,11 @@ function showQuestion() {
   } else {
     current = renderQuestion(qbox, ex, type, opts);
   }
+  if (requeued.has(ex)) { const r = document.createElement('div'); r.className = 'again'; r.textContent = t('↻ Previous mistake'); qbox.prepend(r); }
   current.ex = ex; current.type = type;
   statusEl.textContent = ''; statusEl.className = 'status';
-  checkBtn.style.display = current.selfGraded ? 'none' : ''; nextBtn.style.display = 'none';
+  foot.className = 'lesson-foot';
+  checkBtn.style.display = current.selfGraded ? 'none' : ''; nextBtn.style.display = 'none'; skipBtn.style.display = '';
   updateBar();
 }
 
@@ -176,30 +202,85 @@ function grade(result) {
   answered++;
   const particleTagged = current.ex.chunks.find(c => c.p)?.p || '';
   if (result.ok) {
-    correct++;
-    statusEl.textContent = t('✓ That works.');
-    statusEl.className = 'status ok';
+    correct++; combo++; bestCombo = Math.max(bestCombo, combo);
+    statusEl.innerHTML = `<b>${t(PRAISE[Math.floor(Math.random() * PRAISE.length)])}</b>`;
+    statusEl.className = 'status ok'; foot.className = 'lesson-foot ok';
+    if (combo >= 3 && combo % 3 === 0) { showCombo(combo); sound('combo'); } else sound('ok');
   } else {
-    statusEl.textContent = current.correctText ? t('Not quite. → {x}', { x: current.correctText }) : t('✗ Not quite — try to notice the difference and move on.');
-    statusEl.className = 'status ng';
+    combo = 0;
+    statusEl.innerHTML = `<b>${t('Correct answer:')}</b> ` + (current.correctText ? escH(current.correctText) : escH(fullText(current.ex)));
+    statusEl.className = 'status ng'; foot.className = 'lesson-foot ng';
+    sound('ng');
+    // Duolingo-style: a mistake comes back at the end of the lesson (once), and costs a heart
+    if (!requeued.has(current.ex)) { requeued.add(current.ex); deck.push(current.ex); }
+    if (!FLASH) { hearts--; const h = document.getElementById('hearts'); h.classList.remove('lost'); void h.offsetWidth; h.classList.add('lost'); }
   }
   recordAnswer(current.ex.id, !!result.ok);
   if (particleTagged) recordParticle(particleTagged, !!result.ok);
-  checkBtn.style.display = 'none'; nextBtn.style.display = '';
+  checkBtn.style.display = 'none'; skipBtn.style.display = 'none'; nextBtn.style.display = '';
+  nextBtn.focus();
   updateBar();
-  if (FLASH) setTimeout(() => { if (current && current.ex === deck[idx]) { idx++; showQuestion(); } }, 900);
+  if (FLASH) setTimeout(() => { if (current && current.ex === deck[idx]) next(); }, 900);
 }
-nextBtn.addEventListener('click', () => { idx++; showQuestion(); });
+const PRAISE = ['Great job!', 'Nice!', 'Excellent!', 'Correct!', 'You got it!', 'Amazing!'];
+const escH = s => String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+const fullText = ex => ex.chunks.map(c => c.k + c.p).join(' ') + ' ' + ex.core.k + (ex.question ? '？' : '。');
+function showCombo(n) {
+  comboEl.textContent = t('🔥 {n} in a row!', { n });
+  comboEl.hidden = false; comboEl.classList.remove('pop'); void comboEl.offsetWidth; comboEl.classList.add('pop');
+  setTimeout(() => { comboEl.hidden = true; }, 1600);
+}
+function next() {
+  idx++;
+  if (!FLASH && hearts <= 0) return outOfHearts();
+  showQuestion();
+}
+nextBtn.addEventListener('click', next);
 skipBtn.addEventListener('click', () => { idx++; showQuestion(); });
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (nextBtn.style.display !== 'none') { e.preventDefault(); next(); }
+  else if (checkBtn.style.display !== 'none' && e.target.tagName !== 'BUTTON') { e.preventDefault(); checkBtn.click(); }
+});
+
+function endScreen() {
+  current?.destroy?.();
+  qbox.style.display = 'none'; foot.style.display = 'none'; comboEl.hidden = true;
+  document.getElementById('doneBox').style.display = '';
+  updateBar();
+}
+function outOfHearts() {
+  endScreen();
+  sound('ng');
+  document.getElementById('doneIcon').textContent = '💔';
+  document.getElementById('doneTitle').textContent = t('Out of hearts');
+  document.getElementById('doneSummary').textContent = t('Mistakes are how you learn. Read the lesson again or try once more — the day is marked done when you finish a drill.');
+  const xp = correct; const g = addXP(xp);
+  fillStats(xp, g);
+  const r = document.getElementById('retryBtn'); r.href = location.pathname + location.search; r.style.display = '';
+  if (day) { const nl = document.getElementById('nextLesson'); nl.href = `../lesson/?day=${day}`; nl.textContent = t('Review the lesson'); nl.className = 'btn ghost'; nl.style.display = ''; }
+}
+function fillStats(xp, g) {
+  const secs = Math.round((Date.now() - started) / 1000);
+  document.getElementById('statXP').textContent = '+' + xp;
+  document.getElementById('statAcc').textContent = answered ? Math.round((correct / answered) * 100) + '%' : '—';
+  document.getElementById('statTime').textContent = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
+  const game = getGame();
+  if (g.streakUp) { const b = document.getElementById('streakBanner'); b.hidden = false; b.innerHTML = `<span class="flame">🔥</span> ${t(g.streak > 1 ? '{n} day streak!' : 'Streak started! Come back tomorrow.', { n: g.streak })}`; }
+  document.getElementById('goalText').textContent = t('Daily goal: {x} / {g} XP', { x: g.today, g: game.goal }) + (g.today >= game.goal ? ' ✓' : '');
+  document.getElementById('goalBar').style.width = Math.min(100, Math.round((g.today / game.goal) * 100)) + '%';
+}
 
 function finish() {
-  current?.destroy?.();
-  qbox.style.display = 'none';
-  document.querySelector('.row.status')?.remove?.();
-  checkBtn.style.display = 'none'; nextBtn.style.display = 'none'; skipBtn.style.display = 'none';
-  statusEl.textContent = '';
-  document.getElementById('doneBox').style.display = '';
-  document.getElementById('doneSummary').textContent = t('You got {c} of {a} right.', { c: correct, a: answered });
+  endScreen();
+  const perfect = correct === answered && answered > 0;
+  const xp = correct + 10 + (perfect ? 5 : 0) + (bestCombo >= 10 ? 5 : 0);
+  const g = addXP(xp);
+  fillStats(xp, g);
+  document.getElementById('doneIcon').textContent = perfect ? '🏆' : '🎉';
+  document.getElementById('doneTitle').textContent = perfect ? t('Perfect lesson!') : t('Lesson complete!');
+  document.getElementById('doneSummary').textContent = t('You got {c} of {a} right.', { c: correct, a: answered }) + (bestCombo >= 3 ? ' ' + t('Best combo: {n}', { n: bestCombo }) : '');
+  sound('done'); confetti();
   const stats = particleStats();
   const weak = Object.entries(stats).filter(([, s]) => s.right + s.wrong >= 2).map(([p, s]) => [p, s.right / (s.right + s.wrong)]).sort((a, b) => a[1] - b[1]).slice(0, 3);
   const wl = document.getElementById('weakList');
@@ -208,7 +289,7 @@ function finish() {
   }
   if (day) markDayDone(day);
   if (day && Number(day) < 14) { const nl = document.getElementById('nextLesson'); nl.href = `../lesson/?day=${Number(day) + 1}`; nl.textContent = t('Day {n} lesson →', { n: Number(day) + 1 }); nl.style.display = ''; }
-  updateBar();
+  else { const nl = document.getElementById('nextLesson'); nl.href = '../'; nl.textContent = t('Continue'); nl.style.display = ''; }
 }
 
 showQuestion();

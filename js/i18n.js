@@ -151,4 +151,14 @@ export const TR = {
   'Show answer': 'Cevabı göster', '🎤 Speak': '🎤 Konuş', '🎤 Listening…': '🎤 Dinliyorum…', 'Time:': 'Süre:', 'Heard:': 'Duyulan:',
   '✓ I said it': '✓ Söyledim', '✗ Not yet': '✗ Henüz değil', 'Could not hear you — try again or tap Show answer.': 'Seni duyamadım — tekrar dene ya da Cevabı göster’e dokun.',
   'The core — four kinds': 'Çekirdek — dört tür', 'No tag at all': 'Hiç etiket yok', 'の — the glue inside a chunk': 'の — parçanın içindeki yapıştırıcı',
+  // game layer (streak, XP, path, lesson mode)
+  '{s} day streak · {x} XP': '{s} günlük seri · {x} XP', 'Quit': 'Çık', '↻ Previous mistake': '↻ Önceki hata',
+  'Great job!': 'Harika iş!', 'Nice!': 'Güzel!', 'Excellent!': 'Mükemmel!', 'Correct!': 'Doğru!', 'You got it!': 'Bildin!', 'Amazing!': 'Muhteşem!',
+  'Correct answer:': 'Doğru cevap:', '🔥 {n} in a row!': '🔥 Üst üste {n}!', 'Out of hearts': 'Canın bitti',
+  'Mistakes are how you learn. Read the lesson again or try once more — the day is marked done when you finish a drill.': 'Hatalar öğrenmenin yoludur. Dersi tekrar oku ya da bir kez daha dene — alıştırmayı bitirince gün tamamlanmış sayılır.',
+  'Review the lesson': 'Dersi tekrar et', '{n} day streak!': '{n} günlük seri!', 'Streak started! Come back tomorrow.': 'Seri başladı! Yarın yine gel.',
+  'Daily goal: {x} / {g} XP': 'Günlük hedef: {x} / {g} XP', 'Perfect lesson!': 'Kusursuz ders!', 'Lesson complete!': 'Ders tamamlandı!', 'Best combo: {n}': 'En iyi seri: {n}',
+  'Continue': 'Devam', 'Start': 'Başla', 'Lesson': 'Ders', 'Final test': 'Final sınavı', 'Take the test': 'Sınava gir', '+{x} XP': '+{x} XP',
+  'day streak': 'günlük seri', 'total XP': 'toplam XP', 'Daily goal': 'Günlük hedef', 'Your path': 'Yolun', 'Total XP': 'Toplam XP', 'Accuracy': 'Doğruluk',
+  'best streak': 'en iyi seri', 'This week': 'Bu hafta', 'Settings': 'Ayarlar', 'Sound effects': 'Ses efektleri',
 };

@@ -3,6 +3,7 @@ import { kanaToRomaji, romajiParticle, chunkRomaji, coreRomaji } from './romaji.
 import { parseEx, exKana, exRomaji } from './exparse.js';
 import { speak, canSpeak } from './speech.js';
 import { t, LOCALE } from './i18n.js';
+import { getGame } from './game.js';
 export { t, LOCALE };
 
 /** BASE = site root (data, css, js). LBASE = root of the current language edition (page links). */
@@ -150,6 +151,11 @@ export function renderHeader(active) {
     ? `<a class="lang" href="${root}${other}${location.search}" hreflang="en" title="${t('Learn Japanese in English')}">EN</a>`
     : `<a class="lang" href="${root}${other}${location.search}" hreflang="tr" title="Japoncayı Türkçe öğren">TR</a>`;
   h.innerHTML = `<a class="brand" href="${LBASE}">${t('Easy Japanese 14 Days')}</a><nav>${links.map(([p, label]) => `<a href="${LBASE}${p}" class="${active === label.toLowerCase() ? 'on' : ''}">${t(label)}</a>`).join('')}${langLink}</nav>`;
+  const g = getGame();
+  const chips = document.createElement('a'); chips.className = 'gchips'; chips.href = LBASE + 'progress/';
+  chips.title = t('{s} day streak · {x} XP', { s: g.streak, x: g.xp });
+  chips.innerHTML = `<span class="${g.doneToday ? '' : 'cold'}">🔥${g.streak}</span><span>⚡${g.xp}</span>`;
+  h.querySelector('.brand').after(chips);
   document.body.prepend(h);
   installButton(h.querySelector('nav'));
 }

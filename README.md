@@ -83,3 +83,15 @@ The site installs as an app (home screen / desktop) and works offline.
 - `inject-seo.mjs` adds the manifest / theme-colour / apple-touch-icon tags; `js/app.js` registers the
   service worker and shows an "Install app" button in the header when the browser allows it (iOS shows
   Add-to-Home-Screen instructions).
+
+## Game layer (Duolingo-style)
+
+`js/game.js` keeps XP, the daily streak, the daily goal (10/20/30/50 XP, set on the progress page),
+sound effects (WebAudio, can be turned off) and a confetti burst — all in localStorage (`tags.game.v1`).
+
+- Home: streak / XP / daily-goal card and a winding **path** — one node per day (lesson, drill, instant
+  speaking in a pop-up) and a 🎁/🏆 chapter-test node after each chapter.
+- Drill (`drill/`): 15 questions by default, 5 hearts ❤️ (not in instant-speaking mode), a mistake comes
+  back once at the end, green/red feedback sheet at the bottom, combo call-outs, results screen with XP,
+  accuracy and time. XP = correct answers + 10 for finishing + 5 for a perfect run + 5 for a 10-combo.
+- Tests award correct answers + 20 XP for a pass (≥80%). The header shows 🔥 streak and ⚡ XP.

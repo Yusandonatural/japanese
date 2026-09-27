@@ -82,13 +82,19 @@
     <div class="demo-note" data-i18n>Tap the sentence: the chunks move, the meaning stays.</div>
   </section>
 
-  <div class="panel">
-    <div class="row" style="justify-content:space-between">
-      <div><b id="progressLabel" data-i18n>Day 1 of 14</b> <span class="muted small" id="progressSub"></span></div>
-      <a class="btn" id="continueBtn" href="lesson/?day=1" data-i18n>Start Day 1 →</a>
+  <div class="panel gamebar">
+    <div class="gstat streak" title="Day streak"><span class="gi">🔥</span><b id="gStreak">0</b><span class="small muted" data-i18n>day streak</span></div>
+    <div class="gstat xp" title="Total XP"><span class="gi">⚡</span><b id="gXP">0</b><span class="small muted" data-i18n>total XP</span></div>
+    <div class="gstat dgoal">
+      <div class="small"><b data-i18n>Daily goal</b> <span class="muted" id="gGoalText"></span></div>
+      <div class="progress-bar"><i id="gGoalBar" style="width:0%"></i></div>
     </div>
-    <div class="progress-bar" style="margin-top:10px"><i id="progressBar" style="width:0%"></i></div>
+    <a class="btn" id="continueBtn" href="lesson/?day=1" data-i18n>Start Day 1 →</a>
   </div>
+
+  <h2 data-i18n>Your path</h2>
+  <p class="small muted"><span id="progressLabel" data-i18n>Day 1 of 14</span> · <span id="progressSub"></span></p>
+  <div class="path" id="path"></div>
 
   <h2 data-i18n>How it works</h2>
   <div class="grid">
@@ -96,9 +102,6 @@
     <div class="panel"><b data-i18n>2. Four endings, nothing else</b><p class="small muted" data-i18n>いきます (go) · いきますか (go?) · いきません (don't go) · いきましょう (let's go). That's the whole verb system at level 1.</p></div>
     <div class="panel"><b data-i18n>3. Time words do the tense</b><p class="small muted" data-i18n>Past and future come from a time word — きのう (yesterday), あした (tomorrow), らいしゅう (next week). The verb never changes.</p></div>
   </div>
-
-  <h2 data-i18n>The 10 chapters</h2>
-  <div id="chapters" class="grid"></div>
 
   <h2 data-i18n>How each day works</h2>
   <div class="grid">
@@ -120,7 +123,8 @@
 
 <script type="module">
 import { renderHeader, renderFooter, CHAPTERS, t, exCards, loadParticles, BASE, LOCALE } from './js/app.js';
-import { loadDayLog, daysDoneCount } from './js/srs.js';
+import { loadDayLog, daysDoneCount, loadTests } from './js/srs.js';
+import { getGame } from './js/game.js';
 renderHeader('home');
 
 // language selector in the hero
@@ -155,26 +159,60 @@ drawDemo(false);
 document.getElementById('demo').addEventListener('click', () => { oi++; drawDemo(true); });
 setInterval(() => { if (!document.hidden) { oi++; drawDemo(true); } }, 4200);
 
-const chWrap = document.getElementById('chapters');
-CHAPTERS.forEach(c => {
-  const a = document.createElement('a');
-  a.className = 'chapter-card';
-  a.href = `ch/?n=${c.n}`;
-  a.innerHTML = `<div class="n">${t('Chapter {n} · Day {d}', { n: c.n, d: c.days.join('–') })}</div><div class="t">${c.title}</div><div class="small muted">${c.sub}</div>`;
-  a.href = `lesson/?day=${c.days[0]}`;
-  chWrap.appendChild(a);
-});
-
 const done = daysDoneCount();
 document.getElementById('progressLabel').textContent = t('Day {d} of 14', { d: Math.min(done + 1, 14) });
 document.getElementById('progressSub').textContent = done ? t(done > 1 ? '{n} days done' : '{n} day done', { n: done }) : t('not started yet');
-document.getElementById('progressBar').style.width = Math.round((done / 14) * 100) + '%';
 const log = loadDayLog();
 let nextDay = 1;
 for (let d = 1; d <= 14; d++) if (!log[d]) { nextDay = d; break; } else nextDay = Math.min(d + 1, 14);
-const nextChapter = CHAPTERS.find(c => c.days.includes(nextDay)) || CHAPTERS[0];
 document.getElementById('continueBtn').href = `lesson/?day=${nextDay}`;
 document.getElementById('continueBtn').textContent = done ? t('Continue → Day {d}', { d: nextDay }) : t('Start Day 1 →');
+
+// streak / XP / daily goal
+const game = getGame();
+document.getElementById('gStreak').textContent = game.streak;
+document.getElementById('gXP').textContent = game.xp;
+document.getElementById('gGoalText').textContent = `${game.today} / ${game.goal} XP` + (game.today >= game.goal ? ' ✓' : '');
+document.getElementById('gGoalBar').style.width = Math.min(100, Math.round((game.today / game.goal) * 100)) + '%';
+if (!game.doneToday) document.querySelector('.gstat.streak').classList.add('cold');
+
+// the learning path: one node per day, a trophy after each chapter's last day
+const tests = loadTests();
+const path = document.getElementById('path');
+const allDone = done >= 14;
+let pos = 0;
+const offsets = [0, 1, 2, 1, 0, -1, -2, -1];
+function node(cls, icon, label, pop) {
+  const w = document.createElement('div'); w.className = 'pnode-wrap';
+  w.style.setProperty('--off', offsets[pos++ % offsets.length]);
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'pnode ' + cls; b.innerHTML = `<span>${icon}</span>`; b.setAttribute('aria-label', label);
+  const lab = document.createElement('div'); lab.className = 'plabel'; lab.textContent = label;
+  const pp = document.createElement('div'); pp.className = 'ppop'; pp.hidden = true; pp.innerHTML = pop;
+  b.addEventListener('click', e => { e.stopPropagation(); const open = pp.hidden; closePops(); pp.hidden = !open; w.classList.toggle('open', open); });
+  w.append(b, lab, pp);
+  if (cls.includes('current')) { const s = document.createElement('div'); s.className = 'pstart'; s.textContent = done ? t('Continue') : t('Start'); w.prepend(s); }
+  path.appendChild(w);
+}
+function closePops() { path.querySelectorAll('.ppop').forEach(x => { x.hidden = true; }); path.querySelectorAll('.pnode-wrap.open').forEach(x => x.classList.remove('open')); }
+document.addEventListener('click', e => { if (!e.target.closest('.ppop')) closePops(); });
+CHAPTERS.forEach(c => {
+  const unit = document.createElement('div'); unit.className = 'punit';
+  unit.innerHTML = `<div class="n">${t('Chapter {n} · Day {d}', { n: c.n, d: c.days.join('–') })}</div><div class="t">${c.title} <span class="ja">${c.ja}</span></div><div class="small">${c.sub}</div>`;
+  path.appendChild(unit);
+  c.days.forEach(d => {
+    const state = log[d] ? 'done' : (d === nextDay && !allDone) ? 'current' : d < nextDay ? 'open' : 'locked';
+    const icon = log[d] ? '✓' : state === 'current' ? '★' : state === 'locked' ? '🔒' : '★';
+    node(state, icon, t('Day {n}', { n: d }), `<b>${t('Day {n}', { n: d })}</b><div class="row">
+      <a class="btn small" href="lesson/?day=${d}">📖 ${t('Lesson')}</a>
+      <a class="btn small" href="drill/?ch=${c.n}&day=${d}">✏️ ${t('Drill')}</a>
+      <a class="btn small ghost" href="drill/?ch=${c.n}&day=${d}&mode=flash">⚡ ${t('Instant speaking')}</a></div>`);
+  });
+  const tr = tests[c.n];
+  const passed = tr && tr.correct / tr.total >= .8;
+  node('chest' + (passed ? ' done' : c.days.every(d => log[d]) ? ' open' : ' locked'), passed ? '🏆' : '🎁',
+    c.n === 10 ? t('Final test') : t('Chapter {n} test', { n: c.n }),
+    `<b>${c.n === 10 ? t('Final test') : t('Chapter {n} test', { n: c.n })}</b>${tr ? `<div class="small muted">${tr.correct}/${tr.total}</div>` : ''}<div class="row"><a class="btn small" href="test/?ch=${c.n}">${t('Take the test')}</a></div>`);
+});
 
 renderFooter();
 </script>
