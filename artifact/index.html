@@ -1,0 +1,361 @@
+<title>Easy Japanese 14 Days</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/tags.css">
+<style>
+  /* artifact shell: one page, views swap in place */
+  header.top { top: env(safe-area-inset-top, 0px); }
+  header.top nav button { font: inherit; background: none; border: 0; cursor: pointer; color: var(--muted); padding: 4px 9px; border-radius: 999px; }
+  header.top nav button.on { color: var(--accent); font-weight: 700; background: var(--accent-soft); }
+  .hero-mini { text-align: center; padding-block: 18px 4px; }
+  .hero-mini h1 { margin: 0; }
+  .hero-mini p { margin: 6px auto 0; max-width: 34em; }
+  .crumbs button { font: inherit; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; }
+  .confirm { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .lesson-foot { padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
+  .punit { margin-bottom: 44px; }
+  button.lesson-x { background: none; border: 0; cursor: pointer; font: inherit; font-size: 22px; color: var(--muted); }
+</style>
+
+<div id="app"></div>
+
+<script type="module">
+import { t, loadChapter, loadChapters, loadParticles, loadLessons, CHAPTERS, chapterFor, shuffle, exBlock, esc, kanaToRomaji, pColor } from './js/app.js';
+import { scopedExamples, lessonExamples } from './js/scope.js';
+import { renderQuestion, pickType } from './js/quiz.js';
+import { renderFlash } from './js/flash.js';
+import { recordAnswer, recordParticle, markDayDone, particleStats, loadDayLog, daysDoneCount, loadTests, recordChapterTest } from './js/srs.js';
+import { addXP, getGame, sound, confetti, HEARTS, GOALS, setGoal, setSound, lastDays, resetGame } from './js/game.js';
+import { speak, canSpeak } from './js/speech.js';
+
+const app = document.getElementById('app');
+let cleanup = null;
+
+// ---------- shell ----------
+function header(active) {
+  const g = getGame();
+  const h = document.createElement('header'); h.className = 'top';
+  h.innerHTML = `<a class="brand" href="#" data-go="home">Easy Japanese 14 Days</a>
+    <span class="gchips"><span class="${g.doneToday ? '' : 'cold'}" title="Day streak">🔥${g.streak}</span><span title="Total XP">⚡${g.xp}</span></span>
+    <nav><button data-go="home" class="${active === 'home' ? 'on' : ''}">Path</button><button data-go="lessons" class="${active === 'lessons' ? 'on' : ''}">Lessons</button><button data-go="progress" class="${active === 'progress' ? 'on' : ''}">Progress</button></nav>`;
+  return h;
+}
+function go(view, params = {}) {
+  cleanup?.(); cleanup = null;
+  document.body.classList.remove('lesson-mode');
+  app.innerHTML = '';
+  window.scrollTo(0, 0);
+  (VIEWS[view] || VIEWS.home)(params);
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-go]');
+  if (!b) return;
+  e.preventDefault();
+  go(b.dataset.go, { ...b.dataset });
+});
+const nextDayOf = log => { for (let d = 1; d <= 14; d++) if (!log[d]) return d; return 14; };
+const btn = (label, go, params = {}, cls = 'btn') => `<button type="button" class="${cls}" data-go="${go}" ${Object.entries(params).map(([k, v]) => `data-${k}="${v}"`).join(' ')}>${label}</button>`;
+
+const VIEWS = {
+  // ---------- the path ----------
+  home() {
+    app.appendChild(header('home'));
+    const main = document.createElement('main'); main.className = 'wrap'; app.appendChild(main);
+    const log = loadDayLog(), done = daysDoneCount(), nextDay = nextDayOf(log), game = getGame(), tests = loadTests();
+    main.innerHTML = `
+      <section class="hero-mini">
+        <h1>Easy Japanese <span class="accent" style="color:var(--shu)">14 Days</span></h1>
+        <p class="muted">Tag Grammar: every sentence is tagged chunks in front of one final verb. Move the chunks, keep the tags. Kana and romaji side by side, no conjugation drills.</p>
+      </section>
+      <div class="panel gamebar">
+        <div class="gstat streak ${game.doneToday ? '' : 'cold'}"><span class="gi">🔥</span><b>${game.streak}</b><span class="small muted">day streak</span></div>
+        <div class="gstat xp"><span class="gi">⚡</span><b>${game.xp}</b><span class="small muted">total XP</span></div>
+        <div class="gstat dgoal"><div class="small"><b>Daily goal</b> <span class="muted">${game.today} / ${game.goal} XP${game.today >= game.goal ? ' ✓' : ''}</span></div>
+          <div class="progress-bar"><i style="width:${Math.min(100, Math.round(game.today / game.goal * 100))}%"></i></div></div>
+        ${btn(done ? `Continue → Day ${nextDay}` : 'Start Day 1 →', 'lesson', { day: nextDay })}
+      </div>
+      <h2>Your path</h2>
+      <p class="small muted">Day ${Math.min(done + 1, 14)} of 14 · ${done ? `${done} day${done > 1 ? 's' : ''} done` : 'not started yet'}</p>
+      <div class="path" id="path"></div>`;
+    const path = main.querySelector('#path');
+    const offsets = [0, 1, 2, 1, 0, -1, -2, -1];
+    let pos = 0;
+    const closePops = () => { path.querySelectorAll('.ppop').forEach(x => { x.hidden = true; }); path.querySelectorAll('.pnode-wrap.open').forEach(x => x.classList.remove('open')); };
+    function node(cls, icon, label, pop) {
+      const w = document.createElement('div'); w.className = 'pnode-wrap'; w.style.setProperty('--off', offsets[pos++ % offsets.length]);
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'pnode ' + cls; b.innerHTML = `<span>${icon}</span>`; b.setAttribute('aria-label', label);
+      const lab = document.createElement('div'); lab.className = 'plabel'; lab.textContent = label;
+      const pp = document.createElement('div'); pp.className = 'ppop'; pp.hidden = true; pp.innerHTML = pop;
+      b.addEventListener('click', e => { e.stopPropagation(); const open = pp.hidden; closePops(); pp.hidden = !open; w.classList.toggle('open', open); });
+      w.append(b, lab, pp);
+      if (cls.includes('current')) { const s = document.createElement('div'); s.className = 'pstart'; s.textContent = done ? 'Continue' : 'Start'; w.prepend(s); }
+      path.appendChild(w);
+    }
+    const onDoc = e => { if (!e.target.closest('.ppop')) closePops(); };
+    document.addEventListener('click', onDoc); cleanup = () => document.removeEventListener('click', onDoc);
+    CHAPTERS.forEach(c => {
+      const unit = document.createElement('div'); unit.className = 'punit';
+      unit.innerHTML = `<div class="n">Chapter ${c.n} · Day ${c.days.join('–')}</div><div class="t">${c.title} <span class="ja">${c.ja}</span></div><div class="small">${c.sub}</div>`;
+      path.appendChild(unit);
+      c.days.forEach(d => {
+        const state = log[d] ? 'done' : (d === nextDay && done < 14) ? 'current' : d < nextDay ? 'open' : 'locked';
+        node(state, log[d] ? '✓' : state === 'locked' ? '🔒' : '★', `Day ${d}`,
+          `<b>Day ${d}</b><div class="row">${btn('📖 Lesson', 'lesson', { day: d }, 'btn small')}${btn('✏️ Drill', 'drill', { ch: c.n, day: d }, 'btn small')}${btn('⚡ Instant speaking', 'drill', { ch: c.n, day: d, mode: 'flash' }, 'btn small ghost')}</div>`);
+      });
+      const tr = tests[c.n], passed = tr && tr.correct / tr.total >= .8;
+      const name = c.n === 10 ? 'Final test' : `Chapter ${c.n} test`;
+      node('chest' + (passed ? ' done' : c.days.every(d => log[d]) ? ' open' : ' locked'), passed ? '🏆' : '🎁', name,
+        `<b>${name}</b>${tr ? `<div class="small muted">Last score ${tr.correct}/${tr.total}</div>` : ''}<div class="row">${btn('Take the test', 'drill', { ch: c.n, mode: 'test' }, 'btn small')}</div>`);
+    });
+  },
+
+  // ---------- lesson list ----------
+  async lessons() {
+    app.appendChild(header('lessons'));
+    const main = document.createElement('main'); main.className = 'wrap prose'; app.appendChild(main);
+    const lessons = await loadLessons(), log = loadDayLog();
+    main.innerHTML = `<h1>14 daily lessons</h1><p class="lead">Read the day's lesson (about 15 minutes), then do the drill.</p><div class="panel lesson-list" id="list" style="padding-block:4px"></div>`;
+    lessons.forEach(l => {
+      const a = document.createElement('a'); a.href = '#'; a.dataset.go = 'lesson'; a.dataset.day = l.day;
+      a.innerHTML = `<span class="d">Day ${l.day}</span><span><b>${esc(l.title)}</b><br><span class="small muted">${esc(l.goal)}</span></span>${log[l.day] ? '<span class="done-mark">✓</span>' : ''}`;
+      main.querySelector('#list').appendChild(a);
+    });
+  },
+
+  // ---------- one lesson ----------
+  async lesson({ day }) {
+    day = Number(day) || 1;
+    app.appendChild(header('lessons'));
+    const main = document.createElement('main'); main.className = 'wrap prose'; app.appendChild(main);
+    const [lessons, particles] = await Promise.all([loadLessons(), loadParticles()]);
+    const l = lessons.find(x => x.day === day); const ch = chapterFor(l.chapter);
+    const tagRe = /([ぁ-ゖァ-ヺー])\.(から|まで|でも|にも|とも|へも|は|が|を|に|で|と|へ|も)(?![ぁ-ゖ])/g;
+    const prose = s => esc(s).replace(tagRe, (m, a, p) => { const base = p.length > 1 && p.endsWith('も') ? p.slice(0, -1) : p; return `${a}<b style="color:${(particles.find(x => x.p === base) || {}).color || 'inherit'}">${p}</b>`; });
+    main.innerHTML = `
+      <div class="muted small crumbs"><button data-go="home">Path</button> / <button data-go="lessons">Lessons</button> / Day ${day}</div>
+      <div class="small muted" style="margin-top:10px">Day ${day} of 14 · Chapter ${l.chapter}: ${esc(ch.title)} · about ${l.minutes || 15} min</div>
+      <h1>${esc(l.title)}</h1><div class="muted" style="font-size:18px">${esc(l.ja || '')}</div>
+      <div class="panel goal">🎯 ${esc(l.goal)}</div>
+      <p>${prose(l.intro)}</p><div id="sections"></div>
+      <h2>Try it</h2><p class="small muted">Say it out loud first, then tap to check.</p><div class="panel tryit" id="tryit"></div>
+      <h2>Key words</h2><div class="wordgrid" id="words"></div>
+      <h2>Recap</h2><div class="panel"><ul id="recap" style="margin:0;padding-left:20px"></ul></div>
+      <div class="panel row" style="justify-content:space-between">
+        <div><b>Now practise</b><div class="small muted">A short drill on Chapter ${l.chapter}. It marks Day ${day} as done.</div></div>
+        <div class="row">${btn('⚡ Instant speaking', 'drill', { ch: l.chapter, day, mode: 'flash' }, 'btn ghost')}${btn('Start the drill →', 'drill', { ch: l.chapter, day })}</div>
+      </div>
+      <div class="lesson-nav">${day > 1 ? btn(`← Day ${day - 1}`, 'lesson', { day: day - 1 }, 'btn ghost small') : '<span></span>'}${day < 14 ? btn(`Day ${day + 1} →`, 'lesson', { day: day + 1 }, 'btn ghost small') : '<span></span>'}</div>`;
+    const secs = main.querySelector('#sections');
+    l.sections.forEach(s => {
+      const box = document.createElement('section');
+      box.innerHTML = `<h2>${prose(s.h)}</h2>` + (s.p || []).map(p => `<p>${prose(p)}</p>`).join('');
+      (s.ex || []).forEach(e => box.appendChild(exBlock(e)));
+      if (s.wrong && s.wrong.length) {
+        const m = document.createElement('div'); m.className = 'panel'; m.innerHTML = '<div class="small"><b>Watch out</b></div>';
+        s.wrong.forEach((w, i) => { m.appendChild(exBlock(w.includes('|') ? w : w + '|', { wrong: true })); if (s.right && s.right[i]) m.appendChild(exBlock(s.right[i], { right: true })); });
+        box.appendChild(m);
+      }
+      if (s.tip) { const tip = document.createElement('div'); tip.className = 'tip'; tip.innerHTML = prose(s.tip); box.appendChild(tip); }
+      secs.appendChild(box);
+    });
+    (l.tryit || []).forEach((q, i) => { const d = document.createElement('details'); d.innerHTML = `<summary>${i + 1}. ${prose(q.q)}</summary>`; d.appendChild(exBlock(q.a)); main.querySelector('#tryit').appendChild(d); });
+    (l.words || []).forEach(w => {
+      const d = document.createElement('div'); d.className = 'w'; d.style.cursor = canSpeak() ? 'pointer' : 'default';
+      d.innerHTML = `<b>${esc(w.k)}</b><span>${esc(kanaToRomaji(w.k))} · ${esc(w.en)}</span>`;
+      if (canSpeak()) d.addEventListener('click', () => speak(w.k));
+      main.querySelector('#words').appendChild(d);
+    });
+    (l.recap || []).forEach(r => { const li = document.createElement('li'); li.innerHTML = prose(r); main.querySelector('#recap').appendChild(li); });
+  },
+
+  // ---------- drill / instant speaking / chapter test ----------
+  async drill({ ch, day, mode }) {
+    ch = Math.max(1, Math.min(10, Number(ch) || 1));
+    const FLASH = mode === 'flash', TEST = mode === 'test', isFinal = TEST && ch === 10;
+    const chapter = chapterFor(ch);
+    document.body.classList.add('lesson-mode');
+    const main = document.createElement('main'); main.className = 'wrap'; app.appendChild(main);
+    main.innerHTML = `
+      <div class="lesson-top"><button class="lesson-x" data-go="home" title="Quit" aria-label="Quit">✕</button>
+        <div class="progress-bar big"><i id="bar" style="width:0%"></i></div>
+        <div class="hearts" id="hearts" title="Hearts">❤️ <b id="heartsN">${HEARTS}</b></div></div>
+      <h1 class="lesson-title">${TEST ? (isFinal ? 'Final test · all 10 chapters' : `Chapter ${ch} test`) : FLASH ? `Instant speaking · Chapter ${ch}. ${chapter.title}` : `Drill · Chapter ${ch}. ${chapter.title}`}</h1>
+      <div class="row small muted" style="justify-content:space-between"><div id="counter"></div><div id="score">0 / 0</div></div>
+      ${FLASH ? '<div class="panel flash-intro"><b>⚡ Instant speaking</b> <span class="small muted">See the meaning, say the Japanese out loud before the bar runs out, then check yourself.</span></div>' : ''}
+      <div class="combo" id="combo" hidden></div>
+      <div class="panel qpanel" id="qbox"><p class="muted">Loading…</p></div>
+      <div class="panel result" id="doneBox" hidden>
+        <div class="result-mascot" id="doneIcon">🎉</div><h2 id="doneTitle">Lesson complete!</h2>
+        <div class="result-stats">
+          <div class="stat xp"><span>Total XP</span><b id="statXP">0</b></div>
+          <div class="stat acc"><span>Accuracy</span><b id="statAcc">0%</b></div>
+          <div class="stat time"><span>Time</span><b id="statTime">0:00</b></div></div>
+        <div class="streak-banner" id="streakBanner" hidden></div>
+        <div class="goal-line"><span class="small muted" id="goalText"></span><div class="progress-bar"><i id="goalBar" style="width:0%"></i></div></div>
+        <p id="doneSummary" class="small muted"></p>
+        <div class="row" id="doneBtns" style="margin-top:14px;justify-content:center"></div>
+      </div>`;
+    const foot = document.createElement('div'); foot.className = 'lesson-foot';
+    foot.innerHTML = `<div class="lesson-foot-in"><div class="status" id="status"></div><div class="row">
+      <button class="btn ghost" id="skipBtn">Skip</button><button class="btn" id="checkBtn">Check</button><button class="btn" id="nextBtn" hidden>Continue</button></div></div>`;
+    app.appendChild(foot);
+    const $ = id => app.querySelector('#' + id);
+    const HEARTS_ON = !FLASH && !TEST;
+    if (!HEARTS_ON) $('hearts').hidden = true;
+
+    const [examples, particles, lessons] = await Promise.all([isFinal ? loadChapters([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) : loadChapter(ch), loadParticles(), loadLessons()]);
+    let deck, opts;
+    if (TEST) {
+      opts = { particles, availableParticles: particles.map(p => p.p), speak, pool: examples, showChapter: isFinal };
+      deck = shuffle(examples).slice(0, isFinal ? 100 : 30);
+    } else {
+      const pool = scopedExamples(examples, ch, day);
+      const taught = pool.flatMap(e => e.chunks.map(c => c.p)).filter(Boolean);
+      opts = { particles, availableParticles: particles.filter(p => (p.chapter <= ch || ch >= 7) && (taught.includes(p.p) || p.chapter < ch)).map(p => p.p), speak, pool };
+      if (FLASH) { const fromLesson = shuffle(lessonExamples(lessons, ch, day)).slice(0, 10); deck = shuffle([...fromLesson, ...shuffle(pool).slice(0, 20 - fromLesson.length)]); }
+      else deck = shuffle(pool).slice(0, 15);
+    }
+
+    let idx = 0, correct = 0, answered = 0, hearts = HEARTS, combo = 0, bestCombo = 0, current = null, over = false;
+    const started = Date.now(), requeued = new Set();
+    const qbox = $('qbox'), statusEl = $('status'), checkBtn = $('checkBtn'), nextBtn = $('nextBtn'), skipBtn = $('skipBtn'), comboEl = $('combo');
+    const PRAISE = ['Great job!', 'Nice!', 'Excellent!', 'Correct!', 'You got it!', 'Amazing!'];
+    const fullText = ex => ex.chunks.map(c => c.k + c.p).join(' ') + ' ' + ex.core.k + (ex.question ? '？' : '。');
+    const updateBar = () => {
+      $('counter').textContent = `Question ${Math.min(idx + 1, deck.length)} / ${deck.length}`;
+      $('bar').style.width = Math.round(idx / deck.length * 100) + '%';
+      $('score').textContent = `${correct} / ${answered}`; $('heartsN').textContent = hearts;
+    };
+    function show() {
+      if (idx >= deck.length) return finish();
+      const ex = deck[idx];
+      current?.destroy?.();
+      const type = FLASH || (!TEST && Math.random() < 0.16) ? 'flash' : pickType(ex);
+      if (type === 'flash') { qbox.innerHTML = '<div class="small muted">⚡ Instant speaking</div>'; current = renderFlash(qbox, ex, { ...opts, onGraded: ok => grade({ ok }) }); }
+      else current = renderQuestion(qbox, ex, type, opts);
+      if (requeued.has(ex)) { const r = document.createElement('div'); r.className = 'again'; r.textContent = '↻ Previous mistake'; qbox.prepend(r); }
+      current.ex = ex;
+      statusEl.textContent = ''; statusEl.className = 'status'; foot.className = 'lesson-foot';
+      checkBtn.hidden = !!current.selfGraded; nextBtn.hidden = true; skipBtn.hidden = TEST;
+      updateBar();
+    }
+    function grade(result) {
+      answered++;
+      const tag = current.ex.chunks.find(c => c.p)?.p || '';
+      if (result.ok) {
+        correct++; combo++; bestCombo = Math.max(bestCombo, combo);
+        statusEl.innerHTML = `<b>${PRAISE[Math.floor(Math.random() * PRAISE.length)]}</b>`; statusEl.className = 'status ok'; foot.className = 'lesson-foot ok';
+        if (combo >= 3 && combo % 3 === 0) { comboEl.textContent = `🔥 ${combo} in a row!`; comboEl.hidden = false; comboEl.classList.remove('pop'); void comboEl.offsetWidth; comboEl.classList.add('pop'); setTimeout(() => { comboEl.hidden = true; }, 1600); sound('combo'); }
+        else sound('ok');
+      } else {
+        combo = 0;
+        statusEl.innerHTML = `<b>Correct answer:</b> ${esc(current.correctText || fullText(current.ex))}`; statusEl.className = 'status ng'; foot.className = 'lesson-foot ng';
+        sound('ng');
+        if (!TEST && !requeued.has(current.ex)) { requeued.add(current.ex); deck.push(current.ex); }
+        if (HEARTS_ON) { hearts--; const h = $('hearts'); h.classList.remove('lost'); void h.offsetWidth; h.classList.add('lost'); }
+      }
+      recordAnswer(current.ex.id, !!result.ok);
+      if (tag) recordParticle(tag, !!result.ok);
+      checkBtn.hidden = true; skipBtn.hidden = true; nextBtn.hidden = false; nextBtn.focus();
+      updateBar();
+      if (FLASH) { const ex = current.ex; setTimeout(() => { if (!over && current && current.ex === ex && deck[idx] === ex) next(); }, 900); }
+    }
+    function next() { idx++; if (HEARTS_ON && hearts <= 0) return end(false); show(); }
+    checkBtn.addEventListener('click', () => grade(current.check()));
+    nextBtn.addEventListener('click', next);
+    skipBtn.addEventListener('click', () => { idx++; show(); });
+    const onKey = e => {
+      if (e.key !== 'Enter' || over) return;
+      if (!nextBtn.hidden) { e.preventDefault(); next(); }
+      else if (!checkBtn.hidden && e.target.tagName !== 'BUTTON') { e.preventDefault(); checkBtn.click(); }
+    };
+    document.addEventListener('keydown', onKey);
+    cleanup = () => { over = true; current?.destroy?.(); document.removeEventListener('keydown', onKey); };
+
+    function end(completed) {
+      over = true; current?.destroy?.();
+      qbox.hidden = true; foot.hidden = true; comboEl.hidden = true; $('doneBox').hidden = false;
+      updateBar();
+      const pct = answered ? Math.round(correct / answered * 100) : 0;
+      const perfect = completed && correct === answered && answered > 0;
+      let xp = correct, buttons = [];
+      if (!completed) {
+        sound('ng');
+        $('doneIcon').textContent = '💔'; $('doneTitle').textContent = 'Out of hearts';
+        $('doneSummary').textContent = 'Mistakes are how you learn. Read the lesson again or try once more. The day is marked done when you finish a drill.';
+        buttons = [btn('Try again', 'drill', { ch, day: day || '', mode: mode || '' }), day ? btn('Review the lesson', 'lesson', { day }, 'btn ghost') : ''];
+      } else if (TEST) {
+        const pass = pct >= 80; xp += pass ? 20 : 0;
+        recordChapterTest(ch, correct, answered);
+        $('doneIcon').textContent = pass ? '🏆' : '📘'; $('doneTitle').textContent = pass ? 'Passed!' : 'Keep practicing';
+        $('doneSummary').textContent = pass ? (isFinal ? 'You have the basics. Time to talk.' : `Chapter ${ch + 1} is ready when you are.`) : 'No rush. Drill this chapter again before moving on.';
+        if (pass) { sound('done'); confetti(); }
+        buttons = [btn('Try again', 'drill', { ch, mode: 'test' }, pass ? 'btn ghost' : 'btn')];
+      } else {
+        xp += 10 + (perfect ? 5 : 0) + (bestCombo >= 10 ? 5 : 0);
+        if (day) markDayDone(day);
+        $('doneIcon').textContent = perfect ? '🏆' : '🎉'; $('doneTitle').textContent = perfect ? 'Perfect lesson!' : 'Lesson complete!';
+        $('doneSummary').textContent = `You got ${correct} of ${answered} right.` + (bestCombo >= 3 ? ` Best combo: ${bestCombo}.` : '');
+        sound('done'); confetti();
+        if (day && Number(day) < 14) buttons.push(btn(`Day ${Number(day) + 1} lesson →`, 'lesson', { day: Number(day) + 1 }));
+      }
+      const g = addXP(xp), game = getGame(), secs = Math.round((Date.now() - started) / 1000);
+      $('statXP').textContent = '+' + xp;
+      $('statAcc').textContent = answered ? pct + '%' : '—';
+      $('statTime').textContent = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
+      if (g.streakUp) { const b = $('streakBanner'); b.hidden = false; b.innerHTML = `<span class="flame">🔥</span> ${g.streak > 1 ? `${g.streak} day streak!` : 'Streak started! Come back tomorrow.'}`; }
+      $('goalText').textContent = `Daily goal: ${g.today} / ${game.goal} XP` + (g.today >= game.goal ? ' ✓' : '');
+      $('goalBar').style.width = Math.min(100, Math.round(g.today / game.goal * 100)) + '%';
+      $('doneBtns').innerHTML = buttons.join('') + btn('Back to the path', 'home', {}, 'btn ghost');
+    }
+    const finish = () => end(true);
+    show();
+  },
+
+  // ---------- progress ----------
+  async progress() {
+    app.appendChild(header('progress'));
+    const main = document.createElement('main'); main.className = 'wrap'; app.appendChild(main);
+    const game = getGame(), days = lastDays(7), log = loadDayLog(), tests = loadTests();
+    const maxXP = Math.max(game.goal, ...days.map(d => d.xp));
+    main.innerHTML = `
+      <h1>Your progress</h1>
+      <div class="panel gamebar">
+        <div class="gstat streak"><span class="gi">🔥</span><b>${game.streak}</b><span class="small muted">day streak</span></div>
+        <div class="gstat best"><span class="gi">🏅</span><b>${game.best || 0}</b><span class="small muted">best streak</span></div>
+        <div class="gstat xp"><span class="gi">⚡</span><b>${game.xp}</b><span class="small muted">total XP</span></div>
+      </div>
+      <h2>This week</h2>
+      <div class="panel"><div class="week">${days.map(d => `<div class="wk${d.xp >= game.goal ? ' hit' : ''}"><small>${d.xp}</small><i style="height:${Math.round(d.xp / maxXP * 100)}%"></i><span>${new Date(d.date + 'T12:00:00').toLocaleDateString('en', { weekday: 'short' })}</span></div>`).join('')}</div></div>
+      <h2>14-day plan</h2><div class="day-grid" id="days"></div>
+      <h2>Tag accuracy</h2><div class="panel" id="acc"></div>
+      <h2>Settings</h2>
+      <div class="panel">
+        <div class="row"><b>Daily goal</b><div class="choices" id="goals" style="margin:0"></div></div>
+        <label class="row small" style="margin-top:10px"><input type="checkbox" id="soundOn"> Sound effects</label>
+      </div>
+      <div class="confirm" id="reset"><button class="btn ghost" id="resetBtn">Reset all progress</button></div>`;
+    for (let d = 1; d <= 14; d++) {
+      const c = CHAPTERS.find(x => x.days.includes(d));
+      const a = document.createElement('a'); a.href = '#'; a.dataset.go = 'lesson'; a.dataset.day = d;
+      a.className = 'day' + (log[d] ? ' done' : ''); a.innerHTML = `Day ${d}<br>${log[d] ? '✓' : 'Ch' + c.n}`;
+      main.querySelector('#days').appendChild(a);
+    }
+    const particles = await loadParticles(), stats = particleStats();
+    const rows = particles.map(p => [p, stats[p.p]]).filter(([, s]) => s && s.right + s.wrong > 0);
+    main.querySelector('#acc').innerHTML = rows.length ? rows.map(([p, s]) => { const acc = s.right / (s.right + s.wrong); return `<div class="row" style="padding:6px 0"><span class="tag-pill" style="background:${pColor(p.p)};min-width:26px;text-align:center">${p.p}</span><div style="flex:1"><div class="progress-bar"><i style="width:${Math.round(acc * 100)}%;background:${acc >= .8 ? 'var(--ok)' : acc >= .5 ? 'var(--accent)' : 'var(--ng)'}"></i></div></div><span class="small muted" style="min-width:70px;text-align:right">${s.right}/${s.right + s.wrong}</span></div>`; }).join('')
+      : '<p class="muted small">Do a drill or two, and this fills in.</p>';
+    const goals = main.querySelector('#goals');
+    GOALS.forEach(g => { const b = document.createElement('button'); b.className = 'choice' + (g === game.goal ? ' ok' : ''); b.textContent = `${g} XP`; b.addEventListener('click', () => { setGoal(g); go('progress'); }); goals.appendChild(b); });
+    const snd = main.querySelector('#soundOn'); snd.checked = game.sound !== false; snd.addEventListener('change', () => setSound(snd.checked));
+    main.querySelector('#resetBtn').addEventListener('click', () => {
+      main.querySelector('#reset').innerHTML = '<span>Erase streak, XP and all answers on this device?</span><button class="btn" id="yes">Erase</button><button class="btn ghost" id="no">Keep</button>';
+      main.querySelector('#yes').addEventListener('click', () => { ['tags.srs.v1', 'tags.particleStats.v1', 'tags.dayLog.v1', 'tags.chapterTests.v1'].forEach(k => { try { localStorage.removeItem(k); } catch {} }); resetGame(); go('progress'); });
+      main.querySelector('#no').addEventListener('click', () => go('progress'));
+    });
+  }
+};
+
+go('home');
+</script>
