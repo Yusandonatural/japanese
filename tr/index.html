@@ -68,6 +68,7 @@
 <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="https://nihongo.yusando.com/">
 <link rel="alternate" hreflang="tr" href="https://nihongo.yusando.com/tr/">
+<link rel="alternate" hreflang="fr" href="https://nihongo.yusando.com/fr/">
 <link rel="alternate" hreflang="x-default" href="https://nihongo.yusando.com/">
 </head>
 <body>
@@ -129,7 +130,7 @@ renderHeader('home');
 
 // language selector in the hero
 const ls = document.getElementById('langSwitch');
-[['en', '', 'English', 'EN'], ['tr', 'tr/', 'Türkçe', 'TR']].forEach(([code, path, label, short]) => {
+[['en', '', 'English', 'EN'], ['tr', 'tr/', 'Türkçe', 'TR'], ['fr', 'fr/', 'Français', 'FR']].forEach(([code, path, label, short]) => {
   const a = document.createElement('a');
   a.href = BASE + path; a.hreflang = code; a.lang = code;
   a.className = LOCALE === code ? 'on' : '';
