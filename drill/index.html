@@ -208,7 +208,7 @@ function grade(result) {
     if (combo >= 3 && combo % 3 === 0) { showCombo(combo); sound('combo'); } else sound('ok');
   } else {
     combo = 0;
-    statusEl.innerHTML = `<b>${t('Correct answer:')}</b> ` + (current.correctText ? escH(current.correctText) : escH(fullText(current.ex)));
+    statusEl.innerHTML = `<b>${t('Correct answer:')}</b> ` + (current.correctText ? escH(current.correctText) : escH(fullText(current.ex))) + (result.reason === 'core-last' ? ` <span class="small">${t('The core always goes last.')}</span>` : '');
     statusEl.className = 'status ng'; foot.className = 'lesson-foot ng';
     sound('ng');
     // Duolingo-style: a mistake comes back at the end of the lesson (once), and costs a heart

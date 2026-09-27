@@ -38,7 +38,7 @@ export const TR = {
   'Ch{n}': 'Bl.{n}',
   'Where do the tags split this sentence?': 'Etiketler bu cümleyi nereden bölüyor?',
   'Pick the right tag for each highlighted chunk.': 'İşaretli her parça için doğru etiketi seç.',
-  'Tap the pieces in an order that works. Core stays last.': 'Parçalara uygun bir sırayla dokun. Çekirdek hep sonda kalır.',
+  'Tap the pieces in an order that works. The core goes last.': 'Parçalara uygun bir sırayla dokun. Çekirdek en sona gelir.', 'The core always goes last.': 'Çekirdek her zaman en sona gelir.',
   'Tap the chunk to bring to the front, to stress "{g}".': '"{g}" anlamını vurgulamak için öne alınacak parçaya dokun.',
   'What can you drop when the context is already clear?': 'Bağlam zaten açıksa neyi atabilirsin?',
   '🔊 Play': '🔊 Dinle',

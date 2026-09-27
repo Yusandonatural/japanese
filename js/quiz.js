@@ -86,7 +86,7 @@ const RENDERERS = {
 
   // Q3 build — assemble the chunk cards (any order unless fixedOrder) + core last.
   build(container, ex, opts) {
-    container.appendChild(el('div', 'lead', t('Tap the pieces in an order that works. Core stays last.')));
+    container.appendChild(el('div', 'lead', t('Tap the pieces in an order that works. The core goes last.')));
     const w = buildWidget(ex, opts);
     container.appendChild(w.el);
     return { check: () => w.check() };

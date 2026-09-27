@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
-<link rel="stylesheet" href="css/tags-v3.css">
+<link rel="stylesheet" href="css/tags-v4.css">
 <style>
   /* gothic everywhere (set here too, so a cached stylesheet can't bring Mincho back) */
   :root { --font-head: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -25,13 +25,13 @@
 <div id="app"></div>
 
 <script type="module">
-import { t, loadChapter, loadChapters, loadParticles, loadLessons, CHAPTERS, chapterFor, shuffle, exBlock, esc, kanaToRomaji, pColor } from './js/app.js';
-import { scopedExamples, lessonExamples } from './js/scope.js';
-import { renderQuestion, pickType } from './js/quiz.js';
-import { renderFlash } from './js/flash.js';
-import { recordAnswer, recordParticle, markDayDone, particleStats, loadDayLog, daysDoneCount, loadTests, recordChapterTest } from './js/srs.js';
-import { addXP, getGame, sound, confetti, HEARTS, GOALS, setGoal, setSound, lastDays, resetGame } from './js/game.js';
-import { speak, canSpeak } from './js/speech.js';
+import { t, loadChapter, loadChapters, loadParticles, loadLessons, CHAPTERS, chapterFor, shuffle, exBlock, esc, kanaToRomaji, pColor } from './js4/app.js';
+import { scopedExamples, lessonExamples } from './js4/scope.js';
+import { renderQuestion, pickType } from './js4/quiz.js';
+import { renderFlash } from './js4/flash.js';
+import { recordAnswer, recordParticle, markDayDone, particleStats, loadDayLog, daysDoneCount, loadTests, recordChapterTest } from './js4/srs.js';
+import { addXP, getGame, sound, confetti, HEARTS, GOALS, setGoal, setSound, lastDays, resetGame } from './js4/game.js';
+import { speak, canSpeak } from './js4/speech.js';
 
 const app = document.getElementById('app');
 let cleanup = null;
@@ -254,7 +254,7 @@ const VIEWS = {
         else sound('ok');
       } else {
         combo = 0;
-        statusEl.innerHTML = `<b>Correct answer:</b> ${esc(current.correctText || fullText(current.ex))}`; statusEl.className = 'status ng'; foot.className = 'lesson-foot ng';
+        statusEl.innerHTML = `<b>Correct answer:</b> ${esc(current.correctText || fullText(current.ex))}` + (result.reason === 'core-last' ? ' <span class="small">The core always goes last.</span>' : ''); statusEl.className = 'status ng'; foot.className = 'lesson-foot ng';
         sound('ng');
         if (!TEST && !requeued.has(current.ex)) { requeued.add(current.ex); deck.push(current.ex); }
         if (HEARTS_ON) { hearts--; const h = $('hearts'); h.classList.remove('lost'); void h.offsetWidth; h.classList.add('lost'); }

@@ -2,46 +2,51 @@
 import { chunkCard, shuffle } from './app.js';
 
 /**
- * Build a "組む" (assemble) widget: shuffled chunk bank + core fixed at the end slot.
- * Returns { el, check(): {ok, correctOrder} }
+ * Build a "組む" (assemble) widget: every card, the core included, starts in a shuffled bank.
+ * Tap to place, tap a placed card to send it back. Correct = all placed, core last.
+ * Returns { el, check(): {ok, placed} }
  */
+const CORE = 'core';
 export function buildWidget(ex, opts = {}) {
   const wrap = document.createElement('div');
   const bank = document.createElement('div'); bank.className = 'bank';
-  const slot = document.createElement('div'); slot.className = 'sentence';
+  const slot = document.createElement('div'); slot.className = 'sentence answer';
   const placed = [];
-  const pool = shuffle(ex.chunks.map((c, i) => ({ c, i })));
+  const pool = shuffle([...ex.chunks.map((c, i) => i), CORE]);
+  const card = (i, inBank) => i === CORE
+    ? chunkCard(ex.core, { core: true, gloss: false })
+    : chunkCard(ex.chunks[i], { idx: i, particles: opts.particles, gloss: inBank ? undefined : false });
 
   function renderBank() {
     bank.innerHTML = '';
-    pool.forEach(({ c, i }) => {
+    pool.forEach(i => {
       if (placed.includes(i)) return;
-      const card = chunkCard(c, { idx: i, particles: opts.particles });
-      card.addEventListener('click', () => { placed.push(i); render(); });
-      bank.appendChild(card);
+      const c = card(i, true);
+      c.addEventListener('click', () => { placed.push(i); render(); });
+      bank.appendChild(c);
     });
   }
   function renderSlot() {
     slot.innerHTML = '';
     placed.forEach(i => {
-      const c = ex.chunks[i];
-      const card = chunkCard(c, { idx: i, particles: opts.particles, gloss: false });
-      card.classList.add('selected');
-      card.addEventListener('click', () => { placed.splice(placed.indexOf(i), 1); render(); });
-      slot.appendChild(card);
+      const c = card(i, false);
+      c.classList.add('selected');
+      c.addEventListener('click', () => { placed.splice(placed.indexOf(i), 1); render(); });
+      slot.appendChild(c);
     });
-    const core = chunkCard(ex.core, { core: true, gloss: false }); core.classList.add('locked');
-    slot.appendChild(core);
-    const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '？' : '。';
-    slot.appendChild(punct);
+    if (placed.length === pool.length) {
+      const punct = document.createElement('span'); punct.className = 'punct' + (ex.question ? ' q-mark' : ''); punct.textContent = ex.question ? '？' : '。';
+      slot.appendChild(punct);
+    }
   }
   function render() { renderBank(); renderSlot(); }
   render();
-  wrap.append(bank, document.createElement('hr'), slot);
+  wrap.append(slot, bank);
 
   function check() {
-    if (placed.length !== ex.chunks.length) return { ok: false, reason: 'incomplete' };
-    // any order is fine unless fixedOrder groups require relative order
+    if (placed.length !== pool.length) return { ok: false, reason: 'incomplete' };
+    if (placed[placed.length - 1] !== CORE) return { ok: false, reason: 'core-last' };
+    // any chunk order is fine unless fixedOrder groups require relative order
     let ok = true;
     for (const group of (ex.fixedOrder || [])) {
       const positions = group.map(gi => placed.indexOf(gi));
