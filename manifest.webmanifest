@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "Easy Japanese 14 Days",
+  "short_name": "Japanese 14",
+  "description": "Learn 2,000 real-life Japanese sentences in 14 days with Tag Grammar. Lessons, drills, instant speaking and tests — works offline.",
+  "lang": "en",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5efe3",
+  "theme_color": "#3e5c3b",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Today's lesson", "url": "./lesson/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Daily drill", "url": "./drill/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Instant speaking", "url": "./drill/?mode=flash", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Your progress", "url": "./progress/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

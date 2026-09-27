@@ -15,6 +15,8 @@ export const TR = {
   'Tag Grammar · 2000 real-life sentences': 'Etiket Dilbilgisi · 2000 gerçek hayat cümlesi',
   'Printable workbooks': 'Yazdırılabilir çalışma kitapları',
   'Learn Japanese in English': 'Japoncayı İngilizce öğren', 'Learn Japanese in Turkish': 'Japoncayı Türkçe öğren',
+  '📲 Install app': '📲 Uygulamayı yükle', 'Add to your home screen — works offline': 'Ana ekranına ekle — çevrimdışı da çalışır',
+  'To install: tap the Share button in Safari, then “Add to Home Screen”.': 'Yüklemek için: Safari’de Paylaş düğmesine dokun, sonra “Ana Ekrana Ekle”yi seç.',
 
   // chapters
   'Core only': 'Sadece çekirdek', 'One word is a sentence. Greetings, time words, bare nouns.': 'Tek kelime de bir cümledir. Selamlaşmalar, zaman kelimeleri, yalın isimler.',

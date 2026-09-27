@@ -1,0 +1,26 @@
+{
+  "id": "/tr/",
+  "name": "14 Günde Kolay Japonca",
+  "short_name": "Japonca 14",
+  "description": "Etiket Dilbilgisi ile 14 günde 2.000 gerçek hayat Japonca cümlesi. Dersler, alıştırmalar, anında konuşma ve sınavlar — çevrimdışı da çalışır.",
+  "lang": "tr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5efe3",
+  "theme_color": "#3e5c3b",
+  "categories": ["education"],
+  "icons": [
+    { "src": "../icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "../icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "../icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "../icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Bugünün dersi", "url": "./lesson/", "icons": [{ "src": "../icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Günlük alıştırma", "url": "./drill/", "icons": [{ "src": "../icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Anında konuşma", "url": "./drill/?mode=flash", "icons": [{ "src": "../icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "İlerlemen", "url": "./progress/", "icons": [{ "src": "../icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

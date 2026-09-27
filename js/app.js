@@ -151,6 +151,29 @@ export function renderHeader(active) {
     : `<a class="lang" href="${root}${other}${location.search}" hreflang="tr" title="Japoncayı Türkçe öğren">TR</a>`;
   h.innerHTML = `<a class="brand" href="${LBASE}">${t('Easy Japanese 14 Days')}</a><nav>${links.map(([p, label]) => `<a href="${LBASE}${p}" class="${active === label.toLowerCase() ? 'on' : ''}">${t(label)}</a>`).join('')}${langLink}</nav>`;
   document.body.prepend(h);
+  installButton(h.querySelector('nav'));
+}
+
+// ---------- app (PWA): offline cache + "Install" button ----------
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register(BASE + 'sw.js', { scope: BASE }).catch(() => {}));
+}
+let deferredInstall = null;
+const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstall = e; document.querySelectorAll('a.install').forEach(b => { b.hidden = false; }); });
+window.addEventListener('appinstalled', () => { deferredInstall = null; document.querySelectorAll('a.install').forEach(b => { b.hidden = true; }); });
+function installButton(nav) {
+  if (standalone()) return;
+  const b = document.createElement('a');
+  b.className = 'install'; b.href = '#'; b.textContent = t('📲 Install app'); b.title = t('Add to your home screen — works offline');
+  b.hidden = !deferredInstall && !isIOS;
+  b.addEventListener('click', async e => {
+    e.preventDefault();
+    if (deferredInstall) { deferredInstall.prompt(); await deferredInstall.userChoice.catch(() => {}); deferredInstall = null; b.hidden = true; }
+    else alert(t('To install: tap the Share button in Safari, then “Add to Home Screen”.'));
+  });
+  nav.prepend(b);
 }
 export function renderFooter() {
   const f = document.createElement('footer');

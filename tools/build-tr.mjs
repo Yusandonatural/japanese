@@ -63,7 +63,7 @@ for (const page of PAGES) {
   html = html.replace(/<html lang="en"( data-base="([^"]*)")?/, (m, a, base) => `<html lang="tr" data-locale="tr" data-base="${depthPrefix}${base && base !== './' ? base : ''}"`);
   // asset paths (css, js, favicon) move one level deeper; page links stay relative inside /tr/
   const deeper = p => (p === './' || !p) ? '../' : '../' + p;
-  html = html.replace(/href="(\.\/|(?:\.\.\/)*)(css\/|favicon)/g, (m, p, what) => `href="${deeper(p)}${what}`)
+  html = html.replace(/href="(\.\/|(?:\.\.\/)*)(css\/|favicon|icons\/)/g, (m, p, what) => `href="${deeper(p)}${what}`)
              .replace(/from '(\.\/|(?:\.\.\/)+)js\//g, (m, p) => `from '${deeper(p)}js/`);
   // SEO head
   const url = `${SITE}/tr${page.path}`;
@@ -76,7 +76,8 @@ for (const page of PAGES) {
              .replace(/<meta property="og:locale" content="[^"]*">/, '<meta property="og:locale" content="tr_TR">')
              .replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escAttr(page.title)}">`)
              .replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escAttr(page.desc)}">`)
-             .replace(/"inLanguage": "en"/, '"inLanguage": "tr"');
+             .replace(/"inLanguage": "en"/, '"inLanguage": "tr"')
+             .replace('<meta name="apple-mobile-web-app-title" content="Japanese 14">', '<meta name="apple-mobile-web-app-title" content="Japonca 14">');
   html = translateStatic(html, page.file);
   html = html.split('Easy Japanese 14 Days').join('14 Günde Kolay Japonca');
   const out = path.join(ROOT, 'tr', page.file);

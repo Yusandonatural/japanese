@@ -83,6 +83,8 @@ header.top nav::-webkit-scrollbar { display: none; }
 header.top nav a { flex: 0 0 auto; text-decoration: none; color: var(--muted); white-space: nowrap; padding: 4px 9px; border-radius: 999px; transition: background .15s, color .15s; }
 header.top nav a:hover { color: var(--ink); background: var(--accent-soft); }
 header.top nav a.on { color: var(--accent); font-weight: 700; background: var(--accent-soft); }
+header.top nav a.install { color: var(--accent); font-weight: 700; border: 1px solid var(--accent); margin-right: 4px; }
+header.top nav a[hidden] { display: none; }
 header.top nav a.lang { border: 1px solid var(--line-strong); font-weight: 700; color: var(--shu); margin-left: 4px; letter-spacing: .06em; }
 @media (max-width: 520px) { header.top { padding: 8px 12px; gap: 10px; } header.top .brand { font-size: 15px; } header.top .brand::before { width: 21px; height: 21px; font-size: 12px; } header.top nav { font-size: 12.5px; gap: 2px; } header.top nav a { padding: 3px 7px; } }
 

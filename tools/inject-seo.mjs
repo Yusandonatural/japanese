@@ -89,4 +89,24 @@ for (const page of PAGES) {
   html = html.replace(/<meta charset="utf-8">\s*/i, `<meta charset="utf-8">\n${head(page)}\n`);
   fs.writeFileSync(p, html, 'utf8');
 }
+// App (PWA) tags: manifest, theme colour, home-screen icon. Paths are relative to the page, so the
+// Turkish copies made by build-tr.mjs pick up tr/manifest.webmanifest on their own.
+function pwaHead(base) {
+  return `<link rel="manifest" href="${base === './' ? '' : base}manifest.webmanifest">
+<meta name="theme-color" content="#3e5c3b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Japanese 14">
+<link rel="apple-touch-icon" href="${base === './' ? '' : base}icons/apple-touch-icon.png">
+`;
+}
+for (const page of PAGES) {
+  const p = path.join(ROOT, page.file);
+  let html = fs.readFileSync(p, 'utf8');
+  if (html.includes('rel="manifest"')) continue;
+  const base = (html.match(/<html[^>]*data-base="([^"]*)"/) || [])[1] || './';
+  html = html.replace(/(<link rel="stylesheet" href="[^"]*css\/tags\.css">\n)/, `$1${pwaHead(base)}`);
+  fs.writeFileSync(p, html, 'utf8');
+}
 console.log(`SEO/gtag injected into ${PAGES.length} pages.`);

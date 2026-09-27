@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#3e5c3b"/>
+  <text x="256" y="300" text-anchor="middle" dominant-baseline="middle" font-family="IPAGothic, 'Noto Sans JP', sans-serif" font-size="250" fill="#fbf8f1">あ</text>
+  <g transform="translate(350 142)">
+    <circle r="54" fill="#c0452c"/>
+    <text y="4" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-weight="700" font-size="52" fill="#fbf8f1">14</text>
+  </g>
+</svg>
