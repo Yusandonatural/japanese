@@ -1,14 +1,86 @@
 [
- {"id": "greeting", "name": "Salutations et présentations", "ja": "あいさつ・じこしょうかい", "icon": "👋", "target": 150},
- {"id": "home", "name": "La vie quotidienne à la maison", "ja": "いえの くらし", "icon": "🏠", "target": 250},
- {"id": "shopping", "name": "Faire les courses", "ja": "かいもの", "icon": "🛍️", "target": 200},
- {"id": "food", "name": "Repas et restaurants", "ja": "しょくじ・おみせ", "icon": "🍵", "target": 200},
- {"id": "transport", "name": "Transports et itinéraires", "ja": "いどう・みちあんない", "icon": "🚃", "target": 200},
- {"id": "time", "name": "Heure et emploi du temps", "ja": "じかん・よてい", "icon": "🕒", "target": 150},
- {"id": "work", "name": "Travail", "ja": "しごと", "icon": "💼", "target": 200},
- {"id": "farm", "name": "Champs et plein air", "ja": "はたけ・おちゃ", "icon": "🌱", "target": 150},
- {"id": "health", "name": "Santé et émotions", "ja": "からだ・びょういん", "icon": "💚", "target": 150},
- {"id": "people", "name": "Famille et relations", "ja": "かぞく・ひと", "icon": "👥", "target": 150},
- {"id": "weather", "name": "Météo et nature", "ja": "てんき・きせつ", "icon": "🌤️", "target": 100},
- {"id": "phone", "name": "Téléphone et en ligne", "ja": "でんわ・れんらく", "icon": "📱", "target": 100}
+ {
+  "id": "greeting",
+  "name": "Salutations et présentations",
+  "ja": "あいさつ・じこしょうかい",
+  "icon": "👋",
+  "target": 150
+ },
+ {
+  "id": "home",
+  "name": "La vie quotidienne à la maison",
+  "ja": "いえの くらし",
+  "icon": "🏠",
+  "target": 250
+ },
+ {
+  "id": "shopping",
+  "name": "Faire les courses",
+  "ja": "かいもの",
+  "icon": "🛍️",
+  "target": 200
+ },
+ {
+  "id": "food",
+  "name": "Repas et restaurants",
+  "ja": "しょくじ・おみせ",
+  "icon": "🍵",
+  "target": 200
+ },
+ {
+  "id": "transport",
+  "name": "Transports et itinéraires",
+  "ja": "いどう・みちあんない",
+  "icon": "🚃",
+  "target": 200
+ },
+ {
+  "id": "time",
+  "name": "Heure et emploi du temps",
+  "ja": "じかん・よてい",
+  "icon": "🕒",
+  "target": 150
+ },
+ {
+  "id": "work",
+  "name": "Travail",
+  "ja": "しごと",
+  "icon": "💼",
+  "target": 200
+ },
+ {
+  "id": "farm",
+  "name": "Champs et plein air",
+  "ja": "はたけ・おちゃ",
+  "icon": "🌱",
+  "target": 150
+ },
+ {
+  "id": "health",
+  "name": "Santé et émotions",
+  "ja": "からだ・びょういん",
+  "icon": "💚",
+  "target": 150
+ },
+ {
+  "id": "people",
+  "name": "Famille et relations",
+  "ja": "かぞく・ひと",
+  "icon": "👥",
+  "target": 150
+ },
+ {
+  "id": "weather",
+  "name": "Météo et nature",
+  "ja": "てんき・きせつ",
+  "icon": "🌤️",
+  "target": 100
+ },
+ {
+  "id": "phone",
+  "name": "Téléphone et en ligne",
+  "ja": "でんわ・れんらく",
+  "icon": "📱",
+  "target": 100
+ }
 ]

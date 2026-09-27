@@ -1,88 +1,121 @@
 [
-  {
-    "pair": ["は", "が"],
-    "tip": "は = « quant à X » (ce dont on parle). が = celui qui agit ou qui existe, surtout quand c'est une information nouvelle ou la réponse à qui ? / quoi ?",
-    "ex": [
-      "たなかさん.は きます。|(Quant à) M. Tanaka, il vient.",
-      "たなかさん.が きます。|C'est M. Tanaka qui vient."
-    ]
-  },
-  {
-    "pair": ["に", "で"],
-    "tip": "に = là où quelque chose SE TROUVE ou ARRIVE. で = là où une action SE FAIT.",
-    "ex": [
-      "いえ.に います。|Je suis à la maison.",
-      "いえ.で たべます。|Je mange à la maison."
-    ]
-  },
-  {
-    "pair": ["に", "へ"],
-    "tip": "に = arriver à. へ = se diriger vers. Pour les destinations, les deux marchent ; に est plus courant à l'oral. Pour les destinataires, les heures et l'existence, seul に convient.",
-    "ex": [
-      "なら.に いきます。|Je vais à Nara.",
-      "なら.へ いきます。|Je pars en direction de Nara."
-    ]
-  },
-  {
-    "pair": ["を", "が"],
-    "tip": "を = la chose sur laquelle on agit. が = l'acteur, ou ce qui existe / plaît / est compris. あります, います, すきです, わかります prennent が.",
-    "ex": [
-      "おちゃ.を のみます。|Je bois du thé.",
-      "おちゃ.が すきです。|J'aime le thé."
-    ]
-  },
-  {
-    "pair": ["を", "に"],
-    "tip": "を = le complément de l'action. に = la destination ou le destinataire. Aller À un endroit = に ; quitter ou traverser un endroit = を.",
-    "ex": [
-      "いえ.に かえります。|Je rentre à la maison.",
-      "いえ.を でます。|Je quitte la maison."
-    ]
-  },
-  {
-    "pair": ["と", "に"],
-    "tip": "と = ensemble, dans les deux sens (discuter avec). に = à sens unique, vers une personne (dire à).",
-    "ex": [
-      "ともだち.と はなします。|Je discute avec un ami.",
-      "ともだち.に はなします。|Je le dis à un ami."
-    ]
-  },
-  {
-    "pair": ["と", "で"],
-    "tip": "と = avec une personne. で = au moyen de quelque chose, ou dans un lieu.",
-    "ex": [
-      "ともだち.と いきます。|J'y vais avec un ami.",
-      "バス.で いきます。|J'y vais en bus."
-    ]
-  },
-  {
-    "pair": ["から", "まで"],
-    "tip": "から = début. まで = fin. Ensemble, ils forment une durée, et chacun est un bloc à part.",
-    "ex": [
-      "くじ.から ごじ.まで はたらきます。|Je travaille de neuf heures à cinq heures."
-    ]
-  },
-  {
-    "pair": ["も", "は"],
-    "tip": "も remplace は, が et を. Ne les empile jamais (pas de はも, をも). Après に, で, と, へ, から, まで, ajoute-le : でも, にも.",
-    "ex": [
-      "わたし.も いきます。|Moi aussi, j'y vais.",
-      "なら.でも かいます。|J'en achète aussi à Nara."
-    ]
-  },
-  {
-    "pair": ["", "に"],
-    "tip": "Les heures et les jours de la semaine prennent に. Les mots de temps relatifs (あした, いま, らいしゅう, まいにち) ne prennent rien.",
-    "ex": [
-      "さんじ.に きます。|Je viens à trois heures.",
-      "あした きます。|Je viens demain."
-    ]
-  },
-  {
-    "pair": ["", "は"],
-    "tip": "Les mots de temps n'ont pas besoin d'étiquette. Ajoute は seulement pour en faire le thème : « quant à demain… ».",
-    "ex": [
-      "あした.は やすみです。|Demain, c'est jour de congé."
-    ]
-  }
+ {
+  "pair": [
+   "は",
+   "が"
+  ],
+  "tip": "は = « quant à X » (ce dont on parle). が = celui qui agit ou qui existe, surtout quand c'est une information nouvelle ou la réponse à qui ? / quoi ?",
+  "ex": [
+   "たなかさん.は きます。|(Quant à) M. Tanaka, il vient.",
+   "たなかさん.が きます。|C'est M. Tanaka qui vient."
+  ]
+ },
+ {
+  "pair": [
+   "に",
+   "で"
+  ],
+  "tip": "に = là où quelque chose SE TROUVE ou ARRIVE. で = là où une action SE FAIT.",
+  "ex": [
+   "いえ.に います。|Je suis à la maison.",
+   "いえ.で たべます。|Je mange à la maison."
+  ]
+ },
+ {
+  "pair": [
+   "に",
+   "へ"
+  ],
+  "tip": "に = arriver à. へ = se diriger vers. Pour les destinations, les deux marchent ; に est plus courant à l'oral. Pour les destinataires, les heures et l'existence, seul に convient.",
+  "ex": [
+   "なら.に いきます。|Je vais à Nara.",
+   "なら.へ いきます。|Je pars en direction de Nara."
+  ]
+ },
+ {
+  "pair": [
+   "を",
+   "が"
+  ],
+  "tip": "を = la chose sur laquelle on agit. が = l'acteur, ou ce qui existe / plaît / est compris. あります, います, すきです, わかります prennent が.",
+  "ex": [
+   "おちゃ.を のみます。|Je bois du thé.",
+   "おちゃ.が すきです。|J'aime le thé."
+  ]
+ },
+ {
+  "pair": [
+   "を",
+   "に"
+  ],
+  "tip": "を = le complément de l'action. に = la destination ou le destinataire. Aller À un endroit = に ; quitter ou traverser un endroit = を.",
+  "ex": [
+   "いえ.に かえります。|Je rentre à la maison.",
+   "いえ.を でます。|Je quitte la maison."
+  ]
+ },
+ {
+  "pair": [
+   "と",
+   "に"
+  ],
+  "tip": "と = ensemble, dans les deux sens (discuter avec). に = à sens unique, vers une personne (dire à).",
+  "ex": [
+   "ともだち.と はなします。|Je discute avec un ami.",
+   "ともだち.に はなします。|Je le dis à un ami."
+  ]
+ },
+ {
+  "pair": [
+   "と",
+   "で"
+  ],
+  "tip": "と = avec une personne. で = au moyen de quelque chose, ou dans un lieu.",
+  "ex": [
+   "ともだち.と いきます。|J'y vais avec un ami.",
+   "バス.で いきます。|J'y vais en bus."
+  ]
+ },
+ {
+  "pair": [
+   "から",
+   "まで"
+  ],
+  "tip": "から = début. まで = fin. Ensemble, ils forment une durée, et chacun est un bloc à part.",
+  "ex": [
+   "くじ.から ごじ.まで はたらきます。|Je travaille de neuf heures à cinq heures."
+  ]
+ },
+ {
+  "pair": [
+   "も",
+   "は"
+  ],
+  "tip": "も remplace は, が et を. Ne les empile jamais (pas de はも, をも). Après に, で, と, へ, から, まで, ajoute-le : でも, にも.",
+  "ex": [
+   "わたし.も いきます。|Moi aussi, j'y vais.",
+   "なら.でも かいます。|J'en achète aussi à Nara."
+  ]
+ },
+ {
+  "pair": [
+   "",
+   "に"
+  ],
+  "tip": "Les heures et les jours de la semaine prennent に. Les mots de temps relatifs (あした, いま, らいしゅう, まいにち) ne prennent rien.",
+  "ex": [
+   "さんじ.に きます。|Je viens à trois heures.",
+   "あした きます。|Je viens demain."
+  ]
+ },
+ {
+  "pair": [
+   "",
+   "は"
+  ],
+  "tip": "Les mots de temps n'ont pas besoin d'étiquette. Ajoute は seulement pour en faire le thème : « quant à demain… ».",
+  "ex": [
+   "あした.は やすみです。|Demain, c'est jour de congé."
+  ]
+ }
 ]
