@@ -5,19 +5,28 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-// `node tools/build-print.js tr` builds the Turkish worksheets into tr/print/ (the index page is
-// converted by tools/build-tr.mjs like the other pages).
-const TRMODE = process.argv[2] === 'tr';
-const OUT = path.join(ROOT, TRMODE ? 'tr/print' : 'print');
-const TRX = TRMODE ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tr/ex.json'), 'utf8')) : {};
-const L = TRMODE ? {
-  back: '← Yazdırılabilir çalışma kitapları', title: ch => `Easy Japanese 14 Days — Bölüm ${ch} Çalışma Kitabı`, doc: ch => `Bölüm ${ch} — Yazdırılabilir Çalışma Kitabı`,
-  intro: 'İşaretli parçanın etiketini (は が を に で と へ から まで も) yaz ya da her Türkçe cümlenin Japoncasını yaz. Cevaplar son sayfada.', answers: 'Cevaplar', lang: 'tr'
-} : {
-  back: '← Printable workbooks', title: ch => `Easy Japanese 14 Days — Chapter ${ch} Workbook`, doc: ch => `Chapter ${ch} — Printable Workbook`,
-  intro: 'Fill in the tag (は が を に で と へ から まで も) for the marked chunk, or write the Japanese for each English sentence. Answers on the last page.', answers: 'Answers', lang: 'en'
+// `node tools/build-print.js tr` (or `fr`) builds that edition's worksheets into tr/print/ (fr/print/);
+// the index page is converted by tools/build-tr.mjs like the other pages.
+const LOCALE = ['tr', 'fr'].includes(process.argv[2]) ? process.argv[2] : 'en';
+const TRMODE = LOCALE !== 'en';
+const OUT = path.join(ROOT, TRMODE ? `${LOCALE}/print` : 'print');
+const TRX = TRMODE ? JSON.parse(fs.readFileSync(path.join(ROOT, `data/${LOCALE}/ex.json`), 'utf8')) : {};
+const LABELS = {
+  tr: {
+    back: '← Yazdırılabilir çalışma kitapları', title: ch => `Easy Japanese 14 Days — Bölüm ${ch} Çalışma Kitabı`, doc: ch => `Bölüm ${ch} — Yazdırılabilir Çalışma Kitabı`,
+    intro: 'İşaretli parçanın etiketini (は が を に で と へ から まで も) yaz ya da her Türkçe cümlenin Japoncasını yaz. Cevaplar son sayfada.', answers: 'Cevaplar', lang: 'tr'
+  },
+  fr: {
+    back: '← Cahiers à imprimer', title: ch => `Le japonais facile en 14 jours — Cahier du chapitre ${ch}`, doc: ch => `Chapitre ${ch} — Cahier à imprimer`,
+    intro: 'Écris l’étiquette (は が を に で と へ から まで も) du bloc marqué, ou écris en japonais chaque phrase française. Corrigé à la dernière page.', answers: 'Corrigé', lang: 'fr'
+  },
+  en: {
+    back: '← Printable workbooks', title: ch => `Easy Japanese 14 Days — Chapter ${ch} Workbook`, doc: ch => `Chapter ${ch} — Printable Workbook`,
+    intro: 'Fill in the tag (は が を に で と へ から まで も) for the marked chunk, or write the Japanese for each English sentence. Answers on the last page.', answers: 'Answers', lang: 'en'
+  }
 };
-const enOf = ex => (TRMODE && TRX[ex.id]?.tr) || ex.en;
+const L = LABELS[LOCALE];
+const enOf = ex => (TRMODE && (TRX[ex.id]?.t || TRX[ex.id]?.tr)) || ex.en;
 
 function loadJSON(rel) { return JSON.parse(fs.readFileSync(path.join(ROOT, rel), 'utf8')); }
 const particles = loadJSON('data/particles.json');
@@ -83,7 +92,7 @@ ${rows}
   links.push(ch);
 }
 
-if (TRMODE) { console.log(`Generated ${links.length} Turkish workbooks.`); process.exit(0); }
+if (TRMODE) { console.log(`Generated ${links.length} ${LOCALE} workbooks.`); process.exit(0); }
 const indexHtml = `<!doctype html>
 <html lang="en" data-base="../">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

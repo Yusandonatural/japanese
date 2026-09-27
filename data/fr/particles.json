@@ -1,0 +1,141 @@
+[
+ {
+  "p": "は",
+  "romaji": "wa",
+  "role": "topic",
+  "label": "Thème",
+  "color": "#d49a1a",
+  "chapter": 2,
+  "short": "Quant à ~ / en ce qui concerne ~",
+  "explain": "Marque ce dont parle la phrase. Il vient généralement en premier, mais ailleurs ce n'est pas faux. Imagine que tu montres du doigt la chose dont tu veux parler.",
+  "examples": [
+   "わたし.は がくせいです。|Je suis étudiant.",
+   "おちゃ.は たかいです。|Le thé est cher."
+  ]
+ },
+ {
+  "p": "が",
+  "romaji": "ga",
+  "role": "doer",
+  "label": "Acteur",
+  "color": "#c9533a",
+  "chapter": 2,
+  "short": "Celui qui agit / qui existe",
+  "explain": "Marque qui fait l'action ou ce qui existe. Utilise-le quand l'acteur est une information nouvelle ou la réponse à « qui ? » / « quoi ? ».",
+  "examples": [
+   "あめ.が ふります。|Il pleut.",
+   "じかん.が あります。|J'ai le temps."
+  ]
+ },
+ {
+  "p": "を",
+  "romaji": "o",
+  "role": "target",
+  "label": "Objet",
+  "color": "#2f5d8c",
+  "chapter": 3,
+  "short": "La chose sur laquelle on agit",
+  "explain": "Marque le complément de l'action : ce que tu manges, achètes, lis, vois. Aussi le lieu que tu traverses ou que tu quittes.",
+  "examples": [
+   "おちゃ.を のみます。|Je bois du thé.",
+   "いえ.を でます。|Je quitte la maison."
+  ]
+ },
+ {
+  "p": "に",
+  "romaji": "ni",
+  "role": "goal",
+  "label": "Destination / à",
+  "color": "#5b8a3c",
+  "chapter": 3,
+  "short": "Destination, destinataire, moment précis, lieu où se trouve quelque chose",
+  "explain": "Marque le point d'arrivée : où tu vas, qui reçoit, quand (heure / jour), et où quelque chose se trouve ou habite.",
+  "examples": [
+   "なら.に いきます。|Je vais à Nara.",
+   "さんじ.に あいます。|On se voit à trois heures."
+  ]
+ },
+ {
+  "p": "で",
+  "romaji": "de",
+  "role": "place",
+  "label": "Lieu / moyen",
+  "color": "#86689f",
+  "chapter": 4,
+  "short": "Où l'action se passe, ou l'outil / le moyen",
+  "explain": "Marque le lieu où se déroule une action (pas simplement où quelque chose se trouve), et le moyen : en bus, avec des baguettes, en japonais.",
+  "examples": [
+   "みせ.で かいます。|Je l'achète au magasin.",
+   "バス.で いきます。|J'y vais en bus."
+  ]
+ },
+ {
+  "p": "と",
+  "romaji": "to",
+  "role": "with",
+  "label": "Avec / et",
+  "color": "#d57a36",
+  "chapter": 4,
+  "short": "Ensemble avec, ou « et » entre des choses",
+  "explain": "Marque la personne avec qui tu fais quelque chose, et relie deux noms. Marque aussi ce qui est dit ou pensé.",
+  "examples": [
+   "ともだち.と いきます。|J'y vais avec un ami.",
+   "おちゃとおかし.を ください。|Du thé et des gâteaux, s'il vous plaît."
+  ]
+ },
+ {
+  "p": "へ",
+  "romaji": "e",
+  "role": "toward",
+  "label": "Vers",
+  "color": "#4f9a8a",
+  "chapter": 5,
+  "short": "Direction du mouvement",
+  "explain": "Marque la direction vers laquelle tu te diriges. Très proche de に pour les destinations ; へ insiste sur la direction, に sur l'arrivée. Au quotidien, les deux conviennent.",
+  "examples": [
+   "とうきょう.へ いきます。|Je pars vers Tokyo."
+  ]
+ },
+ {
+  "p": "から",
+  "romaji": "kara",
+  "role": "from",
+  "label": "Depuis",
+  "color": "#2f8fa6",
+  "chapter": 5,
+  "short": "Point de départ dans l'espace ou le temps",
+  "explain": "Marque où ou quand quelque chose commence : depuis Nara, à partir de neuf heures, de la part d'un ami.",
+  "examples": [
+   "なら.から きます。|Je viens de Nara.",
+   "くじ.から はたらきます。|Je travaille à partir de neuf heures."
+  ]
+ },
+ {
+  "p": "まで",
+  "romaji": "made",
+  "role": "until",
+  "label": "Jusqu'à",
+  "color": "#2d6474",
+  "chapter": 5,
+  "short": "Point final dans l'espace ou le temps",
+  "explain": "Marque où ou quand quelque chose se termine : jusqu'à cinq heures, jusqu'à la gare. Va souvent avec から.",
+  "examples": [
+   "ごじ.まで はたらきます。|Je travaille jusqu'à cinq heures.",
+   "えき.まで あるきます。|Je marche jusqu'à la gare."
+  ]
+ },
+ {
+  "p": "も",
+  "romaji": "mo",
+  "role": "also",
+  "label": "Aussi",
+  "color": "#8a8076",
+  "chapter": 6,
+  "short": "Aussi / également",
+  "explain": "Ajoute « aussi ». Il remplace は, が, を et s'ajoute après に, で, と, へ, から, まで.",
+  "examples": [
+   "わたし.も いきます。|Moi aussi, j'y vais.",
+   "なら.でも かいます。|J'en achète aussi à Nara."
+  ]
+ }
+]

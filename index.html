@@ -129,7 +129,7 @@ renderHeader('home');
 
 // language selector in the hero
 const ls = document.getElementById('langSwitch');
-[['en', '', 'English', 'EN'], ['tr', 'tr/', 'Türkçe', 'TR']].forEach(([code, path, label, short]) => {
+[['en', '', 'English', 'EN'], ['tr', 'tr/', 'Türkçe', 'TR'], ['fr', 'fr/', 'Français', 'FR']].forEach(([code, path, label, short]) => {
   const a = document.createElement('a');
   a.href = BASE + path; a.hreflang = code; a.lang = code;
   a.className = LOCALE === code ? 'on' : '';

@@ -8,8 +8,10 @@ export { t, LOCALE };
 
 /** BASE = site root (data, css, js). LBASE = root of the current language edition (page links). */
 export const BASE = document.documentElement.dataset.base || './';
-export const LBASE = BASE + (LOCALE === 'tr' ? 'tr/' : '');
-const TR = LOCALE === 'tr';
+/** Language editions: English at the root, the others in /<code>/ with their own data/<code>/. */
+export const EDITIONS = [['en', 'English', 'EN'], ['tr', 'Türkçe', 'TR'], ['fr', 'Français', 'FR']];
+export const LBASE = BASE + (LOCALE === 'en' ? '' : LOCALE + '/');
+const TR = LOCALE !== 'en'; // true in any translated edition
 const cache = new Map();
 
 export async function loadJSON(rel) {
@@ -18,9 +20,9 @@ export async function loadJSON(rel) {
   cache.set(rel, p);
   return p;
 }
-// Localised data: the Turkish edition has its own copies of the text-heavy files in data/tr/,
+// Localised data: each translated edition has its own copies of the text-heavy files in data/<code>/,
 // and translation maps for the 2000 examples (ex.json), word glosses (gloss.json) and verbs.
-const loc = rel => TR ? rel.replace('data/', 'data/tr/') : rel;
+const loc = rel => TR ? rel.replace('data/', `data/${LOCALE}/`) : rel;
 export const loadParticles = () => loadJSON(loc('data/particles.json'));
 export const loadScenes = () => loadJSON(loc('data/scenes.json'));
 export const loadConfusions = () => loadJSON(loc('data/confusions.json'));
@@ -28,7 +30,8 @@ export const loadAdverbs = () => loadJSON(loc('data/adverbs.json'));
 export const loadLessons = () => loadJSON(loc('data/lessons.json'));
 export const loadGrammar = () => loadJSON(loc('data/grammar.json'));
 export const loadPhrases = () => loadJSON(loc('data/phrases.json'));
-const trMaps = () => Promise.all([loadJSON('data/tr/ex.json'), loadJSON('data/tr/gloss.json')]);
+const trMaps = () => Promise.all([loadJSON(`data/${LOCALE}/ex.json`), loadJSON(`data/${LOCALE}/gloss.json`)]);
+const exT = (ex, id) => ex[id]?.t || ex[id]?.tr;
 const localized = new Map();
 function localize(key, make) { if (!localized.has(key)) localized.set(key, make()); return localized.get(key); }
 export function loadChapter(n) {
@@ -38,7 +41,7 @@ export function loadChapter(n) {
     const [d, [ex, gl]] = await Promise.all([loadJSON(rel), trMaps()]);
     const g = x => (x && gl[x]) || x;
     return d.map(e => ({
-      ...e, en: ex[e.id]?.tr || e.en,
+      ...e, en: exT(ex, e.id) || e.en,
       chunks: e.chunks.map(c => ({ ...c, gloss: g(c.gloss) })),
       core: { ...e.core, gloss: g(e.core.gloss) },
       ...(e.context ? { context: { ...e.context, q_en: ex[e.id]?.q || e.context.q_en } } : {})
@@ -49,13 +52,13 @@ export function loadVocab() {
   if (!TR) return loadJSON('data/vocab.json');
   return localize('vocab', async () => {
     const [v, [ex, gl]] = await Promise.all([loadJSON('data/vocab.json'), trMaps()]);
-    return v.map(w => ({ ...w, en: gl[w.en] || w.en, ex: w.ex ? { ...w.ex, en: (w.ex.id && ex[w.ex.id]?.tr) || w.ex.en } : w.ex }));
+    return v.map(w => ({ ...w, en: gl[w.en] || w.en, ex: w.ex ? { ...w.ex, en: (w.ex.id && exT(ex, w.ex.id)) || w.ex.en } : w.ex }));
   });
 }
 export function loadVerbs() {
   if (!TR) return loadJSON('data/verbs.json');
   return localize('verbs', async () => {
-    const [v, tv] = await Promise.all([loadJSON('data/verbs.json'), loadJSON('data/tr/verbs.json')]);
+    const [v, tv] = await Promise.all([loadJSON('data/verbs.json'), loadJSON(`data/${LOCALE}/verbs.json`)]);
     return v.map(x => ({ ...x, en: tv[x.rank]?.en || x.en, ex: tv[x.rank]?.ex || x.ex }));
   });
 }
@@ -143,13 +146,11 @@ export function inlineKana(ex) {
 export function renderHeader(active) {
   const h = document.createElement('header'); h.className = 'top';
   const links = [['', 'Home'], ['lesson/', 'Lessons'], ['grammar/', 'Grammar'], ['words/', 'Words'], ['scenes/', 'Scenes'], ['progress/', 'Progress']];
-  // language switch: same page in the other edition
+  // language switch: the same page in each other edition
   const root = new URL(BASE, location.href).pathname;
-  const rel = location.pathname.startsWith(root) ? location.pathname.slice(root.length) : location.pathname.replace(/^\//, '');
-  const other = LOCALE === 'tr' ? rel.replace(/^tr\//, '') : 'tr/' + rel;
-  const langLink = LOCALE === 'tr'
-    ? `<a class="lang" href="${root}${other}${location.search}" hreflang="en" title="${t('Learn Japanese in English')}">EN</a>`
-    : `<a class="lang" href="${root}${other}${location.search}" hreflang="tr" title="Japoncayı Türkçe öğren">TR</a>`;
+  const rel = (location.pathname.startsWith(root) ? location.pathname.slice(root.length) : location.pathname.replace(/^\//, '')).replace(/^(tr|fr)\//, '');
+  const langLink = EDITIONS.filter(([code]) => code !== LOCALE).map(([code, name, short]) =>
+    `<a class="lang" href="${root}${code === 'en' ? '' : code + '/'}${rel}${location.search}" hreflang="${code}" lang="${code}" title="${name}">${short}</a>`).join('');
   h.innerHTML = `<a class="brand" href="${LBASE}">${t('Easy Japanese 14 Days')}</a><nav>${links.map(([p, label]) => `<a href="${LBASE}${p}" class="${active === label.toLowerCase() ? 'on' : ''}">${t(label)}</a>`).join('')}${langLink}</nav>`;
   const g = getGame();
   const chips = document.createElement('a'); chips.className = 'gchips'; chips.href = LBASE + 'progress/';

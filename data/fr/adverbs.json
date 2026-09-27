@@ -1,0 +1,39 @@
+{
+  "note": "Le niveau 1 ne modifie jamais le verbe. Le passé et le futur viennent de ces mots de temps, placés comme un bloc sans étiquette.",
+  "past": [
+    {"w": "昨日", "k": "きのう", "romaji": "kinō", "en": "hier"},
+    {"w": "さっき", "k": "さっき", "romaji": "sakki", "en": "tout à l'heure (passé)"},
+    {"w": "もう", "k": "もう", "romaji": "mō", "en": "déjà"},
+    {"w": "先週", "k": "せんしゅう", "romaji": "senshū", "en": "la semaine dernière"},
+    {"w": "先月", "k": "せんげつ", "romaji": "sengetsu", "en": "le mois dernier"},
+    {"w": "去年", "k": "きょねん", "romaji": "kyonen", "en": "l'année dernière"},
+    {"w": "今朝", "k": "けさ", "romaji": "kesa", "en": "ce matin"},
+    {"w": "昨夜", "k": "ゆうべ", "romaji": "yūbe", "en": "hier soir"},
+    {"w": "前に", "k": "まえに", "romaji": "mae ni", "en": "avant / auparavant"},
+    {"w": "この前", "k": "このまえ", "romaji": "kono mae", "en": "l'autre jour"}
+  ],
+  "future": [
+    {"w": "明日", "k": "あした", "romaji": "ashita", "en": "demain"},
+    {"w": "あとで", "k": "あとで", "romaji": "ato de", "en": "plus tard"},
+    {"w": "これから", "k": "これから", "romaji": "kore kara", "en": "à partir de maintenant"},
+    {"w": "来週", "k": "らいしゅう", "romaji": "raishū", "en": "la semaine prochaine"},
+    {"w": "来月", "k": "らいげつ", "romaji": "raigetsu", "en": "le mois prochain"},
+    {"w": "来年", "k": "らいねん", "romaji": "rainen", "en": "l'année prochaine"},
+    {"w": "今晩", "k": "こんばん", "romaji": "konban", "en": "ce soir"},
+    {"w": "すぐ", "k": "すぐ", "romaji": "sugu", "en": "tout de suite"},
+    {"w": "今度", "k": "こんど", "romaji": "kondo", "en": "la prochaine fois"},
+    {"w": "明後日", "k": "あさって", "romaji": "asatte", "en": "après-demain"}
+  ],
+  "present": [
+    {"w": "今", "k": "いま", "romaji": "ima", "en": "maintenant"},
+    {"w": "今日", "k": "きょう", "romaji": "kyō", "en": "aujourd'hui"},
+    {"w": "毎日", "k": "まいにち", "romaji": "mainichi", "en": "tous les jours"},
+    {"w": "いつも", "k": "いつも", "romaji": "itsumo", "en": "toujours"},
+    {"w": "よく", "k": "よく", "romaji": "yoku", "en": "souvent"},
+    {"w": "ときどき", "k": "ときどき", "romaji": "tokidoki", "en": "parfois"},
+    {"w": "毎朝", "k": "まいあさ", "romaji": "maiasa", "en": "tous les matins"},
+    {"w": "毎週", "k": "まいしゅう", "romaji": "maishū", "en": "toutes les semaines"},
+    {"w": "今週", "k": "こんしゅう", "romaji": "konshū", "en": "cette semaine"},
+    {"w": "まだ", "k": "まだ", "romaji": "mada", "en": "pas encore / encore"}
+  ]
+}

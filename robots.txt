@@ -11,5 +11,11 @@ Disallow: /tr/ch/index.html
 Disallow: /tr/drill/index.html
 Disallow: /tr/progress/index.html
 Disallow: /tr/test/index.html
+Disallow: /fr/print/
+Disallow: /fr/ch/index.html
+Disallow: /fr/drill/index.html
+Disallow: /fr/progress/index.html
+Disallow: /fr/test/index.html
+Disallow: /artifact/
 
 Sitemap: https://nihongo.yusando.com/sitemap.xml

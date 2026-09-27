@@ -1,0 +1,598 @@
+{
+  "principles": [
+    {
+      "n": 1,
+      "title": "Le noyau vient en dernier",
+      "text": "Chaque phrase se termine par un seul noyau : un verbe (いきます), un adjectif (おいしいです) ou un nom + です (がくせいです). Le noyau seul forme déjà une phrase complète — le japonais laisse tomber tout ce que l'auditeur peut deviner. Et le noyau n'a que quatre terminaisons : ます, ますか, ません, ましょう.",
+      "ex": [
+        "いきます。|J'y vais.",
+        "いきましょう。|Allons-y.",
+        "おいしいです。|C'est délicieux.",
+        "がくせいです。|Je suis étudiant."
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Un bloc = un nom + une étiquette",
+      "text": "Tout ce qui précède le noyau est un bloc : un nom (ou un groupe nominal) avec une petite étiquette collée à la fin. L'étiquette indique à l'auditeur le rôle du bloc — qui, quoi, où, quand, avec qui. Le français utilise l'ordre des mots et les prépositions pour cela ; le japonais utilise des étiquettes placées après le nom.",
+      "ex": [
+        "ともだち.と いきます。|J'y vais avec un ami.",
+        "えき.で あいます。|On se retrouve à la gare."
+      ]
+    },
+    {
+      "n": 3,
+      "title": "L'ordre des blocs est libre",
+      "text": "Comme chaque bloc porte sa propre étiquette, tu peux mélanger les blocs et le sens reste le même. Ce qui change, c'est l'insistance : le bloc que tu mets en premier est celui que tu poses comme cadre, et le bloc juste avant le noyau est celui sur lequel tu insistes.",
+      "ex": [
+        "あした ともだち.と なら.に いきます。|Demain, je vais à Nara avec un ami.",
+        "なら.に あした ともだち.と いきます。|À Nara — j'y vais demain, avec un ami.",
+        "ともだち.と なら.に あした いきます。|Avec un ami, à Nara — demain."
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Supprime ce qui est déjà connu",
+      "text": "Si l'auditeur connaît déjà un bloc, laisse-le de côté. Les Japonais disent rarement わたし.は (je) — on sait bien qui parle. Les réponses ne gardent généralement que l'information nouvelle plus le noyau.",
+      "ex": [
+        "なに.を のみますか？|Qu'est-ce que tu bois ?",
+        "おちゃ.を のみます。|(Je bois) du thé.",
+        "おちゃ.を ください。|Du thé, s'il vous plaît."
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Les décorations restent dans le bloc",
+      "text": "Les adjectifs, les liens en の (mon, de Nara, de la gare) et les nombres font partie du nom. Ils se placent à l'intérieur du bloc, avant le nom, et l'étiquette va toujours tout à la fin du bloc entier.",
+      "ex": [
+        "あたらしいくるま.で いきます。|J'y vais avec la nouvelle voiture.",
+        "わたしのいえ.に きますか？|Tu viens chez moi ?",
+        "ならのみせ.で かいます。|Je l'achète dans un magasin de Nara."
+      ]
+    }
+  ],
+  "level1": [
+    {
+      "rule": "Quatre terminaisons, rien d'autre",
+      "how": "Le noyau n'utilise jamais que quatre terminaisons. ます affirme, ますか interroge, ません nie, ましょう invite. C'est tout le système verbal du niveau 1 — pas de passé, pas de forme neutre, pas de forme en て à mémoriser pour l'instant.",
+      "ex": [
+        "いきます。|J'y vais.",
+        "いきますか？|Tu y vas ?",
+        "いきません。|Je n'y vais pas.",
+        "いきましょう。|Allons-y."
+      ],
+      "table": [
+        [
+          "ます",
+          "masu",
+          "affirmation",
+          "たべます — je mange / je mangerai"
+        ],
+        [
+          "ますか",
+          "masu ka",
+          "question",
+          "たべますか？ — Tu manges ? / Tu vas manger ?"
+        ],
+        [
+          "ません",
+          "masen",
+          "négation",
+          "たべません — je ne mange pas / je ne mangerai pas"
+        ],
+        [
+          "ましょう",
+          "mashō",
+          "invitation",
+          "たべましょう — Mangeons"
+        ]
+      ]
+    },
+    {
+      "rule": "Noms et adjectifs : です / ですか",
+      "how": "Quand le noyau est un nom ou un adjectif, on applique la même idée avec です pour affirmer et ですか pour demander.",
+      "ex": [
+        "がくせいです。|Je suis étudiant.",
+        "これ.は いくらですか？|Combien ça coûte ?",
+        "おいしいですか？|C'est bon ?"
+      ]
+    },
+    {
+      "rule": "Le passé et le futur viennent d'un mot de temps",
+      "how": "Ajoute un mot de temps comme bloc sans étiquette : きのう (hier), あした (demain), せんしゅう (la semaine dernière), らいしゅう (la semaine prochaine). Le mot de temps fait le travail que fait la conjugaison du verbe en français.",
+      "ex": [
+        "きのう なら.に いきます。|Je suis allé à Nara hier. (niveau 1)",
+        "あした なら.に いきます。|J'irai à Nara demain.",
+        "あした なら.に いきましょう。|Allons à Nara demain."
+      ],
+      "note": "Un natif dirait いきました (ikimashita) pour le passé. C'est le niveau 2. Au niveau 1, on te comprend toujours — le mot de temps rend les choses claires — et tu peux parler dès le premier jour."
+    },
+    {
+      "rule": "Les questions : ajoute simplement か",
+      "how": "Mêmes mots, même ordre — mets か à la fin du noyau et fais monter ta voix dessus. Comme « Tu viens ? » en français, sans inversion. ませんか (tu ne veux pas… ?) est une invitation douce.",
+      "ex": [
+        "あした きますか？|Tu viens demain ?",
+        "なに.を たべますか？|Qu'est-ce que tu vas manger ?",
+        "いっしょに いきませんか？|Tu ne veux pas venir avec moi ?"
+      ]
+    }
+  ],
+  "cores": [
+    {
+      "type": "Verbe",
+      "form": "〜ます / 〜ますか / 〜ません / 〜ましょう",
+      "text": "Actions et existence. Les noyaux les plus courants sont いきます (aller), きます (venir), かいます (acheter), たべます (manger), のみます (boire), あります (il y a — choses), います (il y a — personnes, animaux).",
+      "ex": [
+        "バス.で いきます。|J'y vais en bus.",
+        "じかん.が ありません。|Je n'ai pas le temps.",
+        "えき.で あいましょう。|Retrouvons-nous à la gare."
+      ]
+    },
+    {
+      "type": "Adjectif",
+      "form": "〜いです / 〜です (ですか)",
+      "text": "Décrire. Les adjectifs en い gardent leur い et ajoutent です (たかいです, おいしいです). Les adjectifs en な ajoutent simplement です (しずかです, きれいです).",
+      "ex": [
+        "このおちゃ.は おいしいです。|Ce thé est délicieux.",
+        "このまち.は しずかです。|Cette ville est calme."
+      ]
+    },
+    {
+      "type": "Nom + です",
+      "form": "〜です (ですか)",
+      "text": "Dire ce qu'est une chose. N'importe quel nom devient un noyau en ajoutant です.",
+      "ex": [
+        "わたし.は がくせいです。|Je suis étudiant.",
+        "あした.は やすみです。|Demain, c'est jour de congé."
+      ]
+    },
+    {
+      "type": "Demande",
+      "form": "〜ください",
+      "text": "Demander des choses. Mets ce que tu veux dans un bloc en を et termine par ください.",
+      "ex": [
+        "みず.を ください。|De l'eau, s'il vous plaît.",
+        "これ.を ふたつ ください。|Deux comme ça, s'il vous plaît."
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "p": "は",
+      "picture": "Un projecteur. Il éclaire la chose dont tu veux parler et dit : « alors, à propos de ça… »",
+      "asks": "De quoi parle-t-on ?",
+      "uses": [
+        {
+          "h": "Le thème de la phrase",
+          "text": "は plante le décor. Tout ce qui suit est un commentaire sur ce thème. C'est généralement le premier bloc, mais ce n'est pas obligatoire.",
+          "ex": [
+            "わたし.は たなかです。|Je suis Tanaka.",
+            "このおちゃ.は たかいです。|Ce thé est cher."
+          ]
+        },
+        {
+          "h": "Contraste",
+          "text": "は peut aussi vouloir dire « quant à celui-ci (contrairement aux autres) ». C'est pour ça que les phrases négatives aiment は.",
+          "ex": [
+            "コーヒー.は のみません。|Le café, je n'en bois pas.",
+            "きょう.は いきません。|Aujourd'hui, je n'y vais pas (un autre jour, peut-être)."
+          ]
+        },
+        {
+          "h": "Les mots de temps comme thème",
+          "text": "Les mots de temps ne prennent normalement pas d'étiquette, mais ajouter は en fait le thème : « quant à demain… ».",
+          "ex": [
+            "あした.は やすみです。|Demain, c'est jour de congé.",
+            "にちようび.は はたけ.に いきます。|Le dimanche, je vais au champ."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "だれ.は きますか？",
+          "right": "だれ.が きますか？|Qui vient ?",
+          "why": "Les mots interrogatifs (だれ, なに, どこ comme acteur) ne peuvent jamais être le thème — tu ne les connais pas encore. Utilise が."
+        }
+      ]
+    },
+    {
+      "p": "が",
+      "picture": "Un doigt pointé. Il désigne qui fait l'action, ou ce qui est là — souvent comme une nouvelle.",
+      "asks": "Qui ? Quoi ? (comme réponse)",
+      "uses": [
+        {
+          "h": "L'acteur — comme information nouvelle",
+          "text": "が marque qui fait l'action quand c'est ça la nouvelle, et il répond toujours à だれ？ (qui) et なに？ (quoi) quand ils sont l'acteur.",
+          "ex": [
+            "だれ.が きますか？|Qui vient ?",
+            "たなかさん.が きます。|C'est M. Tanaka qui vient.",
+            "あめ.が ふります。|Il pleut. / La pluie tombe."
+          ]
+        },
+        {
+          "h": "Ce qui existe",
+          "text": "Avec あります / います, が marque la chose ou la personne qui est là.",
+          "ex": [
+            "じかん.が あります。|J'ai le temps.",
+            "へや.に ねこ.が います。|Il y a un chat dans la pièce."
+          ]
+        },
+        {
+          "h": "Goûts, envies, compétences",
+          "text": "すきです (aimer), ほしいです (vouloir), じょうずです (être doué en), わかります (comprendre) prennent が pour leur complément.",
+          "ex": [
+            "おちゃ.が すきです。|J'aime le thé.",
+            "にほんご.が わかりますか？|Tu comprends le japonais ?",
+            "あたま.が いたいです。|J'ai mal à la tête."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "おちゃ.を すきです。",
+          "right": "おちゃ.が すきです。|J'aime le thé.",
+          "why": "すきです est une description (« le thé me plaît »), pas une action, donc la chose aimée prend が — un peu comme en français, où le thé est le sujet de « plaire »."
+        }
+      ]
+    },
+    {
+      "p": "を",
+      "picture": "Une flèche qui atteint son objet. L'action frappe cette chose.",
+      "asks": "Faire quoi ? (la chose sur laquelle on agit)",
+      "uses": [
+        {
+          "h": "Le complément d'une action",
+          "text": "Ce que tu manges, bois, achètes, lis, fais, vois. Si tu peux demander « (verbe) quoi ? », la réponse prend を. Se prononce o.",
+          "ex": [
+            "おちゃ.を のみます。|Je bois du thé.",
+            "やさい.を かいます。|Je vais acheter des légumes.",
+            "なに.を たべますか？|Qu'est-ce que tu vas manger ?"
+          ]
+        },
+        {
+          "h": "Le trajet que tu parcours",
+          "text": "Avec les verbes de mouvement, を marque le chemin que tu suis ou que tu traverses.",
+          "ex": [
+            "このみち.を あるきます。|Je vais marcher le long de cette rue.",
+            "はし.を わたります。|Je vais traverser le pont."
+          ]
+        },
+        {
+          "h": "Le lieu que tu quittes",
+          "text": "でます (sortir, partir), おります (descendre) prennent を pour le lieu que tu quittes.",
+          "ex": [
+            "しちじ.に いえ.を でます。|Je quitte la maison à sept heures.",
+            "つぎのえき.で でんしゃ.を おります。|Je descends du train à la prochaine gare."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "ともだち.を あいます。",
+          "right": "ともだち.に あいます。|Je vais voir un ami.",
+          "why": "En japonais, on rencontre « à » quelqu'un — あいます prend toujours に."
+        }
+      ]
+    },
+    {
+      "p": "に",
+      "picture": "Une punaise sur une carte. Elle marque le point exact où quelque chose arrive, se trouve ou se passe dans le temps.",
+      "asks": "Où (on va) ? À qui ? À quelle heure ? Où (ça se trouve) ?",
+      "uses": [
+        {
+          "h": "Destination",
+          "text": "Là où tu vas, viens ou retournes.",
+          "ex": [
+            "なら.に いきます。|Je vais à Nara.",
+            "いえ.に かえります。|Je rentre à la maison."
+          ]
+        },
+        {
+          "h": "Destinataire / personne que tu rencontres",
+          "text": "À qui tu donnes, envoies, dis, téléphones, ou qui tu rencontres.",
+          "ex": [
+            "はは.に でんわ.を します。|Je vais appeler ma mère.",
+            "ともだち.に あいます。|Je vais voir un ami."
+          ]
+        },
+        {
+          "h": "Heures et dates",
+          "text": "Les chiffres de l'horloge ou du calendrier prennent に. Les mots relatifs (きょう, あした, まいにち) non.",
+          "ex": [
+            "しちじ.に おきます。|Je me lève à sept heures.",
+            "なんじ.に きますか？|Tu viens à quelle heure ?"
+          ]
+        },
+        {
+          "h": "Où se trouve quelque chose",
+          "text": "Avec あります / います, に marque l'endroit où se trouve quelque chose.",
+          "ex": [
+            "いま いえ.に います。|Je suis à la maison maintenant.",
+            "えきのまえ.に みせ.が あります。|Il y a un magasin devant la gare."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "あした.に いきます。",
+          "right": "あした いきます。|J'y vais demain.",
+          "why": "Les mots de temps relatifs (あした, きょう, らいしゅう) ne prennent pas d'étiquette. Seules les heures et les dates prennent に."
+        },
+        {
+          "wrong": "みせ.に かいます。",
+          "right": "みせ.で かいます。|Je l'achète au magasin.",
+          "why": "Le lieu où se déroule une action prend で. に sert seulement pour là où quelque chose se trouve ou là où tu arrives."
+        }
+      ]
+    },
+    {
+      "p": "で",
+      "picture": "Une scène. L'action se joue ici — ou avec cet outil.",
+      "asks": "Où ça se passe ? Par quel moyen ?",
+      "uses": [
+        {
+          "h": "Lieu de l'action",
+          "text": "Là où tu manges, achètes, travailles, retrouves quelqu'un — partout où l'on fait quelque chose.",
+          "ex": [
+            "みせ.で かいます。|Je l'achète au magasin.",
+            "かいしゃ.で はたらきます。|Je travaille dans une entreprise.",
+            "どこ.で たべますか？|On mange où ?"
+          ]
+        },
+        {
+          "h": "Moyens et outils",
+          "text": "En bus, avec des baguettes, en japonais, par carte.",
+          "ex": [
+            "バス.で いきます。|J'y vais en bus.",
+            "にほんご.で はなします。|Je parle en japonais.",
+            "カード.で はらいます。|Je paie par carte."
+          ]
+        },
+        {
+          "h": "Total et cadre",
+          "text": "ぜんぶ.で (en tout), ひとり.で (seul).",
+          "ex": [
+            "ぜんぶ.で いくらですか？|Ça fait combien en tout ?",
+            "ひとり.で いきます。|J'y vais seul."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "いえ.で います。",
+          "right": "いえ.に います。|Je suis à la maison.",
+          "why": "います / あります disent seulement où quelque chose SE TROUVE — c'est に. で sert pour les lieux où quelque chose SE FAIT."
+        }
+      ]
+    },
+    {
+      "p": "と",
+      "picture": "Deux mains jointes. Ensemble avec — ou simplement « et ».",
+      "asks": "Avec qui ?",
+      "uses": [
+        {
+          "h": "Ensemble avec",
+          "text": "La personne avec qui tu fais quelque chose.",
+          "ex": [
+            "ともだち.と いきます。|J'y vais avec un ami.",
+            "だれ.と たべますか？|Tu manges avec qui ?"
+          ]
+        },
+        {
+          "h": "Et (entre des noms)",
+          "text": "Relie deux noms en un seul bloc. Le dernier nom porte la vraie étiquette.",
+          "ex": [
+            "おちゃとおかし.を ください。|Du thé et des gâteaux, s'il vous plaît.",
+            "パンとたまご.を たべます。|Je mange du pain et des œufs."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "ともだち.と あいます。",
+          "right": "ともだち.に あいます。|Je vais voir un ami.",
+          "why": "Les deux existent, mais ともだち.に あいます est la forme courante pour se voir. ともだち.と あいます suggère un rendez-vous prévu et réciproque."
+        }
+      ]
+    },
+    {
+      "p": "へ",
+      "picture": "Une aiguille de boussole. Elle montre la direction vers laquelle tu te diriges.",
+      "asks": "Dans quelle direction ? Vers où ?",
+      "uses": [
+        {
+          "h": "Direction du mouvement",
+          "text": "Très proche de に pour les destinations. へ met l'accent sur la direction et le trajet ; に sur l'arrivée. Au quotidien, les deux conviennent. Se prononce e.",
+          "ex": [
+            "とうきょう.へ いきます。|Je pars vers Tokyo.",
+            "はたけ.へ いきます。|Je me dirige vers le champ."
+          ]
+        }
+      ],
+      "mistakes": []
+    },
+    {
+      "p": "から",
+      "picture": "Une ligne de départ. Où ou quand ça commence.",
+      "asks": "D'où ? Depuis quand ? De qui ?",
+      "uses": [
+        {
+          "h": "Lieu de départ",
+          "text": "D'où tu viens, où quelque chose commence.",
+          "ex": [
+            "なら.から きます。|Je viens de Nara.",
+            "どこ.から きますか？|Tu viens d'où ?"
+          ]
+        },
+        {
+          "h": "Moment de départ",
+          "text": "Quand quelque chose commence.",
+          "ex": [
+            "くじ.から はたらきます。|Je travaille à partir de neuf heures.",
+            "あした.から やすみです。|Je suis en congé à partir de demain."
+          ]
+        },
+        {
+          "h": "Source (personne)",
+          "text": "De qui tu entends, obtiens ou reçois quelque chose.",
+          "ex": [
+            "ともだち.から ききます。|Je l'apprends par un ami."
+          ]
+        }
+      ],
+      "mistakes": []
+    },
+    {
+      "p": "まで",
+      "picture": "Une ligne d'arrivée. Où ou quand ça se termine.",
+      "asks": "Jusqu'à quand ? Jusqu'où ?",
+      "uses": [
+        {
+          "h": "Point final dans le temps",
+          "text": "Jusqu'à quelle heure ou quel jour.",
+          "ex": [
+            "ごじ.まで はたらきます。|Je travaille jusqu'à cinq heures.",
+            "なんじ.まで あいていますか？|C'est ouvert jusqu'à quelle heure ?"
+          ]
+        },
+        {
+          "h": "Point final dans l'espace",
+          "text": "Jusqu'à un lieu.",
+          "ex": [
+            "えき.まで あるきます。|Je marche jusqu'à la gare.",
+            "きょうと.まで バス.で いきます。|Je vais jusqu'à Kyoto en bus."
+          ]
+        },
+        {
+          "h": "から〜まで — une durée",
+          "text": "Associe un bloc en から et un bloc en まで pour dire « de … à … ». Chacun est un bloc à part, donc ils peuvent se déplacer.",
+          "ex": [
+            "くじ.から ごじ.まで はたらきます。|Je travaille de neuf heures à cinq heures.",
+            "なら.から きょうと.まで でんしゃ.で いきます。|Je prends le train de Nara à Kyoto."
+          ]
+        }
+      ],
+      "mistakes": []
+    },
+    {
+      "p": "も",
+      "picture": "Un signe plus. « Celui-ci aussi. »",
+      "asks": "Aussi / également / même",
+      "uses": [
+        {
+          "h": "Remplace は, が, を",
+          "text": "も prend la place de は, が ou を — ne les empile jamais.",
+          "ex": [
+            "わたし.も いきます。|Moi aussi, j'y vais.",
+            "おちゃ.も のみます。|Je bois aussi du thé."
+          ]
+        },
+        {
+          "h": "Ajouté après les autres étiquettes",
+          "text": "Après に, で, と, へ, から, まで, garde l'étiquette et ajoute も : でも, にも, とも…",
+          "ex": [
+            "なら.でも かいます。|J'en achète aussi à Nara.",
+            "ともだち.にも いいます。|Je le dirai aussi à mon ami."
+          ]
+        },
+        {
+          "h": "Pas du tout (avec ません)",
+          "text": "Un mot interrogatif + も + ません = rien du tout, personne.",
+          "ex": [
+            "なに.も たべません。|Je ne mange rien.",
+            "だれ.も いません。|Il n'y a personne."
+          ]
+        }
+      ],
+      "mistakes": [
+        {
+          "wrong": "わたし.はも いきます。",
+          "right": "わたし.も いきます。|Moi aussi, j'y vais.",
+          "why": "も remplace は / が / を. Il ne s'empile qu'après les autres étiquettes (でも, にも…)."
+        }
+      ]
+    }
+  ],
+  "notag": {
+    "title": "Aucune étiquette",
+    "text": "Certains blocs ne prennent pas d'étiquette. Les mots de temps relatifs (きょう, あした, きのう, まいにち, いま, らいしゅう) et les quantités (ひとつ, ふたつ, すこし) se placent devant le noyau tels quels. Au niveau 1, c'est le mot de temps sans étiquette qui met la phrase au passé ou au futur.",
+    "ex": [
+      "あした いきます。|J'y vais demain.",
+      "まいにち おちゃ.を のみます。|Je bois du thé tous les jours.",
+      "おちゃ.を ふたつ ください。|Deux thés, s'il vous plaît."
+    ]
+  },
+  "no": {
+    "title": "の — la colle à l'intérieur d'un bloc",
+    "text": "の n'est pas une étiquette. Il relie deux noms à l'intérieur d'un même bloc, comme « de » en français, mais dans l'ordre inverse : わたしのいえ (ma maison), ならのおちゃ (le thé de Nara), えきのまえ (le devant de la gare). Le tout forme un seul bloc, et la vraie étiquette va toujours à la fin.",
+    "ex": [
+      "わたしのいえ.に きますか？|Tu viens chez moi ?",
+      "ならのおちゃ.を かいます。|J'achète du thé de Nara.",
+      "えきのまえ.で あいます。|Retrouvons-nous devant la gare."
+    ]
+  },
+  "questionWords": [
+    {
+      "k": "だれ",
+      "en": "qui",
+      "ex": [
+        "だれ.が きますか？|Qui vient ?",
+        "だれ.と いきますか？|Tu y vas avec qui ?"
+      ]
+    },
+    {
+      "k": "なに",
+      "en": "quoi",
+      "ex": [
+        "なに.を たべますか？|Qu'est-ce que tu vas manger ?",
+        "なに.が すきですか？|Qu'est-ce que tu aimes ?"
+      ]
+    },
+    {
+      "k": "どこ",
+      "en": "où",
+      "ex": [
+        "どこ.に いきますか？|Tu vas où ?",
+        "どこ.で かいますか？|Tu l'achètes où ?"
+      ]
+    },
+    {
+      "k": "なんじ",
+      "en": "à quelle heure",
+      "ex": [
+        "なんじ.に きますか？|Tu viens à quelle heure ?",
+        "なんじ.まで はたらきますか？|Tu travailles jusqu'à quelle heure ?"
+      ]
+    },
+    {
+      "k": "いつ",
+      "en": "quand",
+      "ex": [
+        "いつ きますか？|Tu viens quand ?",
+        "いつ.から やすみですか？|Tu es en congé à partir de quand ?"
+      ]
+    },
+    {
+      "k": "いくら",
+      "en": "combien (prix)",
+      "ex": [
+        "これ.は いくらですか？|Combien ça coûte ?"
+      ]
+    },
+    {
+      "k": "どれ",
+      "en": "lequel",
+      "ex": [
+        "どれ.が いいですか？|Lequel est bien ?"
+      ]
+    },
+    {
+      "k": "どう",
+      "en": "comment",
+      "ex": [
+        "あじ.は どうですか？|C'est bon, le goût ?"
+      ]
+    }
+  ],
+  "questionNote": "Un mot interrogatif se place au même endroit que sa réponse, avec la même étiquette, et le noyau prend か. Demande なに.を たべますか？, réponds おちゃ.を のみます / パン.を たべます. L'ordre des mots ne change jamais pour une question — comme dans « Tu manges quoi ? » en français parlé."
+}

@@ -17,10 +17,10 @@ const walk = dir => fs.readdirSync(path.join(ROOT, dir), { withFileTypes: true }
 // App pages (not the printable worksheets), plus everything they load.
 const PAGES = ['', 'lesson/', 'grammar/', 'words/', 'scenes/', 'ch/', 'drill/', 'test/', 'progress/', 'print/'];
 const files = [
-  ...PAGES.flatMap(p => [`${p}index.html`, `tr/${p}index.html`]),
-  'manifest.webmanifest', 'tr/manifest.webmanifest', 'favicon.ico',
+  ...PAGES.flatMap(p => [`${p}index.html`, `tr/${p}index.html`, `fr/${p}index.html`]),
+  'manifest.webmanifest', 'tr/manifest.webmanifest', 'fr/manifest.webmanifest', 'favicon.ico',
   ...walk('css'), ...walk('js'), ...walk('data'), ...walk('icons'),
-].filter(f => /\.(html|css|js|json|webmanifest|png|svg|ico)$/.test(f)).sort();
+].filter(f => /\.(html|css|js|json|webmanifest|png|svg|ico)$/.test(f) && !/-[abc]\.json$/.test(f)).sort();
 
 const hash = crypto.createHash('sha256');
 for (const f of files) hash.update(f).update(fs.readFileSync(path.join(ROOT, f)));
@@ -67,7 +67,7 @@ self.addEventListener('fetch', e => {
       return r;
     }).catch(async () => (await caches.match(url.pathname, { ignoreSearch: true }))
       || (await caches.match(req, { ignoreSearch: true }))
-      || caches.match(url.pathname.startsWith(new URL('tr/', self.registration.scope).pathname) ? 'tr/' : './')));
+      || caches.match(['tr', 'fr'].find(c => url.pathname.startsWith(new URL(c + '/', self.registration.scope).pathname)) ? url.pathname.replace(/^.*?\/(tr|fr)\/.*$/, '$1/') : './')));
     return;
   }
 

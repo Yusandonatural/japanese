@@ -1,0 +1,847 @@
+{
+ "note": "Des phrases prêtes à l'emploi pour la vie quotidienne au Japon, classées par situation, des plus essentielles aux moins indispensables. Chaque phrase suit le même schéma : quelques blocs avec étiquette, puis un noyau à la fin. Le noyau n'utilise que quatre terminaisons : ます (je fais), ますか (tu fais ?), ません (je ne fais pas) et ましょう (faisons), ou bien です et ですか pour les noms et les adjectifs. Un mot de temps comme きのう (kinō) ou あした (ashita) indique quand les choses se passent. Pour poser une question, garde les mêmes mots dans le même ordre et ajoute simplement か, en faisant monter la voix dessus. Pour proposer de faire quelque chose ensemble, utilise ましょう. Apprends une phrase, remplace un bloc par ton propre mot, et tu en as une nouvelle.",
+ "scenes": [
+  {
+   "id": "greeting",
+   "name": "Salutations et petites conversations",
+   "intro": "Les premiers mots que tu dis chaque jour. La plupart sont des formules toutes faites que tu peux utiliser sans rien changer.",
+   "phrases": [
+    {
+     "ex": "おはようございます。|Bonjour. (le matin)",
+     "note": "Entre amis et en famille, simplement おはよう (ohayō)."
+    },
+    {
+     "ex": "こんにちは。|Bonjour. / Bon après-midi.",
+     "note": "De la fin de matinée jusqu'au soir. Une fois la nuit tombée, dis こんばんは (konbanwa)."
+    },
+    {
+     "ex": "ありがとうございます。|Merci.",
+     "note": "Familier : ありがとう (arigatō)."
+    },
+    {
+     "ex": "すみません。|Excusez-moi. / Pardon.",
+     "note": "Sert à appeler un serveur, à passer devant quelqu'un ou à s'excuser pour une petite chose."
+    },
+    {
+     "ex": "はじめまして。|Enchanté.",
+     "note": "Uniquement lors de la toute première rencontre. Enchaîne avec ton nom."
+    },
+    {
+     "ex": "わたし.は ジョンです。|Je suis John.",
+     "note": "Mets ton propre nom. On omet souvent complètement わたし.は (watashi wa)."
+    },
+    {
+     "ex": "よろしくおねがいします。|Enchanté. / Au plaisir de travailler avec vous.",
+     "note": "Dis-le juste après ton nom. Cette formule conclut presque toutes les présentations."
+    },
+    {
+     "ex": "おなまえ.は なんですか？|Comment vous appelez-vous ?",
+     "note": "Ajoute か à la terminaison et fais monter la voix dessus."
+    },
+    {
+     "ex": "おくに.は どこですか？|D'où venez-vous ?",
+     "note": "Une première question fréquente pour les visiteurs."
+    },
+    {
+     "ex": "わたし.は イギリスじんです。|Je suis britannique.",
+     "note": "Pays + じん (jin) : アメリカじん, フランスじん, オーストラリアじん."
+    },
+    {
+     "ex": "おげんきですか？|Comment allez-vous ?",
+     "note": "S'emploie quand on n'a pas vu quelqu'un depuis un moment, pas comme bonjour de tous les jours."
+    },
+    {
+     "ex": "げんきです。|Je vais bien.",
+     "note": "La réponse habituelle à おげんきですか？"
+    },
+    {
+     "ex": "にほんご.が すこし わかります。|Je comprends un peu le japonais.",
+     "note": "Remarque l'étiquette が (ga) avec わかります (wakarimasu)."
+    },
+    {
+     "ex": "もういちど おねがいします。|Encore une fois, s'il vous plaît.",
+     "note": "Ton meilleur ami quand tu as raté quelque chose."
+    },
+    {
+     "ex": "ゆっくり おねがいします。|Lentement, s'il vous plaît.",
+     "note": "Combine les deux : もういちど ゆっくり おねがいします."
+    },
+    {
+     "ex": "にほんご.で はなしましょう。|Parlons en japonais.",
+     "note": "ましょう (mashō) = « faisons… ». Utilise-le pour ce que tu fais avec ton interlocuteur."
+    },
+    {
+     "ex": "また あいましょう。|Revoyons-nous.",
+     "note": "Une façon chaleureuse de dire au revoir à quelqu'un que tu viens de rencontrer."
+    },
+    {
+     "ex": "おひさしぶりです。|Ça fait longtemps !"
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "name": "À la maison",
+   "intro": "Dans les foyers japonais, on utilise chaque jour des formules pour partir, rentrer, manger et dormir. Dis-les et tu feras partie de la famille.",
+   "phrases": [
+    {
+     "ex": "いってきます。|J'y vais. / À plus tard.",
+     "note": "Se dit en quittant la maison. La réponse est いってらっしゃい (itterasshai)."
+    },
+    {
+     "ex": "いってらっしゃい。|Bonne journée. / Fais attention à toi.",
+     "note": "Se dit à la personne qui part."
+    },
+    {
+     "ex": "ただいま。|Je suis rentré.",
+     "note": "Se dit en franchissant la porte."
+    },
+    {
+     "ex": "おかえりなさい。|Bon retour à la maison.",
+     "note": "La réponse à ただいま. Familier : おかえり (okaeri)."
+    },
+    {
+     "ex": "トイレ.は どこですか？|Où sont les toilettes ?",
+     "note": "Fonctionne dans n'importe quelle maison, boutique ou gare."
+    },
+    {
+     "ex": "くつ.は ここ.で ぬぎますか？|Je retire mes chaussures ici ?",
+     "note": "Dans la plupart des maisons, on retire ses chaussures à l'entrée."
+    },
+    {
+     "ex": "ごはんです。|À table !",
+     "note": "Litt. « C'est le repas. » Lancé à toute la maison."
+    },
+    {
+     "ex": "おふろ.に はいります。|Je vais prendre mon bain."
+    },
+    {
+     "ex": "まど.を あけます。|Je vais ouvrir la fenêtre.",
+     "note": "Change le noyau : しめます (shimemasu) = fermer."
+    },
+    {
+     "ex": "でんき.を けします。|Je vais éteindre la lumière.",
+     "note": "Allumer : つけます (tsukemasu)."
+    },
+    {
+     "ex": "かぎ.は つくえのうえ.に あります。|La clé est sur le bureau.",
+     "note": "Les mots de lieu se placent à l'intérieur du bloc : つくえのうえ (sur le bureau), ドアのちかく (près de la porte)."
+    },
+    {
+     "ex": "ごみ.は あした だします。|Je sortirai les poubelles demain.",
+     "note": "Au Japon, les jours de collecte des déchets sont stricts. Le mot de temps peut aussi venir en premier : あした ごみ.は だします."
+    },
+    {
+     "ex": "あした.は なんじ.に おきますか？|À quelle heure tu te lèves demain ?"
+    },
+    {
+     "ex": "テレビ.を みます。|Je vais regarder la télé."
+    },
+    {
+     "ex": "ごはん.を たべましょう。|Mangeons."
+    },
+    {
+     "ex": "そろそろ ねましょう。|On va bientôt se coucher.",
+     "note": "そろそろ (sorosoro) = bientôt, il est temps."
+    },
+    {
+     "ex": "もう ねます。|Je vais me coucher maintenant."
+    },
+    {
+     "ex": "おやすみなさい。|Bonne nuit.",
+     "note": "Familier : おやすみ (oyasumi)."
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "name": "Faire les courses",
+   "intro": "Montre du doigt, demande le prix, paie. Avec これ (kore, ceci) et quelques noyaux, tu peux faire tes achats presque partout.",
+   "phrases": [
+    {
+     "ex": "これ.は いくらですか？|Combien ça coûte ?"
+    },
+    {
+     "ex": "これ.を ください。|Je prends celui-ci, s'il vous plaît.",
+     "note": "Montre du doigt et dis-le. La façon la plus simple d'acheter n'importe quoi."
+    },
+    {
+     "ex": "これ.を ふたつ ください。|Deux comme ça, s'il vous plaît.",
+     "note": "Pour compter : ひとつ, ふたつ, みっつ, よっつ, いつつ (de un à cinq)."
+    },
+    {
+     "ex": "ぜんぶ.で いくらですか？|Ça fait combien en tout ?"
+    },
+    {
+     "ex": "カード.は つかえますか？|Je peux payer par carte ?",
+     "note": "Remplace par げんきん (genkin, espèces) ou アイシー (carte de transport IC)."
+    },
+    {
+     "ex": "げんきん.で はらいます。|Je paie en espèces."
+    },
+    {
+     "ex": "ふくろ.は いりません。|Je n'ai pas besoin de sac.",
+     "note": "Si tu en veux un : ふくろ.を ください."
+    },
+    {
+     "ex": "みているだけです。|Je regarde seulement.",
+     "note": "Une façon polie de dire non merci à un vendeur."
+    },
+    {
+     "ex": "おちゃ.は どこ.に ありますか？|Où est le thé ?",
+     "note": "Remplace par ce que tu cherches."
+    },
+    {
+     "ex": "もっと ちいさいの.は ありますか？|Vous en avez un plus petit ?",
+     "note": "Plus grand : おおきいの (ōkii no)."
+    },
+    {
+     "ex": "しちゃく.は できますか？|Je peux l'essayer ?"
+    },
+    {
+     "ex": "ちょっと たかいです。|C'est un peu cher.",
+     "note": "Pas cher : やすいです (yasui desu)."
+    },
+    {
+     "ex": "レジ.は どこですか？|Où est la caisse ?"
+    },
+    {
+     "ex": "レシート.を ください。|Je peux avoir un reçu, s'il vous plaît ?"
+    },
+    {
+     "ex": "つぎのみせ.に いきましょう。|Allons au magasin suivant."
+    },
+    {
+     "ex": "ここ.で かいましょう。|Achetons-le ici."
+    },
+    {
+     "ex": "また きます。|Je reviendrai.",
+     "note": "Une façon aimable de partir sans rien acheter."
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "name": "Manger et boire",
+   "intro": "Restaurants, cafés et dîners chez quelqu'un. Commence et termine chaque repas par les deux formules consacrées.",
+   "phrases": [
+    {
+     "ex": "いただきます。|(Se dit avant de manger.)",
+     "note": "Mains jointes, une petite inclinaison. Tout le monde le dit, même seul."
+    },
+    {
+     "ex": "ごちそうさまでした。|Merci pour le repas. (Se dit après avoir mangé.)",
+     "note": "Se dit aussi au personnel en quittant un restaurant."
+    },
+    {
+     "ex": "おいしいです。|C'est délicieux.",
+     "note": "Les mots les plus appréciés à table."
+    },
+    {
+     "ex": "ふたりです。|Deux personnes, s'il vous plaît.",
+     "note": "À l'entrée, quand on te demande combien vous êtes. Un : ひとりです. Trois : さんにんです."
+    },
+    {
+     "ex": "メニュー.を ください。|Je peux avoir le menu, s'il vous plaît ?"
+    },
+    {
+     "ex": "おすすめ.は なんですか？|Qu'est-ce que vous recommandez ?"
+    },
+    {
+     "ex": "これ.を ひとつ ください。|Un comme ça, s'il vous plaît.",
+     "note": "Montre du doigt le menu ou la photo."
+    },
+    {
+     "ex": "これ.は なんですか？|Qu'est-ce que c'est ?"
+    },
+    {
+     "ex": "おみず.を ください。|De l'eau, s'il vous plaît."
+    },
+    {
+     "ex": "あついおちゃ.を ください。|Du thé chaud, s'il vous plaît.",
+     "note": "Froid : つめたいおちゃ (tsumetai ocha)."
+    },
+    {
+     "ex": "わたし.は にく.を たべません。|Je ne mange pas de viande.",
+     "note": "Remplace par さかな (sakana, poisson) ou ぶたにく (butaniku, porc)."
+    },
+    {
+     "ex": "たまごのアレルギー.が あります。|Je suis allergique aux œufs.",
+     "note": "Remplace par そば, こむぎ (blé), えび (crevette)."
+    },
+    {
+     "ex": "これ.は からいですか？|C'est épicé ?"
+    },
+    {
+     "ex": "おかわり.を おねがいします。|Encore un, s'il vous plaît. / Une autre portion, s'il vous plaît."
+    },
+    {
+     "ex": "あのみせ.に はいりましょう。|Entrons dans ce restaurant."
+    },
+    {
+     "ex": "たべましょう。|Mangeons !",
+     "note": "Quand les plats arrivent et que tout le monde est prêt."
+    },
+    {
+     "ex": "おちゃ.を のみましょう。|Prenons un thé."
+    },
+    {
+     "ex": "おなか.が いっぱいです。|Je n'ai plus faim."
+    },
+    {
+     "ex": "おかいけい.を おねがいします。|L'addition, s'il vous plaît.",
+     "note": "Dans beaucoup d'endroits, on paie à la caisse près de la porte."
+    }
+   ]
+  },
+  {
+   "id": "transport",
+   "name": "Se déplacer",
+   "intro": "Trains, bus et taxis. Les étiquettes まで (made, jusqu'à) et で (de, au moyen de) font ici l'essentiel du travail.",
+   "phrases": [
+    {
+     "ex": "えき.は どこですか？|Où est la gare ?"
+    },
+    {
+     "ex": "なら.まで いくらですか？|Combien ça coûte jusqu'à Nara ?",
+     "note": "Remplace par n'importe quel nom de lieu."
+    },
+    {
+     "ex": "なら.まで どのくらい かかりますか？|Combien de temps faut-il pour aller à Nara ?"
+    },
+    {
+     "ex": "きっぷ.は どこ.で かいますか？|Où est-ce que j'achète un billet ?"
+    },
+    {
+     "ex": "このでんしゃ.は なら.に いきますか？|Ce train va à Nara ?"
+    },
+    {
+     "ex": "きょうとゆき.は なんばんせんですか？|Quel quai pour Kyoto ?",
+     "note": "ゆき (yuki) = à destination de."
+    },
+    {
+     "ex": "つぎのえき.で おります。|Je descends à la prochaine gare."
+    },
+    {
+     "ex": "えき.まで あるきます。|Je vais à la gare à pied."
+    },
+    {
+     "ex": "えき.まで あるきましょう。|Allons à la gare à pied."
+    },
+    {
+     "ex": "タクシー.で いきましょう。|Prenons un taxi."
+    },
+    {
+     "ex": "つぎのえき.で おりましょう。|Descendons à la prochaine gare."
+    },
+    {
+     "ex": "バス.で いきます。|J'y vais en bus.",
+     "note": "Remplace par でんしゃ (train), くるま (voiture), じてんしゃ (vélo)."
+    },
+    {
+     "ex": "タクシー.を よんでください。|Appelez un taxi, s'il vous plaît."
+    },
+    {
+     "ex": "このじゅうしょ.まで おねがいします。|À cette adresse, s'il vous plaît.",
+     "note": "Montre l'adresse au chauffeur sur ton téléphone."
+    },
+    {
+     "ex": "ここ.で とめてください。|Arrêtez-vous ici, s'il vous plaît."
+    },
+    {
+     "ex": "みち.が わかりません。|Je suis perdu. / Je ne connais pas le chemin."
+    },
+    {
+     "ex": "ここ.は どこですか？|Où suis-je ? (litt. Où est-ce ici ?)",
+     "note": "Montre une carte du doigt en posant la question."
+    },
+    {
+     "ex": "えき.から とおいですか？|C'est loin de la gare ?",
+     "note": "Près : ちかいです (chikai desu)."
+    },
+    {
+     "ex": "えき.まで くるま.で むかえ.に いきます。|Je viendrai te chercher à la gare en voiture.",
+     "note": "Les blocs peuvent changer de place : くるま.で えき.まで むかえ.に いきます."
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "name": "L'heure et les projets",
+   "intro": "Faire des projets et dire quand. Le noyau garde ses quatre terminaisons ; un mot de temps placé devant indique le passé ou le futur, et ましょう transforme n'importe quel projet en invitation.",
+   "phrases": [
+    {
+     "ex": "いま なんじですか？|Quelle heure est-il ?"
+    },
+    {
+     "ex": "あした.は ひまですか？|Tu es libre demain ?"
+    },
+    {
+     "ex": "あした.は しごと.が あります。|Je travaille demain."
+    },
+    {
+     "ex": "しゅうまつ.は なに.を しますか？|Qu'est-ce que tu fais ce week-end ?"
+    },
+    {
+     "ex": "なんじ.に あいますか？|À quelle heure on se retrouve ?"
+    },
+    {
+     "ex": "さんじ.に えき.で まちます。|J'attendrai à la gare à trois heures.",
+     "note": "L'heure prend に (ni), le lieu de l'action prend で (de)."
+    },
+    {
+     "ex": "さんじ.に えき.で あいましょう。|Retrouvons-nous à la gare à trois heures.",
+     "note": "Change le noyau pour n'importe quel projet : たべましょう, いきましょう, はじめましょう."
+    },
+    {
+     "ex": "あした えいが.を みませんか？|Ça te dirait d'aller voir un film demain ?",
+     "note": "ませんか (masen ka) = « tu ne veux pas… ? ». Une invitation douce. Pour dire oui, utilise la forme ましょう : みましょう."
+    },
+    {
+     "ex": "そろそろ いきましょう。|Allons-y."
+    },
+    {
+     "ex": "らいしゅう また あいましょう。|Revoyons-nous la semaine prochaine."
+    },
+    {
+     "ex": "らいしゅう きょうと.へ いきます。|Je vais à Kyoto la semaine prochaine."
+    },
+    {
+     "ex": "きのう ともだち.と えいが.を みます。|Hier, j'ai vu un film avec un ami.",
+     "note": "Au niveau 1, le noyau ne change pas : le mot きのう (kinō) indique déjà que c'était dans le passé."
+    },
+    {
+     "ex": "ちょっと まってください。|Attends un instant, s'il te plaît."
+    },
+    {
+     "ex": "すこし おくれます。|Je vais être un peu en retard.",
+     "note": "Envoie ce message avant d'être en retard, pas après."
+    },
+    {
+     "ex": "あとで いきます。|J'irai plus tard."
+    },
+    {
+     "ex": "みせ.は なんじまでですか？|Jusqu'à quelle heure le magasin est-il ouvert ?"
+    },
+    {
+     "ex": "きょう.は なんようびですか？|Quel jour sommes-nous ?"
+    },
+    {
+     "ex": "たんじょうび.は いつですか？|C'est quand, ton anniversaire ?"
+    },
+    {
+     "ex": "まだ じかん.が あります。|Il reste encore du temps."
+    },
+    {
+     "ex": "きょう.は じかん.が ありません。|Je n'ai pas le temps aujourd'hui."
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "Au travail",
+   "intro": "Le japonais du travail est plein de formules toutes faites. Elles te permettent de rester poli sans grammaire honorifique particulière.",
+   "phrases": [
+    {
+     "ex": "おつかれさまです。|Merci pour ton travail.",
+     "note": "La salutation passe-partout entre collègues, à toute heure de la journée."
+    },
+    {
+     "ex": "よろしくおねがいします。|Merci d'avance. / Je compte sur vous.",
+     "note": "Au début d'un travail, d'une réunion ou d'une demande."
+    },
+    {
+     "ex": "わかりました。|C'est compris.",
+     "note": "L'une des deux seules formules figées au passé dont tu as besoin."
+    },
+    {
+     "ex": "ちょっと しつもん.が あります。|J'ai une petite question."
+    },
+    {
+     "ex": "もういちど おしえてください。|Pouvez-vous me le réexpliquer, s'il vous plaît ?"
+    },
+    {
+     "ex": "これ.で いいですか？|C'est bien comme ça ?",
+     "note": "Montre ton travail et demande."
+    },
+    {
+     "ex": "これ.は どこ.に おきますか？|Où est-ce que je mets ça ?"
+    },
+    {
+     "ex": "てつだいます。|Je vais t'aider."
+    },
+    {
+     "ex": "てつだってください。|Aide-moi, s'il te plaît."
+    },
+    {
+     "ex": "はじめましょう。|Commençons.",
+     "note": "Pour commencer une réunion, un cours ou un travail."
+    },
+    {
+     "ex": "すこし やすみましょう。|Faisons une petite pause."
+    },
+    {
+     "ex": "あした また はなしましょう。|Reparlons-en demain."
+    },
+    {
+     "ex": "かいぎ.は なんじ.に はじまりますか？|À quelle heure commence la réunion ?"
+    },
+    {
+     "ex": "しりょう.を メール.で おくります。|J'enverrai les documents par e-mail."
+    },
+    {
+     "ex": "きょう.は ろくじ.まで はたらきます。|Aujourd'hui, je travaille jusqu'à six heures."
+    },
+    {
+     "ex": "かいしゃ.へ でんしゃ.で かよいます。|Je vais au bureau en train."
+    },
+    {
+     "ex": "あした.は やすみます。|Je prends ma journée demain."
+    },
+    {
+     "ex": "もうすこし じかん.を ください。|Laissez-moi encore un peu de temps, s'il vous plaît."
+    },
+    {
+     "ex": "おさきにしつれいします。|Excusez-moi de partir avant vous.",
+     "note": "Se dit quand tu pars alors que les autres travaillent encore. Ils répondent おつかれさまです."
+    }
+   ]
+  },
+  {
+   "id": "farm",
+   "name": "À la ferme / au champ de thé",
+   "intro": "Des phrases de notre ferme de thé naturel à Nara : dans le champ, à la cueillette des feuilles, puis autour d'une tasse partagée.",
+   "phrases": [
+    {
+     "ex": "ここ.は ちゃばたけです。|Ceci est un champ de thé."
+    },
+    {
+     "ex": "ここ.で おちゃ.を つくります。|Ici, nous faisons du thé."
+    },
+    {
+     "ex": "のうやく.は つかいません。|Nous n'utilisons pas de pesticides."
+    },
+    {
+     "ex": "ひりょう.も つかいません。|Nous n'utilisons pas d'engrais non plus.",
+     "note": "L'étiquette も (mo) signifie « aussi » ou « non plus »."
+    },
+    {
+     "ex": "このおちゃ.は なら.で つくります。|Ce thé est fait à Nara."
+    },
+    {
+     "ex": "ごがつ.に しんちゃ.を つみます。|Nous cueillons le thé nouveau en mai.",
+     "note": "しんちゃ (shincha) = le premier thé de l'année, le plus frais."
+    },
+    {
+     "ex": "て.で ちゃば.を つみます。|Nous cueillons les feuilles de thé à la main."
+    },
+    {
+     "ex": "ちゃばたけ.まで くるま.で いきます。|Nous allons au champ de thé en voiture."
+    },
+    {
+     "ex": "ながぐつ.を はいてください。|Mets des bottes en caoutchouc, s'il te plaît."
+    },
+    {
+     "ex": "へび.に きをつけてください。|Fais attention aux serpents.",
+     "note": "Remplace par はち (hachi, abeilles) ou むし (mushi, insectes)."
+    },
+    {
+     "ex": "すこし やすみます。|Je fais une petite pause."
+    },
+    {
+     "ex": "ちゃばたけ.に いきましょう。|Allons au champ de thé."
+    },
+    {
+     "ex": "ここ.で やすみましょう。|Reposons-nous ici."
+    },
+    {
+     "ex": "おちゃ.を のみましょう。|Prenons un thé.",
+     "note": "La meilleure façon de finir une matinée au champ."
+    },
+    {
+     "ex": "おちゃ.を いれます。|Je vais préparer du thé.",
+     "note": "いれます (iremasu) = infuser ou servir le thé."
+    },
+    {
+     "ex": "おちゃ.を どうぞ。|Tiens, prends du thé.",
+     "note": "どうぞ (dōzo) sert à offrir n'importe quoi : une place, à manger, le passage."
+    },
+    {
+     "ex": "しゃしん.を とってもいいですか？|Je peux prendre une photo ?"
+    },
+    {
+     "ex": "あめのひ.は はたけしごと.を やすみます。|Les jours de pluie, nous ne travaillons pas au champ."
+    },
+    {
+     "ex": "あした.も てつだい.に きます。|Je viendrai aider demain aussi."
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Santé et médecin",
+   "intro": "Quand tu es malade, fais court : dis ce qui te fait mal avec が (ga), et demande de l'aide avec ください (kudasai).",
+   "phrases": [
+    {
+     "ex": "たすけてください。|Au secours, aidez-moi !"
+    },
+    {
+     "ex": "きゅうきゅうしゃ.を よんでください。|Appelez une ambulance, s'il vous plaît.",
+     "note": "Au Japon, le numéro d'urgence est le 119."
+    },
+    {
+     "ex": "ぐあい.が わるいです。|Je ne me sens pas bien."
+    },
+    {
+     "ex": "あたま.が いたいです。|J'ai mal à la tête.",
+     "note": "Remplace par おなか (ventre), のど (gorge), は (dent)."
+    },
+    {
+     "ex": "ここ.が いたいです。|J'ai mal ici.",
+     "note": "Montre l'endroit du doigt."
+    },
+    {
+     "ex": "ねつ.が あります。|J'ai de la fièvre."
+    },
+    {
+     "ex": "きのう.から せき.が でます。|Je tousse depuis hier.",
+     "note": "から (kara) avec un mot de temps = depuis."
+    },
+    {
+     "ex": "びょういん.は どこですか？|Où est l'hôpital ?"
+    },
+    {
+     "ex": "びょういん.に いきましょう。|Allons à l'hôpital."
+    },
+    {
+     "ex": "きょう.は ゆっくり やすみましょう。|Reposons-nous bien aujourd'hui."
+    },
+    {
+     "ex": "かぜぐすり.を ください。|Un médicament contre le rhume, s'il vous plaît.",
+     "note": "À la pharmacie (やっきょく, yakkyoku)."
+    },
+    {
+     "ex": "このくすり.は いつ のみますか？|Quand dois-je prendre ce médicament ?",
+     "note": "En japonais, on « boit » les médicaments : のみます (nomimasu)."
+    },
+    {
+     "ex": "アレルギー.が あります。|J'ai une allergie."
+    },
+    {
+     "ex": "えいご.は だいじょうぶですか？|L'anglais, ça vous va ?"
+    },
+    {
+     "ex": "だいじょうぶですか？|Ça va ?"
+    },
+    {
+     "ex": "だいじょうぶです。|Ça va."
+    },
+    {
+     "ex": "おだいじに。|Prends soin de toi. / Bon rétablissement.",
+     "note": "Se dit à quelqu'un de malade, et le personnel te le dit quand tu quittes une clinique."
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "name": "Famille et entourage",
+   "intro": "Parler de sa famille et de ses amis. Pour ta propre famille, utilise des mots simples comme つま (tsuma, ma femme).",
+   "phrases": [
+    {
+     "ex": "かぞく.は なんにんですか？|Vous êtes combien dans ta famille ?"
+    },
+    {
+     "ex": "よにんです。|Quatre.",
+     "note": "ふたり (2), さんにん (3), よにん (4), ごにん (5)."
+    },
+    {
+     "ex": "つま.と むすめ.が います。|J'ai une femme et une fille.",
+     "note": "Ici, と (to) signifie « et ». Mari : おっと (otto). Fils : むすこ (musuko)."
+    },
+    {
+     "ex": "こども.は いません。|Je n'ai pas d'enfants."
+    },
+    {
+     "ex": "むすこ.は じゅっさいです。|Mon fils a dix ans.",
+     "note": "L'âge : nombre + さい (sai)."
+    },
+    {
+     "ex": "おこさん.は なんさいですか？|Quel âge a ton enfant ?",
+     "note": "おこさん (okosan) s'emploie pour l'enfant de quelqu'un d'autre."
+    },
+    {
+     "ex": "こちら.は ともだちです。|Voici mon ami.",
+     "note": "こちら (kochira) est la façon polie de présenter quelqu'un."
+    },
+    {
+     "ex": "あのひと.は だれですか？|Qui est cette personne ?"
+    },
+    {
+     "ex": "あに.は とうきょう.に すんでいます。|Mon grand frère habite à Tokyo."
+    },
+    {
+     "ex": "りょうしん.は アメリカ.に います。|Mes parents sont en Amérique."
+    },
+    {
+     "ex": "わたし.は けっこんしています。|Je suis marié."
+    },
+    {
+     "ex": "おとうさん.は おげんきですか？|Ton père va bien ?"
+    },
+    {
+     "ex": "うち.に いぬ.が います。|Nous avons un chien à la maison.",
+     "note": "Remplace par ねこ (neko, chat)."
+    },
+    {
+     "ex": "ともだち.と ひるごはん.を たべます。|Je déjeune avec un ami.",
+     "note": "Ici, と (to) signifie « avec »."
+    },
+    {
+     "ex": "はは.に てがみ.を かきます。|Je vais écrire une lettre à ma mère."
+    },
+    {
+     "ex": "みんな.で しゃしん.を とります。|On va prendre une photo tous ensemble."
+    },
+    {
+     "ex": "みんな.で たべましょう。|Mangeons tous ensemble."
+    },
+    {
+     "ex": "ともだち.に なりましょう。|Devenons amis."
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Météo et saisons",
+   "intro": "Au Japon, la météo est le sujet de conversation le plus facile. Adjectif + です (desu), c'est tout ce qu'il te faut.",
+   "phrases": [
+    {
+     "ex": "きょう.は いいてんきです。|Il fait beau aujourd'hui."
+    },
+    {
+     "ex": "そと.で たべましょう。|Mangeons dehors."
+    },
+    {
+     "ex": "はる.は はなみ.に いきましょう。|Au printemps, allons admirer les cerisiers en fleurs.",
+     "note": "はなみ (hanami) = admirer les cerisiers en fleurs, en mangeant et en buvant sous les arbres."
+    },
+    {
+     "ex": "あついです。|Il fait chaud."
+    },
+    {
+     "ex": "さむいです。|Il fait froid."
+    },
+    {
+     "ex": "きょう.は むしあついです。|Il fait chaud et humide aujourd'hui."
+    },
+    {
+     "ex": "あめ.が ふっています。|Il pleut."
+    },
+    {
+     "ex": "あした.は あめです。|Il va pleuvoir demain.",
+     "note": "Remplace par はれ (hare, ensoleillé) ou くもり (kumori, nuageux)."
+    },
+    {
+     "ex": "かさ.は ありますか？|Tu as un parapluie ?"
+    },
+    {
+     "ex": "かさ.を かしてください。|Tu pourrais me prêter un parapluie ?"
+    },
+    {
+     "ex": "タクシー.で かえりましょう。|Rentrons en taxi."
+    },
+    {
+     "ex": "かぜ.が つよいです。|Le vent est fort."
+    },
+    {
+     "ex": "たいふう.が きます。|Un typhon arrive."
+    },
+    {
+     "ex": "あめ.は あした.まで つづきます。|La pluie va continuer jusqu'à demain."
+    },
+    {
+     "ex": "ゆき.が ふります。|Il va neiger."
+    },
+    {
+     "ex": "はる.は さくら.が きれいです。|Au printemps, les cerisiers en fleurs sont magnifiques."
+    },
+    {
+     "ex": "ならのなつ.は あついです。|L'été à Nara est chaud."
+    },
+    {
+     "ex": "どのきせつ.が すきですか？|Quelle saison aimes-tu ?"
+    },
+    {
+     "ex": "わたし.は あき.が すきです。|J'aime l'automne.",
+     "note": "はる (printemps), なつ (été), あき (automne), ふゆ (hiver)."
+    }
+   ]
+  },
+  {
+   "id": "phone",
+   "name": "Téléphone et messages",
+   "intro": "Appels et applications de messagerie. Au téléphone, parle un peu plus lentement et n'hésite pas à demander de répéter.",
+   "phrases": [
+    {
+     "ex": "もしもし。|Allô ? (au téléphone)",
+     "note": "Uniquement au téléphone, jamais en face à face."
+    },
+    {
+     "ex": "スミスです。|Ici Smith.",
+     "note": "Simplement ton nom + です quand tu appelles ou que tu réponds."
+    },
+    {
+     "ex": "たなかさん.は いますか？|M. Tanaka est-il là ?"
+    },
+    {
+     "ex": "よく きこえません。|Je vous entends mal."
+    },
+    {
+     "ex": "もうすこし おおきいこえ.で おねがいします。|Un peu plus fort, s'il vous plaît."
+    },
+    {
+     "ex": "いま でんしゃのなかです。|Je suis dans le train en ce moment.",
+     "note": "On ne téléphone pas dans les trains. Dis ceci et rappelle plus tard."
+    },
+    {
+     "ex": "あとで かけなおします。|Je te rappelle plus tard."
+    },
+    {
+     "ex": "あとで また でんわします。|Je rappellerai plus tard."
+    },
+    {
+     "ex": "あとで また はなしましょう。|On en reparle plus tard."
+    },
+    {
+     "ex": "でんわばんごう.を おしえてください。|Donne-moi ton numéro de téléphone, s'il te plaît."
+    },
+    {
+     "ex": "ライン.は やっていますか？|Tu es sur LINE ?",
+     "note": "LINE est l'application de messagerie que la plupart des gens utilisent au Japon."
+    },
+    {
+     "ex": "メッセージ.を おくります。|Je t'enverrai un message."
+    },
+    {
+     "ex": "しゃしん.を ライン.で おくります。|Je t'envoie la photo sur LINE."
+    },
+    {
+     "ex": "ライン.で れんらくしましょう。|Restons en contact sur LINE."
+    },
+    {
+     "ex": "メール.で おくってください。|Envoie-le par e-mail, s'il te plaît."
+    },
+    {
+     "ex": "へんじ.を まっています。|J'attends ta réponse."
+    },
+    {
+     "ex": "バッテリー.が すくないです。|Ma batterie est faible."
+    },
+    {
+     "ex": "しつれいします。|Au revoir. (Façon polie de terminer un appel.)",
+     "note": "S'emploie aussi en entrant dans une pièce ou en la quittant."
+    }
+   ]
+  }
+ ]
+}

@@ -1,10 +1,13 @@
-// UI localisation. English strings are the keys; the Turkish edition (/tr/) looks them up in TR.
+// UI localisation. English strings are the keys; the Turkish edition (/tr/) looks them up in TR,
+// the French edition (/fr/) in FR (js/i18n-fr.js).
+import { FR } from './i18n-fr.js';
 // Pages under /tr/ have <html data-locale="tr">. Static HTML marked with data-i18n is translated at
 // build time by tools/build-tr.mjs; strings built in JavaScript go through t().
 export const LOCALE = (typeof document !== 'undefined' && document.documentElement.dataset.locale) || 'en';
 
 export function t(key, vars) {
-  let s = (LOCALE === 'tr' && Object.prototype.hasOwnProperty.call(TR, key)) ? TR[key] : key;
+  const dict = LOCALE === 'tr' ? TR : LOCALE === 'fr' ? FR : null;
+  let s = (dict && Object.prototype.hasOwnProperty.call(dict, key)) ? dict[key] : key;
   if (vars) s = s.replace(/\{(\w+)\}/g, (m, k) => (vars[k] ?? m));
   return s;
 }
